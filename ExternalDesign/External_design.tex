@@ -167,7 +167,7 @@
   \item 子育て窓口画面遷移ボタン\\
         子育て窓口機能を使用したい場合に押すボタンです。タップすると子育て窓口画面(図\ref{honjo_CR_Window})へ遷移します。
   \item 設定画面遷移ボタン\\
-        アプリの設定を変更したい場合に押すボタンです。タップすると設定画面(図\ref{configration})へ遷移します。
+        アプリの設定を変更したい場合に押すボタンです。タップすると設定画面(図\ref{configuration})へ遷移します。
 \end{enumerate}
 
 %ゲーム%
@@ -216,7 +216,7 @@
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {illustration.png}}
     \caption {イラスト}
-    \label{illustraion}
+    \label{illustration}
     \end{center}
 \end{figure}
 
@@ -228,7 +228,7 @@
   保存ボタンをタップすることでおえかきが成長記録として保存されます。
 \end{enumerate}
 
-  
+
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {oekaki2.png}}
@@ -349,7 +349,7 @@
   材料が揃っている場合、おうち画面（図\ref{myhome}）のつくるボタンをタップするとできあがり画面（図\ref{completion}）へ遷移します。材料が揃っていない場合、図\ref{otukai6}のように「材料が足りないよ」と表示されます。
 \item とじるボタン\\
   図\ref{otukai6}の閉じるボタンをタップするとおうち画面（図\ref{myhome}）へ遷移します。
-\item　おつかい\\
+\item おつかい\\
   おうち画面（図\ref{myhome}）のおつかいにいくをタップするとお店の画面（図\ref{shop}）遷移します。
 \end{enumerate}
 
@@ -370,7 +370,7 @@
 
 % 成長記録%
 \newpage
-\subsection{成長記録}\label{grow}
+\subsection{成長記録}
 図\ref{Grow}に、成長記録起動時の画面を示します。
 成長記録は、自分の撮影した子どもの写真やゲームの記録を保存し、閲覧及び共有することができます。
 
@@ -393,7 +393,7 @@
 \end{enumerate}
 
 \newpage
-\subsubsection{アルバム画面}\label{albam}
+\subsubsection{アルバム画面}
 写真をタップしたときに拡大表示される画面(図\ref{Albam})に推移します。
 写真や記録は拡大して表示されます。また、共有ボタンもありここから外部アプリ(Twitter)を起動し共有することができます。
 
@@ -405,7 +405,7 @@
     \end{center}
 \end{figure}
 
-アルバムに保存された写真や記録にはコメントボタンを押すことによりコメント入力画面(\ref{Comment})に推移し、コメントを残すことができます。
+アルバムに保存された写真や記録にはコメントボタンを押すことによりコメント入力画面(図\ref{Comment})に推移し、コメントを残すことができます。
 
 \begin{figure}[H]
     \begin{center}
@@ -416,8 +416,8 @@
 \end{figure}
 
 \subsubsection{カメラ}
-カメラボタンを押すことにより外部カメラ(\ref{Camera})を起動します。
-カメラを使用して撮影するときに使用されます。ここで撮影された写真はアルバムとして保存され\ref{albam}のように閲覧、共有することができます。
+カメラボタンを押すことにより外部カメラ(図\ref{Camera})を起動します。
+カメラを使用して撮影するときに使用されます。ここで撮影された写真はアルバムとして保存され図\ref{Albam}のように閲覧、共有することができます。
 
 
 \begin{figure}[H]
@@ -430,7 +430,7 @@
 
 
 \subsubsection{共有}
-写真や記録を他社に共有したいときに使用されます。共有は外部アプリであるTwitterで行われます。共有するためには\ref{grow}と\ref{albam}についている共有ボタンを押すことで起動することができます。
+写真や記録を他社に共有したいときに使用されます。共有は外部アプリであるTwitterで行われます。共有するためには図\ref{Grow}と図\ref{Albam}についている共有ボタンを押すことで起動することができます。
 
 %質問箱%
 \subsubsection{子育て窓口}
@@ -524,7 +524,7 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {honjo_CR_CompleteAnswer.png}}
-    \caption {回答投稿画面}
+    \caption {回答投稿完了画面}
     \label{honjo_CR_CompleteAnswer}
     \end{center}
 \end{figure}
@@ -534,7 +534,7 @@
   \item ステータス\\
         ユーザの回答投稿が正常に完了したかを通知します。
   \item 戻るボタン\\
-        子育て窓口の画面へ遷移するためのボタンです。
+        子育て窓口の画面(図\ref{honjo_CR_Window})へ遷移するためのボタンです。
 \end{enumerate}
 
 \newpage
@@ -574,7 +574,7 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {honjo_CR_CompleteContribution.png}}
-    \caption {質問投稿画面}
+    \caption {質問投稿完了画面}
     \label{honjo_CR_CompleteContribution}
     \end{center}
 \end{figure}
@@ -781,7 +781,7 @@
 また、表\ref{tbl: datatable}に上記のデータテーブルに対する操作を示します。ユーザー情報はユーザー側と管理者側の両方で編集できるようにします。質問と回答のテーブルはユーザーが作成を行い、削除は管理者側が行えるようにします。質問内容と回答内容は内容を修正できるようにユーザーが更新できるようにしておきます。日付は自動で保存されるので参照のみできるようにします。
 
 \begin{table}[H]
-    \caption{表14 各種データテーブルに対する操作}
+    \caption{各種データテーブルに対する操作}
     \label{tbl: datatable}
     \begin{center}
         \begin{tabular}{|l||c|c|c|c||c|c|c|c|} \hline
