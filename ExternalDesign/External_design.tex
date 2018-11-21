@@ -171,7 +171,7 @@
 \end{enumerate}
 
 %ゲーム%
-\subsection{ゲーム}
+\subsection{ゲーム画面}
 図\ref{game}にゲームの画面を示します。\\
 お絵描きとおつかいのゲームを提供します。
 
@@ -186,20 +186,20 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item おえかき\\
-  おえかきの矩形領域をタップするとお絵描きの詳細画面へ遷移します。
+  おえかきの矩形領域をタップするとお絵描きの詳細画面（図\ref{oekaki}）へ遷移します。
 \item おつかい\\
-  おつかいの矩形領域をタップするとおつかいのゲーム画面へ遷移します。
+  おつかいの矩形領域をタップするとおつかいのゲーム画面（図\ref{otukai1}）へ遷移します。
 \end{enumerate}
 
 \newpage
-\subsubsection{おえかき}
+\subsubsection{おえかきゲーム画面}
 図\ref{oekaki}におえかきの詳細画面を示します。\\
 画面上のボタンをタップすることでおえかきのモードを選択することができます。\\
 
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {oekaki.png}}
-    \caption {おえかき画面}
+    \caption {おえかきゲーム画面}
     \label{oekaki}
     \end{center}
 \end{figure}
@@ -212,6 +212,9 @@
   おえかきのボタンをタップすることでおえかきの図\ref{oekaki2}のゲーム画面に遷移し、自由におえかきができます。
 \end{enumerate}
 
+\subsubsection{イラストおえかき画面}
+図\ref{illustration}はイラストおえかき画面を示します。\\
+
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {illustration.png}}
@@ -223,11 +226,13 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item もどるボタン\\
-  もどるボタンをタップすることでおえかき画面に遷移します。
+  もどるボタンをタップすることでおえかきゲーム画面（図\ref{oekaki}）に遷移します。
 \item 保存ボタン\\
   保存ボタンをタップすることでおえかきが成長記録として保存されます。
 \end{enumerate}
 
+\subsubsection{おえかき画面}
+図\ref{oekaki2}はおえかき画面を示します。\\
 
 \begin{figure}[H]
     \begin{center}
@@ -246,7 +251,7 @@
 \end{enumerate}
 
 \newpage
-\subsubsection{おつかい}
+\subsubsection{おつかいゲーム画面}
 図\ref{otukai1}におつかいの詳細画面を示します。\\
 おつかいは作りたい料理を選択し、その料理に必要な材料をお店から買ってくるゲームです。\\
 
@@ -266,6 +271,9 @@
   図\ref{otukai1}の料理のイラストボタンをタップするとその料理の材料画面（図\ref{material}）に遷移します。
 \end{enumerate}
 
+\subsubsection{材料画面}
+図\ref{material}は材料画面を示します。\\
+
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {material.png}}
@@ -281,6 +289,9 @@
 \item おつかいボタン\\
  おつかいのボタンをタップするとお店の画面（図\ref{shop}）へ遷移します
 \end{enumerate}
+
+\subsubsection{お店画面}
+図\ref{shop}はお店画面を示します。\\
 
 \begin{figure}[H]
     \begin{center}
@@ -302,6 +313,9 @@
   かごのイラストをタップすると持っている材料を確認することができます。
 \end{enumerate}
 
+\subsubsection{食材画面}
+図\ref{shop_material}は食材画面を示します。\\
+
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {shop_material.png}}
@@ -316,29 +330,32 @@
   食材画面（図\ref{shop_material}）のもどるボタンをタップするとお店画面（図\ref{shop}）にもどります。
 \item 食材のイラストボタン\\
   食材のイラストボタンをタップすることで材料の中にタップした食材が１つずつ格納されます。
-\item スクロール\\
-  スクロールすることでその他の食材を閲覧できます。
+\item スクロールバー\\
+  スクロールバーをスクロールすることでその他の食材を閲覧できます。
 \item ざいりょう\\
   ざいりょうをタップすると作りたい料理の材料を確認できます。
 \item かごのイラスト\\
   かごのイラストをタップすると持っている材料を確認することができます。
 \end{enumerate}
 
+\subsubsection{おうち画面}
 図\ref{myhome}はおうち画面を示します。\\
 
 \begin{figure}[H]
+  \begin{minipage}{0.5\hsize}
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {go_home.png}}
     \caption {おうち画面}
     \label{myhome}
     \end{center}
-\end{figure}
-\begin{figure}[H]
+    \end{minipage}
+    \begin{minipage}{0.5\hsize}
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {lack.png}}
     \caption {材料が足りない場合}
     \label{otukai6}
     \end{center}
+    \end{minipage}
 \end{figure}
 
 \begin{enumerate}
@@ -346,12 +363,16 @@
 \item もどるボタン\\
   おうち画面（図\ref{myhome}）のもどるボタンをタップするとお店画面（図\ref{shop}）にもどります。
 \item つくるボタン\\
-  材料が揃っている場合、おうち画面（図\ref{myhome}）のつくるボタンをタップするとできあがり画面（図\ref{completion}）へ遷移します。材料が揃っていない場合、図\ref{otukai6}のように「材料が足りないよ」と表示されます。
+  材料が揃っている場合、おうち画面（図\ref{myhome}）のつくるボタンをタップするとできあがり画面（図\ref{completion}）へ遷移します。材料が揃っていない場合、図\ref{otukai6}のように「ざいりょうがたりないよ」と表示されます。
+\item おつかい\\
+  おうち画面（図\ref{myhome}）のおつかいにいくをタップするとお店の画面（図\ref{shop}）遷移します。   
 \item とじるボタン\\
   図\ref{otukai6}の閉じるボタンをタップするとおうち画面（図\ref{myhome}）へ遷移します。
-\item おつかい\\
-  おうち画面（図\ref{myhome}）のおつかいにいくをタップするとお店の画面（図\ref{shop}）遷移します。
+
 \end{enumerate}
+
+\subsubsection{できあがり画面}
+図\ref{completion}はできあがり画面を示します。\\
 
 \begin{figure}[H]
     \begin{center}
@@ -364,7 +385,7 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item つぎへ\\
-  つぎへをタップすることでおつかいのホーム画面に遷移します。
+  つぎへをタップすることでおつかいのゲーム画面（図\ref{otukai1}）に遷移します。
 \end{enumerate}
 
 
