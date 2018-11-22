@@ -187,10 +187,32 @@
 
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
+\item もどるボタン\\
+  もどるボタンをタップすることでパスワード画面（図\ref{password}）に遷移します。
 \item おえかき\\
   おえかきの矩形領域をタップするとお絵描きの詳細画面（図\ref{oekaki}）へ遷移します。
 \item おつかい\\
   おつかいの矩形領域をタップするとおつかいのゲーム画面（図\ref{otukai1}）へ遷移します。
+\end{enumerate}
+
+\newpage
+\subsubsection{パスワード画面}
+図\ref{password}にパスワード画面を示します。\\
+
+\begin{figure}[H]
+    \begin{center}
+    \resizebox{8cm}{!}{\includegraphics {password.png}}
+    \caption {パスワード画面}
+    \label{game}
+    \end{center}
+\end{figure}
+
+\begin{enumerate}
+  \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
+\item もどるボタン\\
+  もどるボタンをタップすることでゲーム画面（図\ref{game}）に遷移します。
+\item キーボード\\
+  キーボードの数字をタップしパスワードを打つことでメインメニュー画面（図\ref{honjo_main}）に遷移します
 \end{enumerate}
 
 \newpage
@@ -208,6 +230,8 @@
 
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
+\item もどるボタン\\
+  もどるボタンをタップするとゲーム画面（図\ref{game}）に遷移します。
 \item イラストボタン\\
   イラストのボタンをタップすることで図\ref{illustration}のようにタップしたイラストを閲覧しながらのおえかきができます。
 \item おえかきボタン\\
@@ -219,19 +243,42 @@
 図\ref{illustration}はイラストおえかき画面を示します。\\
 
 \begin{figure}[H]
+  \begin{minipage}{0.5\hsize}
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {illustration.png}}
     \caption {イラスト}
     \label{illustration}
     \end{center}
+  \end{minipage}
+  \begin{minipage}{0.5\hsize}
+    \begin{center}
+    \resizebox{8cm}{!}{\includegraphics {storage.png}}
+    \caption {保存画面}
+    \label{storage}
+    \end{center}
+    \end{minipage}
 \end{figure}
 
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item もどるボタン\\
   もどるボタンをタップすることでおえかきゲーム画面（図\ref{oekaki}）に遷移します。
+\item ペンのイラストボタン\\
+  ペンのイラストボタンをタップすることでペンの種類を変更できます。
+\item 黒い丸ボタン\\
+  黒い丸ボタンをタップすることでペンの太さを選択できます。
+\item 進むボタン\\
+  進むボタンをタップすることでイラストが１段階進みます。
+\item パレットのイラストボタン\\
+  パレットのイラストボタンをタップすることでペンの色を選択できます。
+\item 消しゴムのイラストボタン\\
+  消しゴムのイラストボタンをタップすることでペンが消しゴムに代わりおえかきを消すことができます。
+\item １段階もどるボタン\\
+  1段階もどるボタンをタップすることで描いたイラストを１段階もどすことができます。
 \item 保存ボタン\\
-  保存ボタンをタップすることでおえかきが成長記録として保存されます。
+  保存ボタンをタップすることで図\ref{storage}のように「ほぞんしました」と表示されおえかきが成長記録として保存されます。
+\item とじるボタン\\
+  図\ref{storage}のとじるボタンをタップすることで表示を図\ref{storage}の表示を閉じます。
 \end{enumerate}
 
 \newpage
@@ -239,19 +286,42 @@
 図\ref{oekaki2}はおえかき画面を示します。\\
 
 \begin{figure}[H]
+  \begin{minipage}{0.5\hsize}
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {oekaki2.png}}
-    \caption {おえかき}
+    \caption {おえかき画面}
     \label{oekaki2}
     \end{center}
+  \end{minipage}
+  \begin{minipage}{0.5\hsize}
+    \begin{center}
+    \resizebox{8cm}{!}{\includegraphics {storage2.png}}
+    \caption {保存画面}
+    \label{storage2}
+    \end{center}
+    \end{minipage}
 \end{figure}
 
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item もどるボタン\\
-  もどるボタンをタップすることでおえかき画面（図\ref{oekaki2}）に遷移します。
+  もどるボタンをタップすることでおえかきゲーム画面（図\ref{oekaki}）に遷移します。
+\item ペンのイラストボタン\\
+  ペンのイラストボタンをタップすることでペンの種類を変更できます。
+\item 黒い丸ボタン\\
+  黒い丸ボタンをタップすることでペンの太さを選択できます。
+\item 進むボタン\\
+  進むボタンをタップすることでイラストが１段階進みます。
+\item パレットのイラストボタン\\
+  パレットのイラストボタンをタップすることでペンの色を選択できます。
+\item 消しゴムのイラストボタン\\
+  消しゴムのイラストボタンをタップすることでペンが消しゴムに代わりおえかきを消すことができます。
+\item １段階もどるボタン\\
+  1段階もどるボタンをタップすることで描いたイラストを１段階もどすことができます。
 \item 保存ボタン\\
-  保存ボタンをタップすることでおえかきが成長記録として保存されます。
+  保存ボタンをタップすることで図\ref{storage2}のように「ほぞんしました」と表示されおえかきが成長記録として保存されます。
+\item とじるボタン\\
+  図\ref{storage2}のとじるボタンをタップすることで表示を図\ref{storage2}の表示を閉じます。
 \end{enumerate}
 
 \newpage
@@ -316,7 +386,27 @@
 \item おうちにかえるボタン\\
   おうちにかえるをタップするとおうち画面（図\ref{myhome}）へ遷移します。
 \item かごのイラストボタン\\
-  かごのイラストをタップすると持っている材料を確認することができます。
+  かごのイラストをタップすると図\ref{have}の材料確認画面に遷移し、持っている材料を確認することができます。
+\end{enumerate}
+
+\newpage
+\subsubsection{材料画面}
+図\ref{have}は材料確認画面を示します。\\
+
+\begin{figure}[H]
+    \begin{center}
+    \resizebox{8cm}{!}{\includegraphics {have.png}}
+    \caption {材料確認画面}
+    \label{have}
+    \end{center}
+\end{figure}
+
+\begin{enumerate}
+  \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
+\item もどるボタン\\
+  材料確認画面（図\ref{have}）のもどるボタンをタップするとお店画面（図\ref{shop}）にもどります。
+\item スクロールバー\\
+  スクロールバーをスクロールすることで持っている材料を閲覧できます。
 \end{enumerate}
 
 \newpage
@@ -342,7 +432,7 @@
 \item ざいりょうボタン\\
   ざいりょうをタップすると作りたい料理の材料を確認できます。
 \item かごのイラストボタン\\
-  かごのイラストをタップすると持っている材料を確認することができます。
+  かごのイラストをタップすると図\ref{have}の材料確認画面に遷移し、持っている材料を確認することができます。
 \end{enumerate}
 
 \newpage
