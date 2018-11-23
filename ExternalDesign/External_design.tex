@@ -157,7 +157,7 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {honjo_main.png}}
-    \caption {初期設定画面のイメージ}
+    \caption {メインメニュー画面のイメージ}
     \label{honjo_main}
     \end{center}
 \end{figure}
@@ -747,26 +747,36 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {configuration.png}}
-    \caption {設定画面}
+    \caption {設定画面のイメージ}
     \label{configuration}
     \end{center}
 \end{figure}
 
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
+\item もどるボタン\\
+  タップすると、メインメニュー画面(図\ref{honjo_main})へ遷移するボタンです。
 \item 問い合わせボタン\\
   問い合わせをタップすることで問い合わせのメールアドレスと問い合わせに必要な情報を記載したページ（図\ref{inquiry}）に遷移します。
 \item アカウントボタン\\
   アカウントをタップすると変更と削除の画面（図\ref{account}）に遷移します。
+\item ゲームのパスワード設定ボタン\\
+　ゲームのパスワード設定をタップするとゲーム画面からメニュー画面に遷移するためのパスワード設定画面にします。
 \end{enumerate}
 
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {inquiry.png}}
-    \caption {問い合わせ}
+    \caption {問い合わせ画面のイメージ}
     \label{inquiry}
     \end{center}
 \end{figure}
+
+\begin{enumerate}
+  \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
+\item もどるボタン\\
+  タップすると、設定画面(図\ref{configuration})へ遷移するボタンです。
+\end{enumerate}
 
 \newpage
 \subsubsection{アカウント}
@@ -776,13 +786,15 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {account.png}}
-    \caption {アカウント}
+    \caption {アカウント画面のイメージ}
     \label{account}
     \end{center}
 \end{figure}
 
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
+\item もどるボタン\\
+  タップすると、設定画面(図\ref{configuration})へ遷移するボタンです。
 \item 変更\\
   変更をタップするとニックネームと地域の設定画面（図\ref{change}）に遷移します。
 \item 削除\\
@@ -797,20 +809,23 @@
 \begin{figure}[H]
   \begin{center}
     \resizebox{8cm}{!}{\includegraphics {change.png}}
-    \caption {変更}
+    \caption {変更画面のイメージ}
     \label{change}
   \end{center}
 \end{figure}
 
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
+\item もどるボタン\\
+  タップすると、アカウント画面(図\ref{account})へ遷移するボタンです。
 \item ニックネーム\\
   ニックネームをタップするとキーボードが開き、入力することが可能になります。
 \item 地域\\
   地域をタップすると都道府県の一覧が表示され、選択することができます。
+\item 完了ボタン\\
+  タップすると、変更内容を保存してアカウント画面(図\ref{account})へ遷移します。
 \end{enumerate}
 
-変更後、完了ボタンをタップすることで変更が完了します。
 
 \newpage
 \subsubsection{削除}
@@ -819,15 +834,17 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {delete.png}}
-    \caption {確認}
+    \caption {削除画面のイメージ}
     \label{delete}
     \end{center}
 \end{figure}
 
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
+\item もどるボタン\\
+  タップすると、アカウント画面(図\ref{account})へ遷移するボタンです。
 \item はい\\
-  はいをタップすると削除が完了し、完了画面（図\ref{check}）へ遷移します。
+  はいをタップすると削除が完了し、アカウント削除完了画面（図\ref{check}）へ遷移します。
 \item いいえ\\
   いいえをタップするとアカウントの設定画面（図\ref{account}）に遷移します。
 \end{enumerate}
@@ -835,10 +852,54 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {check.png}}
-    \caption {完了}
+    \caption {アカウント削除完了画面のイメージ}
     \label{check}
     \end{center}
 \end{figure}
+
+\begin{enumerate}
+  \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
+\item ホームへボタン\\
+  タップすると、初期設定画面(図\ref{honjo_setup})へ遷移するボタンです。
+\end{enumerate}
+
+\newpage
+\subsubsection{ゲームのパスワード設定}
+図\ref{passwordchange}はゲーム画面からメニュー画面へ遷移するためのパスワードの設定画面を示します。\\
+
+\begin{figure}[H]
+    \begin{center}
+    \resizebox{8cm}{!}{\includegraphics {passwordchange.png}}
+    \caption {ゲームのパスワード設定画面のイメージ}
+    \label{passwordchange}
+    \end{center}
+\end{figure}
+
+\begin{enumerate}
+  \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
+\item もどるボタン\\
+  タップすると、設定画面(図\ref{configuration})へ遷移するボタンです。
+\item パスワード入力1\\
+  タップするとキーボードが開くので、設定したいパスワードを入力します。
+\item パスワード入力2\\
+  タップするとキーボードが開くので、パスワードの入力間違いがないようもう一度パスワードを入力します。
+\item 完了ボタン\\
+  タップするとパスワード設定が完了し、パスワード設定完了画面（図\ref{passwordchange_check}）へ遷移します。ただし、パスワード入力1及びパスワード入力2の入力が済まない限り、タップすることができません。
+\end{enumerate}
+
+\begin{figure}[H]
+    \begin{center}
+    \resizebox{8cm}{!}{\includegraphics {passwordchange_check.png}}
+    \caption {パスワード設定完了画面のイメージ}
+    \label{passwordchange_check}
+    \end{center}
+\end{figure}
+
+\begin{enumerate}
+  \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
+\item 設定画面へボタン\\
+  タップすると、設定画面(図\ref{configuration})へ遷移するボタンです。
+\end{enumerate}
 
 \newpage
 \section{データテーブル設計}
