@@ -53,7 +53,7 @@
 \subsection{ゲーム機能}
 ゲーム機能では、2〜5歳を対象とした簡単な知育ゲームを提供します。おえかきとおつかいのゲームがあり、お絵描きではゲームの記録を成長記録機能に保存することが可能です。
 \subsubsection*{構築サブシステム}
-\noindent ペイントサブシステム、おつかいサブシステム、ゲーム記録保存サブシステム
+\noindent ペイントサブシステム、おつかいサブシステム、ゲーム記録保存サブシステム、ゲーム追加サブシステム
 
 \subsection{子育て窓口機能}
 子育て窓口機能では、子育てに関する質問を投稿・回答することができる機能を提供します。質問の検索も可能です。
@@ -91,6 +91,8 @@
 おつかいのゲームを提供します。特定の料理の材料を買うことで料理が完成するという内容です。
 \subsubsection*{ゲーム記録保存サブシステム}
 お絵描きの記録を保存するサブシステムです。保存されることにより成長記録機能での記録の閲覧が可能です。
+\subsubsection*{ゲーム追加サブシステム}
+新しくゲームを追加を行います。またゲームの削除や変更も行います。今後この機能を利用してゲームの種類の増加を図ります。
 
 \subsection{子育て窓口機能}
 \subsubsection*{検索サブシステム}
@@ -184,7 +186,7 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {game.png}}
-    \caption {ゲーム画面}
+    \caption {ゲーム画面のイメージ}
     \label{game}
     \end{center}
 \end{figure}
@@ -206,7 +208,7 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {password.png}}
-    \caption {パスワード画面}
+    \caption {パスワード画面のイメージ}
     \label{password}
     \end{center}
 \end{figure}
@@ -227,7 +229,7 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {oekaki.png}}
-    \caption {おえかきゲーム画面}
+    \caption {おえかきゲーム画面のイメージ}
     \label{oekaki}
     \end{center}
 \end{figure}
@@ -250,14 +252,14 @@
   \begin{minipage}{0.5\hsize}
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {illustration.png}}
-    \caption {イラスト}
+    \caption {イラストのイメージ}
     \label{illustration}
     \end{center}
   \end{minipage}
   \begin{minipage}{0.5\hsize}
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {storage.png}}
-    \caption {保存画面}
+    \caption {保存画面のイメージ}
     \label{storage}
     \end{center}
     \end{minipage}
@@ -293,14 +295,14 @@
   \begin{minipage}{0.5\hsize}
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {oekaki2.png}}
-    \caption {おえかき画面}
+    \caption {おえかき画面のイメージ}
     \label{oekaki2}
     \end{center}
   \end{minipage}
   \begin{minipage}{0.5\hsize}
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {storage2.png}}
-    \caption {保存画面}
+    \caption {保存画面のイメージ}
     \label{storage2}
     \end{center}
     \end{minipage}
@@ -336,7 +338,7 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {otukai1.png}}
-    \caption {おつかい}
+    \caption {おつかいのイメージ}
     \label{otukai1}
     \end{center}
 \end{figure}
@@ -356,7 +358,7 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {material.png}}
-    \caption {材料画面}
+    \caption {材料画面のイメージ}
     \label{material}
     \end{center}
 \end{figure}
@@ -376,7 +378,7 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {shop.png}}
-    \caption {お店}
+    \caption {お店のイメージ}
     \label{shop}
     \end{center}
 \end{figure}
@@ -400,7 +402,7 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {have.png}}
-    \caption {材料確認画面}
+    \caption {材料確認画面のイメージ}
     \label{have}
     \end{center}
 \end{figure}
@@ -420,7 +422,7 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {shop_material.png}}
-    \caption {食材画面}
+    \caption {食材画面のイメージ}
     \label{shop_material}
     \end{center}
 \end{figure}
@@ -448,14 +450,14 @@
  \begin{minipage}{0.5\hsize}
    \begin{center}
    \resizebox{8cm}{!}{\includegraphics {go_home.png}}
-   \caption{おうち画面}
+   \caption{おうち画面のイメージ}
    \label{myhome}
   \end{center}
  \end{minipage}
  \begin{minipage}{0.5\hsize}
   \begin{center}
    \resizebox{8cm}{!}{\includegraphics {lack.png}}
-   \caption{材料が足りない場合}
+   \caption{材料が足りない場合のイメージ}
    \label{otukai6}
   \end{center}
  \end{minipage}
@@ -480,7 +482,7 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {completion.png}}
-    \caption {できあがり画面}
+    \caption {できあがり画面のイメージ}
     \label{completion}
     \end{center}
 \end{figure}
@@ -501,7 +503,7 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {Albam1.png}}
-    \caption {成長記録の画面}
+    \caption {成長記録の画面のイメージ}
     \label{Grow}
     \end{center}
 \end{figure}
@@ -523,14 +525,14 @@
  \begin{minipage}{0.5\hsize}
    \begin{center}
    \resizebox{8cm}{!}{\includegraphics {deleter.png}}
-   \caption{選択画面}
+   \caption{選択画面のイメージ}
    \label{deleter}
   \end{center}
  \end{minipage}
  \begin{minipage}{0.5\hsize}
   \begin{center}
    \resizebox{8cm}{!}{\includegraphics {checker.png}}
-   \caption{確認画面}
+   \caption{確認画面のイメージ}
    \label{checker}
   \end{center}
  \end{minipage}
@@ -544,7 +546,7 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {Albam2.png}}
-    \caption {アルバム画面}
+    \caption {アルバム画面のイメージ}
     \label{Albam}
     \end{center}
 \end{figure}
@@ -560,7 +562,7 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {comment.png}}
-    \caption {コメント入力画面}
+    \caption {コメント入力画面のイメージ}
     \label{Comment}
     \end{center}
 \end{figure}
@@ -573,7 +575,7 @@
 \begin{figure}[H]
     \begin{center}
     \resizebox{12cm}{!}{\includegraphics {Camera.png}}
-    \caption {カメラ画面}
+    \caption {カメラ画面のイメージ}
     \label{Camera}
     \end{center}
 \end{figure}
