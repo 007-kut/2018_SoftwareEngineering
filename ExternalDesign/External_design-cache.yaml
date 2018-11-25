@@ -74,7 +74,7 @@ options:
     2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
 files:
   dicy-instance.yaml-ParsedYAML:
-    timeStamp: 2018-11-24T07:18:54.251Z
+    timeStamp: 2018-11-25T00:56:29.997Z
     jobNames: []
     value:
       severity: info
@@ -136,13 +136,13 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   External_design.tex:
-    timeStamp: 2018-11-24T06:54:30.038Z
+    timeStamp: 2018-11-25T00:56:28.283Z
     jobNames: []
-    hash: +nYsbzN9wws1hiLxZVQCgnPZh2bB2wQzOj+diverCP4=
+    hash: oQ38gLodQ+b0HSLmorTeURLbn8VbW0gktWWUS1mdJ54=
     type: LaTeX
     subType: jarticle
   'C:\Users\Michio7\AppData\Roaming\dicy\config.yaml':
-    timeStamp: 2018-11-24T07:29:54.261Z
+    timeStamp: 2018-11-25T00:56:30.119Z
     jobNames: []
     type: YAML
   x.y-Nil:
@@ -3120,25 +3120,25 @@ files:
       calls: []
     type: ParsedLaTeXLog
   External_design.aux:
-    timeStamp: 2018-11-24T07:31:00.555Z
+    timeStamp: 2018-11-25T00:57:15.560Z
     jobNames: []
     hash: gvib1EGiaa08c/lFBNRl8l72Co3GvWznnvIxBt7n7bE=
     type: LaTeXAuxilary
   External_design.fls:
-    timeStamp: 2018-11-24T07:31:00.582Z
+    timeStamp: 2018-11-25T00:57:15.650Z
     jobNames: []
     hash: hbTeEWK1cWHnRbmYniGTkFDhDsuG/LHfHeVZiFac8AI=
     type: FileListing
   External_design.log:
-    timeStamp: 2018-11-24T07:31:00.573Z
+    timeStamp: 2018-11-25T00:57:15.640Z
     jobNames: []
-    hash: lpQYMJVT3OMs9dbDG2vCXX1eughQ2xrfpLlE4viLRu0=
+    hash: 2SHF2/PoXasplLvmXjERXpGtiHkwVG0F3m3gMtDEqBI=
     type: LaTeXLog
     subType: e-pTeX
   External_design.pdf:
-    timeStamp: 2018-11-24T07:31:12.200Z
+    timeStamp: 2018-11-25T00:57:30.990Z
     jobNames: []
-    hash: NGGi1nLi38BoFlnMwVpDkQB8gJjWg7EjLp9K9Jp1d7w=
+    hash: peDPmx7B1172Cq4CnXmvdcqxw9F7ayUdk6AeD7EaX9E=
     type: PortableDocumentFormat
   External_design.aux-ParsedLaTeXAuxilary:
     timeStamp: 2018-11-24T07:30:09.400Z
@@ -3290,11 +3290,11 @@ files:
         - newlabel
     type: ParsedLaTeXAuxilary
   External_design.dvi:
-    timeStamp: 2018-11-24T07:31:00.568Z
+    timeStamp: 2018-11-25T00:57:15.634Z
     jobNames: []
     type: DeviceIndependentFile
   External_design.toc:
-    timeStamp: 2018-11-24T07:31:00.561Z
+    timeStamp: 2018-11-25T00:57:15.566Z
     jobNames: []
     hash: DEm2PxRQ0wAT6vZ3Lx2Sja1H8YaCKQ4mmmM7TFXIuZs=
     type: TableOfContents
