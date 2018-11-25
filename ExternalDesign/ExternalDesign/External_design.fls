@@ -1,0 +1,185 @@
+PWD C:/Users/Michio7/Desktop/ExternalDesign
+INPUT c:/w32tex/share/texmf-dist/web2c/texmf.cnf
+INPUT c:/w32tex/share/texmf-dist/web2c/eptex/platex.fmt
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/External_design.tex
+OUTPUT External_design.log
+INPUT c:/w32tex/share/texmf-dist/tex/platex/base/jarticle.cls
+INPUT c:/w32tex/share/texmf-dist/tex/platex/base/jarticle.cls
+INPUT c:/w32tex/share/texmf-dist/tex/platex/base/jsize10.clo
+INPUT c:/w32tex/share/texmf-dist/tex/platex/base/jsize10.clo
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics/trig.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics/trig.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+INPUT c:/w32tex/share/texmf-dist/tex/latex/url/url.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/url/url.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/here/here.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/here/here.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/float/float.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/float/float.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics/color.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics/color.sty
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics/dvipsnam.def
+INPUT c:/w32tex/share/texmf-dist/tex/latex/graphics/dvipsnam.def
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/External_design.aux
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/External_design.aux
+OUTPUT External_design.aux
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/ptex-fonts/standard/min8.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/ptex-fonts/standard/min6.tfm
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT c:/w32tex/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/External_design.toc
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/External_design.toc
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+OUTPUT External_design.dvi
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+OUTPUT External_design.toc
+INPUT c:/w32tex/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/honjo_FirstSetting.png
+INPUT extractbb -B cropbox -O honjo_FirstSetting.png
+INPUT c:/w32tex/share/texmf-dist/tex/latex/base/omscmr.fd
+INPUT c:/w32tex/share/texmf-dist/tex/latex/base/omscmr.fd
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/honjo_main.png
+INPUT extractbb -B cropbox -O honjo_main.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/game.png
+INPUT extractbb -B cropbox -O game.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/password.png
+INPUT extractbb -B cropbox -O password.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/oekaki.png
+INPUT extractbb -B cropbox -O oekaki.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/illustration.png
+INPUT extractbb -B cropbox -O illustration.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/storage.png
+INPUT extractbb -B cropbox -O storage.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/oekaki2.png
+INPUT extractbb -B cropbox -O oekaki2.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/storage2.png
+INPUT extractbb -B cropbox -O storage2.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/otukai1.png
+INPUT extractbb -B cropbox -O otukai1.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/material.png
+INPUT extractbb -B cropbox -O material.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/shop.png
+INPUT extractbb -B cropbox -O shop.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/have.png
+INPUT extractbb -B cropbox -O have.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/shop_material.png
+INPUT extractbb -B cropbox -O shop_material.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/go_home.png
+INPUT extractbb -B cropbox -O go_home.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/lack.png
+INPUT extractbb -B cropbox -O lack.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/completion.png
+INPUT extractbb -B cropbox -O completion.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/Albam1.png
+INPUT extractbb -B cropbox -O Albam1.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/deleter.png
+INPUT extractbb -B cropbox -O deleter.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/checker.png
+INPUT extractbb -B cropbox -O checker.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/Albam2.png
+INPUT extractbb -B cropbox -O Albam2.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/comment.png
+INPUT extractbb -B cropbox -O comment.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/Camera.png
+INPUT extractbb -B cropbox -O Camera.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/honjo_CR_Window.png
+INPUT extractbb -B cropbox -O honjo_CR_Window.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/honjo_CR_Contribution.png
+INPUT extractbb -B cropbox -O honjo_CR_Contribution.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/honjo_CR_CompleteContribution.png
+INPUT extractbb -B cropbox -O honjo_CR_CompleteContribution.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/honjo_CR_Answer.png
+INPUT extractbb -B cropbox -O honjo_CR_Answer.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/honjo_CR_CreateAnswer.png
+INPUT extractbb -B cropbox -O honjo_CR_CreateAnswer.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/honjo_CR_CompleteAnswer.png
+INPUT extractbb -B cropbox -O honjo_CR_CompleteAnswer.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/configuration.png
+INPUT extractbb -B cropbox -O configuration.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/inquiry.png
+INPUT extractbb -B cropbox -O inquiry.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/account.png
+INPUT extractbb -B cropbox -O account.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/change.png
+INPUT extractbb -B cropbox -O change.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/delete.png
+INPUT extractbb -B cropbox -O delete.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/check.png
+INPUT extractbb -B cropbox -O check.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/passwordchange.PNG
+INPUT extractbb -B cropbox -O passwordchange.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/passwordchange_check.PNG
+INPUT extractbb -B cropbox -O passwordchange_check.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/zentai.png
+INPUT extractbb -B cropbox -O zentai.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/seithou.png
+INPUT extractbb -B cropbox -O seithou.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/ugame.png
+INPUT extractbb -B cropbox -O ugame.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/sns.png
+INPUT extractbb -B cropbox -O sns.png
+INPUT c:/Users/Michio7/Desktop/ExternalDesign/External_design.aux

@@ -1,0 +1,3706 @@
+version: 0.12.2
+filePath: External_design.tex
+options:
+  $BIBINPUTS:
+    - $ROOTDIR
+    - $ROOTDIR/$OUTDIR
+    - ''
+  $TEXINPUTS:
+    - $ROOTDIR
+    - $ROOTDIR/$OUTDIR
+    - ''
+  bibtexEngine: bibtex
+  cleanPatterns:
+    - '**/*.aux'
+    - '**/*.aux.bak'
+    - '**/*.bbl'
+    - '**/*.bcf'
+    - '**/*.blg'
+    - '**/*.dvi'
+    - '**/*.fdb_latexmk'
+    - '**/*.fls'
+    - '**/*.idx'
+    - '**/*.idx.bak'
+    - '**/*.ilg'
+    - '**/*.ind'
+    - '**/*.lof'
+    - '**/*.log'
+    - '**/*.lol'
+    - '**/*.lot'
+    - '**/*.nav'
+    - '**/*.out'
+    - '**/*.pdf'
+    - '**/*.ps'
+    - '**/*.snm'
+    - '**/*.synctex.gz'
+    - '**/*.toc'
+    - '/**/_minted-${JOB}'
+    - '/${OUTDIR}/sage-plots-for-${JOB}.tex'
+    - /missfont.log
+    - /texput.log
+    - /texput.aux
+  dviToPdfEngine: xdvipdfmx
+  engine: platex
+  epstopdfBoundingBox: default
+  epstopdfOutputPath: $DIR_0/$NAME_0.pdf
+  indexAutomaticRanges: true
+  indexEngine: makeindex
+  indexOrdering: word
+  indexSorting: default
+  knitrConcordance: true
+  knitrOutputPath: $JOB.tex
+  lhs2texStyle: poly
+  literateAgdaEngine: agda
+  literateHaskellEngine: lhs2TeX
+  loadCache: true
+  loadUserOptions: true
+  outputFormat: pdf
+  phaseCycles: 20
+  pweaveCacheDirectory: pweave-cache-for-$JOB
+  pweaveFigureDirectory: pweave-figures-for-$JOB
+  pweaveKernel: python3
+  pweaveOutputFormat: tex
+  pweaveOutputPath: $JOB.tex
+  saveCache: true
+  severity: info
+  validateCache: true
+  synctex: false
+  copyTargetsToRoot: false
+  outputDirectory: ''
+  shellEscape: enabled
+  intermediatePostScript: false
+  $PATH: >-
+    %SystemDrive%\texlive\2017\bin\win32;%SystemDrive%\texlive\2016\bin\win32;%SystemDrive%\texlive\2015\bin\win32;%ProgramFiles%\MiKTeX
+    2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
+files:
+  dicy-instance.yaml-ParsedYAML:
+    timeStamp: 2018-11-25T03:28:50.252Z
+    jobNames: []
+    value:
+      severity: info
+    type: ParsedYAML
+  dicy.yaml-ParsedYAML:
+    jobNames: []
+    type: ParsedYAML
+  External_design.yaml-ParsedYAML:
+    jobNames: []
+    type: ParsedYAML
+  External_design.tex-ParsedLaTeXMagic:
+    timeStamp: 2018-11-24T06:42:21.010Z
+    jobNames: []
+    value: {}
+    type: ParsedLaTeXMagic
+  'C:\Users\Michio7\AppData\Roaming\dicy\config.yaml-ParsedYAML':
+    timeStamp: 2018-11-24T07:29:54.461Z
+    jobNames: []
+    value:
+      synctex: false
+      engine: platex
+      severity: info
+      copyTargetsToRoot: false
+      outputDirectory: ''
+      outputFormat: pdf
+      cleanPatterns:
+        - '**/*.aux'
+        - '**/*.aux.bak'
+        - '**/*.bbl'
+        - '**/*.bcf'
+        - '**/*.blg'
+        - '**/*.dvi'
+        - '**/*.fdb_latexmk'
+        - '**/*.fls'
+        - '**/*.idx'
+        - '**/*.idx.bak'
+        - '**/*.ilg'
+        - '**/*.ind'
+        - '**/*.lof'
+        - '**/*.log'
+        - '**/*.lol'
+        - '**/*.lot'
+        - '**/*.nav'
+        - '**/*.out'
+        - '**/*.pdf'
+        - '**/*.ps'
+        - '**/*.snm'
+        - '**/*.synctex.gz'
+        - '**/*.toc'
+        - '/**/_minted-${JOB}'
+        - '/${OUTDIR}/sage-plots-for-${JOB}.tex'
+        - /missfont.log
+        - /texput.log
+        - /texput.aux
+      shellEscape: enabled
+      intermediatePostScript: false
+      $PATH: >-
+        %SystemDrive%\texlive\2017\bin\win32;%SystemDrive%\texlive\2016\bin\win32;%SystemDrive%\texlive\2015\bin\win32;%ProgramFiles%\MiKTeX
+        2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
+    type: ParsedYAML
+  External_design.tex:
+    timeStamp: 2018-11-25T00:56:28.283Z
+    jobNames: []
+    hash: oQ38gLodQ+b0HSLmorTeURLbn8VbW0gktWWUS1mdJ54=
+    type: LaTeX
+    subType: jarticle
+  'C:\Users\Michio7\AppData\Roaming\dicy\config.yaml':
+    timeStamp: 2018-11-25T03:28:50.318Z
+    jobNames: []
+    type: YAML
+  x.y-Nil:
+    jobNames: []
+    type: Nil
+  pdf\External_design.fls-ParsedFileListing:
+    timeStamp: 2018-11-24T07:20:08.810Z
+    jobNames: []
+    value:
+      messages: []
+      inputs:
+        - Albam1.png
+        - Albam2.png
+        - Camera.png
+        - External_design.tex
+        - account.png
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\goth10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min6.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min8.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\tgoth10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\tmin10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm'
+        - >-
+          c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam5.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam7.tfm'
+        - >-
+          c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm5.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm7.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmbx10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmbx12.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmex10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi12.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi6.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi8.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr12.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr17.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr6.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr8.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy6.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy8.tfm'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amsfonts.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amssymb.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\umsa.fd'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\umsb.fd'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsbsy.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsgen.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsopn.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amstext.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\base\omscmr.fd'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\float\float.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics-cfg\color.cfg'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics-cfg\graphics.cfg'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics-def\dvipdfmx.def'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\color.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\dvipsnam.def'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphics.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphicx.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\keyval.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\trig.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\here\here.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\url\url.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\platex\base\jarticle.cls'
+        - 'c:\w32tex\share\texmf-dist\tex\platex\base\jsize10.clo'
+        - 'c:\w32tex\share\texmf-dist\web2c\eptex\platex.fmt'
+        - 'c:\w32tex\share\texmf-dist\web2c\texmf.cnf'
+        - change.png
+        - check.png
+        - checker.png
+        - comment.png
+        - completion.png
+        - configuration.png
+        - delete.png
+        - deleter.png
+        - extractbb -B cropbox -O Albam1.png
+        - extractbb -B cropbox -O Albam2.png
+        - extractbb -B cropbox -O Camera.png
+        - extractbb -B cropbox -O account.png
+        - extractbb -B cropbox -O change.png
+        - extractbb -B cropbox -O check.png
+        - extractbb -B cropbox -O checker.png
+        - extractbb -B cropbox -O comment.png
+        - extractbb -B cropbox -O completion.png
+        - extractbb -B cropbox -O configuration.png
+        - extractbb -B cropbox -O delete.png
+        - extractbb -B cropbox -O deleter.png
+        - extractbb -B cropbox -O game.png
+        - extractbb -B cropbox -O go_home.png
+        - extractbb -B cropbox -O have.png
+        - extractbb -B cropbox -O honjo_CR_Answer.png
+        - extractbb -B cropbox -O honjo_CR_CompleteAnswer.png
+        - extractbb -B cropbox -O honjo_CR_CompleteContribution.png
+        - extractbb -B cropbox -O honjo_CR_Contribution.png
+        - extractbb -B cropbox -O honjo_CR_CreateAnswer.png
+        - extractbb -B cropbox -O honjo_CR_Window.png
+        - extractbb -B cropbox -O honjo_FirstSetting.png
+        - extractbb -B cropbox -O honjo_main.png
+        - extractbb -B cropbox -O illustration.png
+        - extractbb -B cropbox -O inquiry.png
+        - extractbb -B cropbox -O lack.png
+        - extractbb -B cropbox -O material.png
+        - extractbb -B cropbox -O oekaki.png
+        - extractbb -B cropbox -O oekaki2.png
+        - extractbb -B cropbox -O otukai1.png
+        - extractbb -B cropbox -O password.png
+        - extractbb -B cropbox -O passwordchange.png
+        - extractbb -B cropbox -O passwordchange_check.png
+        - extractbb -B cropbox -O seithou.png
+        - extractbb -B cropbox -O shop.png
+        - extractbb -B cropbox -O shop_material.png
+        - extractbb -B cropbox -O sns.png
+        - extractbb -B cropbox -O storage.png
+        - extractbb -B cropbox -O storage2.png
+        - extractbb -B cropbox -O ugame.png
+        - extractbb -B cropbox -O zentai.png
+        - game.png
+        - go_home.png
+        - have.png
+        - honjo_CR_Answer.png
+        - honjo_CR_CompleteAnswer.png
+        - honjo_CR_CompleteContribution.png
+        - honjo_CR_Contribution.png
+        - honjo_CR_CreateAnswer.png
+        - honjo_CR_Window.png
+        - honjo_FirstSetting.png
+        - honjo_main.png
+        - illustration.png
+        - inquiry.png
+        - lack.png
+        - material.png
+        - oekaki.png
+        - oekaki2.png
+        - otukai1.png
+        - password.png
+        - passwordchange.PNG
+        - passwordchange_check.PNG
+        - pdf\External_design.aux
+        - pdf\External_design.toc
+        - seithou.png
+        - shop.png
+        - shop_material.png
+        - sns.png
+        - storage.png
+        - storage2.png
+        - ugame.png
+        - zentai.png
+      outputs:
+        - pdf\External_design.aux
+        - pdf\External_design.dvi
+        - pdf\External_design.log
+        - pdf\External_design.toc
+      calls: []
+    type: ParsedFileListing
+  pdf\External_design.log-ParsedLaTeXLog:
+    timeStamp: 2018-11-24T07:20:35.030Z
+    jobNames: []
+    value:
+      messages:
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Overwriting symbol font `mincho' in version `bold' JY1/mc/m/n -->
+            JY1/gt/m/n.
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\platex\base\jarticle.cls'
+            range:
+              start: 614
+              end: 614
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 26
+              end: 27
+        - name: e-pTeX
+          severity: info
+          text: 'graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphicx.sty'
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 33
+              end: 33
+        - name: e-pTeX
+          severity: info
+          text: keyval 2014/10/28 v1.15 key=value parser (DPC)
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\keyval.sty'
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 35
+              end: 35
+        - name: e-pTeX
+          severity: info
+          text: 'graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphics.sty'
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 38
+              end: 38
+        - name: e-pTeX
+          severity: info
+          text: trig 2016/01/03 v1.10 sin cos tan (DPC)
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\trig.sty'
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 40
+              end: 40
+        - severity: info
+          name: e-pTeX
+          category: Package graphics
+          text: 'Driver file: dvipdfmx.def'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphics.sty'
+            range:
+              start: 99
+              end: 99
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 44
+              end: 44
+        - name: e-pTeX
+          severity: info
+          text: 'url 2013/09/16 ver 3.4 Verb mode for urls, etc.'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\url\url.sty'
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 52
+              end: 52
+        - name: e-pTeX
+          severity: info
+          text: float 2001/11/08 v1.3d Float enhancements (AL)
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\float\float.sty'
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 55
+              end: 55
+        - name: e-pTeX
+          severity: info
+          text: amsmath 2017/09/02 v2.17a AMS math features
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 62
+              end: 62
+        - name: e-pTeX
+          severity: info
+          text: amstext 2000/06/29 v2.01 AMS text
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amstext.sty'
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 66
+              end: 66
+        - name: e-pTeX
+          severity: info
+          text: amsbsy 1999/11/29 v1.2d Bold Symbols
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsbsy.sty'
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 72
+              end: 72
+        - name: e-pTeX
+          severity: info
+          text: amsopn 2016/03/08 v2.02 operator names
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsopn.sty'
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 75
+              end: 75
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \frac
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 213
+              end: 213
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 78
+              end: 78
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \overline
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 375
+              end: 375
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 81
+              end: 81
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \ldots
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 472
+              end: 472
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 84
+              end: 84
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \dots
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 475
+              end: 475
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 85
+              end: 85
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \cdots
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 596
+              end: 596
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 86
+              end: 86
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Redeclaring font encoding OML
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 712
+              end: 712
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 90
+              end: 90
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Redeclaring font encoding OMS
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 713
+              end: 713
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 91
+              end: 91
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: 'Redefining \['
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 2817
+              end: 2817
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 112
+              end: 112
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: 'Redefining \]'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 2818
+              end: 2818
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 113
+              end: 113
+        - name: e-pTeX
+          severity: info
+          text: amssymb 2013/01/14 v3.01 AMS font symbols
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amssymb.sty'
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 115
+              end: 115
+        - name: e-pTeX
+          severity: info
+          text: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amsfonts.sty'
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 117
+              end: 117
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Overwriting math alphabet `\mathfrak' in version `bold' U/euf/m/n
+            --> U/euf/b/n.
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amsfonts.sty'
+            range:
+              start: 106
+              end: 106
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 120
+              end: 121
+        - name: e-pTeX
+          severity: info
+          text: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\color.sty'
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 123
+              end: 123
+        - severity: info
+          name: e-pTeX
+          category: Package color
+          text: 'Driver file: dvipdfmx.def'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\color.sty'
+            range:
+              start: 147
+              end: 147
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 127
+              end: 127
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for OML/cmm/m/it ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 133
+              end: 134
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for T1/cmr/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 135
+              end: 136
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for OT1/cmr/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 137
+              end: 138
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for OMS/cmsy/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 139
+              end: 140
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for OMX/cmex/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 141
+              end: 142
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for U/cmr/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 143
+              end: 144
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for JY1/mc/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 145
+              end: 146
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for JT1/mc/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 147
+              end: 148
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JT1/mc/bx/n' in size <17.28> not available Font shape
+            `JT1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 34
+              end: 34
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 149
+              end: 150
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JY1/mc/bx/n' in size <17.28> not available Font shape
+            `JY1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 34
+              end: 34
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 151
+              end: 152
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Try loading font information for U+msa
+          source:
+            file: External_design.tex
+            range:
+              start: 34
+              end: 34
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 153
+              end: 153
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Try loading font information for U+msb
+          source:
+            file: External_design.tex
+            range:
+              start: 34
+              end: 34
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 157
+              end: 157
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JT1/mc/bx/n' in size <14.4> not available Font shape
+            `JT1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 35
+              end: 35
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 161
+              end: 162
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JY1/mc/bx/n' in size <14.4> not available Font shape
+            `JY1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 35
+              end: 35
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 163
+              end: 164
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JT1/mc/bx/n' in size <10> not available Font shape
+            `JT1/gt/m/n' tried instead.
+          source:
+            file: pdf\External_design.toc
+            range:
+              start: 1
+              end: 1
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 166
+              end: 167
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JY1/mc/bx/n' in size <10> not available Font shape
+            `JY1/gt/m/n' tried instead.
+          source:
+            file: pdf\External_design.toc
+            range:
+              start: 1
+              end: 1
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 168
+              end: 169
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JT1/mc/bx/n' in size <12> not available Font shape
+            `JT1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 48
+              end: 48
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 177
+              end: 178
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JY1/mc/bx/n' in size <12> not available Font shape
+            `JY1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 48
+              end: 48
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 179
+              end: 180
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Try loading font information for OMS+cmr
+          source:
+            file: External_design.tex
+            range:
+              start: 144
+              end: 144
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 184
+              end: 184
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `OMS/cmr/m/n' in size <10> not available Font shape
+            `OMS/cmsy/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 144
+              end: 144
+          log:
+            file: pdf\External_design.log
+            range:
+              start: 189
+              end: 190
+      inputs: []
+      outputs:
+        - pdf\External_design.dvi
+      calls: []
+    type: ParsedLaTeXLog
+  pdf\External_design.aux-ParsedLaTeXAuxilary:
+    timeStamp: 2018-11-24T06:43:49.342Z
+    jobNames: []
+    value:
+      commands:
+        - relax
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+    type: ParsedLaTeXAuxilary
+  Albam1.png:
+    timeStamp: 2018-11-24T01:07:13.664Z
+    jobNames: []
+    hash: gCHYVv6PF/dpWUCXV4UhSNxPvq3FqcjH5YBViEzbvMM=
+  Albam2.png:
+    timeStamp: 2018-11-24T00:28:57.346Z
+    jobNames: []
+    hash: GRFaac97IPqzYVV0qPndxjEoznt7RI9hk39cWGiHhlo=
+  Camera.png:
+    timeStamp: 2018-11-24T00:28:57.350Z
+    jobNames: []
+    hash: AngLFZnUd5DVNliUGMdBiZJ/1+D1F6W7mJNAxhroHGg=
+  account.png:
+    timeStamp: 2018-11-24T00:28:57.430Z
+    jobNames: []
+    hash: SClX9UvB79Qtnck9Y8H2L7YBFSzoolGWurW03uXS4ik=
+  'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\goth10.tfm':
+    timeStamp: 2018-02-28T11:40:42.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min10.tfm':
+    timeStamp: 2018-02-28T11:40:42.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min6.tfm':
+    timeStamp: 2018-02-28T11:40:42.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min8.tfm':
+    timeStamp: 2018-02-28T11:40:42.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\tgoth10.tfm':
+    timeStamp: 2018-02-28T11:40:42.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\tmin10.tfm':
+    timeStamp: 2018-02-28T11:40:42.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm':
+    timeStamp: 2009-02-06T20:24:08.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm':
+    timeStamp: 2009-02-06T20:24:08.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam10.tfm':
+    timeStamp: 2009-02-06T20:24:14.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam5.tfm':
+    timeStamp: 2009-02-06T20:24:14.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam7.tfm':
+    timeStamp: 2009-02-06T20:24:14.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm10.tfm':
+    timeStamp: 2009-02-06T20:24:14.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm5.tfm':
+    timeStamp: 2009-02-06T20:24:14.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm7.tfm':
+    timeStamp: 2009-02-06T20:24:14.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmbx10.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmbx12.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmex10.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi12.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi6.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi8.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr12.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr17.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr6.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr8.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy10.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy6.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy8.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amsfonts.sty':
+    timeStamp: 2013-01-14T21:09:32.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amssymb.sty':
+    timeStamp: 2013-01-14T21:09:32.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\umsa.fd':
+    timeStamp: 2013-01-14T21:09:32.000Z
+    jobNames: []
+    type: FontDescription
+  'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\umsb.fd':
+    timeStamp: 2013-01-14T21:09:32.000Z
+    jobNames: []
+    type: FontDescription
+  'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsbsy.sty':
+    timeStamp: 2018-04-06T06:42:46.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsgen.sty':
+    timeStamp: 2018-04-06T06:42:46.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty':
+    timeStamp: 2018-04-06T06:42:46.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsopn.sty':
+    timeStamp: 2018-04-06T06:42:46.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amstext.sty':
+    timeStamp: 2018-04-06T06:42:46.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\base\omscmr.fd':
+    timeStamp: 2018-05-27T14:33:28.000Z
+    jobNames: []
+    type: FontDescription
+  'c:\w32tex\share\texmf-dist\tex\latex\float\float.sty':
+    timeStamp: 2011-09-26T12:19:47.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics-cfg\color.cfg':
+    timeStamp: 2016-06-14T01:51:32.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics-cfg\graphics.cfg':
+    timeStamp: 2016-06-14T01:51:32.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics-def\dvipdfmx.def':
+    timeStamp: 2017-10-24T09:53:32.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics\color.sty':
+    timeStamp: 2018-04-06T06:37:40.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics\dvipsnam.def':
+    timeStamp: 2018-04-06T06:37:40.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphics.sty':
+    timeStamp: 2018-04-06T06:37:40.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphicx.sty':
+    timeStamp: 2018-04-06T06:37:40.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics\keyval.sty':
+    timeStamp: 2018-04-06T06:37:40.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics\trig.sty':
+    timeStamp: 2018-04-06T06:37:40.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\here\here.sty':
+    timeStamp: 2009-11-22T01:57:22.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\url\url.sty':
+    timeStamp: 2013-12-31T03:47:32.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\platex\base\jarticle.cls':
+    timeStamp: 2018-09-22T10:17:31.000Z
+    jobNames: []
+    type: LaTeXClass
+  'c:\w32tex\share\texmf-dist\tex\platex\base\jsize10.clo':
+    timeStamp: 2018-09-22T10:17:31.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\web2c\eptex\platex.fmt':
+    timeStamp: 2018-11-14T05:04:10.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\web2c\texmf.cnf':
+    timeStamp: 2018-07-22T20:50:38.000Z
+    jobNames: []
+  change.png:
+    timeStamp: 2018-11-24T00:28:57.432Z
+    jobNames: []
+    hash: 4mIk6n7w2J2j6/HsBFwLt/ocbH0AeUSzzE/YrQ1fEho=
+  check.png:
+    timeStamp: 2018-11-24T00:28:57.448Z
+    jobNames: []
+    hash: EAi5Iz1dLJjQ397Ots0J74N74cZfDmGYCepbS4bsk3o=
+  checker.png:
+    timeStamp: 2018-11-24T00:28:57.451Z
+    jobNames: []
+    hash: +4dQdPzH/T+HbIhSqLsf0tDQcLLIltlVnYhkVx+ljHM=
+  comment.png:
+    timeStamp: 2018-11-24T01:46:44.641Z
+    jobNames: []
+    hash: fFG0uirtbd6Mwyv8N+CrWCk1hP9Mm5Uf+lsJmojUuq4=
+  completion.png:
+    timeStamp: 2018-11-24T00:28:57.464Z
+    jobNames: []
+    hash: KZlc6T52f0+qkIABZuqK9dy5droiZv8XOszXRaMRZBQ=
+  configuration.png:
+    timeStamp: 2018-11-24T00:28:57.470Z
+    jobNames: []
+    hash: SUQeDqQCTKLO021biEV+nwohYoeKMdlt/u/W6i3EoUg=
+  delete.png:
+    timeStamp: 2018-11-24T00:28:57.475Z
+    jobNames: []
+    hash: 4/xL1vIDrmeh3pHl9jOASpOPpQGwdGOBDEbCA6qydu8=
+  deleter.png:
+    timeStamp: 2018-11-24T00:28:57.477Z
+    jobNames: []
+    hash: hHymziNK/rqsds9cySmRNI83drBbHyYYHc9nX0sG40Q=
+  game.png:
+    timeStamp: 2018-11-24T00:28:57.527Z
+    jobNames: []
+    hash: 0EJxikQ7aB4L/exx5zTIGQAGDzn7eSQ5SX82yqlQj0w=
+  go_home.png:
+    timeStamp: 2018-11-24T00:28:57.528Z
+    jobNames: []
+    hash: IgZj067aWtd6BHcakTrc+JyTtx5MHUXRfBJubTZlUgA=
+  have.png:
+    timeStamp: 2018-11-24T00:28:57.548Z
+    jobNames: []
+    hash: Usa4kUDhL2jWoaE3jKObNQpfunBMTxo11M2uAs4uoU8=
+  honjo_CR_Answer.png:
+    timeStamp: 2018-11-24T00:28:57.552Z
+    jobNames: []
+    hash: FYXGOCCombLPVNMVD4DF0KK3tFq6wbtcr+//3VdttZw=
+  honjo_CR_CompleteAnswer.png:
+    timeStamp: 2018-11-24T00:28:57.555Z
+    jobNames: []
+    hash: iqVpfl/5BGyNDH5ioeFapat/PRV1PM+neibzjlrWclw=
+  honjo_CR_CompleteContribution.png:
+    timeStamp: 2018-11-24T00:28:57.558Z
+    jobNames: []
+    hash: pP8cFUfDCOco9NySeuziXpbD4TzLqCS5m1R6JvE8PNk=
+  honjo_CR_Contribution.png:
+    timeStamp: 2018-11-24T00:28:57.565Z
+    jobNames: []
+    hash: GVCRu1OoalBCFxgjxf6Xw2mW4fplCfjFBzkdMs+O+A0=
+  honjo_CR_CreateAnswer.png:
+    timeStamp: 2018-11-24T00:28:57.574Z
+    jobNames: []
+    hash: wEJesQx/N9eiZqllTWdz7gPPuXXODpNSzxFzwYyt2f0=
+  honjo_CR_Window.png:
+    timeStamp: 2018-11-24T00:28:57.576Z
+    jobNames: []
+    hash: 1dUSIvb8m0RcEV5Kpe5dnMSW2yQzDE+QQBpsYhPmNy4=
+  honjo_FirstSetting.png:
+    timeStamp: 2018-11-24T00:28:57.603Z
+    jobNames: []
+    hash: uY9VzVr92Da9/gSCKoNsmjCuf2NUMd1TSA2gJOonh4E=
+  honjo_main.png:
+    timeStamp: 2018-11-24T00:28:57.608Z
+    jobNames: []
+    hash: ITWbM/4/0cLqvEvh4MUbN3KtgbJ2g4cx5kugaG4jRxI=
+  illustration.png:
+    timeStamp: 2018-11-24T00:28:57.611Z
+    jobNames: []
+    hash: ChzLb+I8B+IqT7CFIWaqnSvYSA0whA68d6+ZZ+D7G6Q=
+  inquiry.png:
+    timeStamp: 2018-11-24T00:28:57.614Z
+    jobNames: []
+    hash: czb9tcaD4TcVMYxWRT+FnyUQXpLasD3fXWGeGKJpXdw=
+  lack.png:
+    timeStamp: 2018-11-25T03:27:13.133Z
+    jobNames: []
+    hash: 1xU448px5jgi185Txaf3RRufN5Mik53u4gBYkMbtHhQ=
+  material.png:
+    timeStamp: 2018-11-24T00:28:57.644Z
+    jobNames: []
+    hash: v0FDB9ojBcOBOyh3mGuNiBobCSIrPWYgocTo15t2Vhk=
+  oekaki.png:
+    timeStamp: 2018-11-24T00:28:57.650Z
+    jobNames: []
+    hash: +tKa3mLwYvedYVPIAPm5r6ASHpm2uicvcnulygnsUKE=
+  oekaki2.png:
+    timeStamp: 2018-11-24T00:28:57.652Z
+    jobNames: []
+    hash: 8TatB2gG3HfDSHRNSQi+DosbS6+MkUlI4HOpqnp0wa8=
+  otukai1.png:
+    timeStamp: 2018-11-24T00:28:57.675Z
+    jobNames: []
+    hash: RE7YUqfukgQmsi9QkOGsJnjU0a8F8+d57llfZA2LMlY=
+  password.png:
+    timeStamp: 2018-11-24T00:28:57.678Z
+    jobNames: []
+    hash: W0zBKPjqjq57VHg13dAZFjKr9Ac3lNoFsJzqWao5SgA=
+  passwordchange.PNG:
+    timeStamp: 2018-11-24T00:28:57.682Z
+    jobNames: []
+    hash: z0wGCltLIfT2XK058kknrLgWXMvNUF02M5dMdJBiJ0k=
+  passwordchange_check.PNG:
+    timeStamp: 2018-11-24T00:28:57.707Z
+    jobNames: []
+    hash: IYdpBI5h4j/g3a0fletR1L8bkziKrch+wVdJ2OLJQwQ=
+  seithou.png:
+    timeStamp: 2018-11-24T00:28:57.754Z
+    jobNames: []
+    hash: GcA4SiPH6Yuw+L+BPlcv7uD+sTeL9D1AlBE1ibTeGgk=
+  shop.png:
+    timeStamp: 2018-11-24T00:28:57.770Z
+    jobNames: []
+    hash: HTGmDfPnNKiU+3qatIGlGwSJKWEXkASG7mnxChDi6ec=
+  shop_material.png:
+    timeStamp: 2018-11-24T00:28:57.808Z
+    jobNames: []
+    hash: lrD+LVzJ+EVtae0hgv6InWdwZd/2X1CZ9DJWvMdZYHQ=
+  sns.png:
+    timeStamp: 2018-11-24T00:28:57.829Z
+    jobNames: []
+    hash: ukUceCmxK0k2+TuMyGFziLuu6kdiqZCANwt3MDAf/jU=
+  storage.png:
+    timeStamp: 2018-11-24T00:28:57.831Z
+    jobNames: []
+    hash: Vqm5U3URAe/iNVgAJ+xXz3zg4oDD4+02lNs4OlascGM=
+  storage2.png:
+    timeStamp: 2018-11-24T00:28:57.833Z
+    jobNames: []
+    hash: W7IfZ/IHjE6HKQxrKMgMRFKMdY6OQjU/qwmuPVZMzWU=
+  ugame.png:
+    timeStamp: 2018-11-24T00:28:57.835Z
+    jobNames: []
+    hash: f2yUVQTQQxgdWWusfeYjxhUNBuBoR3T/4dYPVKV5DMs=
+  zentai.png:
+    timeStamp: 2018-11-24T00:28:57.851Z
+    jobNames: []
+    hash: 28wc74irenBFsGKNgIoIkV4F6UJNUpW6eU42R48i8cY=
+  ExternaDesign\External_design.fls-ParsedFileListing:
+    timeStamp: 2018-11-24T07:28:45.260Z
+    jobNames: []
+    value:
+      messages: []
+      inputs:
+        - Albam1.png
+        - Albam2.png
+        - Camera.png
+        - ExternaDesign\External_design.aux
+        - ExternaDesign\External_design.toc
+        - External_design.tex
+        - account.png
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\goth10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min6.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min8.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\tgoth10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\tmin10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm'
+        - >-
+          c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam5.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam7.tfm'
+        - >-
+          c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm5.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm7.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmbx10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmbx12.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmex10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi12.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi6.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi8.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr12.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr17.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr6.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr8.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy6.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy8.tfm'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amsfonts.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amssymb.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\umsa.fd'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\umsb.fd'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsbsy.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsgen.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsopn.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amstext.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\base\omscmr.fd'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\float\float.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics-cfg\color.cfg'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics-cfg\graphics.cfg'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics-def\dvipdfmx.def'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\color.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\dvipsnam.def'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphics.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphicx.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\keyval.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\trig.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\here\here.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\url\url.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\platex\base\jarticle.cls'
+        - 'c:\w32tex\share\texmf-dist\tex\platex\base\jsize10.clo'
+        - 'c:\w32tex\share\texmf-dist\web2c\eptex\platex.fmt'
+        - 'c:\w32tex\share\texmf-dist\web2c\texmf.cnf'
+        - change.png
+        - check.png
+        - checker.png
+        - comment.png
+        - completion.png
+        - configuration.png
+        - delete.png
+        - deleter.png
+        - extractbb -B cropbox -O Albam1.png
+        - extractbb -B cropbox -O Albam2.png
+        - extractbb -B cropbox -O Camera.png
+        - extractbb -B cropbox -O account.png
+        - extractbb -B cropbox -O change.png
+        - extractbb -B cropbox -O check.png
+        - extractbb -B cropbox -O checker.png
+        - extractbb -B cropbox -O comment.png
+        - extractbb -B cropbox -O completion.png
+        - extractbb -B cropbox -O configuration.png
+        - extractbb -B cropbox -O delete.png
+        - extractbb -B cropbox -O deleter.png
+        - extractbb -B cropbox -O game.png
+        - extractbb -B cropbox -O go_home.png
+        - extractbb -B cropbox -O have.png
+        - extractbb -B cropbox -O honjo_CR_Answer.png
+        - extractbb -B cropbox -O honjo_CR_CompleteAnswer.png
+        - extractbb -B cropbox -O honjo_CR_CompleteContribution.png
+        - extractbb -B cropbox -O honjo_CR_Contribution.png
+        - extractbb -B cropbox -O honjo_CR_CreateAnswer.png
+        - extractbb -B cropbox -O honjo_CR_Window.png
+        - extractbb -B cropbox -O honjo_FirstSetting.png
+        - extractbb -B cropbox -O honjo_main.png
+        - extractbb -B cropbox -O illustration.png
+        - extractbb -B cropbox -O inquiry.png
+        - extractbb -B cropbox -O lack.png
+        - extractbb -B cropbox -O material.png
+        - extractbb -B cropbox -O oekaki.png
+        - extractbb -B cropbox -O oekaki2.png
+        - extractbb -B cropbox -O otukai1.png
+        - extractbb -B cropbox -O password.png
+        - extractbb -B cropbox -O passwordchange.png
+        - extractbb -B cropbox -O passwordchange_check.png
+        - extractbb -B cropbox -O seithou.png
+        - extractbb -B cropbox -O shop.png
+        - extractbb -B cropbox -O shop_material.png
+        - extractbb -B cropbox -O sns.png
+        - extractbb -B cropbox -O storage.png
+        - extractbb -B cropbox -O storage2.png
+        - extractbb -B cropbox -O ugame.png
+        - extractbb -B cropbox -O zentai.png
+        - game.png
+        - go_home.png
+        - have.png
+        - honjo_CR_Answer.png
+        - honjo_CR_CompleteAnswer.png
+        - honjo_CR_CompleteContribution.png
+        - honjo_CR_Contribution.png
+        - honjo_CR_CreateAnswer.png
+        - honjo_CR_Window.png
+        - honjo_FirstSetting.png
+        - honjo_main.png
+        - illustration.png
+        - inquiry.png
+        - lack.png
+        - material.png
+        - oekaki.png
+        - oekaki2.png
+        - otukai1.png
+        - password.png
+        - passwordchange.PNG
+        - passwordchange_check.PNG
+        - seithou.png
+        - shop.png
+        - shop_material.png
+        - sns.png
+        - storage.png
+        - storage2.png
+        - ugame.png
+        - zentai.png
+      outputs:
+        - ExternaDesign\External_design.aux
+        - ExternaDesign\External_design.dvi
+        - ExternaDesign\External_design.log
+        - ExternaDesign\External_design.toc
+      calls: []
+    type: ParsedFileListing
+  ExternaDesign\External_design.log-ParsedLaTeXLog:
+    timeStamp: 2018-11-24T07:29:10.860Z
+    jobNames: []
+    value:
+      messages:
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Overwriting symbol font `mincho' in version `bold' JY1/mc/m/n -->
+            JY1/gt/m/n.
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\platex\base\jarticle.cls'
+            range:
+              start: 614
+              end: 614
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 26
+              end: 27
+        - name: e-pTeX
+          severity: info
+          text: 'graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphicx.sty'
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 33
+              end: 33
+        - name: e-pTeX
+          severity: info
+          text: keyval 2014/10/28 v1.15 key=value parser (DPC)
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\keyval.sty'
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 35
+              end: 35
+        - name: e-pTeX
+          severity: info
+          text: 'graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphics.sty'
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 38
+              end: 38
+        - name: e-pTeX
+          severity: info
+          text: trig 2016/01/03 v1.10 sin cos tan (DPC)
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\trig.sty'
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 40
+              end: 40
+        - severity: info
+          name: e-pTeX
+          category: Package graphics
+          text: 'Driver file: dvipdfmx.def'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphics.sty'
+            range:
+              start: 99
+              end: 99
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 44
+              end: 44
+        - name: e-pTeX
+          severity: info
+          text: 'url 2013/09/16 ver 3.4 Verb mode for urls, etc.'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\url\url.sty'
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 52
+              end: 52
+        - name: e-pTeX
+          severity: info
+          text: float 2001/11/08 v1.3d Float enhancements (AL)
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\float\float.sty'
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 55
+              end: 55
+        - name: e-pTeX
+          severity: info
+          text: amsmath 2017/09/02 v2.17a AMS math features
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 62
+              end: 62
+        - name: e-pTeX
+          severity: info
+          text: amstext 2000/06/29 v2.01 AMS text
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amstext.sty'
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 66
+              end: 66
+        - name: e-pTeX
+          severity: info
+          text: amsbsy 1999/11/29 v1.2d Bold Symbols
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsbsy.sty'
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 72
+              end: 72
+        - name: e-pTeX
+          severity: info
+          text: amsopn 2016/03/08 v2.02 operator names
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsopn.sty'
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 75
+              end: 75
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \frac
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 213
+              end: 213
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 78
+              end: 78
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \overline
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 375
+              end: 375
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 81
+              end: 81
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \ldots
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 472
+              end: 472
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 84
+              end: 84
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \dots
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 475
+              end: 475
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 85
+              end: 85
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \cdots
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 596
+              end: 596
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 86
+              end: 86
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Redeclaring font encoding OML
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 712
+              end: 712
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 90
+              end: 90
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Redeclaring font encoding OMS
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 713
+              end: 713
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 91
+              end: 91
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: 'Redefining \['
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 2817
+              end: 2817
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 112
+              end: 112
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: 'Redefining \]'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 2818
+              end: 2818
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 113
+              end: 113
+        - name: e-pTeX
+          severity: info
+          text: amssymb 2013/01/14 v3.01 AMS font symbols
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amssymb.sty'
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 115
+              end: 115
+        - name: e-pTeX
+          severity: info
+          text: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amsfonts.sty'
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 117
+              end: 117
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Overwriting math alphabet `\mathfrak' in version `bold' U/euf/m/n
+            --> U/euf/b/n.
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amsfonts.sty'
+            range:
+              start: 106
+              end: 106
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 120
+              end: 121
+        - name: e-pTeX
+          severity: info
+          text: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\color.sty'
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 123
+              end: 123
+        - severity: info
+          name: e-pTeX
+          category: Package color
+          text: 'Driver file: dvipdfmx.def'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\color.sty'
+            range:
+              start: 147
+              end: 147
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 127
+              end: 127
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for OML/cmm/m/it ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 133
+              end: 134
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for T1/cmr/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 135
+              end: 136
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for OT1/cmr/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 137
+              end: 138
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for OMS/cmsy/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 139
+              end: 140
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for OMX/cmex/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 141
+              end: 142
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for U/cmr/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 143
+              end: 144
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for JY1/mc/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 145
+              end: 146
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for JT1/mc/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 147
+              end: 148
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JT1/mc/bx/n' in size <17.28> not available Font shape
+            `JT1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 34
+              end: 34
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 149
+              end: 150
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JY1/mc/bx/n' in size <17.28> not available Font shape
+            `JY1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 34
+              end: 34
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 151
+              end: 152
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Try loading font information for U+msa
+          source:
+            file: External_design.tex
+            range:
+              start: 34
+              end: 34
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 153
+              end: 153
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Try loading font information for U+msb
+          source:
+            file: External_design.tex
+            range:
+              start: 34
+              end: 34
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 157
+              end: 157
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JT1/mc/bx/n' in size <14.4> not available Font shape
+            `JT1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 35
+              end: 35
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 161
+              end: 162
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JY1/mc/bx/n' in size <14.4> not available Font shape
+            `JY1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 35
+              end: 35
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 163
+              end: 164
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JT1/mc/bx/n' in size <10> not available Font shape
+            `JT1/gt/m/n' tried instead.
+          source:
+            file: ExternaDesign\External_design.toc
+            range:
+              start: 1
+              end: 1
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 166
+              end: 167
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JY1/mc/bx/n' in size <10> not available Font shape
+            `JY1/gt/m/n' tried instead.
+          source:
+            file: ExternaDesign\External_design.toc
+            range:
+              start: 1
+              end: 1
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 168
+              end: 169
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JT1/mc/bx/n' in size <12> not available Font shape
+            `JT1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 48
+              end: 48
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 177
+              end: 178
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JY1/mc/bx/n' in size <12> not available Font shape
+            `JY1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 48
+              end: 48
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 179
+              end: 180
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Try loading font information for OMS+cmr
+          source:
+            file: External_design.tex
+            range:
+              start: 144
+              end: 144
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 184
+              end: 184
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `OMS/cmr/m/n' in size <10> not available Font shape
+            `OMS/cmsy/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 144
+              end: 144
+          log:
+            file: ExternaDesign\External_design.log
+            range:
+              start: 189
+              end: 190
+      inputs: []
+      outputs:
+        - ExternaDesign\External_design.dvi
+      calls: []
+    type: ParsedLaTeXLog
+  ExternaDesign\External_design.aux-ParsedLaTeXAuxilary:
+    timeStamp: 2018-11-24T07:28:19.352Z
+    jobNames: []
+    value:
+      commands:
+        - relax
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+    type: ParsedLaTeXAuxilary
+  External_design.fls-ParsedFileListing:
+    timeStamp: 2018-11-24T07:30:35.223Z
+    jobNames: []
+    value:
+      messages: []
+      inputs:
+        - Albam1.png
+        - Albam2.png
+        - Camera.png
+        - External_design.aux
+        - External_design.tex
+        - External_design.toc
+        - account.png
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\goth10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min6.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min8.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\tgoth10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\tmin10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm'
+        - >-
+          c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam5.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam7.tfm'
+        - >-
+          c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm5.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm7.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmbx10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmbx12.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmex10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi12.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi6.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi8.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr12.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr17.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr6.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr8.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy6.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy8.tfm'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amsfonts.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amssymb.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\umsa.fd'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\umsb.fd'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsbsy.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsgen.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsopn.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amstext.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\base\omscmr.fd'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\float\float.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics-cfg\color.cfg'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics-cfg\graphics.cfg'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics-def\dvipdfmx.def'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\color.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\dvipsnam.def'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphics.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphicx.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\keyval.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\trig.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\here\here.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\url\url.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\platex\base\jarticle.cls'
+        - 'c:\w32tex\share\texmf-dist\tex\platex\base\jsize10.clo'
+        - 'c:\w32tex\share\texmf-dist\web2c\eptex\platex.fmt'
+        - 'c:\w32tex\share\texmf-dist\web2c\texmf.cnf'
+        - change.png
+        - check.png
+        - checker.png
+        - comment.png
+        - completion.png
+        - configuration.png
+        - delete.png
+        - deleter.png
+        - extractbb -B cropbox -O Albam1.png
+        - extractbb -B cropbox -O Albam2.png
+        - extractbb -B cropbox -O Camera.png
+        - extractbb -B cropbox -O account.png
+        - extractbb -B cropbox -O change.png
+        - extractbb -B cropbox -O check.png
+        - extractbb -B cropbox -O checker.png
+        - extractbb -B cropbox -O comment.png
+        - extractbb -B cropbox -O completion.png
+        - extractbb -B cropbox -O configuration.png
+        - extractbb -B cropbox -O delete.png
+        - extractbb -B cropbox -O deleter.png
+        - extractbb -B cropbox -O game.png
+        - extractbb -B cropbox -O go_home.png
+        - extractbb -B cropbox -O have.png
+        - extractbb -B cropbox -O honjo_CR_Answer.png
+        - extractbb -B cropbox -O honjo_CR_CompleteAnswer.png
+        - extractbb -B cropbox -O honjo_CR_CompleteContribution.png
+        - extractbb -B cropbox -O honjo_CR_Contribution.png
+        - extractbb -B cropbox -O honjo_CR_CreateAnswer.png
+        - extractbb -B cropbox -O honjo_CR_Window.png
+        - extractbb -B cropbox -O honjo_FirstSetting.png
+        - extractbb -B cropbox -O honjo_main.png
+        - extractbb -B cropbox -O illustration.png
+        - extractbb -B cropbox -O inquiry.png
+        - extractbb -B cropbox -O lack.png
+        - extractbb -B cropbox -O material.png
+        - extractbb -B cropbox -O oekaki.png
+        - extractbb -B cropbox -O oekaki2.png
+        - extractbb -B cropbox -O otukai1.png
+        - extractbb -B cropbox -O password.png
+        - extractbb -B cropbox -O passwordchange.png
+        - extractbb -B cropbox -O passwordchange_check.png
+        - extractbb -B cropbox -O seithou.png
+        - extractbb -B cropbox -O shop.png
+        - extractbb -B cropbox -O shop_material.png
+        - extractbb -B cropbox -O sns.png
+        - extractbb -B cropbox -O storage.png
+        - extractbb -B cropbox -O storage2.png
+        - extractbb -B cropbox -O ugame.png
+        - extractbb -B cropbox -O zentai.png
+        - game.png
+        - go_home.png
+        - have.png
+        - honjo_CR_Answer.png
+        - honjo_CR_CompleteAnswer.png
+        - honjo_CR_CompleteContribution.png
+        - honjo_CR_Contribution.png
+        - honjo_CR_CreateAnswer.png
+        - honjo_CR_Window.png
+        - honjo_FirstSetting.png
+        - honjo_main.png
+        - illustration.png
+        - inquiry.png
+        - lack.png
+        - material.png
+        - oekaki.png
+        - oekaki2.png
+        - otukai1.png
+        - password.png
+        - passwordchange.PNG
+        - passwordchange_check.PNG
+        - seithou.png
+        - shop.png
+        - shop_material.png
+        - sns.png
+        - storage.png
+        - storage2.png
+        - ugame.png
+        - zentai.png
+      outputs:
+        - External_design.aux
+        - External_design.dvi
+        - External_design.log
+        - External_design.toc
+      calls: []
+    type: ParsedFileListing
+  External_design.log-ParsedLaTeXLog:
+    timeStamp: 2018-11-24T07:31:00.847Z
+    jobNames: []
+    value:
+      messages:
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Overwriting symbol font `mincho' in version `bold' JY1/mc/m/n -->
+            JY1/gt/m/n.
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\platex\base\jarticle.cls'
+            range:
+              start: 614
+              end: 614
+          log:
+            file: External_design.log
+            range:
+              start: 26
+              end: 27
+        - name: e-pTeX
+          severity: info
+          text: 'graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphicx.sty'
+          log:
+            file: External_design.log
+            range:
+              start: 33
+              end: 33
+        - name: e-pTeX
+          severity: info
+          text: keyval 2014/10/28 v1.15 key=value parser (DPC)
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\keyval.sty'
+          log:
+            file: External_design.log
+            range:
+              start: 35
+              end: 35
+        - name: e-pTeX
+          severity: info
+          text: 'graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphics.sty'
+          log:
+            file: External_design.log
+            range:
+              start: 38
+              end: 38
+        - name: e-pTeX
+          severity: info
+          text: trig 2016/01/03 v1.10 sin cos tan (DPC)
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\trig.sty'
+          log:
+            file: External_design.log
+            range:
+              start: 40
+              end: 40
+        - severity: info
+          name: e-pTeX
+          category: Package graphics
+          text: 'Driver file: dvipdfmx.def'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphics.sty'
+            range:
+              start: 99
+              end: 99
+          log:
+            file: External_design.log
+            range:
+              start: 44
+              end: 44
+        - name: e-pTeX
+          severity: info
+          text: 'url 2013/09/16 ver 3.4 Verb mode for urls, etc.'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\url\url.sty'
+          log:
+            file: External_design.log
+            range:
+              start: 52
+              end: 52
+        - name: e-pTeX
+          severity: info
+          text: float 2001/11/08 v1.3d Float enhancements (AL)
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\float\float.sty'
+          log:
+            file: External_design.log
+            range:
+              start: 55
+              end: 55
+        - name: e-pTeX
+          severity: info
+          text: amsmath 2017/09/02 v2.17a AMS math features
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+          log:
+            file: External_design.log
+            range:
+              start: 62
+              end: 62
+        - name: e-pTeX
+          severity: info
+          text: amstext 2000/06/29 v2.01 AMS text
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amstext.sty'
+          log:
+            file: External_design.log
+            range:
+              start: 66
+              end: 66
+        - name: e-pTeX
+          severity: info
+          text: amsbsy 1999/11/29 v1.2d Bold Symbols
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsbsy.sty'
+          log:
+            file: External_design.log
+            range:
+              start: 72
+              end: 72
+        - name: e-pTeX
+          severity: info
+          text: amsopn 2016/03/08 v2.02 operator names
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsopn.sty'
+          log:
+            file: External_design.log
+            range:
+              start: 75
+              end: 75
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \frac
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 213
+              end: 213
+          log:
+            file: External_design.log
+            range:
+              start: 78
+              end: 78
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \overline
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 375
+              end: 375
+          log:
+            file: External_design.log
+            range:
+              start: 81
+              end: 81
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \ldots
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 472
+              end: 472
+          log:
+            file: External_design.log
+            range:
+              start: 84
+              end: 84
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \dots
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 475
+              end: 475
+          log:
+            file: External_design.log
+            range:
+              start: 85
+              end: 85
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \cdots
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 596
+              end: 596
+          log:
+            file: External_design.log
+            range:
+              start: 86
+              end: 86
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Redeclaring font encoding OML
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 712
+              end: 712
+          log:
+            file: External_design.log
+            range:
+              start: 90
+              end: 90
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Redeclaring font encoding OMS
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 713
+              end: 713
+          log:
+            file: External_design.log
+            range:
+              start: 91
+              end: 91
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: 'Redefining \['
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 2817
+              end: 2817
+          log:
+            file: External_design.log
+            range:
+              start: 112
+              end: 112
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: 'Redefining \]'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 2818
+              end: 2818
+          log:
+            file: External_design.log
+            range:
+              start: 113
+              end: 113
+        - name: e-pTeX
+          severity: info
+          text: amssymb 2013/01/14 v3.01 AMS font symbols
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amssymb.sty'
+          log:
+            file: External_design.log
+            range:
+              start: 115
+              end: 115
+        - name: e-pTeX
+          severity: info
+          text: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amsfonts.sty'
+          log:
+            file: External_design.log
+            range:
+              start: 117
+              end: 117
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Overwriting math alphabet `\mathfrak' in version `bold' U/euf/m/n
+            --> U/euf/b/n.
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amsfonts.sty'
+            range:
+              start: 106
+              end: 106
+          log:
+            file: External_design.log
+            range:
+              start: 120
+              end: 121
+        - name: e-pTeX
+          severity: info
+          text: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\color.sty'
+          log:
+            file: External_design.log
+            range:
+              start: 123
+              end: 123
+        - severity: info
+          name: e-pTeX
+          category: Package color
+          text: 'Driver file: dvipdfmx.def'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\color.sty'
+            range:
+              start: 147
+              end: 147
+          log:
+            file: External_design.log
+            range:
+              start: 127
+              end: 127
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for OML/cmm/m/it ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: External_design.log
+            range:
+              start: 133
+              end: 134
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for T1/cmr/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: External_design.log
+            range:
+              start: 135
+              end: 136
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for OT1/cmr/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: External_design.log
+            range:
+              start: 137
+              end: 138
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for OMS/cmsy/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: External_design.log
+            range:
+              start: 139
+              end: 140
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for OMX/cmex/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: External_design.log
+            range:
+              start: 141
+              end: 142
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for U/cmr/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: External_design.log
+            range:
+              start: 143
+              end: 144
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for JY1/mc/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: External_design.log
+            range:
+              start: 145
+              end: 146
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for JT1/mc/m/n ... okay
+          source:
+            file: External_design.tex
+            range:
+              start: 33
+              end: 33
+          log:
+            file: External_design.log
+            range:
+              start: 147
+              end: 148
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JT1/mc/bx/n' in size <17.28> not available Font shape
+            `JT1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 34
+              end: 34
+          log:
+            file: External_design.log
+            range:
+              start: 149
+              end: 150
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JY1/mc/bx/n' in size <17.28> not available Font shape
+            `JY1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 34
+              end: 34
+          log:
+            file: External_design.log
+            range:
+              start: 151
+              end: 152
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Try loading font information for U+msa
+          source:
+            file: External_design.tex
+            range:
+              start: 34
+              end: 34
+          log:
+            file: External_design.log
+            range:
+              start: 153
+              end: 153
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Try loading font information for U+msb
+          source:
+            file: External_design.tex
+            range:
+              start: 34
+              end: 34
+          log:
+            file: External_design.log
+            range:
+              start: 157
+              end: 157
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JT1/mc/bx/n' in size <14.4> not available Font shape
+            `JT1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 35
+              end: 35
+          log:
+            file: External_design.log
+            range:
+              start: 161
+              end: 162
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JY1/mc/bx/n' in size <14.4> not available Font shape
+            `JY1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 35
+              end: 35
+          log:
+            file: External_design.log
+            range:
+              start: 163
+              end: 164
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JT1/mc/bx/n' in size <10> not available Font shape
+            `JT1/gt/m/n' tried instead.
+          source:
+            file: External_design.toc
+            range:
+              start: 1
+              end: 1
+          log:
+            file: External_design.log
+            range:
+              start: 166
+              end: 167
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JY1/mc/bx/n' in size <10> not available Font shape
+            `JY1/gt/m/n' tried instead.
+          source:
+            file: External_design.toc
+            range:
+              start: 1
+              end: 1
+          log:
+            file: External_design.log
+            range:
+              start: 168
+              end: 169
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JT1/mc/bx/n' in size <12> not available Font shape
+            `JT1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 48
+              end: 48
+          log:
+            file: External_design.log
+            range:
+              start: 177
+              end: 178
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JY1/mc/bx/n' in size <12> not available Font shape
+            `JY1/gt/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 48
+              end: 48
+          log:
+            file: External_design.log
+            range:
+              start: 179
+              end: 180
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Try loading font information for OMS+cmr
+          source:
+            file: External_design.tex
+            range:
+              start: 144
+              end: 144
+          log:
+            file: External_design.log
+            range:
+              start: 184
+              end: 184
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `OMS/cmr/m/n' in size <10> not available Font shape
+            `OMS/cmsy/m/n' tried instead.
+          source:
+            file: External_design.tex
+            range:
+              start: 144
+              end: 144
+          log:
+            file: External_design.log
+            range:
+              start: 189
+              end: 190
+      inputs: []
+      outputs:
+        - External_design.dvi
+      calls: []
+    type: ParsedLaTeXLog
+  External_design.aux:
+    timeStamp: 2018-11-25T03:29:47.713Z
+    jobNames: []
+    hash: gvib1EGiaa08c/lFBNRl8l72Co3GvWznnvIxBt7n7bE=
+    type: LaTeXAuxilary
+  External_design.fls:
+    timeStamp: 2018-11-25T03:29:47.737Z
+    jobNames: []
+    hash: hbTeEWK1cWHnRbmYniGTkFDhDsuG/LHfHeVZiFac8AI=
+    type: FileListing
+  External_design.log:
+    timeStamp: 2018-11-25T03:29:47.731Z
+    jobNames: []
+    hash: 2SHF2/PoXasplLvmXjERXpGtiHkwVG0F3m3gMtDEqBI=
+    type: LaTeXLog
+    subType: e-pTeX
+  External_design.pdf:
+    timeStamp: 2018-11-25T03:30:02.008Z
+    jobNames: []
+    hash: EBSJeCLAzEy3ONMe19v11EMKDxr4fs3iQf6td88SCwc=
+    type: PortableDocumentFormat
+  External_design.aux-ParsedLaTeXAuxilary:
+    timeStamp: 2018-11-24T07:30:09.400Z
+    jobNames: []
+    value:
+      commands:
+        - relax
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+    type: ParsedLaTeXAuxilary
+  External_design.dvi:
+    timeStamp: 2018-11-25T03:29:47.724Z
+    jobNames: []
+    type: DeviceIndependentFile
+  External_design.toc:
+    timeStamp: 2018-11-25T03:29:47.719Z
+    jobNames: []
+    hash: DEm2PxRQ0wAT6vZ3Lx2Sja1H8YaCKQ4mmmM7TFXIuZs=
+    type: TableOfContents
+rules:
+  - name: ApplyOptions
+    command: load
+    phase: initialize
+    parameters: []
+    inputs:
+      - file: dicy.yaml-ParsedYAML
+        type: default
+      - file: External_design.yaml-ParsedYAML
+        type: default
+      - file: External_design.tex-ParsedLaTeXMagic
+        type: default
+      - file: dicy-instance.yaml-ParsedYAML
+        type: default
+      - file: 'C:\Users\Michio7\AppData\Roaming\dicy\config.yaml-ParsedYAML'
+        type: default
+    outputs: []
+  - name: LoadAndValidateCache
+    command: load
+    phase: initialize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: Migrate
+    command: load
+    phase: initialize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: ApplyOptions
+    command: load
+    phase: execute
+    parameters: []
+    inputs:
+      - file: dicy.yaml-ParsedYAML
+        type: default
+      - file: External_design.yaml-ParsedYAML
+        type: default
+      - file: External_design.tex-ParsedLaTeXMagic
+        type: default
+      - file: dicy-instance.yaml-ParsedYAML
+        type: default
+      - file: 'C:\Users\Michio7\AppData\Roaming\dicy\config.yaml-ParsedYAML'
+        type: default
+    outputs: []
+  - name: ParseOptionsFile
+    command: load
+    phase: execute
+    parameters: []
+    inputs:
+      - file: 'C:\Users\Michio7\AppData\Roaming\dicy\config.yaml'
+        type: default
+    outputs:
+      - file: 'C:\Users\Michio7\AppData\Roaming\dicy\config.yaml-ParsedYAML'
+        type: default
+  - name: ParseLaTeXMagic
+    command: load
+    phase: execute
+    parameters:
+      - External_design.tex
+    inputs:
+      - file: External_design.tex
+        type: default
+    outputs:
+      - file: External_design.tex-ParsedLaTeXMagic
+        type: default
+  - name: AssignJobNames
+    command: load
+    phase: finalize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: FindLogFiles
+    command: build
+    phase: initialize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: LaTeX
+    command: build
+    phase: execute
+    parameters:
+      - External_design.tex
+    inputs:
+      - file: External_design.tex
+        type: default
+      - file: External_design.fls-ParsedFileListing
+        type: default
+      - file: External_design.log-ParsedLaTeXLog
+        type: default
+      - file: External_design.aux
+        type: default
+      - file: Albam1.png
+        type: default
+      - file: Albam2.png
+        type: default
+      - file: Camera.png
+        type: default
+      - file: account.png
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\goth10.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min10.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min6.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min8.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\tgoth10.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\tmin10.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm'
+        type: default
+      - file: >-
+          c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam5.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam7.tfm'
+        type: default
+      - file: >-
+          c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm5.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm7.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmbx10.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmbx12.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmex10.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi12.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi6.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi8.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr12.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr17.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr6.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr8.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy10.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy6.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy8.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amsfonts.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amssymb.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\umsa.fd'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\umsb.fd'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsbsy.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsgen.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsopn.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amstext.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\base\omscmr.fd'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\float\float.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics-cfg\color.cfg'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics-cfg\graphics.cfg'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics-def\dvipdfmx.def'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\color.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\dvipsnam.def'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphics.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphicx.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\keyval.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\trig.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\here\here.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\url\url.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\platex\base\jarticle.cls'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\platex\base\jsize10.clo'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\web2c\eptex\platex.fmt'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\web2c\texmf.cnf'
+        type: default
+      - file: change.png
+        type: default
+      - file: check.png
+        type: default
+      - file: checker.png
+        type: default
+      - file: comment.png
+        type: default
+      - file: completion.png
+        type: default
+      - file: configuration.png
+        type: default
+      - file: delete.png
+        type: default
+      - file: deleter.png
+        type: default
+      - file: game.png
+        type: default
+      - file: go_home.png
+        type: default
+      - file: have.png
+        type: default
+      - file: honjo_CR_Answer.png
+        type: default
+      - file: honjo_CR_CompleteAnswer.png
+        type: default
+      - file: honjo_CR_CompleteContribution.png
+        type: default
+      - file: honjo_CR_Contribution.png
+        type: default
+      - file: honjo_CR_CreateAnswer.png
+        type: default
+      - file: honjo_CR_Window.png
+        type: default
+      - file: honjo_FirstSetting.png
+        type: default
+      - file: honjo_main.png
+        type: default
+      - file: illustration.png
+        type: default
+      - file: inquiry.png
+        type: default
+      - file: lack.png
+        type: default
+      - file: material.png
+        type: default
+      - file: oekaki.png
+        type: default
+      - file: oekaki2.png
+        type: default
+      - file: otukai1.png
+        type: default
+      - file: password.png
+        type: default
+      - file: passwordchange.PNG
+        type: default
+      - file: passwordchange_check.PNG
+        type: default
+      - file: seithou.png
+        type: default
+      - file: shop.png
+        type: default
+      - file: shop_material.png
+        type: default
+      - file: sns.png
+        type: default
+      - file: storage.png
+        type: default
+      - file: storage2.png
+        type: default
+      - file: ugame.png
+        type: default
+      - file: zentai.png
+        type: default
+      - file: External_design.toc
+        type: default
+    outputs:
+      - file: External_design.aux
+        type: default
+      - file: External_design.fls
+        type: default
+      - file: External_design.log
+        type: default
+      - file: External_design.pdf
+        type: target
+      - file: External_design.dvi
+        type: default
+      - file: External_design.toc
+        type: default
+  - name: ParseLaTeXAuxilary
+    command: build
+    phase: execute
+    parameters:
+      - External_design.aux
+    inputs:
+      - file: External_design.aux
+        type: default
+    outputs:
+      - file: External_design.aux-ParsedLaTeXAuxilary
+        type: default
+  - name: ParseFileListing
+    command: build
+    phase: execute
+    parameters:
+      - External_design.fls
+    inputs:
+      - file: External_design.fls
+        type: default
+    outputs:
+      - file: External_design.fls-ParsedFileListing
+        type: default
+  - name: ParseLaTeXLog
+    command: build
+    phase: execute
+    parameters:
+      - External_design.log
+    inputs:
+      - file: External_design.log
+        type: default
+    outputs:
+      - file: External_design.log-ParsedLaTeXLog
+        type: default
+  - name: DviToPdf
+    command: build
+    phase: execute
+    parameters:
+      - External_design.dvi
+    inputs:
+      - file: External_design.dvi
+        type: target
+    outputs:
+      - file: External_design.pdf
+        type: target
+  - name: LogProducedTargets
+    command: build
+    phase: finalize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: CheckForMissingBuildRule
+    command: build
+    phase: finalize
+    parameters:
+      - External_design.tex
+    inputs:
+      - file: External_design.tex
+        type: default
+    outputs: []
+  - name: FindLogFiles
+    command: log
+    phase: initialize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: ReportLogMessages
+    command: log
+    phase: execute
+    parameters:
+      - pdf\External_design.log-ParsedLaTeXLog
+    inputs:
+      - file: pdf\External_design.log-ParsedLaTeXLog
+        type: default
+    outputs: []
+  - name: ReportLogMessages
+    command: log
+    phase: execute
+    parameters:
+      - ExternaDesign\External_design.log-ParsedLaTeXLog
+    inputs:
+      - file: ExternaDesign\External_design.log-ParsedLaTeXLog
+        type: default
+    outputs: []
+  - name: ReportLogMessages
+    command: log
+    phase: execute
+    parameters:
+      - External_design.log-ParsedLaTeXLog
+    inputs:
+      - file: External_design.log-ParsedLaTeXLog
+        type: default
+    outputs: []
+  - name: ParseLaTeXLog
+    command: log
+    phase: execute
+    parameters:
+      - External_design.log
+    inputs:
+      - file: External_design.log
+        type: default
+    outputs:
+      - file: External_design.log-ParsedLaTeXLog
+        type: default
+  - name: SaveCache
+    command: save
+    phase: execute
+    parameters: []
+    inputs: []
+    outputs: []
