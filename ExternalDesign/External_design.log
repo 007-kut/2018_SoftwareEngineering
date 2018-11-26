@@ -1,103 +1,104 @@
-This is e-pTeX, Version 3.14159265-p3.8.1-180901-2.6 (utf8.sjis) (TeX Live 2018/W32TeX) (preloaded format=platex 2018.11.14)  25 NOV 2018 09:56
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2017.4.9)  26 NOV 2018 11:43
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**External_design.tex
-(c:/Users/Michio7/Desktop/ExternalDesign/External_design.tex
-pLaTeX2e <2018-07-28>+1 (based on LaTeX2e <2018-04-01> patch level 5)
-(c:/w32tex/share/texmf-dist/tex/platex/base/jarticle.cls
-Document Class: jarticle 2018/07/03 v1.8 Standard pLaTeX class
-\c@@paper=\count83
-(c:/w32tex/share/texmf-dist/tex/platex/base/jsize10.clo
-File: jsize10.clo 2018/07/03 v1.8 Standard pLaTeX file (size option)
+**./External_design.tex
+(./External_design.tex
+pLaTeX2e <2016/11/29> (based on LaTeX2e <2017/01/01> patch level 3)
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(d:/share/texmf-dist/tex/platex/base/jarticle.cls
+Document Class: jarticle 2016/11/22 v1.7b Standard pLaTeX class
+\c@@paper=\count82
+(d:/share/texmf-dist/tex/platex/base/jsize10.clo
+File: jsize10.clo 2016/11/22 v1.7b Standard pLaTeX file (size option)
 )
-\c@part=\count84
-\c@section=\count85
-\c@subsection=\count86
-\c@subsubsection=\count87
-\c@paragraph=\count88
-\c@subparagraph=\count89
-\c@figure=\count90
-\c@table=\count91
+\c@part=\count83
+\c@section=\count84
+\c@subsection=\count85
+\c@subsubsection=\count86
+\c@paragraph=\count87
+\c@subparagraph=\count88
+\c@figure=\count89
+\c@table=\count90
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \symmincho=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
-(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 614.
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 579.
 \toclineskip=\dimen118
 \@lnumwidth=\dimen119
 \bibindent=\dimen120
-\heisei=\count92
-) (c:/w32tex/share/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-(c:/w32tex/share/texmf-dist/tex/latex/graphics/keyval.sty
+\heisei=\count91
+) (d:/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+ (d:/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
-) (c:/w32tex/share/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-(c:/w32tex/share/texmf-dist/tex/latex/graphics/trig.sty
+) (d:/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
+ (d:/share/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (c:/w32tex/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (d:/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: dvipdfmx.def on input line 99.
-(c:/w32tex/share/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
-File: dvipdfmx.def 2017/06/24 v5.0g Graphics/color driver for dvipdfmx
+ (d:/share/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2016/07/11 v4.12 LaTeX color/graphics driver for dvipdfmx (L3/ChoF)
 ))
 \Gin@req@height=\dimen121
 \Gin@req@width=\dimen122
-) (c:/w32tex/share/texmf-dist/tex/latex/url/url.sty
+) (d:/share/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (c:/w32tex/share/texmf-dist/tex/latex/here/here.sty) (c:/w32tex/share/texmf-d
-ist/tex/latex/float/float.sty
+) (d:/share/texmf-dist/tex/latex/here/here.sty) (d:/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count93
+\c@float@type=\count92
 \float@exts=\toks16
-\float@box=\box42
+\float@box=\box41
 \@float@everytoks=\toks17
-\@floatcapt=\box43
-) (c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2017/09/02 v2.17a AMS math features
+\@floatcapt=\box42
+) (d:/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip43
+
 For additional information on amsmath, use the `?' option.
-(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amstext.sty
+(d:/share/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (d:/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
 \ex@=\dimen123
-)) (c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (d:/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen124
-) (c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (d:/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count94
+\inf@bad=\count93
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count95
-\leftroot@=\count96
+\uproot@=\count94
+\leftroot@=\count95
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count97
-\DOTSCASE@=\count98
+\classnum@=\count96
+\DOTSCASE@=\count97
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box44
-\strutbox@=\box45
+\Mathstrutbox@=\box43
+\strutbox@=\box44
 \big@size=\dimen125
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count99
-\c@MaxMatrixCols=\count100
+\macc@depth=\count98
+\c@MaxMatrixCols=\count99
 \dotsspace@=\muskip11
-\c@parentequation=\count101
-\dspbrk@lvl=\count102
+\c@parentequation=\count100
+\dspbrk@lvl=\count101
 \tag@help=\toks19
-\row@=\count103
-\column@=\count104
-\maxfields@=\count105
+\row@=\count102
+\column@=\count103
+\maxfields@=\count104
 \andhelp@=\toks20
 \eqnshift@=\dimen126
 \alignsep@=\dimen127
@@ -111,23 +112,23 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-) (c:/w32tex/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (d:/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-(c:/w32tex/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+ (d:/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup5
 \symAMSb=\mathgroup6
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (c:/w32tex/share/texmf-dist/tex/latex/graphics/color.sty
+)) (d:/share/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
-(c:/w32tex/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (d:/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: dvipdfmx.def on input line 147.
-(c:/w32tex/share/texmf-dist/tex/latex/graphics/dvipsnam.def
+ (d:/share/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-)) (c:/Users/Michio7/Desktop/ExternalDesign/External_design.aux)
+)) (./External_design.aux)
 \openout1 = `External_design.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -151,180 +152,150 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 34.
 LaTeX Font Info:    Try loading font information for U+msa on input line 34.
-(c:/w32tex/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (d:/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 34.
-(c:/w32tex/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+ (d:/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 35.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 35.
-(c:/Users/Michio7/Desktop/ExternalDesign/External_design.toc
+ (./External_design.toc
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
-[1
+ [1
 
 ] [2])
 \tf@toc=\write3
 \openout3 = `External_design.toc'.
 
-[3]
+ [3]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 48.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 48.
-[4] [5] [6] [7]
+ [4] [5] [6] [7]
 File: honjo_FirstSetting.png Graphic file (type bmp)
-<honjo_FirstSetting.png>
+ <honjo_FirstSetting.png>
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 144.
-
-(c:/w32tex/share/texmf-dist/tex/latex/base/omscmr.fd
+ (d:/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 144.
-[8]
+ [8]
 File: honjo_main.png Graphic file (type bmp)
-<honjo_main.png>
-[9]
+ <honjo_main.png> [9]
 File: game.png Graphic file (type bmp)
-<game.png>
-[10]
+ <game.png> [10]
 File: password.png Graphic file (type bmp)
-<password.png>
-[11]
+ <password.png> [11]
 File: oekaki.png Graphic file (type bmp)
-<oekaki.png>
-[12]
+ <oekaki.png> [12]
 File: illustration.png Graphic file (type bmp)
-<illustration.png>
+ <illustration.png>
 File: storage.png Graphic file (type bmp)
-<storage.png>
-
+ <storage.png>
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 252--266
 [][]$[]$[] []$[]$[] 
  []
 
 [13] [14]
 File: oekaki2.png Graphic file (type bmp)
-<oekaki2.png>
+ <oekaki2.png>
 File: storage2.png Graphic file (type bmp)
-<storage2.png>
-
+ <storage2.png>
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 295--309
 [][]$[]$[] []$[]$[] 
  []
 
 [15] [16]
 File: otukai1.png Graphic file (type bmp)
-<otukai1.png>
-[17]
+ <otukai1.png> [17]
 File: material.png Graphic file (type bmp)
-<material.png>
-[18]
+ <material.png> [18]
 File: shop.png Graphic file (type bmp)
-<shop.png>
-[19]
+ <shop.png> [19]
 File: have.png Graphic file (type bmp)
-<have.png>
-[20]
+ <have.png> [20]
 File: shop_material.png Graphic file (type bmp)
-<shop_material.png>
-[21]
+ <shop_material.png> [21]
 File: go_home.png Graphic file (type bmp)
-<go_home.png>
+ <go_home.png>
 File: lack.png Graphic file (type bmp)
-<lack.png>
-
+ <lack.png>
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 450--464
 [][]$[]$[] []$[]$[] 
  []
 
 [22]
 File: completion.png Graphic file (type bmp)
-<completion.png>
-[23]
+ <completion.png> [23]
 File: Albam1.png Graphic file (type bmp)
-<Albam1.png>
+ <Albam1.png>
 File: deleter.png Graphic file (type bmp)
-<deleter.png>
+ <deleter.png>
 File: checker.png Graphic file (type bmp)
-<checker.png>
-
+ <checker.png>
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 525--539
 [][]$[]$[] []$[]$[] 
  []
 
 [24] [25]
 File: Albam2.png Graphic file (type bmp)
-<Albam2.png>
+ <Albam2.png>
 File: comment.png Graphic file (type bmp)
-<comment.png>
-[26]
+ <comment.png> [26]
 File: Camera.png Graphic file (type bmp)
-<Camera.png>
-[27]
+ <Camera.png> [27]
 File: honjo_CR_Window.png Graphic file (type bmp)
-<honjo_CR_Window.png>
-[28]
+ <honjo_CR_Window.png> [28]
 File: honjo_CR_Contribution.png Graphic file (type bmp)
-<honjo_CR_Contribution.png>
-[29] [30]
+ <honjo_CR_Contribution.png> [29] [30]
 File: honjo_CR_CompleteContribution.png Graphic file (type bmp)
-<honjo_CR_CompleteContribution.png>
-[31]
+ <honjo_CR_CompleteContribution.png> [31]
 File: honjo_CR_Answer.png Graphic file (type bmp)
-<honjo_CR_Answer.png>
-[32]
+ <honjo_CR_Answer.png> [32]
 File: honjo_CR_CreateAnswer.png Graphic file (type bmp)
-<honjo_CR_CreateAnswer.png>
-[33]
+ <honjo_CR_CreateAnswer.png> [33]
 File: honjo_CR_CompleteAnswer.png Graphic file (type bmp)
-<honjo_CR_CompleteAnswer.png>
-[34]
+ <honjo_CR_CompleteAnswer.png> [34]
 File: configuration.png Graphic file (type bmp)
-<configuration.png>
+ <configuration.png>
 File: inquiry.png Graphic file (type bmp)
-<inquiry.png>
-[35] [36]
+ <inquiry.png> [35] [36]
 File: account.png Graphic file (type bmp)
-<account.png>
-[37]
+ <account.png> [37]
 File: change.png Graphic file (type bmp)
-<change.png>
-[38]
+ <change.png> [38]
 File: delete.png Graphic file (type bmp)
-<delete.png>
+ <delete.png>
 File: check.png Graphic file (type bmp)
-<check.png>
-[39] [40]
+ <check.png> [39] [40]
 File: passwordchange.png Graphic file (type bmp)
-<passwordchange.png>
+ <passwordchange.png>
 File: passwordchange_check.png Graphic file (type bmp)
-<passwordchange_check.png>
-[41] [42] [43] [44]
+ <passwordchange_check.png> [41] [42] [43] [44]
 File: zentai.png Graphic file (type bmp)
-<zentai.png>
+ <zentai.png>
 File: seithou.png Graphic file (type bmp)
-<seithou.png>
+ <seithou.png>
 File: ugame.png Graphic file (type bmp)
-<ugame.png>
-[45]
+ <ugame.png> [45]
 File: sns.png Graphic file (type bmp)
-<sns.png>
-[46] (c:/Users/Michio7/Desktop/ExternalDesign/External_design.aux) ) 
+ <sns.png> [46] (./External_design.aux) ) 
 Here is how much of TeX's memory you used:
- 2077 strings out of 493246
- 26857 string characters out of 6146321
- 97212 words of memory out of 5000000
- 5944 multiletter control sequences out of 15000+600000
+ 2138 strings out of 493671
+ 27104 string characters out of 6151255
+ 90185 words of memory out of 5000000
+ 5617 multiletter control sequences out of 15000+600000
  18081 words of font info for 73 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 27i,9n,27p,453b,395s stack positions out of 5000i,500n,10000p,500000b,80000s
+ 27i,9n,26p,455b,395s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on External_design.dvi (46 pages, 91644 bytes).
+Output written on External_design.dvi (46 pages, 90616 bytes).

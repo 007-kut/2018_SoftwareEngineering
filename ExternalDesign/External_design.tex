@@ -46,7 +46,7 @@
 本システムは機能として成長記録機能、ゲーム機能、子育て窓口機能、設定機能の4つを実装します。この章では、各機能の説明及び各機能を構成するサブシステムを示します。サブシステムの詳細は第3章にて説明します。
 
 \subsection{成長記録機能}
-成長記録機能では、日々の子供の成長を記録できる機能を提供します。成長記録は日付ごとに分けて記録され、いつでも見返すことができます。外部アプリ(Tweitter)で記録を共有することもできます。
+成長記録機能では、日々の子供の成長を記録できる機能を提供します。成長記録は日付ごとに分けて記録され、いつでも見返すことができます。外部アプリ(Twitter)で記録を共有することもできます。
 \subsubsection*{構成サブシステム}
 \noindent カメラ撮影サブシステム、コメント記録サブシステム、ゲーム結果取得サブシステム、カレンダーサブシステム、共有サブシステム
 
@@ -92,7 +92,7 @@
 \subsubsection*{ゲーム記録保存サブシステム}
 お絵描きの記録を保存するサブシステムです。保存されることにより成長記録機能での記録の閲覧が可能です。
 \subsubsection*{ゲーム追加サブシステム}
-新しくゲームを追加を行います。またゲームの削除や変更も行います。今後この機能を利用してゲームの種類の増加を図ります。
+新しくゲームの追加を行います。またゲームの削除や変更も行います。今後この機能を利用してゲームの種類の増加を図ります。
 
 \subsection{子育て窓口機能}
 \subsubsection*{検索サブシステム}
@@ -124,7 +124,7 @@
 本システムが提供するアプリケーションの画面遷移及び画面の詳細について説明します。
 \subsubsection{初期設定画面}
 図\ref{honjo_setup}に、アプリを初めて起動した際に表示される初期設定画面を示します。
-この画面はユーザに『ニックネーム(名前)の入力』・『居住地域の選択』を行ってもらうために表示されます。
+この画面はユーザに『名前(ニックネーム)の入力』・『居住地域の選択』を行ってもらうために表示されます。
 入力が完了しないと次の画面に遷移することはできません。
 
 また、再インストールをした場合であってもこの画面が表示され、再度設定(ユーザの新規作成)を行う必要があります。
@@ -168,7 +168,7 @@
 
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
-  \item ゲーム画面遷移ボタン\\
+  \item ゲーム画面選択ボタン\\
         ゲーム機能を使用したい場合に押すボタンです。タップするとゲーム選択画面(図\ref{game})へ遷移します。
   \item 成長記録画面遷移ボタン\\
         成長記録機能を使用したい場合に押すボタンです。タップすると成長記録画面(図\ref{Grow})へ遷移します。
@@ -179,14 +179,14 @@
 \end{enumerate}
 
 %ゲーム%
-\subsection{ゲーム画面}
-図\ref{game}にゲームの画面を示します。\\
+\subsection{ゲーム選択画面}
+図\ref{game}にゲームの選択画面を示します。\\
 お絵描きとおつかいのゲームを提供します。
 
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {game.png}}
-    \caption {ゲーム画面のイメージ}
+    \caption {ゲーム選択画面のイメージ}
     \label{game}
     \end{center}
 \end{figure}
@@ -216,7 +216,7 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item もどるボタン\\
-  もどるボタンをタップすることでゲーム画面（図\ref{game}）に遷移します。
+  もどるボタンをタップすることでゲーム選択画面（図\ref{game}）に遷移します。
 \item キーボード\\
   キーボードの数字をタップしパスワードを打つことでメインメニュー画面（図\ref{honjo_main}）に遷移します
 \end{enumerate}
@@ -237,11 +237,11 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item もどるボタン\\
-  もどるボタンをタップするとゲーム画面（図\ref{game}）に遷移します。
+  もどるボタンをタップするとゲーム選択画面（図\ref{game}）に遷移します。
 \item イラストボタン\\
-  イラストのボタンをタップすることで図\ref{illustration}のようにタップしたイラストを閲覧しながらのおえかきができます。
+  イラストのボタンをタップすることでイラストおえかき画面(図\ref{illustration})に遷移し、タップしたイラストを閲覧しながらのおえかきができます。
 \item おえかきボタン\\
-  おえかきのボタンをタップすることでおえかきの図\ref{oekaki2}のゲーム画面に遷移し、自由におえかきができます。
+  おえかきのボタンをタップすることでおえかきのゲーム画面(図\ref{oekaki2})に遷移し、自由におえかきができます。
 \end{enumerate}
 
 \newpage
@@ -279,12 +279,12 @@
   パレットのイラストボタンをタップすることでペンの色を選択できます。
 \item 消しゴムのイラストボタン\\
   消しゴムのイラストボタンをタップすることでペンが消しゴムに代わりおえかきを消すことができます。
-\item １段階もどるボタン\\
+\item もどるボタン\\
   1段階もどるボタンをタップすることで描いたイラストを１段階もどすことができます。
 \item 保存ボタン\\
   保存ボタンをタップすることで図\ref{storage}のように「ほぞんしました」と表示されおえかきが成長記録として保存されます。
 \item とじるボタン\\
-  図\ref{storage}のとじるボタンをタップすることで表示を図\ref{storage}の表示を閉じます。
+  図\ref{storage}のとじるボタンをタップすることで図\ref{storage}の表示を閉じます。
 \end{enumerate}
 
 \newpage
@@ -346,7 +346,7 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item もどるボタン\\
-  もどるボタンをタップすることでゲーム画面（図\ref{game}）に遷移します。
+  もどるボタンをタップすることでゲーム選択画面（図\ref{game}）に遷移します。
 \item イラストボタン\\
   図\ref{otukai1}の料理のイラストボタンをタップするとその料理の材料画面（図\ref{material}）に遷移します。
 \end{enumerate}
@@ -366,9 +366,9 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item もどるボタン\\
-  材料画面（図\ref{material}）のもどるボタンをタップするとおつかい画面（図\ref{otukai1}）にもどります。
+  材料画面（図\ref{material}）のもどるボタンをタップするとおつかい画面（図\ref{otukai1}）へ遷移します。
 \item おつかいボタン\\
- おつかいのボタンをタップするとお店の画面（図\ref{shop}）へ遷移します
+ おつかいのボタンをタップするとお店の画面（図\ref{shop}）へ遷移します。
 \end{enumerate}
 
 \newpage
@@ -396,7 +396,7 @@
 \end{enumerate}
 
 \newpage
-\subsubsection{材料画面}
+\subsubsection{材料確認画面}
 図\ref{have}は材料確認画面を示します。\\
 
 \begin{figure}[H]
@@ -469,8 +469,8 @@
   おうち画面（図\ref{myhome}）のもどるボタンをタップするとお店画面（図\ref{shop}）にもどります。
 \item つくるボタン\\
   材料が揃っている場合、おうち画面（図\ref{myhome}）のつくるボタンをタップするとできあがり画面（図\ref{completion}）へ遷移します。材料が揃っていない場合、図\ref{otukai6}のように「ざいりょうがたりないよ」と表示されます。
-\item おつかい\\
-  おうち画面（図\ref{myhome}）のおつかいにいくをタップするとお店の画面（図\ref{shop}）遷移します。
+\item おつかいボタン\\
+  おうち画面（図\ref{myhome}）のおつかいにいくをタップするとお店の画面（図\ref{shop}）へ遷移します。
 \item とじるボタン\\
   図\ref{otukai6}の閉じるボタンをタップするとおうち画面（図\ref{myhome}）へ遷移します。
 \end{enumerate}
@@ -510,16 +510,16 @@
 
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
-  \item 戻るボタン\\
-       このボタンをタップすることにより1つ前の画面に戻ります。
-  \item ゴミ箱マーク\\
-      このマークをタップすることで選択画面(図\ref{deleter})に遷移し、不要になった写真やゲーム記録を選択する事で削除できます。選択した写真などには左上にチェックマークが表示されます。選択後は一度、確認画面(図\ref{checker})が表示されます。「はい」をタップすると消去され、「いいえ」をタップするとキャンセルされます。
+  \item もどるボタン\\
+       タップすると、メインメニュー画面(図\ref{honjo_main})に戻ります。
+  \item ゴミ箱ボタン\\
+      タップすると、選択画面(図\ref{deleter})に遷移し、不要になった写真やゲーム記録を選択する事で削除できます。選択した写真などには左上にチェックマークが表示されます。選択後は一度、確認画面(図\ref{checker})が表示されます。「はい」をタップすると消去され、「いいえ」をタップするとキャンセルされます。
   \item 写真及びゲーム記録\\
-       撮影した写真やゲームの記録を閲覧することができます。各写真や記録をタップすると拡大して表示され、保存は月ごとにされていきます。また、メモを残すこともできます。
+       撮影した写真やゲームの記録を閲覧することができます。各写真や記録をタップするとアルバム画面(図\ref{Albam})に遷移します。
   \item カメラボタン\\
-        撮影したいときに使用するボタンです。ボタンをタップすると外部のカメラアプリを起動し写真を撮影することができます。
+        撮影したいときに使用するボタンです。ボタンをタップするとシステム内からカメラを起動し写真を撮影することができます。
   \item 共有ボタン　\label{enum:share}\\
-        写真やゲームの記録を共有したい時に使用するボタンです。ボタンをタップするとと外部アプリ(Twitter)を起動し共有することができます。
+        写真やゲームの記録を共有したい時に使用するボタンです。ボタンをタップすると外部アプリ(Twitter)を起動し共有することができます。
 \end{enumerate}
 \begin{figure}[H]
  \begin{minipage}{0.5\hsize}
@@ -556,7 +556,7 @@
   \item コメントボタン\\
     アルバムに保存された写真や記録にはコメントボタンを押すことによりコメント入力画面(図\ref{Comment})に遷移し、コメントを残すことができます。
   \item 共有ボタン\\
-        第\ref{grow}節の\ref{enum:share}と同様
+    写真やゲームの記録を共有したい時に使用するボタンです。ボタンをタップすると外部アプリ(Twitter)を起動し共有することができます。
 \end{enumerate}
 
 \begin{figure}[H]
@@ -568,16 +568,17 @@
 \end{figure}
 
 \begin{enumerate}
-\item 戻るボタン\\
-     このボタンをタップすることにより1つ前の画面に戻ります。
-\item コメント入力欄\\
+  \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
+  \item もどるボタン\\
+     もどるボタンをタップすると、アルバム画面(図\ref{Albam})に戻ります。
+  \item コメント入力欄\\
      この枠内に残したいコメントを書き記すことができます。
-\item 保存ボタン\\
-     このボタンをタップすることにより編集した写真を保存することができます。
+  \item 保存ボタン\\
+     保存ボタンをタップすると、編集した写真を保存することができます。
 \end{enumerate}
 
 \subsubsection{カメラ}
-カメラボタンを押すことにより外部カメラ(図\ref{Camera})を起動します。
+カメラボタンを押すことによりカメラ(図\ref{Camera})を起動します。
 カメラを使用して撮影するときに使用されます。ここで撮影された写真はアルバムとして保存され図\ref{Albam}のように閲覧、共有することができます。
 
 
@@ -591,7 +592,7 @@
 
 
 \subsubsection{共有}
-写真や記録を共有したいときに使用されます。共有は外部アプリであるTwitterで行われます。共有するためには図\ref{Grow}と図\ref{Albam}についている共有ボタンをタップすることで起動することができます。
+写真や記録を共有したいときに使用されます。共有は外部アプリであるTwitterで行われます。共有するためには成長記録画面(図\ref{Grow})とアルバム画面(図\ref{Albam})についている共有ボタンをタップすることで起動することができます。
 
 %質問箱%
 \subsection{子育て窓口}
@@ -611,9 +612,9 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
   \item もどるボタン\\
-        タップすると、メインメニュー画面(図\ref{honjo_main})へ遷移するボタンです。
+        もどるボタンをタップすると、メインメニュー画面(図\ref{honjo_main})へ遷移します。
   \item 質問投稿作成ボタン\\
-        質問投稿をしたい時に押すボタンです。ペンのマークをタップすると、質問を行うための投稿画面(図\ref{honjo_CR_Contribution})へ遷移します。
+        質問投稿をしたい時に押すボタンです。ペンのボタンをタップすると、質問を行うための投稿画面(図\ref{honjo_CR_Contribution})へ遷移します。
   \item 質問の検索欄\\
         ユーザが子育て窓口内に投稿されたものを検索するために使用します。矩形領域をタップするとキーボードが開き、入力することが可能になります。
   \item 質問の一覧表示\\
@@ -638,7 +639,7 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
   \item もどるボタン\\
-        タップすると、子育て窓口の画面(図\ref{honjo_CR_Window})へ遷移するボタンです。
+        もどるボタンをタップすると、子育て窓口の画面(図\ref{honjo_CR_Window})へ遷移します。
   \item 質問内容の入力欄\\
         ユーザが質問の内容を書き込むための欄です。矩形領域をタップするとキーボードが開き、入力することが可能になります。
   \item 匿名チェックボックス\\
@@ -667,8 +668,8 @@
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
   \item ステータス\\
         ユーザの質問投稿が正常に完了したかを通知します。何らかのエラーが発生し投稿できなかった場合は、右図のようになります。
-  \item 戻るボタン\\
-        子育て窓口の画面(図\ref{honjo_CR_Window})へ遷移するためのボタンです。
+  \item もどるボタン\\
+        もどるボタンをタップすると、子育て窓口の画面(図\ref{honjo_CR_Window})へ遷移します。
 \end{enumerate}
 
 
@@ -690,8 +691,8 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
   \item もどるボタン\\
-        タップすると、子育て窓口の画面(図\ref{honjo_CR_Window})へ遷移するボタンです。
-  \item 回答ボタン\\
+        もどるボタンをタップすると、子育て窓口の画面(図\ref{honjo_CR_Window})へ遷移します。
+  \item 回答作成ボタン\\
         この質問に対する回答を作成するためのボタンです。タップすると回答作成画面(図\ref{honjo_CR_CreateAnswer})へ遷移します。
   \item 質問内容\\
         質問内容の全文を表示します。
@@ -717,7 +718,7 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
   \item もどるボタン\\
-        タップすると、質問の詳細画面(図\ref{honjo_CR_Answer})へ遷移するボタンです。
+        もどるボタンをタップすると、質問の詳細画面(図\ref{honjo_CR_Answer})へ遷移します。
   \item 質問内容\\
         質問内容の全文を表示します。
   \item 回答内容の入力欄\\
@@ -748,7 +749,7 @@
   \item ステータス\\
         ユーザの回答投稿が正常に完了したかを通知します。何らかのエラーが発生し投稿できなかった場合は、右図のようになります。
   \item もどるボタン\\
-        子育て窓口の画面(図\ref{honjo_CR_Window})へ遷移するためのボタンです。
+        もどるボタンをタップすると、子育て窓口の画面(図\ref{honjo_CR_Window})へ遷移します。
 \end{enumerate}
 
 %変更･問い合わせ%
@@ -768,13 +769,13 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item もどるボタン\\
-  タップすると、メインメニュー画面(図\ref{honjo_main})へ遷移するボタンです。
+  タップすると、メインメニュー画面(図\ref{honjo_main})へ遷移します。
 \item 問い合わせボタン\\
-  問い合わせをタップすることで問い合わせのメールアドレスと問い合わせに必要な情報を記載したページ（図\ref{inquiry}）に遷移します。
+  タップすることで問い合わせのメールアドレスと問い合わせに必要な情報を記載したページ（図\ref{inquiry}）に遷移します。
 \item アカウントボタン\\
-  アカウントをタップすると変更と削除の画面（図\ref{account}）に遷移します。
+  タップすると変更と削除の画面（図\ref{account}）に遷移します。
 \item ゲームのパスワード設定ボタン\\
-　ゲームのパスワード設定をタップするとゲーム画面からメニュー画面に遷移するためのパスワード設定画面（図\ref{passwordchange}）に遷移します。
+　タップするとゲーム画面からメニュー画面に遷移するためのパスワード設定画面（図\ref{passwordchange}）に遷移します。
 \end{enumerate}
 
 \begin{figure}[H]
@@ -788,7 +789,7 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item もどるボタン\\
-  タップすると、設定画面(図\ref{configuration})へ遷移するボタンです。
+  タップすると、設定画面(図\ref{configuration})へ遷移します。
 \end{enumerate}
 
 \newpage
@@ -807,11 +808,11 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item もどるボタン\\
-  タップすると、設定画面(図\ref{configuration})へ遷移するボタンです。
+  タップすると、設定画面(図\ref{configuration})へ遷移します。
 \item 変更\\
-  変更をタップするとニックネームと地域の設定画面（図\ref{change}）に遷移します。
+  タップするとニックネームと地域の設定画面（図\ref{change}）に遷移します。
 \item 削除\\
-  削除をタップすると削除をするか確認する画面（図\ref{delete}）に遷移します。
+  タップすると削除をするか確認する画面（図\ref{delete}）に遷移します。
 \end{enumerate}
 
 \newpage
@@ -830,11 +831,11 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item もどるボタン\\
-  タップすると、アカウント画面(図\ref{account})へ遷移するボタンです。
-\item ニックネーム\\
-  ニックネームをタップするとキーボードが開き、入力することが可能になります。
-\item 地域\\
-  地域をタップすると都道府県の一覧が表示され、選択することができます。
+  タップすると、アカウント画面(図\ref{account})へ遷移します。
+\item ニックネーム入力欄\\
+  タップするとキーボードが開き、入力することが可能になります。
+\item 居住地域の選択欄\\
+  タップすると都道府県の一覧が表示され、選択することができます。
 \item 完了ボタン\\
   タップすると、変更内容を保存してアカウント画面(図\ref{account})へ遷移します。
 \end{enumerate}
@@ -855,11 +856,11 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item もどるボタン\\
-  タップすると、アカウント画面(図\ref{account})へ遷移するボタンです。
+  タップすると、アカウント画面(図\ref{account})へ遷移します。
 \item はい\\
-  はいをタップすると削除が完了し、アカウント削除完了画面（図\ref{check}）へ遷移します。
+  タップすると削除が完了し、アカウント削除完了画面（図\ref{check}）へ遷移します。
 \item いいえ\\
-  いいえをタップするとアカウントの設定画面（図\ref{account}）に遷移します。
+  タップするとアカウントの設定画面（図\ref{account}）に遷移します。
 \end{enumerate}
 
 \begin{figure}[H]
@@ -873,7 +874,7 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item ホームへボタン\\
-  タップすると、初期設定画面(図\ref{honjo_setup})へ遷移するボタンです。
+  タップすると、初期設定画面(図\ref{honjo_setup})へ遷移します。
 \end{enumerate}
 
 \newpage
@@ -891,7 +892,7 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item もどるボタン\\
-  タップすると、設定画面(図\ref{configuration})へ遷移するボタンです。
+  タップすると、設定画面(図\ref{configuration})へ遷移します。
 \item パスワード入力1\\
   タップするとキーボードが開くので、設定したいパスワードを入力します。
 \item パスワード入力2\\
@@ -911,7 +912,7 @@
 \begin{enumerate}
   \renewcommand{\labelenumi}{\textcircled{\scriptsize \theenumi}}
 \item 設定画面へボタン\\
-  タップすると、設定画面(図\ref{configuration})へ遷移するボタンです。
+  タップすると、設定画面(図\ref{configuration})へ遷移します。
 \end{enumerate}
 
 \newpage
@@ -1056,7 +1057,7 @@
 \begin{figure}[H]
   \begin{center}
      \resizebox{8cm}{!}{\includegraphics{sns.png}}
-    \caption{SNS機能のユースケース図}
+    \caption{子育て窓口機能のユースケース図}
     \label{SNS}
   \end{center}
 \end{figure}
