@@ -41,7 +41,7 @@
 
 \begin{figure}[H]
     \begin{center}
-    \resizebox{8cm}{!}{\includegraphics {sample.png}}
+    \resizebox{8cm}{!}{\includegraphics {sample.PNG}}
     \caption {見本のイメージ}
     \label{sample}
     \end{center}
@@ -53,7 +53,7 @@
 \subsubsection{機能選択モジュール\label{機能選択}}
 \begin{figure}[H]
     \begin{center}
-    \resizebox{16.5cm}{!}{\includegraphics {functionselection.png}}
+    \resizebox{16.5cm}{!}{\includegraphics {functionselection.PNG}}
     \caption {機能選択モジュールのイメージ}
     \label{functionselection}
     \end{center}
@@ -80,7 +80,7 @@
 \begin{figure}[H]
 \subsubsection{初期設定モジュール\label{初期設定}}
     \begin{center}
-    \resizebox{16.5cm}{!}{\includegraphics {initialsetting.png}}
+    \resizebox{16.5cm}{!}{\includegraphics {initialsetting.PNG}}
     \caption {初期設定モジュールのイメージ}
     \label{initialsetting}
     \end{center}
@@ -104,10 +104,10 @@
 
 
 \subsection{成長記録機能}
-\subsubsection{成長記録モジュール}
+\subsubsection{成長記録モジュール\label{grow}}
 \begin{figure}[H]
     \begin{center}
-    \resizebox{16.5cm}{!}{\includegraphics {functionselection.png}}
+    \resizebox{16.5cm}{!}{\includegraphics {growall.PNG}}
     \caption {成長記録モジュールのイメージ}
     \label{functionselection}
     \end{center}
@@ -121,22 +121,106 @@
 
 \subsubsection*{処理フロー}
 \begin{itemize}
-\item 【ゴミ箱ボタン】をタップすることで消去モジュールを呼び出します。
+\item 【ゴミ箱】をタップすることで消去モジュール(第\ref{delete}節)を呼び出します。
 
-\item 写真・記録を直接タップすることでアルバムモジュールを呼び出します。
+\item 写真・記録を直接タップすることでアルバムモジュール(第\ref{albam}節)を呼び出します。
 
-\item 【カメラボタン】をタップすることでカメラモジュールを呼び出します。
+\item 【カメラ】をタップすることでカメラモジュール(第\ref{camera}節)を呼び出します。
 
-\item 【共有ボタン】をタップすることで外部アプリであるTwitterを起動します。
+\item 【共有】をタップすることで外部アプリであるTwitterを起動します。
 
-\item 【もどるボタン】をタップすることで機能選択画面に戻ります。
+\item 【もどる】をタップすることで機能選択画面に戻ります。
 \end{itemize}
+
+\subsubsection{消去モジュール\label{delete}}
+\begin{figure}[H]
+    \begin{center}
+    \resizebox{12cm}{!}{\includegraphics {delete.PNG}}
+    \caption {消去モジュールのイメージ}
+    \label{functionselection}
+    \end{center}
+\end{figure}
+
+\subsubsection*{概要}
+利用者が不要と判断した写真やゲームの記録の消去を行うために使用する機能です。
+
+\subsubsection*{処理フロー}
+\begin{itemize}
+\item 消去したい写真や記録をタップすることでその写真や記録にチェックマークが表示されます。その後、【消去】するか【もどるボタン】を選択します。
+\item 【消去】を選んだ場合確認画面が表示されます。確認画面では【はい】と【いいえ】のボタンがあります。
+\item 【はい】をタップすると選択した写真や記録が消去されます。
+\item 【いいえ】をタップすると消去するか戻るかを選択する画面に戻ります。
+\item 【もどるボタン】をタップした場合成長記録のメイン画面に戻ります。
+\end{itemize}
+
+\subsubsection{アルバムモジュール\label{albam}}
+\begin{figure}[H]
+    \begin{center}
+    \resizebox{16.5cm}{!}{\includegraphics {albam.PNG}}
+    \caption {アルバムモジュールのイメージ}
+    \label{functionselection}
+    \end{center}
+\end{figure}
+
+\subsubsection*{概要}
+利用者が閲覧したい写真や記録をタップすることでそれを拡大表示して閲覧することができる機能です。
+
+\subsubsection*{処理フロー}
+\begin{itemize}
+\item 写真や記録タップした場合、それにコメントがついているかを判定します。コメントがあった場合はコメントを写真や記録と一緒に表示し、ない場合は写真や記録のみを拡大表示します。拡大表示した画面では【もどるボタン】,【ゴミ箱ボタン】,【コメントボタン】,【共有ボタン】が選択できます。
+\item 【もどるボタン】をタップすることで成長記録のメイン画面に戻ることができます。
+\item 【ゴミ箱ボタン】をタップすることで消去モジュール(第\ref{delete}節)を呼び出します。
+\item 【コメントボタン】をタップすることでコメントモジュール(第\ref{coment}節)を呼び出します。
+\item 【共有ボタン】をタップすることで外部アプリであるTwitterを起動します。
+\end{itemize}
+
+\subsubsection{カメラモジュール\label{camera}}
+\begin{figure}[H]
+    \begin{center}
+    \resizebox{8cm}{!}{\includegraphics {camera.PNG}}
+    \caption {カメラモジュールのイメージ}
+    \label{functionselection}
+    \end{center}
+\end{figure}
+
+\subsubsection*{概要}
+利用者が新しく写真を撮影したいときに使用する機能です。
+
+\subsubsection*{処理フロー}
+\begin{itemize}
+\item 外部アプリのカメラを起動し写真を撮影します。その後、【もどるボタン】か【保存ボタン】を選択します。
+\item 【もどるボタン】をタップすることで写真を撮影する画面に戻ります。
+\item 【保存ボタン】をタップすることで成長記録と連動します。その後、撮影した写真を月ごとに保存し成長記録のメイン画面に戻ります。
+\end{itemize}
+
+\subsubsection{コメントモジュール\label{coment}}
+\begin{figure}[H]
+    \begin{center}
+    \resizebox{16.5cm}{!}{\includegraphics {coment.PNG}}
+    \caption {コメントモジュールのイメージ}
+    \label{functionselection}
+    \end{center}
+\end{figure}
+
+\subsubsection*{概要}
+利用者が写真や記録にコメントを挿入したい、または既についているコメントを編集したい場合に使用する機能です。
+
+\subsubsection*{処理フロー}
+\begin{itemize}
+\item このモジュールに入ったときにその写真や記録にコメントが付与されているかを判定します。コメントがなければコメント入力画面のみ表示し、コメントがあればそのコメントとコメント入力画面を一緒に表示します。
+\item コメント入力画面が表示されるとコメント欄をタップすることでコメントの書き込みが行えます。挿入、編集は何度でも行えます。
+\item コメントの書き込みが終わった場合、もしくはコメントを書き込まなかった場合【保存ボタン】をタップするか、保存せずに【もどるボタン】をタップするかを選択します。
+\item 【保存ボタン】をタップした場合コメントの内容が変更されたかを判定し、変更されていれば内容を保存してアルバムモジュールに戻ります。変更されていなければ保存せずにアルバムモジュール(第\ref{albam}節)に戻ります。
+\item 【もどるボタン】をタップすることで内容を保存せずアルバムモジュール(第\ref{albam}節)に戻ります。
+\end{itemize}
+\newpage
+
 
 \subsection{子育て窓口機能}
 \subsubsection{子育て窓口モジュール\label{子育て窓口}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[height=8.0cm] {子育て窓口_全体.png} %画像は各自で用意、大きさも自分で調整
+      \includegraphics[height=8.0cm] {子育て窓口_全体.PNG} %画像は各自で用意、大きさも自分で調整
     \caption {子育て窓口モジュールのイメージ}
     \label{functionselection}
     \end{center}
@@ -154,7 +238,7 @@
 \subsubsection{投稿モジュール\label{投稿}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[height = 12.0cm] {子育て窓口_投稿.png} %画像は各自で用意、大きさも自分で調整
+      \includegraphics[height = 12.0cm] {子育て窓口_投稿.PNG} %画像は各自で用意、大きさも自分で調整
     \caption {投稿モジュールのイメージ}
     \label{functionselection}
     \end{center}
@@ -172,7 +256,7 @@
 \subsubsection{検索モジュール\label{検索}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[height = 12.0cm] {子育て窓口_検索.png} %画像は各自で用意、大きさも自分で調整
+      \includegraphics[height = 12.0cm] {子育て窓口_検索.PNG} %画像は各自で用意、大きさも自分で調整
     \caption {検索モジュールのイメージ}
     \label{functionselection}
     \end{center}
@@ -190,7 +274,7 @@
 \subsubsection{質問モジュール\label{質問}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[height = 12.0cm] {子育て窓口_質問.png} %画像は各自で用意、大きさも自分で調整
+      \includegraphics[height = 12.0cm] {子育て窓口_質問.PNG} %画像は各自で用意、大きさも自分で調整
     \caption {質問モジュールのイメージ}
     \label{functionselection}
     \end{center}
@@ -208,7 +292,7 @@
 \subsubsection{回答モジュール\label{回答}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[height = 12.0cm] {子育て窓口_回答.png} %画像は各自で用意、大きさも自分で調整
+      \includegraphics[height = 12.0cm] {子育て窓口_回答.PNG} %画像は各自で用意、大きさも自分で調整
     \caption {回答モジュールのイメージ}
     \label{functionselection}
     \end{center}
@@ -227,7 +311,7 @@
 \subsection{見本機能}
 \begin{figure}[H]
     \begin{center}
-    \resizebox{16.5cm}{!}{\includegraphics {functionselection.png}} %画像は各自で用意、大きさも自分で調整
+    \resizebox{16.5cm}{!}{\includegraphics {functionselection.PNG}} %画像は各自で用意、大きさも自分で調整
     \caption {見本モジュールのイメージ}
     \label{functionselection}
     \end{center}
