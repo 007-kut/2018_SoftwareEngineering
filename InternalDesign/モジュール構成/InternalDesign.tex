@@ -41,7 +41,7 @@
 
 \begin{figure}[H]
     \begin{center}
-    \resizebox{8cm}{!}{\includegraphics {sample.PNG}}
+    \resizebox{8cm}{!}{\includegraphics {sample.png}}
     \caption {見本のイメージ}
     \label{sample}
     \end{center}
@@ -53,7 +53,7 @@
 \subsubsection{機能選択モジュール\label{機能選択}}
 \begin{figure}[H]
     \begin{center}
-    \resizebox{16.5cm}{!}{\includegraphics {functionselection.PNG}}
+    \resizebox{16.5cm}{!}{\includegraphics {functionselection.png}}
     \caption {機能選択モジュールのイメージ}
     \label{functionselection}
     \end{center}
@@ -80,7 +80,7 @@
 \begin{figure}[H]
 \subsubsection{初期設定モジュール\label{初期設定}}
     \begin{center}
-    \resizebox{16.5cm}{!}{\includegraphics {initialsetting.PNG}}
+    \resizebox{16.5cm}{!}{\includegraphics {initialsetting.png}}
     \caption {初期設定モジュールのイメージ}
     \label{initialsetting}
     \end{center}
@@ -107,7 +107,7 @@
 \subsubsection{成長記録モジュール\label{grow}}
 \begin{figure}[H]
     \begin{center}
-    \resizebox{16.5cm}{!}{\includegraphics {growall.PNG}}
+    \resizebox{16.5cm}{!}{\includegraphics {growall.png}}
     \caption {成長記録モジュールのイメージ}
     \label{functionselection}
     \end{center}
@@ -135,7 +135,7 @@
 \subsubsection{消去モジュール\label{delete}}
 \begin{figure}[H]
     \begin{center}
-    \resizebox{12cm}{!}{\includegraphics {delete.PNG}}
+    \resizebox{12cm}{!}{\includegraphics {delete.png}}
     \caption {消去モジュールのイメージ}
     \label{functionselection}
     \end{center}
@@ -156,7 +156,7 @@
 \subsubsection{アルバムモジュール\label{albam}}
 \begin{figure}[H]
     \begin{center}
-    \resizebox{16.5cm}{!}{\includegraphics {albam.PNG}}
+    \resizebox{16.5cm}{!}{\includegraphics {albam.png}}
     \caption {アルバムモジュールのイメージ}
     \label{functionselection}
     \end{center}
@@ -177,7 +177,7 @@
 \subsubsection{カメラモジュール\label{camera}}
 \begin{figure}[H]
     \begin{center}
-    \resizebox{8cm}{!}{\includegraphics {camera.PNG}}
+    \resizebox{8cm}{!}{\includegraphics {camera.png}}
     \caption {カメラモジュールのイメージ}
     \label{functionselection}
     \end{center}
@@ -196,7 +196,7 @@
 \subsubsection{コメントモジュール\label{coment}}
 \begin{figure}[H]
     \begin{center}
-    \resizebox{16.5cm}{!}{\includegraphics {coment.PNG}}
+    \resizebox{16.5cm}{!}{\includegraphics {coment.png}}
     \caption {コメントモジュールのイメージ}
     \label{functionselection}
     \end{center}
@@ -220,98 +220,109 @@
 \subsubsection{子育て窓口モジュール\label{子育て窓口}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
 \begin{figure}[H]
     \begin{center}
-      \includegraphics[height=8.0cm] {子育て窓口_全体.PNG} %画像は各自で用意、大きさも自分で調整
+      \includegraphics[height=8.0cm] {子育て窓口_全体.png} %画像は各自で用意、大きさも自分で調整
     \caption {子育て窓口モジュールのイメージ}
     \label{functionselection}
     \end{center}
 \end{figure}
 \subsubsection*{概要}
-モジュールの概要説明をここで行います。
+子育て窓口機能のメインモジュールです。子育て窓口機能の各サブシステムを利用するまでの流れを示しています。
 \subsubsection*{処理フロー}
 \begin{itemize}
-\item 【A】をタップすることで～モジュール(第\ref{初期設定}節)を呼び出します。%()は半角で！
-\item 【B】
-\item 【C】
-\item 【D】
+\item データベースに保存されている最新の質問N個を要求し、新しい順に画面に表示させます。
+\item 【もどる】をタップすることで機能選択画面に戻ります。
+\item 【投稿作成】をタップすることで投稿モジュール(第\ref{投稿}節)を呼び出します。
+\item 【検索】をタップすることで検索モジュール(第\ref{検索}節)を呼び出します。
+\item 各質問をタップすることで質問モジュール(第\ref{質問}節)を呼び出します。
+
 \end{itemize}
 
 \subsubsection{投稿モジュール\label{投稿}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
 \begin{figure}[H]
     \begin{center}
-      \includegraphics[height = 12.0cm] {子育て窓口_投稿.PNG} %画像は各自で用意、大きさも自分で調整
+      \includegraphics[height = 12.0cm] {子育て窓口_投稿.png} %画像は各自で用意、大きさも自分で調整
     \caption {投稿モジュールのイメージ}
     \label{functionselection}
     \end{center}
 \end{figure}
 \subsubsection*{概要}
-モジュールの概要説明をここで行います。
+本システム利用者が子育てに関する質問を投稿するためのモジュールです。
 \subsubsection*{処理フロー}
 \begin{itemize}
-\item 【A】をタップすることで～モジュール(第\ref{初期設定}節)を呼び出します。%()は半角で！
-\item 【B】
-\item 【C】
-\item 【D】
+\item 質問入力欄をタップすることで質問を入力することができます。匿名で投稿するか、登録されているユーザ名で投稿するか決めることができ、匿名投稿をしたい場合は匿名チェックボックスをタップします。
+\item 【投稿】をタップすることで投稿を行うことができます。
+\item 投稿に失敗した場合は質問投稿失敗画面を表示させます。
+\item 投稿に成功した場合はユーザ名と質問情報をデータベースに保存します。匿名チェックボックスをタップしていた場合は、ユーザ名を「匿名」で保存します。
+\item 投稿に成功した場合は質問投稿成功画面を表示させます。
+\item 投稿終了後、【もどる】をタップすることで子育て窓口機能のメイン画面に戻ります。
+
 \end{itemize}
 
 \subsubsection{検索モジュール\label{検索}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
 \begin{figure}[H]
     \begin{center}
-      \includegraphics[height = 12.0cm] {子育て窓口_検索.PNG} %画像は各自で用意、大きさも自分で調整
+      \includegraphics[height = 12.0cm] {子育て窓口_検索.png} %画像は各自で用意、大きさも自分で調整
     \caption {検索モジュールのイメージ}
     \label{functionselection}
     \end{center}
 \end{figure}
 \subsubsection*{概要}
-モジュールの概要説明をここで行います。
+本システム利用者が子育てに関する質問をキーワードで検索し、キーワードに関連した質問を表示させるためのモジュールです。
 \subsubsection*{処理フロー}
 \begin{itemize}
-\item 【A】をタップすることで～モジュール(第\ref{初期設定}節)を呼び出します。%()は半角で！
-\item 【B】
-\item 【C】
-\item 【D】
+\item 検索欄をタップすることでキーボードが表示され、キーワードを入力することができます。入力されたキーワードに関連する質問N個をデータベースに要求し、新しい順に画面に表示させます。
+\item 【もどる】をタップすることで子育て窓口機能のメイン画面に戻ります。
+\item 【投稿作成】をタップすることで投稿モジュール(第\ref{投稿}節)を呼び出します。
+\item 各質問をタップすることで質問モジュール(第\ref{質問}節)を呼び出します。
+
+
 \end{itemize}
 
 \subsubsection{質問モジュール\label{質問}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
 \begin{figure}[H]
     \begin{center}
-      \includegraphics[height = 12.0cm] {子育て窓口_質問.PNG} %画像は各自で用意、大きさも自分で調整
+      \includegraphics[height = 12.0cm] {子育て窓口_質問.png} %画像は各自で用意、大きさも自分で調整
     \caption {質問モジュールのイメージ}
     \label{functionselection}
     \end{center}
 \end{figure}
 \subsubsection*{概要}
-モジュールの概要説明をここで行います。
+画面上に表示された各質問をタップしたときに利用するモジュールです。質問の詳細内容を表示させます。
 \subsubsection*{処理フロー}
 \begin{itemize}
-\item 【A】をタップすることで～モジュール(第\ref{初期設定}節)を呼び出します。%()は半角で！
-\item 【B】
-\item 【C】
-\item 【D】
+\item データベースに質問の全文と投稿者のユーザ名を要求し、画面に表示させます。
+\item データベースに質問に対する回答の全文と回答者のユーザ名を要求し、画面に表示させます。
+\item 【もどる】をタップすることで子育て窓口機能のメイン画面に戻ります。
+\item 【回答作成】をタップすることで回答モジュール(第\ref{回答}節)を呼び出します。
+
 \end{itemize}
 
 \subsubsection{回答モジュール\label{回答}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
 \begin{figure}[H]
     \begin{center}
-      \includegraphics[height = 12.0cm] {子育て窓口_回答.PNG} %画像は各自で用意、大きさも自分で調整
+      \includegraphics[height = 12.0cm] {子育て窓口_回答.png} %画像は各自で用意、大きさも自分で調整
     \caption {回答モジュールのイメージ}
     \label{functionselection}
     \end{center}
 \end{figure}
 \subsubsection*{概要}
-モジュールの概要説明をここで行います。
+子育てに関する質問に対して回答を行うためのモジュールです。
 \subsubsection*{処理フロー}
 \begin{itemize}
-\item 【A】をタップすることで～モジュール(第\ref{初期設定}節)を呼び出します。%()は半角で！
-\item 【B】
-\item 【C】
-\item 【D】
+\item 回答入力欄をタップすることで回答を入力することができます。匿名で投稿するか、登録されているユーザ名で投稿するか決めることができ、匿名投稿をしたい場合は匿名チェックボックスをタップします。
+\item 【回答】をタップすることで投稿を行うことができます。
+\item 投稿に失敗した場合は回答投稿失敗画面を表示させます。
+\item 投稿に成功した場合はユーザ名と回答情報をデータベースに保存します。匿名チェックボックスをタップしていた場合は、ユーザ名を「匿名」で保存します。
+\item 投稿に成功した場合は回答投稿成功画面を表示させます。
+\item 投稿終了後、【もどる】をタップすることで子育て窓口機能のメイン画面に戻ります。
+
 \end{itemize}
 
 
 \subsection{見本機能}
 \begin{figure}[H]
     \begin{center}
-    \resizebox{16.5cm}{!}{\includegraphics {functionselection.PNG}} %画像は各自で用意、大きさも自分で調整
+    \resizebox{16.5cm}{!}{\includegraphics {functionselection.png}} %画像は各自で用意、大きさも自分で調整
     \caption {見本モジュールのイメージ}
     \label{functionselection}
     \end{center}
