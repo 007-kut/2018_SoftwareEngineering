@@ -35,8 +35,119 @@
 \tableofcontents
 \newpage
 
+\section{開発環境}
+本章では、システムを開発する際に必要となる環境を示しています。
+
+\subsection{Androidアプリの開発環境}
+Androidアプリの開発環境を表\ref{Application_Development_Environment}に示します。
+
+\begin{table}[H]
+    \caption{Androidアプリの開発環境}
+    \label{Application_Development_Environment}
+    \begin{center}
+        \begin{tabular}{|c||c|} \hline
+            IDE & Android Studio 3.2.1 \\ \hline
+            開発言語 & Java, PHP \\ \hline
+            画面設計 & XML \\ \hline
+            バージョン管理 & GitHub \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\subsection{サーバの開発環境}
+システムで使用するサーバの開発環境を表\ref{Server_Development_Environment}に示します。
+\begin{table}[H]
+    \caption{サーバの開発環境}
+    \label{Server_Development_Environment}
+    \begin{center}
+        \begin{tabular}{|c||c|} \hline
+            OS & CentOS 7.5.1804 \\ \hline
+            サーバソフトウェア & Apache 2.4.6 \\ \hline
+            データベース & mysql 14.14 \\ \hline
+            CPU & Intel Corei7-3930K \\ \hline
+            RAM & 32GB \\ \hline
+            ROM & 500GB \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+
+\section{動作環境}
+本章では、システムを動作させる際に必要となる環境を示しています。
+
+\begin{table}[H]
+    \caption{動作環境}
+    \label{Operationg_Environment}
+    \begin{center}
+        \begin{tabular}{|c||c|} \hline
+            OS & Android4.4 以上 9.0以下 \\ \hline
+            画面 & 高解像度(hdpi) \\ \hline
+            必要機能 & カメラ \\ \hline
+            通信 & 3G/4G(LTE)またはWi-Fiによるインターネット接続 \\ \hline
+            CPU & 1GHz以上 \\ \hline
+            RAM & 2GB以上 \\ \hline
+
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\section{コーディング規約}
+本章では、本システムを開発する際のコーディング規約を示します。
+
+\subsection{命名規則}
+\begin{itemize}
+  %スネーク記法のほうが良ければスネーク記法にしましょ(例：setting_account)
+  \item クラス名・モジュール名
+  %アッパーキャメルケース表記で命名を行います。
+  \begin{itemize}
+    \item 2つ以上の英単語を使用します。
+    \item 単語の頭文字は全て大文字を使用します。
+    \item 名称は英字のみを使用し、意味のあるものを用います。
+  \end{itemize}
+  (例：SettingAccount)
+
+  \item メソッド名・変数名
+  %ローワーキャメルケース表記で命名を行います。
+  \begin{itemize}
+    \item 2つ以上の英単語を使用します。
+    \item 名称の頭文字は小文字、後続する単語の頭文字は大文字を使用します。
+    \item 名称は英字のみを使用し、意味のあるものを用います。
+  \end{itemize}
+  (例：getStatus)
+
+  \item 定数
+  \begin{itemize}
+    \item 全ての文字を大文字で表記します。
+    \item 2つ以上の単語を用いる場合は、単語と単語を'\_'で区切ります。
+  \end{itemize}
+  (例：ERRAND\_ID)
+  %errand -> おつかいの意味
+\end{itemize}
+
+\subsection{コーディングスタイル}
+
+\begin{itemize}
+  \item インデント
+  \begin{itemize}
+    \item インデントはTAB文字、または半角スペース4文字を使用します。
+  \end{itemize}
+
+  \item 括弧
+  \begin{itemize}
+    \item 中括弧は改行して開始します。
+    \item 小括弧の前後にはスペースを使用しない。
+  \end{itemize}
+
+  \item 演算子
+  \begin{itemize}
+    \item 演算子の前後には半角スペースを一文字分使用します。
+  \end{itemize}
+
+  %\item 文字コード
+\end{itemize}
+
 \section{モジュール設計書}
-本システムのモジュール構成をフロー図として図\ref{functionselection}、図\ref{initialsetting}に示します。モジュール構成において各図形が何を意味するか図\ref{sample}に示してあります。
+本システムのモジュール構成をフロー図として図\ref{functionselection}、図\ref{initialsetting}、図\ref{game}、図\ref{oekaki}、図\ref{oekaki2}、図\ref{illustration}、図\ref{otukai}、図\ref{urimono}、図\ref{outi}、図\ref{growall}、図\ref{delete}、図\ref{albam}、図\ref{camera}、図\ref{coment}、図\ref{子育て窓口_全体}、図\ref{子育て窓口_投稿}、図\ref{子育て窓口_検索}、図\ref{子育て窓口_質問}、図\ref{子育て窓口_回答}、図\ref{設定_全体}、図\ref{設定_アカウント}、図\ref{設定_アカウント変更}、図\ref{設定_アカウント削除}、図\ref{設定_パスワード}に示します。モジュール構成において各図形が何を意味するか図\ref{sample}に示してあります。
 
 
 \begin{figure}[H]
@@ -68,13 +179,13 @@
 
 \item 【ゲームであそぶ】タップすることでゲームモジュールを呼び出します。
 
-\item 【成長記録】をタップすることで成長記録モジュール第\ref{growall}節を呼び出します。
+\item 【成長記録】をタップすることで成長記録モジュール（第\ref{grow}節）を呼び出します。
 
-\item 【子育て窓口】をタップすることで子育て窓口モジュールを呼び出しします。
+\item 【子育て窓口】をタップすることで子育て窓口モジュールを呼び出します。
 
-\item 【設定】をタップすることで設定モジュールを呼び出しします。
+\item 【設定】をタップすることで設定モジュールを呼び出します。
 
-\item 機能選択画面から呼び出される各モジュールにおいて【もどるボタン】をタップすることで、機能選択画面に戻ります。
+\item 機能選択画面から呼び出される各モジュールにおいて【もどる】をタップすることで、機能選択画面に戻ります。
 \end{itemize}
 
 \begin{figure}[H]
@@ -99,7 +210,7 @@
 
 \item 【ゲームのパスワードの入力欄】をタップすることでキーボードを表示させ、ゲーム画面から機能選択画面に戻るためのパスワードとして、4桁の数字が入力できるようになります。
 
-\item 【完了】をタップすることで初期設定が全て行われているか判定を行い、設定漏れがなければデータベースに初期設定情報を登録して機能選択画面に遷移します。設定漏れが見つかれば再び初期設定画面に戻り、設定漏れを埋めることになります。
+\item 【完了】をタップすることで初期設定が全て行われているか判定を行い、設定漏れがなければデータベースに初期設定情報を登録して機能選択モジュール(第\ref{機能選択}節)を呼び出します。設定漏れが見つかれば再び初期設定画面に戻り、設定漏れを埋めることになります。
 \end{itemize}
 
 \newpage
@@ -109,9 +220,9 @@
 \subsubsection{ゲーム選択モジュール\label{ゲーム選択}}
 \begin{figure}[H]
     \begin{center}
-    \resizebox{16.5cm}{!}{\includegraphics {ゲーム_全体.png}}
+    \resizebox{16.5cm}{!}{\includegraphics {game.png}}
     \caption {ゲーム選択モジュールのイメージ}
-    \label{functionselection}
+    \label{game}
     \end{center}
 \end{figure}
 
@@ -132,7 +243,7 @@
     \begin{center}
     \resizebox{16.5cm}{!}{\includegraphics {oekaki.png}}
     \caption {おえかき選択モジュールのイメージ}
-    \label{functionselection}
+    \label{oekaki}
     \end{center}
 \end{figure}
 
@@ -154,19 +265,20 @@
     \begin{center}
     \resizebox{16.5cm}{!}{\includegraphics {oekaki2.png}}
     \caption {おえかきモジュールのイメージ}
-    \label{functionselection}
+    \label{oekaki2}
     \end{center}
 \end{figure}
 
 \subsubsection*{概要}
 利用者が実際におえかきゲームで遊ぶための画面です。
 
-機能としておえかきを描いたり、描いたおえかきを成長記録のアルバムに保存することができます。
+機能として絵を描いたり、描いた絵を成長記録のアルバムに保存することができます。
 \subsubsection*{処理フロー}
 \begin{itemize}
 \item　【イラスト】をタップすることでおえかきをするためのペンやペンの太さ、消しゴム、色の種類を変更できます。
 \item　【ほぞん】をタップすことで自分の描いたおえかきが成長記録のアルバムに保存されます。
-\item　【もどる】をタップすることでおえかき選択モジュール(第\ref{おえかき選択}節)に戻ります。
+\item　「ほぞんしました」と表示された画面の【とじる】をタップするとおえかきの続き画面に戻ります。　
+\item　【もどる】をタップすることでおえかき選択画面(第\ref{おえかき選択}節)に戻ります。
 \end{itemize}
 
 \newpage
@@ -175,29 +287,30 @@
     \begin{center}
     \resizebox{16.5cm}{!}{\includegraphics {illustration.png}}
     \caption {イラスト付きおえかきモジュールのイメージ}
-    \label{functionselection}
+    \label{illustration}
     \end{center}
 \end{figure}
 
 \subsubsection*{概要}
-ここでは、用意されたイラストを閲覧しながらおえかきを描いたり、描いたおえかきを成長記録のアルバムに保存することができます。
+ここでは、用意されたイラストを閲覧しながら絵を描いたり、描いた絵を成長記録のアルバムに保存することができます。
 
 \subsubsection*{処理フロー}
 \begin{itemize}
 \item　【イラスト】をタップすることでおえかきをするためのペンやペンの太さ、消しゴム、色の種類を変更できます。
 \item　【ほぞん】をタップすことで自分の描いたおえかきが成長記録のアルバムに保存されます。
-\item　【もどる】をタップすることでおえかき選択モジュール(第\ref{おえかき選択}節)に戻ります。
+\item　「ほぞんしました」と表示された画面の【とじる】をタップするとおえかきの続き画面に戻ります。
+\item　【もどる】をタップすることでおえかき選択画面(第\ref{おえかき選択}節)に戻ります。
 \end{itemize}
 
 
 \newpage
 
-\subsubsection{おつかい画面モジュールl{おつかい}}
+\subsubsection{おつかい画面モジュール\label{おつかい}}
 \begin{figure}[H]
     \begin{center}
     \resizebox{16.5cm}{!}{\includegraphics {otukai.png}}
     \caption {おつかいモジュールのイメージ}
-    \label{functionselection}
+    \label{otukai}
     \end{center}
 \end{figure}
 
@@ -209,7 +322,7 @@
 \subsubsection*{処理フロー}
 \begin{itemize}
 \item　【もどる】をタップすることでゲーム選択画面(第\ref{ゲーム選択}節)に戻ります。
-\item　【各料理】をタップすることで選択した料理の材料画面を表示します。
+\item　【料理のイラスト】をタップすることで選択した料理の材料画面を表示します。
 \item　材料画面の【おつかい】をタップするとおみせ画面を表示し、【もどる】をタップするとおつかいゲーム画面を表示します。
 \item　【お店のイラスト】をタップすることで売り物画面モジュール(第\ref{売り物}節)を呼び出します。
 \item　【おうちにかえる】をタップすることでおうち画面モジュール(第\ref{おうち}節)を呼び出します。
@@ -223,7 +336,7 @@
     \begin{center}
     \resizebox{16.5cm}{!}{\includegraphics {urimono.png}}
     \caption {おつかいモジュールのイメージ}
-    \label{functionselection}
+    \label{urimono}
     \end{center}
 \end{figure}
 
@@ -244,7 +357,7 @@
     \begin{center}
     \resizebox{9cm}{!}{\includegraphics {outi.png}}
     \caption {おうちモジュールのイメージ}
-    \label{functionselection}
+    \label{outi}
     \end{center}
 \end{figure}
 
@@ -266,7 +379,7 @@
     \begin{center}
     \resizebox{16.5cm}{!}{\includegraphics {growall.png}}
     \caption {成長記録モジュールのイメージ}
-    \label{functionselection}
+    \label{growall}
     \end{center}
 \end{figure}
 
@@ -278,23 +391,23 @@
 
 \subsubsection*{処理フロー}
 \begin{itemize}
-\item 【ゴミ箱】をタップすることで削除モジュール(第\ref{delete}節)を呼び出します。
+\item 【ゴミ箱】をタップすることで画像削除モジュール(第\ref{Delete}節)を呼び出します。
 
-\item 写真・記録を直接タップすることでアルバムモジュール(第\ref{albam}節)を呼び出します。
+\item 写真・記録を直接タップすることでアルバムモジュール(第\ref{Albam}節)を呼び出します。
 
-\item 【カメラ】をタップすることでカメラモジュール(第\ref{camera}節)を呼び出します。
+\item 【カメラ】をタップすることでカメラモジュール(第\ref{Camera}節)を呼び出します。
 
 \item 【共有】をタップすることで外部アプリであるTwitterを起動します。
 
-\item 【もどる】をタップすることで機能選択画面に戻ります。
+\item 【もどる】をタップすることで機能選択画面(第\ref{機能選択}節)に戻ります。
 \end{itemize}
 
-\subsubsection{削除モジュール\label{delete}}
+\subsubsection{画像削除モジュール\label{Delete}}
 \begin{figure}[H]
     \begin{center}
-    \resizebox{12cm}{!}{\includegraphics {delete.png}}
-    \caption {削除モジュールのイメージ}
-    \label{functionselection}
+    \resizebox{10cm}{!}{\includegraphics {delete.png}}
+    \caption {画像削除モジュールのイメージ}
+    \label{delete}
     \end{center}
 \end{figure}
 
@@ -307,15 +420,15 @@
 \item 【削除】を選んだ場合確認画面が表示されます。確認画面では【はい】と【いいえ】のボタンがあります。
 \item 【はい】をタップすると選択した写真や記録が削除されます。
 \item 【いいえ】をタップすると削除するか戻るかを選択する画面に戻ります。
-\item 【もどるボタン】をタップした場合成長記録のメイン画面に戻ります。
+\item 【もどるボタン】をタップした場合成長記録のメイン画面(第\ref{grow}節)に戻ります。
 \end{itemize}
 
-\subsubsection{アルバムモジュール\label{albam}}
+\subsubsection{アルバムモジュール\label{Albam}}
 \begin{figure}[H]
     \begin{center}
     \resizebox{16.5cm}{!}{\includegraphics {albam.png}}
     \caption {アルバムモジュールのイメージ}
-    \label{functionselection}
+    \label{albam}
     \end{center}
 \end{figure}
 
@@ -324,19 +437,19 @@
 
 \subsubsection*{処理フロー}
 \begin{itemize}
-\item 写真や記録タップした場合、それにコメントがついているかを判定します。コメントがあった場合はコメントを写真や記録と一緒に表示し、ない場合は写真や記録のみを拡大表示します。拡大表示した画面では【もどる】,【ゴミ箱】,【コメント】,【共有】が選択できます。
-\item 【もどる】をタップすることで成長記録のメイン画面に戻ることができます。
-\item 【ゴミ箱】をタップすることで削除モジュール(第\ref{delete}節)を呼び出します。
-\item 【コメント】をタップすることでコメントモジュール(第\ref{coment}節)を呼び出します。
+\item 写真や記録をタップした場合、それにコメントがついているかを判定します。コメントがあった場合はコメントを写真や記録と一緒に表示し、ない場合は写真や記録のみを拡大表示します。拡大表示した画面では【もどる】,【ゴミ箱】,【コメント】,【共有】が選択できます。
+\item 【もどる】をタップすることで成長記録のメイン画面(第\ref{grow}節)に戻ることができます。
+\item 【ゴミ箱】をタップすることで画像削除モジュール(第\ref{Delete}節)を呼び出します。
+\item 【コメント】をタップすることでコメントモジュール(第\ref{Coment}節)を呼び出します。
 \item 【共有】をタップすることで外部アプリであるTwitterを起動します。
 \end{itemize}
 
-\subsubsection{カメラモジュール\label{camera}}
+\subsubsection{カメラモジュール\label{Camera}}
 \begin{figure}[H]
     \begin{center}
     \resizebox{8cm}{!}{\includegraphics {camera.png}}
     \caption {カメラモジュールのイメージ}
-    \label{functionselection}
+    \label{camera}
     \end{center}
 \end{figure}
 
@@ -346,16 +459,16 @@
 \subsubsection*{処理フロー}
 \begin{itemize}
 \item 外部アプリのカメラを起動し写真を撮影します。その後、【もどる】か【保存】を選択します。
-\item 【もどるボタン】をタップすることで写真を撮影する画面に戻ります。
-\item 【保存ボタン】をタップすることで成長記録と連動します。その後、撮影した写真を月ごとに保存し成長記録のメイン画面に戻ります。
+\item 【もどる】をタップすることで写真を撮影する画面に戻ります。
+\item 【保存】をタップすることで成長記録と連動します。その後、撮影した写真を月ごとに保存し成長記録のメイン画面に戻ります。
 \end{itemize}
 
-\subsubsection{コメントモジュール\label{coment}}
+\subsubsection{コメントモジュール\label{Coment}}
 \begin{figure}[H]
     \begin{center}
     \resizebox{16.5cm}{!}{\includegraphics {coment.png}}
     \caption {コメントモジュールのイメージ}
-    \label{functionselection}
+    \label{coment}
     \end{center}
 \end{figure}
 
@@ -366,9 +479,9 @@
 \begin{itemize}
 \item このモジュールに入ったときにその写真や記録にコメントが付与されているかを判定します。コメントがなければコメント入力画面のみ表示し、コメントがあればそのコメントとコメント入力画面を一緒に表示します。
 \item コメント入力画面が表示されるとコメント欄をタップすることでコメントの書き込みが行えます。挿入、編集は何度でも行えます。
-\item コメントの書き込みが終わった場合、もしくはコメントを書き込まなかった場合【保存】をタップするか、保存せずに【もどるボタン】をタップするかを選択します。
-\item 【保存】をタップした場合コメントの内容が変更されたかを判定し、変更されていれば内容を保存してアルバムモジュールに戻ります。変更されていなければ保存せずにアルバムモジュール(第\ref{albam}節)に戻ります。
-\item 【もどる】をタップすることで内容を保存せずアルバムモジュール(第\ref{albam}節)に戻ります。
+\item コメントの書き込みが終わった場合、もしくはコメントを書き込まなかった場合【保存】をタップするか、保存せずに【もどる】をタップするかを選択します。
+\item 【保存】をタップした場合コメントの内容が変更されたかを判定し、変更されていれば内容を保存してアルバムモジュールに戻ります。変更されていなければ保存せずにアルバムモジュール(第\ref{Albam}節)に戻ります。
+\item 【もどる】をタップすることで内容を保存せずアルバムモジュール(第\ref{Albam}節)に戻ります。
 \end{itemize}
 \newpage
 
@@ -379,7 +492,7 @@
     \begin{center}
       \includegraphics[height=8.0cm] {子育て窓口_全体.png} %画像は各自で用意、大きさも自分で調整
     \caption {子育て窓口モジュールのイメージ}
-    \label{functionselection}
+    \label{子育て窓口_全体}
     \end{center}
 \end{figure}
 \subsubsection*{概要}
@@ -399,7 +512,7 @@
     \begin{center}
       \includegraphics[height = 12.0cm] {子育て窓口_投稿.png} %画像は各自で用意、大きさも自分で調整
     \caption {投稿モジュールのイメージ}
-    \label{functionselection}
+    \label{子育て窓口_投稿}
     \end{center}
 \end{figure}
 \subsubsection*{概要}
@@ -420,7 +533,7 @@
     \begin{center}
       \includegraphics[height = 12.0cm] {子育て窓口_検索.png} %画像は各自で用意、大きさも自分で調整
     \caption {検索モジュールのイメージ}
-    \label{functionselection}
+    \label{子育て窓口_検索}
     \end{center}
 \end{figure}
 \subsubsection*{概要}
@@ -440,7 +553,7 @@
     \begin{center}
       \includegraphics[height = 12.0cm] {子育て窓口_質問.png} %画像は各自で用意、大きさも自分で調整
     \caption {質問モジュールのイメージ}
-    \label{functionselection}
+    \label{子育て窓口_質問}
     \end{center}
 \end{figure}
 \subsubsection*{概要}
@@ -457,10 +570,10 @@
 \subsubsection{回答モジュール\label{回答}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
 \begin{figure}[H]
     \begin{center}
-      \includegraphics[height = 12.0cm] {子育て窓口_回答.png} %画像は各自で用意、大きさも自分で調整
+      \includegraphics[height = 14.0cm] {子育て窓口_回答.png} %画像は各自で用意、大きさも自分で調整
     \caption {回答モジュールのイメージ}
-    \label{functionselection}
-    \end{center}
+    \label{子育て窓口_回答}　
+    \end{center}　
 \end{figure}
 \subsubsection*{概要}
 子育てに関する質問に対して回答を行うためのモジュールです。
@@ -475,6 +588,7 @@
 
 \end{itemize}
 
+\newpage
 
 \subsection{設定機能}
 \subsubsection{設定機能モジュール\label{設定機能}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
@@ -482,7 +596,7 @@
     \begin{center}
       \includegraphics[height=8.0cm] {設定_全体.png} %画像は各自で用意、大きさも自分で調整
     \caption {設定機能モジュールのイメージ}
-    \label{functionselection}
+    \label{設定_全体}
     \end{center}
 \end{figure}
 \subsubsection*{概要}
@@ -501,44 +615,44 @@
 \subsubsection{アカウントモジュール\label{アカウント}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
 \begin{figure}[H]
     \begin{center}
-      \resizebox{16.5cm}{!}{\includegraphics{設定_パスワード.png}} %画像は各自で用意、大きさも自分で調整
+      \resizebox{16.5cm}{!}{\includegraphics{設定_アカウント.png}} %画像は各自で用意、大きさも自分で調整
     \caption {アカウントモジュールのイメージ}
-    \label{functionselection}
+    \label{設定_アカウント}
     \end{center}
 \end{figure}
 \subsubsection*{概要}
 SNSを利用する際のアカウントの登録・変更・削除を行う機能です。
 \subsubsection*{処理フロー}
 \begin{itemize}
-\item 【変更】をタップすることで変更モジュールを呼び出します。
-\item 【削除】をタップすることで削除モジュールを呼び出します。
+\item 【変更】をタップすることでアカウント変更モジュールを呼び出します。
+\item 【削除】をタップすることでアカウント削除モジュールを呼び出します。
 \item 【もどる】をタップすることで設定画面に戻ります。
 \end{itemize}
 
-\subsubsection{変更モジュール\label{変更}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
+\subsubsection{アカウント変更モジュール\label{アカウント変更}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
 \begin{figure}[H]
     \begin{center}
-      \resizebox{16.5cm}{!}{\includegraphics{設定_変更.png}}%画像は各自で用意、大きさも自分で調整
-    \caption {変更モジュールのイメージ}
-    \label{functionselection}
+      \resizebox{16.5cm}{!}{\includegraphics{設定_アカウント変更.png}}%画像は各自で用意、大きさも自分で調整
+    \caption {アカウント変更モジュールのイメージ}
+    \label{設定_アカウント変更}
     \end{center}
 \end{figure}
 \subsubsection*{概要}
 アカウントの変更を行う機能です。
 \subsubsection*{処理フロー}
 \begin{itemize}
-\item 【ニックネーム】をタップすることでニックネームの変更を行います。
-\item 【地域】をタップすることで地域の変更を行います。
+\item 【ニックネーム】をタップすることで画面下にキーボードが表示され、名前入力を行いニックネームの変更が可能になります。
+\item 【地域】をタップすることで47都道府県をタップして選択できるドロップダウンリストを表示させ、住んでいる地域設定を行い地域の変更が可能になります。
 \item 【完了】をタップした場合【ニックネーム】と【地域】の設定が正しく行われていればDBを更新しアカウントの変更を行います。
 \item 【もどる】ボタンをタップすることでアカウント画面に戻ります。
 \end{itemize}
 
-\subsubsection{削除モジュール\label{削除}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
+\subsubsection{アカウント削除モジュール\label{アカウント削除}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
 \begin{figure}[H]
     \begin{center}
-      \resizebox{16.5cm}{!}{\includegraphics{設定_削除.png}} %画像は各自で用意、大きさも自分で調整
-    \caption {削除モジュールのイメージ}
-    \label{functionselection}
+      \resizebox{16.5cm}{!}{\includegraphics{設定_アカウント削除.png}} %画像は各自で用意、大きさも自分で調整
+    \caption {アカウント削除モジュールのイメージ}
+    \label{設定_アカウント削除}
     \end{center}
 \end{figure}
 \subsubsection*{概要}
@@ -554,7 +668,7 @@ SNSを利用する際のアカウントの登録・変更・削除を行う機�
     \begin{center}
        \resizebox{16.5cm}{!}{\includegraphics{設定_パスワード.png}}%画像は各自で用意、大きさも自分で調整
     \caption {パスワードモジュールのイメージ}
-    \label{functionselection}
+    \label{設定_パスワード}
     \end{center}
 \end{figure}
 \subsubsection*{概要}
@@ -567,23 +681,113 @@ SNSを利用する際のアカウントの登録・変更・削除を行う機�
 \item 【もどる】をタップすることで設定画面に戻ります。
 \end{itemize}
 
-\subsection{見本機能}
-\begin{figure}[H]
+\newpage
+
+\section{データテーブル設計}
+
+以下に本システムで用いるデータテーブルを示します。\\
+表\ref{tbl: user}はユーザ情報を示しており、親の情報を格納しています。\\
+
+\begin{table}[H]
+    \caption{ユーザ情報}
+    \label{tbl: user}
     \begin{center}
-    \resizebox{16.5cm}{!}{\includegraphics {functionselection.png}} %画像は各自で用意、大きさも自分で調整
-    \caption {見本モジュールのイメージ}
-    \label{functionselection}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            UserID & 半角英数字型 & 6文字固定長 & TEXT & PK\\ \hline
+            Name & 全角文字型 & 10文字可変長 & TEXT & \\ \hline
+            Area & 全角文字型 & 5文字可変長 & TEXT & \\ \hline
+        \end{tabular}
     \end{center}
-\end{figure}
-\subsubsection{見本モジュール\label{見本}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
-\subsubsection*{概要}
-モジュールの概要説明をここで行います。
-\subsubsection*{処理フロー}
-\begin{itemize}
-\item 【A】をタップすることで～モジュール(第\ref{初期設定}節)を呼び出します。%()は半角で！
-\item 【B】
-\item 【C】
-\item 【D】
-\end{itemize}
+\end{table}
+
+
+表\ref{tbl: question}～表\ref{tbl: date}では、質問箱に関するデータを示しています。表\ref{tbl: question}では質問と質問者の関連付けを、表\ref{tbl: answer}では回答と回答者の関連付けを行い、質問と回答の管理を行っています。\\
+また、表\ref{tbl: qcontents}では質問内容を、表\ref{tbl: acontents}では回答内容を、表\ref{tbl: date}では日付の管理を行っています。\\
+\begin{table}[H]
+    \caption{質問}
+    \label{tbl: question}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            QID & 半角英数字型 & 8文字固定長 & TEXT & PK\\ \hline
+            UserID & 半角英数字型 & 6文字固定長 & TEXT & FK:親ユーザ情報\\ \hline
+            QcontentsID & 半角英数字型 & 10文字固定長 & TEXT & FK:質問内容\\ \hline
+            DateID & 半角英数字型 & 8文字固定長 & TEXT & FK:日付\\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \caption{回答}
+    \label{tbl: answer}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            AID & 半角英数字型 & 8文字固定長 & TEXT & PK\\ \hline
+            QID & 半角英数字型 & 8文字固定長 & TEXT & FK:質問\\ \hline
+            UserID & 半角英数字型 & 6文字固定長 & TEXT & FK:親ユーザ情報\\ \hline
+            AcontentsID & 半角英数字型 & 10文字固定長 & TEXT & FK:回答内容\\ \hline
+            DateID & 半角英数字型 & 8文字固定長 & TEXT & FK:日付\\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \caption{質問内容}
+    \label{tbl: qcontents}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+           属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            QcontentsID & 半角英数字型 & 10文字固定長 & TEXT & PK\\ \hline
+            Qcontents & 全角文字型 & 1000文字可変長 & TEXT & \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+
+\begin{table}[H]
+    \caption{回答内容}
+    \label{tbl: acontents}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            AcontentsID & 半角英数字型 & 10文字固定長 & TEXT & PK\\ \hline
+            Acontents & 全角文字型 & 1000文字可変長 & TEXT & \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \caption{日付}
+    \label{tbl: date}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            DateID & 半角英数字型 & 8文字固定長 & TEXT & PK\\ \hline
+            Date & 日付型 & 20文字固定長 & NUMERIC & \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+
+また、表\ref{tbl: datatable}に上記のデータテーブルに対する操作を示します。ユーザ情報はユーザ側と管理者側の両方で編集できるようにします。質問と回答のテーブルはユーザが作成を行い、削除は管理者側が行えるようにします。質問内容と回答内容は内容を修正できるようにユーザが更新できるようにしておきます。日付は自動で保存されるので参照のみできるようにします。
+
+\begin{table}[H]
+    \caption{各種データテーブルに対する操作}
+    \label{tbl: datatable}
+    \begin{center}
+        \begin{tabular}{|l||c|c|c|c||c|c|c|c|} \hline
+             & \multicolumn{4}{|c||}{アプリケーション} & \multicolumn{4}{|c|}{管理画面}\\ \hline
+            データテーブル & \multicolumn{1}{|l|}{作成} & \multicolumn{1}{|l|}{参照} & \multicolumn{1}{|l|}{更新} & \multicolumn{1}{|l||}{削除} & \multicolumn{1}{|l|}{作成} & \multicolumn{1}{|l|}{参照} & \multicolumn{1}{|l|}{更新} & \multicolumn{1}{|l|}{削除}\\ \hline \hline
+            ユーザ情報 & 〇 & 〇 & 〇 & 〇 & 〇 & 〇 & 〇 & 〇\\ \hline
+            質問 & 〇 & 〇 &  &  & 〇 & 〇 & 〇 & 〇\\ \hline
+            質問内容 & 〇 & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline
+            回答 & 〇 & 〇 &  &  & 〇 & 〇 & 〇 & 〇\\ \hline
+            回答内容 & 〇 & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline
+            日付 &  & 〇 &  &  & 〇 & 〇 & 〇 & 〇\\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
 
 \end{document}
