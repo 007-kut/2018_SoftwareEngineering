@@ -102,6 +102,163 @@
 \item 【完了】をタップすることで初期設定が全て行われているか判定を行い、設定漏れがなければデータベースに初期設定情報を登録して機能選択画面に遷移します。設定漏れが見つかれば再び初期設定画面に戻り、設定漏れを埋めることになります。
 \end{itemize}
 
+\newpage
+
+
+\subsection{ゲーム機能}
+\subsubsection{ゲーム選択モジュール\label{ゲーム選択}}
+\begin{figure}[H]
+    \begin{center}
+    \resizebox{16.5cm}{!}{\includegraphics {ゲーム_全体.png}}
+    \caption {ゲーム選択モジュールのイメージ}
+    \label{functionselection}
+    \end{center}
+\end{figure}
+
+\subsubsection*{概要}
+ 利用者が行うゲームを選択する画面です。
+
+\subsubsection*{処理フロー}
+\begin{itemize}
+\item 【おえかき】をタップすることでおえかき選択モジュール(第\ref{おえかき選択}節)を呼び出します。
+\item 【おつかい】をタップすることでおつかいモジュール(第\ref{おつかい}節)を呼び出します。
+\item 【もどる】をタップすることで機能選択画面(第\ref{機能選択}節)に戻ります。
+\end{itemize}
+
+\newpage
+
+\subsubsection{おえかき選択モジュール\label{おえかき選択}}
+\begin{figure}[H]
+    \begin{center}
+    \resizebox{16.5cm}{!}{\includegraphics {oekaki.png}}
+    \caption {おえかき選択モジュールのイメージ}
+    \label{functionselection}
+    \end{center}
+\end{figure}
+
+\subsubsection*{概要}
+ おえかきの種類を選択する画面です。
+ 
+ あらかじめ用意されたイラストを見ながらおえかきするか自由におえかきするかを選択できます。
+
+\subsubsection*{処理フロー}
+\begin{itemize}
+\item　【イラスト】をタップすることでイラスト付きおえかきモジュール(第\ref{イラスト}節)を呼び出します。
+\item　【おえかき】をタップすことでおえかきモジュール(第\ref{おえかき}節)を呼び出します。
+\item　【もどる】をタップすることでゲーム選択画面(第\ref{ゲーム選択}節)に戻ります。
+\end{itemize}
+
+\newpage
+\subsubsection{おえかきモジュール\label{おえかき}}
+\begin{figure}[H]
+    \begin{center}
+    \resizebox{16.5cm}{!}{\includegraphics {oekaki2.png}}
+    \caption {おえかきモジュールのイメージ}
+    \label{functionselection}
+    \end{center}
+\end{figure}
+
+\subsubsection*{概要}
+利用者が実際におえかきゲームで遊ぶための画面です。
+
+機能としておえかきを描いたり、描いたおえかきを成長記録のアルバムに保存することができます。
+\subsubsection*{処理フロー}
+\begin{itemize}
+\item　【イラスト】をタップすることでおえかきをするためのペンやペンの太さ、消しゴム、色の種類を変更できます。
+\item　【ほぞん】をタップすことで自分の描いたおえかきが成長記録のアルバムに保存されます。
+\item　【もどる】をタップすることでおえかき選択モジュール(第\ref{おえかき選択}節)に戻ります。
+\end{itemize}
+
+\newpage
+\subsubsection{イラスト付きおえかきモジュール\label{イラスト}}
+\begin{figure}[H]
+    \begin{center}
+    \resizebox{16.5cm}{!}{\includegraphics {illustration.png}}
+    \caption {イラスト付きおえかきモジュールのイメージ}
+    \label{functionselection}
+    \end{center}
+\end{figure}
+
+\subsubsection*{概要}
+ここでは、用意されたイラストを閲覧しながらおえかきを描いたり、描いたおえかきを成長記録のアルバムに保存することができます。
+
+\subsubsection*{処理フロー}
+\begin{itemize}
+\item　【イラスト】をタップすることでおえかきをするためのペンやペンの太さ、消しゴム、色の種類を変更できます。
+\item　【ほぞん】をタップすことで自分の描いたおえかきが成長記録のアルバムに保存されます。
+\item　【もどる】をタップすることでおえかき選択モジュール(第\ref{おえかき選択}節)に戻ります。
+\end{itemize}
+
+
+\newpage
+
+\subsubsection{おつかい画面モジュールl{おつかい}}
+\begin{figure}[H]
+    \begin{center}
+    \resizebox{16.5cm}{!}{\includegraphics {otukai.png}}
+    \caption {おつかいモジュールのイメージ}
+    \label{functionselection}
+    \end{center}
+\end{figure}
+
+\subsubsection*{概要}
+利用者が実際におつかいゲームで遊ぶための画面です。
+
+選択した料理の材料を買ってくるゲームです。
+
+\subsubsection*{処理フロー}
+\begin{itemize}
+\item　【もどる】をタップすることでゲーム選択画面(第\ref{ゲーム選択}節)に戻ります。
+\item　【各料理】をタップすることで選択した料理の材料画面を表示します。
+\item　材料画面の【おつかい】をタップするとおみせ画面を表示し、【もどる】をタップするとおつかいゲーム画面を表示します。
+\item　【お店のイラスト】をタップすることで売り物画面モジュール(第\ref{売り物}節)を呼び出します。
+\item　【おうちにかえる】をタップすることでおうち画面モジュール(第\ref{おうち}節)を呼び出します。
+\item　【かごのイラスト】をタップすることで材料確認画面に遷移し持っている材料を確認できます。
+\end{itemize}
+
+
+\newpage
+\subsubsection{売り物モジュール\label{売り物}}
+\begin{figure}[H]
+    \begin{center}
+    \resizebox{16.5cm}{!}{\includegraphics {urimono.png}}
+    \caption {おつかいモジュールのイメージ}
+    \label{functionselection}
+    \end{center}
+\end{figure}
+
+\subsubsection*{概要}
+ここでは、必要な材料を買うことができます。
+
+\subsubsection*{処理フロー}
+\begin{itemize}
+\item　【もどる】をタップすることでおみせ画面に戻ります。
+\item　【材料のイラスト】をタップすることでかごにタップした材料が格納されます。
+\item　【かごのイラスト】をタップすることで材料確認画面に遷移し持っている材料を確認できます。
+\item　【ざいりょう】をタップすることで料理に必要な材料を表示します。
+\end{itemize}
+
+\newpage
+\subsubsection{おうちモジュール\label{おうち}}
+\begin{figure}[H]
+    \begin{center}
+    \resizebox{9cm}{!}{\includegraphics {outi.png}}
+    \caption {おうちモジュールのイメージ}
+    \label{functionselection}
+    \end{center}
+\end{figure}
+
+\subsubsection*{概要}
+ここでは、おつかい画面で選択した料理を持っている材料で作ることができます。
+
+\subsubsection*{処理フロー}
+\begin{itemize}
+\item　【おつかいにいく】・【もどる】をタップすることでおみせ画面に戻ります。
+\item　【料理を作る】をタップすると材料が足りている場合と足りてない場合に分岐します。足りている場合は出来上がり画面を表示し、足りてない場合は「ざいりょうがたいない」と表示します。
+\item 足りている時に表示された画面の【つぎへ】をタップすることでおつかいゲーム画面に戻ります。
+\item 足りていない時に表示された画面の【とじる】をタップすることでおうち画面へ遷移します。
+\end{itemize}
+
 
 \subsection{成長記録機能}
 \subsubsection{成長記録モジュール\label{grow}}
