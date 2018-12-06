@@ -147,7 +147,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 \end{itemize}
 
 \section{モジュール設計書}
-本システムのモジュール構成をフロー図として図\ref{functionselection}、図\ref{initialsetting}、図\ref{game}、図\ref{oekaki}、図\ref{oekaki2}、図\ref{illustration}、図\ref{otukai}、図\ref{urimono}、図\ref{outi}、図\ref{growall}、図\ref{delete}、図\ref{albam}、図\ref{camera}、図\ref{coment}、図\ref{子育て窓口_全体}、図\ref{子育て窓口_投稿}、図\ref{子育て窓口_検索}、図\ref{子育て窓口_質問}、図\ref{子育て窓口_回答}、図\ref{設定_全体}、図\ref{設定_アカウント}、図\ref{設定_アカウント変更}、図\ref{設定_アカウント削除}、図\ref{設定_パスワード}に示します。モジュール構成において各図形が何を意味するか図\ref{sample}に示してあります。
+モジュール構成において各図形が何を意味するか図\ref{sample}に示してあります。
 
 
 \begin{figure}[H]
@@ -171,7 +171,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 \end{figure}
 
 \subsubsection*{概要}
-本システムを起動してから各機能選択を行う本システムのメイン画面です。
+図\ref{functionselection}は、本システムを起動してから各機能選択を行うまでの流れを示しています。
 
 \subsubsection*{処理フロー}
 \begin{itemize}
@@ -199,14 +199,14 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 
 
 \subsubsection*{概要}
-本システムを初めて利用する場合、最初に行う初期設定機能です。
+図\ref{initialsetting}は、本システムを初めて利用する場合の初期設定機能の流れを示しています。
 
 
 \subsubsection*{処理フロー}
 \begin{itemize}
 \item 【名前（ニックネーム）の入力欄】をタップすることで画面下にキーボードが表示され、名前入力を行えるようになります。
 
-\item 【居住地域の選択欄の矩形領域】をタップすることで47都道府県をタップして選択できるドロップダウンリストを表示させ、住んでいる地域設定が行えるようになります。
+\item 【居住地域の選択欄の矩形領域】をタップすることで47都道府県をタップして選択できるドロップダウンリストを「都道府県コード順」に表示させ、住んでいる地域設定が行えるようになります。
 
 \item 【ゲームのパスワードの入力欄】をタップすることでキーボードを表示させ、ゲーム画面から機能選択画面に戻るためのパスワードとして、4桁の数字が入力できるようになります。
 
@@ -227,7 +227,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 \end{figure}
 
 \subsubsection*{概要}
- 利用者が行うゲームを選択する画面です。
+ 図\ref{game}は、利用者が行うゲーム選択の流れを示しています。
 
 \subsubsection*{処理フロー}
 \begin{itemize}
@@ -248,9 +248,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 \end{figure}
 
 \subsubsection*{概要}
- おえかきの種類を選択する画面です。
- 
- あらかじめ用意されたイラストを見ながらおえかきするか自由におえかきするかを選択できます。
+ 図\ref{oekaki}は、おえかきゲームの種類を選択する流れを示しています。
 
 \subsubsection*{処理フロー}
 \begin{itemize}
@@ -270,9 +268,8 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 \end{figure}
 
 \subsubsection*{概要}
-利用者が実際におえかきゲームで遊ぶための画面です。
+図\ref{oekaki2}は、利用者が実際におえかきゲームで遊ぶ際の流れを示しています。
 
-機能として絵を描いたり、描いた絵を成長記録のアルバムに保存することができます。
 \subsubsection*{処理フロー}
 \begin{itemize}
 \item　【イラスト】をタップすることでおえかきをするためのペンやペンの太さ、消しゴム、色の種類を変更できます。
@@ -292,7 +289,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 \end{figure}
 
 \subsubsection*{概要}
-ここでは、用意されたイラストを閲覧しながら絵を描いたり、描いた絵を成長記録のアルバムに保存することができます。
+図\ref{illustration}は、利用者が実際にイラスト付きおえかきゲームで遊ぶ際の流れを示しています。
 
 \subsubsection*{処理フロー}
 \begin{itemize}
@@ -315,9 +312,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 \end{figure}
 
 \subsubsection*{概要}
-利用者が実際におつかいゲームで遊ぶための画面です。
-
-選択した料理の材料を買ってくるゲームです。
+図\ref{otukai}は、利用者が実際におつかいゲームで遊ぶ際の流れを示しています。
 
 \subsubsection*{処理フロー}
 \begin{itemize}
@@ -341,7 +336,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 \end{figure}
 
 \subsubsection*{概要}
-ここでは、必要な材料を買うことができます。
+図\ref{urimono}はおつかいゲームで必要な材料を買う流れを示しています。
 
 \subsubsection*{処理フロー}
 \begin{itemize}
@@ -362,7 +357,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 \end{figure}
 
 \subsubsection*{概要}
-ここでは、おつかい画面で選択した料理を持っている材料で作ることができます。
+図\ref{outi}は、おつかい画面で選択した料理を持っている材料で作るまでの流れを示しています。
 
 \subsubsection*{処理フロー}
 \begin{itemize}
@@ -385,9 +380,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 
 
 \subsubsection*{概要}
-利用者が保存した写真やゲームの記録などの閲覧や編集を行うために使用する成長記録のメイン画面です。
-
-機能としては、不要な写真や記録の削除、写真や記録の閲覧、写真の撮影が行います。また、写真や記録をTwitterで共有できます。
+図\ref{growall}は、各サブシステムを利用するまでの流れを示しています。
 
 \subsubsection*{処理フロー}
 \begin{itemize}
@@ -412,7 +405,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 \end{figure}
 
 \subsubsection*{概要}
-利用者が不要と判断した写真やゲームの記録の消去を行うために使用する機能です。
+図\ref{delete}は、利用者が不要と判断した写真やゲームの記録の消去を行う際の流れを示しています。
 
 \subsubsection*{処理フロー}
 \begin{itemize}
@@ -433,7 +426,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 \end{figure}
 
 \subsubsection*{概要}
-利用者が閲覧したい写真や記録をタップすることでそれを拡大表示して閲覧することができる機能です。
+図\ref{albam}は、利用者が閲覧したい写真や記録をタップした際の流れを示しています。
 
 \subsubsection*{処理フロー}
 \begin{itemize}
@@ -454,7 +447,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 \end{figure}
 
 \subsubsection*{概要}
-利用者が新しく写真を撮影したいときに使用する機能です。
+図\ref{camera}は、利用者が新しく写真を撮影する際の流れを示しています。
 
 \subsubsection*{処理フロー}
 \begin{itemize}
@@ -473,7 +466,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 \end{figure}
 
 \subsubsection*{概要}
-利用者が写真や記録にコメントを挿入したい、または既についているコメントを編集したい場合に使用する機能です。
+図\ref{coment}は、利用者が写真や記録にコメントを挿入・編集する際の流れを示しています。。
 
 \subsubsection*{処理フロー}
 \begin{itemize}
@@ -496,7 +489,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
     \end{center}
 \end{figure}
 \subsubsection*{概要}
-子育て窓口機能のメインモジュールです。子育て窓口機能の各サブシステムを利用するまでの流れを示しています。
+図\ref{子育て窓口_全体}は、子育て窓口機能の各サブシステムを利用するまでの流れを示しています。
 \subsubsection*{処理フロー}
 \begin{itemize}
 \item データベースに保存されている最新の質問10個を要求し、新しい順に画面に表示させます。
@@ -516,7 +509,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
     \end{center}
 \end{figure}
 \subsubsection*{概要}
-本システム利用者が子育てに関する質問を投稿するためのモジュールです。
+図\ref{子育て窓口_投稿}は、本システム利用者が子育てに関する質問を投稿する際の流れを示しています。
 \subsubsection*{処理フロー}
 \begin{itemize}
 \item 質問入力欄をタップすることで質問を入力することができます。匿名で投稿するか、登録されているユーザ名で投稿するか決めることができ、匿名投稿をしたい場合は匿名チェックボックスをタップします。
@@ -537,7 +530,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
     \end{center}
 \end{figure}
 \subsubsection*{概要}
-本システム利用者が子育てに関する質問をキーワードで検索し、キーワードに関連した質問を表示させるためのモジュールです。
+図\ref{子育て窓口_検索}は、本システム利用者が子育てに関する質問をキーワードで検索し、キーワードに関連した質問を表示させる際の流れを示しています。
 \subsubsection*{処理フロー}
 \begin{itemize}
 \item 検索欄をタップすることでキーボードが表示され、キーワードを入力することができます。入力されたキーワードに関連する質問10個をデータベースに要求し、新しい順に画面に表示させます。
@@ -557,7 +550,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
     \end{center}
 \end{figure}
 \subsubsection*{概要}
-画面上に表示された各質問をタップしたときに利用するモジュールです。質問の詳細内容を表示させます。
+図\ref{子育て窓口_質問}は、画面上に表示された各質問をタップした際の流れを示しています。。
 \subsubsection*{処理フロー}
 \begin{itemize}
 \item データベースに質問の全文と投稿者のユーザ名を要求し、画面に表示させます。
@@ -576,7 +569,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
     \end{center}　
 \end{figure}
 \subsubsection*{概要}
-子育てに関する質問に対して回答を行うためのモジュールです。
+図\ref{子育て窓口_回答}は、子育てに関する質問に対して回答を行う際の流れを示しています。
 \subsubsection*{処理フロー}
 \begin{itemize}
 \item 回答入力欄をタップすることで回答を入力することができます。匿名で投稿するか、登録されているユーザ名で投稿するか決めることができ、匿名投稿をしたい場合は匿名チェックボックスをタップします。
@@ -590,7 +583,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 
 \newpage
 
-\subsection{設定}
+\subsection{設定機能}
 \subsubsection{設定モジュール\label{設定}} %ラベル名は「～モジュール」の「～」部分を使用。他の人が参照してくる場合もあるので（メイン画面は特に）
 \begin{figure}[H]
     \begin{center}
@@ -600,7 +593,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
     \end{center}
 \end{figure}
 \subsubsection*{概要}
-本システムは子育て窓口機能を利用する際に必要なアカウントの登録を行うことができます。また、アカウントの変更・削除も行うことができます。他に、こどもがゲーム機能を使用する際に他の機能や本システム以外のシステムを触らないようにパスワードの設定も行います。
+図\ref{設定_全体}は、設定機能の各サブシステムを利用するまでの流れを示しています。
 \subsubsection*{処理フロー}
 \begin{itemize}
 \item 【アカウント】をタップすることでアカウントモジュール(第\ref{アカウント}節)を呼び出します。その後アカウントが削除されたかどうかで設定画面か初期設定画面に遷移します。
@@ -621,7 +614,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
     \end{center}
 \end{figure}
 \subsubsection*{概要}
-子育て窓口機能を利用する際のアカウントの登録・変更・削除を行う機能です。
+図\ref{設定_アカウント}は、子育て窓口機能を利用する際のアカウントの登録・変更・削除を行う際の流れを示しています。
 \subsubsection*{処理フロー}
 \begin{itemize}
 \item 【変更】をタップすることでアカウント変更モジュール(第\ref{アカウント変更}節)を呼び出します。
@@ -638,11 +631,11 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
     \end{center}
 \end{figure}
 \subsubsection*{概要}
-アカウントの変更を行う機能です。
+図\ref{設定_アカウント変更}は、アカウントの変更を行う際の流れを示しています。
 \subsubsection*{処理フロー}
 \begin{itemize}
 \item 【ニックネーム】をタップすることで画面下にキーボードが表示され、名前入力を行いニックネームの変更が可能になります。
-\item 【地域】をタップすることで47都道府県をタップして選択できるドロップダウンリストを表示させ、住んでいる地域設定を行い地域の変更が可能になります。
+\item 【地域】をタップすることで47都道府県をタップして選択できるドロップダウンリストを【都道府県コード順」に表示させ、住んでいる地域設定を行い地域の変更が可能になります。
 \item 【完了】をタップした場合【ニックネーム】と【地域】の設定が正しく行われていればデータベースを更新しアカウントの変更を行います。
 \item 【もどる】ボタンをタップすることでアカウント画面に戻ります。
 \end{itemize}
@@ -656,7 +649,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
     \end{center}
 \end{figure}
 \subsubsection*{概要}
-アカウントの削除を行うモジュールです。
+	図\ref{設定_アカウント削除}は、アカウントの削除を行う際の流れを示しています。
 \subsubsection*{処理フロー}
 \begin{itemize}
 \item 【はい】をタップすることでDBを更新しアカウントの削除を行います。その後削除完了画面を表示し初期設定画面に戻ります。
@@ -672,7 +665,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
     \end{center}
 \end{figure}
 \subsubsection*{概要}
-こどもがゲーム機能を利用する際に他の機能や他のシステムを利用できないようにパスワードを設定する機能です。
+図\ref{設定_パスワード}は、こどもがゲーム機能を利用する際に他の機能や他のシステムを利用できないようにパスワードを設定する際の流れを示しています。
 \subsubsection*{処理フロー}
 \begin{itemize}
 \item 【パスワードを入力してください】をタップし4桁の数字を入力することでパスワードの設定を行います。
