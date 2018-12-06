@@ -380,7 +380,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 
 
 \subsubsection*{概要}
-図\ref{growall}は、各サブシステムを利用するまでの流れを示しています。
+図\ref{growall}は、成長記録機能の各サブシステムを利用するまでの流れを示しています。
 
 \subsubsection*{処理フロー}
 \begin{itemize}
@@ -405,7 +405,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 \end{figure}
 
 \subsubsection*{概要}
-図\ref{delete}は、利用者が不要と判断した写真やゲームの記録の消去を行う際の流れを示しています。
+図\ref{delete}は、利用者が不要と判断した写真やゲームの記録の削除を行う際の流れを示しています。
 
 \subsubsection*{処理フロー}
 \begin{itemize}
@@ -682,7 +682,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
 本小節では、テーブル間の関係性をER図を用いて示します。
 \begin{figure}[H]
   \begin{center} %センタリングする
-    \includegraphics[width=16.0cm]{ER図.png}
+    \includegraphics[width=16.0cm]{ER図v2.png}
     \caption{データテーブルER図} %タイトルをつける
     \label{fig:er} %ラベルをつけ図の参照を可能にする
   \end{center}
@@ -732,12 +732,12 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
             QID & 半角英数字型 & 8文字固定長 & TEXT & PK & Not\\ \hline
             UserID & 半角英数字型 & 6文字固定長 & TEXT & FK:親ユーザー情報 & Not\\ \hline
             QcontentsID & 半角英数字型 & 10文字固定長 & TEXT & FK:質問内容 & Not\\ \hline
-            DateID & 半角英数字型 & 8文字固定長 & TEXT & FK:日付 & Not\\ \hline
+            Date & 日付型 & 20文字固定長 & NUMERIC & & Not\\ \hline
         \end{tabular}
     \end{center}
 \end{table}
 
-表\ref{tbl: question}では、質問と質問者の関連付けを行っています。質問IDを主キーとし、ユーザ情報テーブル、質問内容テーブル、日付テーブルといったテーブルの主キーを外部キーとすることで、質問を投稿、確認できるようにしています。\\
+表\ref{tbl: question}では、質問と質問者の関連付けを行っています。質問IDを主キーとし、ユーザ情報テーブル、質問内容テーブルといったテーブルの主キーを外部キーとすることで、質問を投稿、確認できるようにしています。\\
 各フィールドの概要は以下の通りです。
 \begin{itemize}
   \item 質問ID(QID):
@@ -746,8 +746,8 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
   ユーザテーブルの主キー
   \item 質問内容ID(QcontentsID):
   質問内容テーブルの主キー
-  \item 日付ID(DateID):
-  日付テーブルの主キー
+  \item 日付(Date):
+  投稿した日付と時刻の保存
 \end{itemize}
 
 \subsubsection{回答テーブル}
@@ -761,7 +761,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
             QID & 半角英数字型 & 8文字固定長 & TEXT & FK:質問 & Not\\ \hline
             UserID & 半角英数字型 & 6文字固定長 & TEXT & FK:親ユーザー情報 & Not\\ \hline
             AcontentsID & 半角英数字型 & 10文字固定長 & TEXT & FK:回答内容 & Not\\ \hline
-            DateID & 半角英数字型 & 8文字固定長 & TEXT & FK:日付 & Not\\ \hline
+            Date & 日付型 & 20文字固定長 & NUMERIC & & Not\\ \hline
         \end{tabular}
     \end{center}
 \end{table}
@@ -776,8 +776,8 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
   ユーザテーブルの主キー
   \item 回答内容ID(AcontentsID):
   回答内容テーブルの主キー
-  \item 日付ID(DateID):
-  日付テーブルの主キー
+  \item 日付(Date):
+  投稿した日付と時刻の保存
 \end{itemize}
 
 \subsubsection{質問内容テーブル}
@@ -821,27 +821,7 @@ Androidアプリの開発環境を表\ref{Application_Development_Environment}�
   \item 回答内容(Acontents):
   回答内容の本文
 \end{itemize}
-%日付テーブル消して質問と回答にくっつけたほうが良い気がしてきた
-\subsubsection{日付}
-\begin{table}[H]
-    \caption{日付}
-    \label{tbl: date}
-    \begin{center}
-        \begin{tabular}{|c|c|c|c|c|c|} \hline
-            属性 & データ型 & データ長 & SQLite & key:Table名 & NULL\\ \hline \hline
-            DateID & 半角英数字型 & 8文字固定長 & TEXT & PK & Not\\ \hline
-            Date & 日付型 & 20文字固定長 & NUMERIC & & Not\\ \hline
-        \end{tabular}
-    \end{center}
-\end{table}
-表\ref{tbl: date}では日付の管理を行っています。日付はIDで管理されており、呼び出したIDから日付を取得します。日付は日付型で管理されています。\\
-各フィールドの概要は以下の通りです。
-\begin{itemize}
-  \item 日付ID(DateID):
-  日付テーブルの主キー
-  \item 日付(Date):
-  日付と時刻の保存
-\end{itemize}
+
 
 
 \end{document}
