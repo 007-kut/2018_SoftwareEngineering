@@ -1,0 +1,11 @@
+<resources>
+        <string name="app_name">TestActivity</string>
+        <string name="main">Main Activity</string>
+        <string name="move">MOVE</string>
+        <string name="sub">Sub Activity</string>
+        <string name="return_sub">RETURN</string>
+        <string name="red">赤</string>
+        <string name="blue">青</string>
+        <string name="yellow">黄</string>string>
+        <string name="home">ホームへ</string>string>
+</resources>
