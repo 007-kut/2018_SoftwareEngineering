@@ -20,7 +20,7 @@ public class ChooseArt extends Activity {
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button0, Perform action on click");
-                Intent intent = new Intent(getApplication(), PassGame.class);
+                Intent intent = new Intent(getApplication(), ChooseGame.class);
                 startActivity(intent);
             }
         });
