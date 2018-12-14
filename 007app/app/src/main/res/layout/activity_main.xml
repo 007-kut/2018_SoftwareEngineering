@@ -1,23 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RED" />
+        android:id="@+id/button_game"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/game"
+        app:layout_constraintBottom_toTopOf="@+id/button_grow"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.646" />
 
     <Button
-        android:id="@+id/button_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="BLUE" />
+        android:id="@+id/button_grow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/grow"
+        app:layout_constraintBottom_toTopOf="@+id/button_wind"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_game" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/button_wind"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/wind"
+        app:layout_constraintBottom_toTopOf="@+id/button_setting"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_grow" />
+
+    <Button
+        android:id="@+id/button_setting"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/setting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_wind" />
+
+</android.support.constraint.ConstraintLayout>
