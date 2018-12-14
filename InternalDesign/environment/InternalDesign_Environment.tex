@@ -1,0 +1,93 @@
+\documentclass[a4j]{jarticle}
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{url}
+\usepackage{here}
+%\usepackage{listings}
+\usepackage{amsmath,amssymb}
+\usepackage[dvipdfmx]{color}
+
+\setlength{\headsep}{-5mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\textwidth}{165mm}
+\setlength{\textheight}{230mm}
+\setlength{\footskip}{20mm}
+
+\title{
+\vspace{30mm}
+{\bf 子育て支援システム}
+\\
+\vspace{5mm}
+{\bf 内部設計書v1\\
+}
+\vspace{120mm}
+}
+
+\author{
+\vspace{5mm}
+チーム名 007\\
+\vspace{5mm}
+}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{開発環境}
+本章では、システムを開発する際に必要となる環境を示しています。
+
+\subsection{Androidアプリの開発環境}
+Androidアプリの開発環境を表\ref{Application_Development_Environment}に示します。
+
+\begin{table}[H]
+    \caption{Androidアプリの開発環境}
+    \label{Application_Development_Environment}
+    \begin{center}
+        \begin{tabular}{|c||c|} \hline
+            IDE & Android Studio 3.2.1 \\ \hline
+            開発言語 & Java, PHP \\ \hline
+            画面設計 & XML \\ \hline
+            バージョン管理 & GitHub \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\subsection{サーバの開発環境}
+システムで使用するサーバの開発環境を表\ref{Server_Development_Environment}に示します。
+\begin{table}[H]
+    \caption{サーバの開発環境}
+    \label{Server_Development_Environment}
+    \begin{center}
+        \begin{tabular}{|c||c|} \hline
+            OS & CentOS 7.5.1804 \\ \hline
+            サーバソフトウェア & Apache 2.4.6 \\ \hline
+            データベース & mysql 14.14 \\ \hline
+            CPU & Intel Corei7-3930K \\ \hline
+            RAM & 32GB \\ \hline
+            ROM & 500GB \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+
+\section{動作環境}
+本章では、システムを動作させる際に必要となる環境を示しています。
+
+\begin{table}[H]
+    \caption{動作環境}
+    \label{Operationg_Environment}
+    \begin{center}
+        \begin{tabular}{|c||c|} \hline
+            OS & Android4.4 以上 9.0以下 \\ \hline
+            画面 & 高解像度(hdpi) \\ \hline
+            必要機能 & カメラ \\ \hline
+            通信 & 3G/4G(LTE)またはWi-Fiによるインターネット接続 \\ \hline
+            CPU & 1GHz以上 \\ \hline
+            RAM & 2GB以上 \\ \hline
+
+        \end{tabular}
+    \end{center}
+\end{table}
+\end{document}
