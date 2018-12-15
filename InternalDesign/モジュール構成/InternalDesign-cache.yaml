@@ -1,0 +1,1621 @@
+version: 0.12.2
+filePath: InternalDesign.tex
+options:
+  $BIBINPUTS:
+    - $ROOTDIR
+    - $ROOTDIR/$OUTDIR
+    - ''
+  $TEXINPUTS:
+    - $ROOTDIR
+    - $ROOTDIR/$OUTDIR
+    - ''
+  bibtexEngine: bibtex
+  cleanPatterns:
+    - '**/*.aux'
+    - '**/*.aux.bak'
+    - '**/*.bbl'
+    - '**/*.bcf'
+    - '**/*.blg'
+    - '**/*.dvi'
+    - '**/*.fdb_latexmk'
+    - '**/*.fls'
+    - '**/*.idx'
+    - '**/*.idx.bak'
+    - '**/*.ilg'
+    - '**/*.ind'
+    - '**/*.lof'
+    - '**/*.log'
+    - '**/*.lol'
+    - '**/*.lot'
+    - '**/*.nav'
+    - '**/*.out'
+    - '**/*.pdf'
+    - '**/*.ps'
+    - '**/*.snm'
+    - '**/*.synctex.gz'
+    - '**/*.toc'
+    - '/**/_minted-${JOB}'
+    - '/${OUTDIR}/sage-plots-for-${JOB}.tex'
+    - /missfont.log
+    - /texput.log
+    - /texput.aux
+  dviToPdfEngine: xdvipdfmx
+  engine: platex
+  epstopdfBoundingBox: default
+  epstopdfOutputPath: $DIR_0/$NAME_0.pdf
+  indexAutomaticRanges: true
+  indexEngine: makeindex
+  indexOrdering: word
+  indexSorting: default
+  knitrConcordance: true
+  knitrOutputPath: $JOB.tex
+  lhs2texStyle: poly
+  literateAgdaEngine: agda
+  literateHaskellEngine: lhs2TeX
+  loadCache: true
+  loadUserOptions: true
+  outputFormat: pdf
+  phaseCycles: 20
+  pweaveCacheDirectory: pweave-cache-for-$JOB
+  pweaveFigureDirectory: pweave-figures-for-$JOB
+  pweaveKernel: python3
+  pweaveOutputFormat: tex
+  pweaveOutputPath: $JOB.tex
+  saveCache: true
+  severity: info
+  validateCache: true
+  synctex: false
+  copyTargetsToRoot: false
+  outputDirectory: ''
+  shellEscape: enabled
+  intermediatePostScript: false
+  $PATH: >-
+    %SystemDrive%\texlive\2017\bin\win32;%SystemDrive%\texlive\2016\bin\win32;%SystemDrive%\texlive\2015\bin\win32;%ProgramFiles%\MiKTeX
+    2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
+files:
+  dicy-instance.yaml-ParsedYAML:
+    timeStamp: 2018-12-15T08:06:38.699Z
+    jobNames: []
+    value:
+      severity: info
+    type: ParsedYAML
+  dicy.yaml-ParsedYAML:
+    jobNames: []
+    type: ParsedYAML
+  InternalDesign.yaml-ParsedYAML:
+    jobNames: []
+    type: ParsedYAML
+  InternalDesign.tex-ParsedLaTeXMagic:
+    timeStamp: 2018-12-15T08:06:38.900Z
+    jobNames: []
+    value: {}
+    type: ParsedLaTeXMagic
+  'C:\Users\Michio7\AppData\Roaming\dicy\config.yaml-ParsedYAML':
+    timeStamp: 2018-12-15T08:06:38.891Z
+    jobNames: []
+    value:
+      synctex: false
+      engine: platex
+      severity: info
+      copyTargetsToRoot: false
+      outputDirectory: ''
+      outputFormat: pdf
+      cleanPatterns:
+        - '**/*.aux'
+        - '**/*.aux.bak'
+        - '**/*.bbl'
+        - '**/*.bcf'
+        - '**/*.blg'
+        - '**/*.dvi'
+        - '**/*.fdb_latexmk'
+        - '**/*.fls'
+        - '**/*.idx'
+        - '**/*.idx.bak'
+        - '**/*.ilg'
+        - '**/*.ind'
+        - '**/*.lof'
+        - '**/*.log'
+        - '**/*.lol'
+        - '**/*.lot'
+        - '**/*.nav'
+        - '**/*.out'
+        - '**/*.pdf'
+        - '**/*.ps'
+        - '**/*.snm'
+        - '**/*.synctex.gz'
+        - '**/*.toc'
+        - '/**/_minted-${JOB}'
+        - '/${OUTDIR}/sage-plots-for-${JOB}.tex'
+        - /missfont.log
+        - /texput.log
+        - /texput.aux
+      shellEscape: enabled
+      intermediatePostScript: false
+      $PATH: >-
+        %SystemDrive%\texlive\2017\bin\win32;%SystemDrive%\texlive\2016\bin\win32;%SystemDrive%\texlive\2015\bin\win32;%ProgramFiles%\MiKTeX
+        2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
+    type: ParsedYAML
+  InternalDesign.tex:
+    timeStamp: 2018-12-15T08:06:35.576Z
+    jobNames: []
+    hash: VA5DKqYqS5yK5prcuD7cqz3GhKdLUTTUeNDIIZijcQk=
+    type: LaTeX
+    subType: jarticle
+  'C:\Users\Michio7\AppData\Roaming\dicy\config.yaml':
+    timeStamp: 2018-12-15T08:06:38.741Z
+    jobNames: []
+    type: YAML
+  x.y-Nil:
+    jobNames: []
+    type: Nil
+  InternalDesign.fls-ParsedFileListing:
+    timeStamp: 2018-12-15T08:07:27.545Z
+    jobNames: []
+    value:
+      messages: []
+      inputs:
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\ER�}v2.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\ER�}v2.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\InternalDesign.aux
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\InternalDesign.tex
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\InternalDesign.toc
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\albam.PNG
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\albam.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\camera.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\camera.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\coment.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\coment.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\delete.PNG
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\delete.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\functionselection.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\functionselection.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\game.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\game.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\growall.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\growall.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\illustration.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\illustration.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\initialsetting.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\initialsetting.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\oekaki.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\oekaki.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\oekaki2.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\oekaki2.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\otukai.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\otukai.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\outi.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\outi.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\sample.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\sample.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\urimono.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\urimono.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�q��đ���_�S��.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�q��đ���_�S��.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�q��đ���_��.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�q��đ���_��.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�q��đ���_���e.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�q��đ���_���e.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�q��đ���_����.png
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�q��đ���_����.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�ݒ�_�A�J�E���g.PNG
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�ݒ�_�A�J�E���g.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�ݒ�_�A�J�E���g�ύX.PNG
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�ݒ�_�A�J�E���g�ύX.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�ݒ�_�A�J�E���g�폜.PNG
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�ݒ�_�A�J�E���g�폜.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�ݒ�_�S��.PNG
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�ݒ�_�S��.xbb
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�ݒ�_�p�X���[�h.PNG
+        - >-
+          c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\�ݒ�_�p�X���[�h.xbb
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\goth10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min6.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min8.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\tgoth10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\tmin10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm'
+        - >-
+          c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam5.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam7.tfm'
+        - >-
+          c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm5.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm7.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmbx10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmbx12.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmex10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi12.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi6.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi8.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr12.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr17.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr6.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr8.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy10.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy6.tfm'
+        - 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy8.tfm'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amsfonts.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amssymb.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\umsa.fd'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\umsb.fd'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsbsy.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsgen.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsopn.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amstext.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\base\omscmr.fd'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\float\float.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics-cfg\color.cfg'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics-cfg\graphics.cfg'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics-def\dvipdfmx.def'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\color.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\dvipsnam.def'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphics.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphicx.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\keyval.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\graphics\trig.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\here\here.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\latex\url\url.sty'
+        - 'c:\w32tex\share\texmf-dist\tex\platex\base\jarticle.cls'
+        - 'c:\w32tex\share\texmf-dist\tex\platex\base\jsize10.clo'
+        - 'c:\w32tex\share\texmf-dist\web2c\eptex\platex.fmt'
+        - 'c:\w32tex\share\texmf-dist\web2c\texmf.cnf'
+      outputs:
+        - >-
+          C:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\InternalDesign.aux
+        - >-
+          C:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\InternalDesign.dvi
+        - >-
+          C:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\InternalDesign.log
+        - >-
+          C:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\���W���[���\��\InternalDesign.toc
+      calls: []
+    type: ParsedFileListing
+  InternalDesign.log-ParsedLaTeXLog:
+    timeStamp: 2018-12-15T08:07:38.580Z
+    jobNames: []
+    value:
+      messages:
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Overwriting symbol font `mincho' in version `bold' JY1/mc/m/n -->
+            JY1/gt/m/n.
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\platex\base\jarticle.cls'
+            range:
+              start: 614
+              end: 614
+          log:
+            file: InternalDesign.log
+            range:
+              start: 28
+              end: 29
+        - name: e-pTeX
+          severity: info
+          text: 'graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphicx.sty'
+          log:
+            file: InternalDesign.log
+            range:
+              start: 35
+              end: 35
+        - name: e-pTeX
+          severity: info
+          text: keyval 2014/10/28 v1.15 key=value parser (DPC)
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\keyval.sty'
+          log:
+            file: InternalDesign.log
+            range:
+              start: 37
+              end: 37
+        - name: e-pTeX
+          severity: info
+          text: 'graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphics.sty'
+          log:
+            file: InternalDesign.log
+            range:
+              start: 40
+              end: 40
+        - name: e-pTeX
+          severity: info
+          text: trig 2016/01/03 v1.10 sin cos tan (DPC)
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\trig.sty'
+          log:
+            file: InternalDesign.log
+            range:
+              start: 42
+              end: 42
+        - severity: info
+          name: e-pTeX
+          category: Package graphics
+          text: 'Driver file: dvipdfmx.def'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphics.sty'
+            range:
+              start: 99
+              end: 99
+          log:
+            file: InternalDesign.log
+            range:
+              start: 46
+              end: 46
+        - name: e-pTeX
+          severity: info
+          text: 'url 2013/09/16 ver 3.4 Verb mode for urls, etc.'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\url\url.sty'
+          log:
+            file: InternalDesign.log
+            range:
+              start: 54
+              end: 54
+        - name: e-pTeX
+          severity: info
+          text: float 2001/11/08 v1.3d Float enhancements (AL)
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\float\float.sty'
+          log:
+            file: InternalDesign.log
+            range:
+              start: 57
+              end: 57
+        - name: e-pTeX
+          severity: info
+          text: amsmath 2017/09/02 v2.17a AMS math features
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+          log:
+            file: InternalDesign.log
+            range:
+              start: 64
+              end: 64
+        - name: e-pTeX
+          severity: info
+          text: amstext 2000/06/29 v2.01 AMS text
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amstext.sty'
+          log:
+            file: InternalDesign.log
+            range:
+              start: 68
+              end: 68
+        - name: e-pTeX
+          severity: info
+          text: amsbsy 1999/11/29 v1.2d Bold Symbols
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsbsy.sty'
+          log:
+            file: InternalDesign.log
+            range:
+              start: 74
+              end: 74
+        - name: e-pTeX
+          severity: info
+          text: amsopn 2016/03/08 v2.02 operator names
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsopn.sty'
+          log:
+            file: InternalDesign.log
+            range:
+              start: 77
+              end: 77
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \frac
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 213
+              end: 213
+          log:
+            file: InternalDesign.log
+            range:
+              start: 80
+              end: 80
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \overline
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 375
+              end: 375
+          log:
+            file: InternalDesign.log
+            range:
+              start: 83
+              end: 83
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \ldots
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 472
+              end: 472
+          log:
+            file: InternalDesign.log
+            range:
+              start: 86
+              end: 86
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \dots
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 475
+              end: 475
+          log:
+            file: InternalDesign.log
+            range:
+              start: 87
+              end: 87
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: Redefining \cdots
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 596
+              end: 596
+          log:
+            file: InternalDesign.log
+            range:
+              start: 88
+              end: 88
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Redeclaring font encoding OML
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 712
+              end: 712
+          log:
+            file: InternalDesign.log
+            range:
+              start: 92
+              end: 92
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Redeclaring font encoding OMS
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 713
+              end: 713
+          log:
+            file: InternalDesign.log
+            range:
+              start: 93
+              end: 93
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: 'Redefining \['
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 2817
+              end: 2817
+          log:
+            file: InternalDesign.log
+            range:
+              start: 114
+              end: 114
+        - severity: info
+          name: e-pTeX
+          category: LaTeX
+          text: 'Redefining \]'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 2818
+              end: 2818
+          log:
+            file: InternalDesign.log
+            range:
+              start: 115
+              end: 115
+        - name: e-pTeX
+          severity: info
+          text: amssymb 2013/01/14 v3.01 AMS font symbols
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amssymb.sty'
+          log:
+            file: InternalDesign.log
+            range:
+              start: 117
+              end: 117
+        - name: e-pTeX
+          severity: info
+          text: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amsfonts.sty'
+          log:
+            file: InternalDesign.log
+            range:
+              start: 119
+              end: 119
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Overwriting math alphabet `\mathfrak' in version `bold' U/euf/m/n
+            --> U/euf/b/n.
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amsfonts.sty'
+            range:
+              start: 106
+              end: 106
+          log:
+            file: InternalDesign.log
+            range:
+              start: 122
+              end: 123
+        - name: e-pTeX
+          severity: info
+          text: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\color.sty'
+          log:
+            file: InternalDesign.log
+            range:
+              start: 125
+              end: 125
+        - severity: info
+          name: e-pTeX
+          category: Package color
+          text: 'Driver file: dvipdfmx.def'
+          source:
+            file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\color.sty'
+            range:
+              start: 147
+              end: 147
+          log:
+            file: InternalDesign.log
+            range:
+              start: 129
+              end: 129
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for OML/cmm/m/it ... okay
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 33
+              end: 33
+          log:
+            file: InternalDesign.log
+            range:
+              start: 137
+              end: 138
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for T1/cmr/m/n ... okay
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 33
+              end: 33
+          log:
+            file: InternalDesign.log
+            range:
+              start: 139
+              end: 140
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for OT1/cmr/m/n ... okay
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 33
+              end: 33
+          log:
+            file: InternalDesign.log
+            range:
+              start: 141
+              end: 142
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for OMS/cmsy/m/n ... okay
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 33
+              end: 33
+          log:
+            file: InternalDesign.log
+            range:
+              start: 143
+              end: 144
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for OMX/cmex/m/n ... okay
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 33
+              end: 33
+          log:
+            file: InternalDesign.log
+            range:
+              start: 145
+              end: 146
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for U/cmr/m/n ... okay
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 33
+              end: 33
+          log:
+            file: InternalDesign.log
+            range:
+              start: 147
+              end: 148
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for JY1/mc/m/n ... okay
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 33
+              end: 33
+          log:
+            file: InternalDesign.log
+            range:
+              start: 149
+              end: 150
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Checking defaults for JT1/mc/m/n ... okay
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 33
+              end: 33
+          log:
+            file: InternalDesign.log
+            range:
+              start: 151
+              end: 152
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JT1/mc/bx/n' in size <17.28> not available Font shape
+            `JT1/gt/m/n' tried instead.
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 34
+              end: 34
+          log:
+            file: InternalDesign.log
+            range:
+              start: 153
+              end: 154
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JY1/mc/bx/n' in size <17.28> not available Font shape
+            `JY1/gt/m/n' tried instead.
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 34
+              end: 34
+          log:
+            file: InternalDesign.log
+            range:
+              start: 155
+              end: 156
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Try loading font information for U+msa
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 34
+              end: 34
+          log:
+            file: InternalDesign.log
+            range:
+              start: 157
+              end: 157
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Try loading font information for U+msb
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 34
+              end: 34
+          log:
+            file: InternalDesign.log
+            range:
+              start: 161
+              end: 161
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JT1/mc/bx/n' in size <14.4> not available Font shape
+            `JT1/gt/m/n' tried instead.
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 35
+              end: 35
+          log:
+            file: InternalDesign.log
+            range:
+              start: 165
+              end: 166
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JY1/mc/bx/n' in size <14.4> not available Font shape
+            `JY1/gt/m/n' tried instead.
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 35
+              end: 35
+          log:
+            file: InternalDesign.log
+            range:
+              start: 167
+              end: 168
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JT1/mc/bx/n' in size <10> not available Font shape
+            `JT1/gt/m/n' tried instead.
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 1
+              end: 1
+          log:
+            file: InternalDesign.log
+            range:
+              start: 172
+              end: 173
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JY1/mc/bx/n' in size <10> not available Font shape
+            `JY1/gt/m/n' tried instead.
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 1
+              end: 1
+          log:
+            file: InternalDesign.log
+            range:
+              start: 174
+              end: 175
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JT1/mc/bx/n' in size <12> not available Font shape
+            `JT1/gt/m/n' tried instead.
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 41
+              end: 41
+          log:
+            file: InternalDesign.log
+            range:
+              start: 183
+              end: 184
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `JY1/mc/bx/n' in size <12> not available Font shape
+            `JY1/gt/m/n' tried instead.
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 41
+              end: 41
+          log:
+            file: InternalDesign.log
+            range:
+              start: 185
+              end: 186
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: Try loading font information for OMS+cmr
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 102
+              end: 102
+          log:
+            file: InternalDesign.log
+            range:
+              start: 188
+              end: 188
+        - severity: info
+          name: e-pTeX
+          category: LaTeX Font
+          text: >-
+            Font shape `OMS/cmr/m/n' in size <10> not available Font shape
+            `OMS/cmsy/m/n' tried instead.
+          source:
+            file: >-
+              c:\Users\Michio7\Documents\GitHub\2018_SoftwareEngineering\InternalDesign\モジ
+            range:
+              start: 102
+              end: 102
+          log:
+            file: InternalDesign.log
+            range:
+              start: 193
+              end: 194
+      inputs: []
+      outputs:
+        - InternalDesign.dvi
+      calls: []
+    type: ParsedLaTeXLog
+  InternalDesign.aux:
+    timeStamp: 2018-12-15T08:07:38.065Z
+    jobNames: []
+    hash: pRQSZVmFA3wIyGTGtbhhZLqfqzqYo6FXlMuETm7hLQs=
+    type: LaTeXAuxilary
+  InternalDesign.fls:
+    timeStamp: 2018-12-15T08:07:38.182Z
+    jobNames: []
+    hash: FfJhmi0vJ0/2s6Epc99epiQN3N2DhLExagXwoOVHSJ8=
+    type: FileListing
+  InternalDesign.log:
+    timeStamp: 2018-12-15T08:07:38.144Z
+    jobNames: []
+    hash: xmOIX/1sCA1uuUue5Q9kpO5OZ51enXtkswlpkwllx9g=
+    type: LaTeXLog
+    subType: e-pTeX
+  InternalDesign.pdf:
+    timeStamp: 2018-12-15T08:07:47.131Z
+    jobNames: []
+    hash: Xwfd0fAFkTfIq7r/CpSEGO42C8wZhZ4suYUMRB2nnpg=
+    type: PortableDocumentFormat
+  InternalDesign.aux-ParsedLaTeXAuxilary:
+    timeStamp: 2018-12-15T08:07:05.790Z
+    jobNames: []
+    value:
+      commands:
+        - relax
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+        - '@writefile'
+        - '@writefile'
+        - newlabel
+    type: ParsedLaTeXAuxilary
+  'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\goth10.tfm':
+    timeStamp: 2018-02-28T11:40:42.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min10.tfm':
+    timeStamp: 2018-02-28T11:40:42.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min6.tfm':
+    timeStamp: 2018-02-28T11:40:42.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min8.tfm':
+    timeStamp: 2018-02-28T11:40:42.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\tgoth10.tfm':
+    timeStamp: 2018-02-28T11:40:42.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\tmin10.tfm':
+    timeStamp: 2018-02-28T11:40:42.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm':
+    timeStamp: 2009-02-06T20:24:08.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm':
+    timeStamp: 2009-02-06T20:24:08.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam10.tfm':
+    timeStamp: 2009-02-06T20:24:14.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam5.tfm':
+    timeStamp: 2009-02-06T20:24:14.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam7.tfm':
+    timeStamp: 2009-02-06T20:24:14.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm10.tfm':
+    timeStamp: 2009-02-06T20:24:14.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm5.tfm':
+    timeStamp: 2009-02-06T20:24:14.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm7.tfm':
+    timeStamp: 2009-02-06T20:24:14.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmbx10.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmbx12.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmex10.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi12.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi6.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi8.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr12.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr17.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr6.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr8.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy10.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy6.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy8.tfm':
+    timeStamp: 2006-01-09T01:04:13.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amsfonts.sty':
+    timeStamp: 2013-01-14T21:09:32.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amssymb.sty':
+    timeStamp: 2013-01-14T21:09:32.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\umsa.fd':
+    timeStamp: 2013-01-14T21:09:32.000Z
+    jobNames: []
+    type: FontDescription
+  'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\umsb.fd':
+    timeStamp: 2013-01-14T21:09:32.000Z
+    jobNames: []
+    type: FontDescription
+  'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsbsy.sty':
+    timeStamp: 2018-04-06T06:42:46.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsgen.sty':
+    timeStamp: 2018-04-06T06:42:46.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty':
+    timeStamp: 2018-04-06T06:42:46.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsopn.sty':
+    timeStamp: 2018-04-06T06:42:46.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amstext.sty':
+    timeStamp: 2018-04-06T06:42:46.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\base\omscmr.fd':
+    timeStamp: 2018-05-27T14:33:28.000Z
+    jobNames: []
+    type: FontDescription
+  'c:\w32tex\share\texmf-dist\tex\latex\float\float.sty':
+    timeStamp: 2011-09-26T12:19:47.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics-cfg\color.cfg':
+    timeStamp: 2016-06-14T01:51:32.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics-cfg\graphics.cfg':
+    timeStamp: 2016-06-14T01:51:32.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics-def\dvipdfmx.def':
+    timeStamp: 2017-10-24T09:53:32.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics\color.sty':
+    timeStamp: 2018-04-06T06:37:40.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics\dvipsnam.def':
+    timeStamp: 2018-04-06T06:37:40.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphics.sty':
+    timeStamp: 2018-04-06T06:37:40.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphicx.sty':
+    timeStamp: 2018-04-06T06:37:40.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics\keyval.sty':
+    timeStamp: 2018-04-06T06:37:40.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\graphics\trig.sty':
+    timeStamp: 2018-04-06T06:37:40.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\here\here.sty':
+    timeStamp: 2009-11-22T01:57:22.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\latex\url\url.sty':
+    timeStamp: 2013-12-31T03:47:32.000Z
+    jobNames: []
+    type: LaTeXStyle
+  'c:\w32tex\share\texmf-dist\tex\platex\base\jarticle.cls':
+    timeStamp: 2018-09-22T10:17:31.000Z
+    jobNames: []
+    type: LaTeXClass
+  'c:\w32tex\share\texmf-dist\tex\platex\base\jsize10.clo':
+    timeStamp: 2018-09-22T10:17:31.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\web2c\eptex\platex.fmt':
+    timeStamp: 2018-11-14T05:04:10.000Z
+    jobNames: []
+  'c:\w32tex\share\texmf-dist\web2c\texmf.cnf':
+    timeStamp: 2018-07-22T20:50:38.000Z
+    jobNames: []
+  InternalDesign.dvi:
+    timeStamp: 2018-12-15T08:07:38.081Z
+    jobNames: []
+    type: DeviceIndependentFile
+rules:
+  - name: ApplyOptions
+    command: load
+    phase: initialize
+    parameters: []
+    inputs:
+      - file: dicy.yaml-ParsedYAML
+        type: default
+      - file: InternalDesign.yaml-ParsedYAML
+        type: default
+      - file: InternalDesign.tex-ParsedLaTeXMagic
+        type: default
+      - file: dicy-instance.yaml-ParsedYAML
+        type: default
+      - file: 'C:\Users\Michio7\AppData\Roaming\dicy\config.yaml-ParsedYAML'
+        type: default
+    outputs: []
+  - name: LoadAndValidateCache
+    command: load
+    phase: initialize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: Migrate
+    command: load
+    phase: initialize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: ApplyOptions
+    command: load
+    phase: execute
+    parameters: []
+    inputs:
+      - file: dicy.yaml-ParsedYAML
+        type: default
+      - file: InternalDesign.yaml-ParsedYAML
+        type: default
+      - file: InternalDesign.tex-ParsedLaTeXMagic
+        type: default
+      - file: dicy-instance.yaml-ParsedYAML
+        type: default
+      - file: 'C:\Users\Michio7\AppData\Roaming\dicy\config.yaml-ParsedYAML'
+        type: default
+    outputs: []
+  - name: ParseOptionsFile
+    command: load
+    phase: execute
+    parameters: []
+    inputs:
+      - file: 'C:\Users\Michio7\AppData\Roaming\dicy\config.yaml'
+        type: default
+    outputs:
+      - file: 'C:\Users\Michio7\AppData\Roaming\dicy\config.yaml-ParsedYAML'
+        type: default
+  - name: ParseLaTeXMagic
+    command: load
+    phase: execute
+    parameters:
+      - InternalDesign.tex
+    inputs:
+      - file: InternalDesign.tex
+        type: default
+    outputs:
+      - file: InternalDesign.tex-ParsedLaTeXMagic
+        type: default
+  - name: AssignJobNames
+    command: load
+    phase: finalize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: FindLogFiles
+    command: build
+    phase: initialize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: LaTeX
+    command: build
+    phase: execute
+    parameters:
+      - InternalDesign.tex
+    inputs:
+      - file: InternalDesign.tex
+        type: default
+      - file: InternalDesign.fls-ParsedFileListing
+        type: default
+      - file: InternalDesign.log-ParsedLaTeXLog
+        type: default
+      - file: InternalDesign.aux
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\goth10.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min10.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min6.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\min8.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\tgoth10.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\ptex-fonts\standard\tmin10.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm'
+        type: default
+      - file: >-
+          c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam5.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msam7.tfm'
+        type: default
+      - file: >-
+          c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm5.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\amsfonts\symbols\msbm7.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmbx10.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmbx12.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmex10.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi12.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi6.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmmi8.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr12.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr17.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr6.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmr8.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy10.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy6.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\fonts\tfm\public\cm\cmsy8.tfm'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amsfonts.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\amssymb.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\umsa.fd'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsfonts\umsb.fd'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsbsy.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsgen.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsmath.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amsopn.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\amsmath\amstext.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\base\omscmr.fd'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\float\float.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics-cfg\color.cfg'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics-cfg\graphics.cfg'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics-def\dvipdfmx.def'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\color.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\dvipsnam.def'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphics.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\graphicx.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\keyval.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\graphics\trig.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\here\here.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\latex\url\url.sty'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\platex\base\jarticle.cls'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\tex\platex\base\jsize10.clo'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\web2c\eptex\platex.fmt'
+        type: default
+      - file: 'c:\w32tex\share\texmf-dist\web2c\texmf.cnf'
+        type: default
+    outputs:
+      - file: InternalDesign.aux
+        type: default
+      - file: InternalDesign.fls
+        type: default
+      - file: InternalDesign.log
+        type: default
+      - file: InternalDesign.pdf
+        type: target
+      - file: InternalDesign.dvi
+        type: default
+  - name: ParseLaTeXAuxilary
+    command: build
+    phase: execute
+    parameters:
+      - InternalDesign.aux
+    inputs:
+      - file: InternalDesign.aux
+        type: default
+    outputs:
+      - file: InternalDesign.aux-ParsedLaTeXAuxilary
+        type: default
+  - name: ParseFileListing
+    command: build
+    phase: execute
+    parameters:
+      - InternalDesign.fls
+    inputs:
+      - file: InternalDesign.fls
+        type: default
+    outputs:
+      - file: InternalDesign.fls-ParsedFileListing
+        type: default
+  - name: ParseLaTeXLog
+    command: build
+    phase: execute
+    parameters:
+      - InternalDesign.log
+    inputs:
+      - file: InternalDesign.log
+        type: default
+    outputs:
+      - file: InternalDesign.log-ParsedLaTeXLog
+        type: default
+  - name: DviToPdf
+    command: build
+    phase: execute
+    parameters:
+      - InternalDesign.dvi
+    inputs:
+      - file: InternalDesign.dvi
+        type: target
+    outputs:
+      - file: InternalDesign.pdf
+        type: target
+  - name: LogProducedTargets
+    command: build
+    phase: finalize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: CheckForMissingBuildRule
+    command: build
+    phase: finalize
+    parameters:
+      - InternalDesign.tex
+    inputs:
+      - file: InternalDesign.tex
+        type: default
+    outputs: []
+  - name: FindLogFiles
+    command: log
+    phase: initialize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: ReportLogMessages
+    command: log
+    phase: execute
+    parameters:
+      - InternalDesign.log-ParsedLaTeXLog
+    inputs:
+      - file: InternalDesign.log-ParsedLaTeXLog
+        type: default
+    outputs: []
+  - name: ParseLaTeXLog
+    command: log
+    phase: execute
+    parameters:
+      - InternalDesign.log
+    inputs:
+      - file: InternalDesign.log
+        type: default
+    outputs:
+      - file: InternalDesign.log-ParsedLaTeXLog
+        type: default
+  - name: SaveCache
+    command: save
+    phase: execute
+    parameters: []
+    inputs: []
+    outputs: []
