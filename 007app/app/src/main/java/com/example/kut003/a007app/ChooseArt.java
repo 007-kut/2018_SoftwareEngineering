@@ -25,29 +25,32 @@ public class ChooseArt extends Activity {
             }
         });
 
+        //りんご
         final Button button1 = findViewById(R.id.button_apple);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button1, Perform action on click");
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
+                Intent intent = new Intent(getApplication(), MakeArt.class);
                 startActivity(intent);
             }
         });
 
+        //ばなな
         final Button button2 = findViewById(R.id.button_banana);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button2, Perform action on click");
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
+                Intent intent = new Intent(getApplication(), MakeArt.class);
                 startActivity(intent);
             }
         });
 
+        //おえかき
         final Button button3 = findViewById(R.id.button_drawing);
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button2, Perform action on click");
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
+                Intent intent = new Intent(getApplication(), MakeArt.class);
                 startActivity(intent);
             }
         });

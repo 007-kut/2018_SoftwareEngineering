@@ -25,6 +25,7 @@ public class ChooseGame extends Activity {
             }
         });
 
+        //おえかき
         final Button button1 = findViewById(R.id.button_art);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -34,6 +35,7 @@ public class ChooseGame extends Activity {
             }
         });
 
+        //おつかい
         final Button button2 = findViewById(R.id.button_buy);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
