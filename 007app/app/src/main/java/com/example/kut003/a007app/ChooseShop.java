@@ -30,7 +30,7 @@ public class ChooseShop extends Activity {
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button1, Perform action on click");
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
+                Intent intent = new Intent(getApplication(), ChooseMaterial.class);
                 startActivity(intent);
             }
         });
@@ -40,7 +40,7 @@ public class ChooseShop extends Activity {
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button2, Perform action on click");
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
+                Intent intent = new Intent(getApplication(), ChooseMaterial.class);
                 startActivity(intent);
             }
         });
@@ -50,7 +50,7 @@ public class ChooseShop extends Activity {
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button2, Perform action on click");
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
+                Intent intent = new Intent(getApplication(), ChooseMaterial.class);
                 startActivity(intent);
             }
         });
@@ -60,7 +60,7 @@ public class ChooseShop extends Activity {
         button4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button2, Perform action on click");
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
+                Intent intent = new Intent(getApplication(), InBasket.class);
                 startActivity(intent);
             }
         });
@@ -70,7 +70,7 @@ public class ChooseShop extends Activity {
         button5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button2, Perform action on click");
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
+                Intent intent = new Intent(getApplication(), BackHome.class);
                 startActivity(intent);
             }
         });
