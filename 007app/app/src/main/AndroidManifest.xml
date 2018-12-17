@@ -74,6 +74,11 @@
             android:name=".BackHome"
             android:label="@string/app_name" >
         </activity>
+        //食べ物完成画面(図17)
+        <activity
+            android:name=".CheckFood"
+            android:label="@string/app_name" >
+        </activity>
 
         //子育て窓口メイン画面(図24)
         <activity
