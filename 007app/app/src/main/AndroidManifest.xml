@@ -40,10 +40,6 @@
             android:label="@string/app_name" >
         </activity>
         //イラストの保存画面(図7)
-        <activity
-            android:name=".SavedArt"
-            android:label="@string/app_name" >
-        </activity>
         //作る食べ物を選ぶ画面(図10)
         <activity
             android:name=".ChooseFood"
