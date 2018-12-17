@@ -1,4 +1,4 @@
-//おえかきゲーム画面(図5)
+//材料をお店で選択する画面(図14)
 package com.example.kut003.a007app;
 
 import android.app.Activity;
@@ -8,49 +8,39 @@ import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
 
-public class ChooseArt extends Activity {
+public class ChooseMaterial extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.choose_art);
+        setContentView(R.layout.choose_material);
 
-        //機能設定画面に戻る
+        //お店選択に戻る
         final Button button0 = findViewById(R.id.button_back);
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button0, Perform action on click");
-                Intent intent = new Intent(getApplication(), ChooseGame.class);
+                Intent intent = new Intent(getApplication(), ChooseShop.class);
                 startActivity(intent);
             }
         });
 
-        //りんご
-        final Button button1 = findViewById(R.id.button_apple);
+        //籠の中身を確認
+        final Button button1 = findViewById(R.id.button_basket);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button1, Perform action on click");
-                Intent intent = new Intent(getApplication(), MakeArt.class);
+                Intent intent = new Intent(getApplication(), InBasket.class);
                 startActivity(intent);
             }
         });
 
-        //ばなな
-        final Button button2 = findViewById(R.id.button_banana);
+        //材料を確認
+        final Button button2 = findViewById(R.id.button_material);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button2, Perform action on click");
-                Intent intent = new Intent(getApplication(), MakeArt.class);
-                startActivity(intent);
-            }
-        });
-
-        //おえかき
-        final Button button3 = findViewById(R.id.button_drawing);
-        button3.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Log.d("debug", "button2, Perform action on click");
-                Intent intent = new Intent(getApplication(), MakeArt.class);
+                Intent intent = new Intent(getApplication(), SubActivity2.class);
                 startActivity(intent);
             }
         });

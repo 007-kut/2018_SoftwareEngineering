@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -24,33 +24,33 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 
 
     <Button
-        android:id="@+id/button_art"
+        android:id="@+id/button_cookie"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="24dp"
-        android:text="@string/art"
+        android:text="COOKIE"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_buy"
+        app:layout_constraintBottom_toTopOf="@+id/button_hamburg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_back" />
 
     <Button
-        android:id="@+id/button_buy"
+        android:id="@+id/button_hamburg"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
-        android:text="@string/buy"
+        android:text="HAMBURG"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_art" />
+        app:layout_constraintTop_toBottomOf="@+id/button_cookie" />
 
 </android.support.constraint.ConstraintLayout>
