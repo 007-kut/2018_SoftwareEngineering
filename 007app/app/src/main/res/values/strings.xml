@@ -19,4 +19,7 @@
         <string name="art">おえかき</string>string>
         <string name="buy">おつかい</string>string>
         <string name="back">もどる</string>string>
+
+        //子育て窓口メイン画面(図24)
+        <string name="post">投稿作成</string>string>
 </resources>
