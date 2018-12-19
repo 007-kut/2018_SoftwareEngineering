@@ -2,11 +2,16 @@
 package com.example.kut003.a007app;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.content.Intent;
+import android.widget.Toast;
 
 public class ChooseMaterial extends Activity {
     @Override
@@ -39,10 +44,23 @@ public class ChooseMaterial extends Activity {
         final Button button2 = findViewById(R.id.button_material);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Log.d("debug", "button2, Perform action on click");
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
-                startActivity(intent);
+                toast();
             }
         });
+    }
+
+    private Context context;
+    public void toast() {
+        context = getApplicationContext();
+        Toast toast = new Toast(context);
+        LayoutInflater inflater = getLayoutInflater();
+        ViewGroup viewGroup = findViewById(R.id.relative_layout);
+        View view = inflater.inflate(R.layout.custom_toast, viewGroup);
+        toast.setView(view);
+        // 表示時間
+        toast.setDuration(Toast.LENGTH_SHORT);
+        // 位置調整
+        //toast.setGravity(Gravity.CENTER, 0, -100);
+        toast.show();
     }
 }

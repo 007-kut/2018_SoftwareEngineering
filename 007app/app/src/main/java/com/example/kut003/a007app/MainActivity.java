@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
         button_wind.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug","button_wind, Perform action on click");
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
+                Intent intent = new Intent(getApplication(), Parenting.class);
                 startActivity(intent);
             }
         });
