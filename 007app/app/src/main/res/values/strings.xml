@@ -22,4 +22,11 @@
 
         //子育て窓口メイン画面(図24)
         <string name="post">投稿作成</string>string>
+<<<<<<< HEAD
+=======
+
+        //設定画面(図)
+        <string name="button">Button</string>
+        <string name="hint">ここに入力して下さい</string>
+>>>>>>> morimoto_server
 </resources>
