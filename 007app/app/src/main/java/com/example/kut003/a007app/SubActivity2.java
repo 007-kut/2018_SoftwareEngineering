@@ -1,9 +1,9 @@
 package com.example.kut003.a007app;
 
 import android.app.Activity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.widget.Button;
 
 public class SubActivity2 extends Activity {
     @Override

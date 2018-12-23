@@ -5,7 +5,25 @@
         <string name="sub">Sub Activity</string>
         <string name="return_sub">RETURN</string>
         <string name="red">赤</string>
-        <string name="blue">青</string>
+        <string name="blue">これ以降は未完成やわ</string>
         <string name="yellow">黄</string>string>
         <string name="home">ホームへ</string>string>
+
+        //メイン画面(図2)
+        <string name="game">ゲームであそぶ</string>string>
+        <string name="grow">成長記録</string>string>
+        <string name="wind">子育て窓口</string>string>
+        <string name="setting">各種設定</string>string>
+
+        //ゲーム選択画面(図3)
+        <string name="art">おえかき</string>string>
+        <string name="buy">おつかい</string>string>
+        <string name="back">もどる</string>string>
+
+        //子育て窓口メイン画面(図24)
+        <string name="post">投稿作成</string>string>
+
+        //設定画面(図)
+        <string name="button">Button</string>
+        <string name="hint">ここに入力して下さい</string>
 </resources>

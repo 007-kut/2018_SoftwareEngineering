@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:text="@string/blue"
+        android:text="NEXT"
         android:textSize="30sp"
         android:layout_margin="10dp"
         android:layout_width="wrap_content"
@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.3"/>
 
     <Button
-        android:id="@+id/return_button"
+        android:id="@+id/button_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
