@@ -12,12 +12,16 @@ import android.content.Intent;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.FileInputStream;
+
 public class PassGame extends Activity {
 
     public SharedPreferences dataPass;
     public EditText editText;
-    private TextView textWrite, textView;
-    public String pass = "1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,18 +35,16 @@ public class PassGame extends Activity {
         //入力できるようにする
         editText = findViewById(R.id.edit_text);
 
-
         //exitを押せるようにする
         final Button button0 = findViewById(R.id.button_write);
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                String pass = readFile();
                 final String text = editText.getText().toString();  //入力内容を格納
                 if(pass.equals(text)){  //パスワードと入力を比較
-                    Log.d("debug", "button1, Perform action on click");
                     Intent intent = new Intent(getApplication(), MainActivity.class);
                     startActivity(intent);
                 } else {
-                    Log.d("debug", "button1, Perform action on click");
                     Intent intent = new Intent(getApplication(), SubActivity2.class);
                     startActivity(intent);
                 }
@@ -52,10 +54,27 @@ public class PassGame extends Activity {
         final Button button1 = findViewById(R.id.button_return);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Log.d("debug", "button1, Perform action on click");
                 Intent intent = new Intent(getApplication(), ChooseGame.class);
                 startActivity(intent);
             }
         });
+    }
+
+    //パスワードを読み込む
+    public String readFile() {
+        String text = null;
+        String file = "gamePass.txt";
+        // try-with-resources
+        try (FileInputStream fileInputStream = openFileInput(file);
+             BufferedReader reader= new BufferedReader(
+                     new InputStreamReader(fileInputStream, "UTF-8"))) {
+            String lineBuffer;
+            while( (lineBuffer = reader.readLine()) != null ) {
+                text = lineBuffer ;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return text;
     }
 }

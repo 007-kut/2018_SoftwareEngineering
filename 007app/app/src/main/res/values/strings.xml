@@ -15,6 +15,9 @@
         <string name="wind">子育て窓口</string>string>
         <string name="setting">各種設定</string>string>
 
+        //成長記録
+        <string name="description">各種設定</string>string>
+
         //ゲーム選択画面(図3)
         <string name="art">おえかき</string>string>
         <string name="buy">おつかい</string>string>
@@ -22,4 +25,8 @@
 
         //子育て窓口メイン画面(図24)
         <string name="post">投稿作成</string>string>
+
+        //設定画面(図30)
+        <string name="button">Button</string>
+        <string name="hint">ここに入力して下さい</string>
 </resources>
