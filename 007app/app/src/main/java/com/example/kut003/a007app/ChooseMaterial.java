@@ -60,11 +60,7 @@ public class ChooseMaterial extends Activity {
         // 表示時間
         toast.setDuration(Toast.LENGTH_SHORT);
         // 位置調整
-<<<<<<< HEAD
         //toast.setGravity(Gravity.CENTER, 0, -100);
-=======
-        toast.setGravity(Gravity.CENTER, 0, 0);
->>>>>>> morimoto_server
         toast.show();
     }
 }
