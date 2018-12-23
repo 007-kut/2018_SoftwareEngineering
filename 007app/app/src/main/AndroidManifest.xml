@@ -58,6 +58,8 @@
         //もっている材料を確認する画面(図13)
         <activity
             android:name=".InBasket"
+<<<<<<< HEAD
+=======
             android:label="@string/app_name" >
         </activity>
        //材料をお店で選択する画面(図14)
@@ -86,6 +88,66 @@
             android:name=".MakePost"
             android:label="@string/app_name" >
         </activity>
+        //パスワード変更画面(図36)
+        <activity
+            android:name=".ChangePass"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name=".SetteiMain"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".SetteiToiawase"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".SetteiAcount"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".SetteiAcounthenkou"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".SetteiAcountsakujo"
+>>>>>>> morimoto_server
+            android:label="@string/app_name" >
+        </activity>
+       //材料をお店で選択する画面(図14)
+        <activity
+<<<<<<< HEAD
+            android:name=".ChooseMaterial"
+            android:label="@string/app_name" >
+        </activity>
+        //帰ってきた画面(図15)
+        <activity
+            android:name=".BackHome"
+            android:label="@string/app_name" >
+        </activity>
+        //食べ物完成画面(図17)
+        <activity
+            android:name=".CheckFood"
+            android:label="@string/app_name" >
+        </activity>
+
+        //子育て窓口メイン画面(図24)
+        <activity
+            android:name=".Parenting"
+            android:label="@string/app_name" >
+        </activity>
+        //投稿作成画面(図25)
+        <activity
+            android:name=".MakePost"
+            android:label="@string/app_name" >
+        </activity>
+=======
+            android:name=".SetteiGamepassword"
+            android:label="@string/app_name" >
+        </activity>
+
+>>>>>>> morimoto_server
 
 
         <activity

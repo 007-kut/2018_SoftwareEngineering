@@ -2,20 +2,29 @@
 package com.example.kut003.a007app;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
+import android.widget.TextView;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class MainActivity extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+<<<<<<< HEAD
 
+=======
+>>>>>>> morimoto_server
         //ゲーム
         final Button button_game = findViewById(R.id.button_game);
         button_game.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +60,11 @@ public class MainActivity extends Activity {
         button_setting.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug","button_wind, Perform action on click");
+<<<<<<< HEAD
                 Intent intent = new Intent(getApplication(), SubActivity2.class);
+=======
+                Intent intent = new Intent(getApplication(), SetteiMain.class);
+>>>>>>> morimoto_server
                 startActivity(intent);
             }
         });
