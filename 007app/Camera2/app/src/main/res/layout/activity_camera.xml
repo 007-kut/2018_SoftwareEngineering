@@ -5,32 +5,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Camera">
+    tools:context=".MainActivity">
 
     <Button
         android:id="@+id/camera_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_margin="20dp"
-        android:text="button"
+        android:text="📷"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.46"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="🚮"
+        tools:layout_editor_absoluteX="268dp"
+        tools:layout_editor_absoluteY="447dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="もどる"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="16dp" />
+
 
     <ImageView
         android:id="@+id/image_view"
-        android:scaleType="fitCenter"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:contentDescription="@string/description"
-        app:layout_constraintVertical_bias="0.7"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.393" />
 
 </android.support.constraint.ConstraintLayout>
