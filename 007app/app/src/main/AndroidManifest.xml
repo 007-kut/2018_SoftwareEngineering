@@ -10,7 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        //ゲーム選択画面(図3)
+
+        <activity
+            android:name=".ListArea"
+            android:label="@string/app_name" >
+        </activity>
+        //アカウント初期設定画面(図1)
         <activity
             android:name=".NewAccount"
             android:label="@string/app_name" >

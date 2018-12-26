@@ -8,9 +8,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.content.Intent;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 import android.view.Gravity;
 
@@ -20,51 +23,60 @@ import java.io.IOException;
 
 public class SetteiAcounthenkou extends Activity {
 
-//    String toastMessage;
-
     SharedPreferences dataPass;
-    //    SharedPreferences dataPass2;
     public EditText editText2;
-    public EditText editText3;
     private String passText = null;
-    private String passText2 = null;
     private String message = null;
+    private String accountArea;
+    private String [] listArea = new String[47];
 
-
+    public SetteiAcounthenkou(){
+        ListArea la = new ListArea();
+        System.arraycopy(la.listArea, 0, this.listArea, 0, 47);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.settei_acounthenkou);
+        //ニックネーム入力のためのインスタンスを生成
+        dataPass = getSharedPreferences("data", MODE_PRIVATE);
+
+        //都道府県リスト
+        Spinner sp = findViewById(R.id.area);
+        // ArrayAdapter
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, listArea);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sp.setAdapter(adapter);
+
+        //都道府県のリストを表示
+        sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            //選択された
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Spinner spinner = (Spinner)parent;
+                accountArea = (String)spinner.getSelectedItem();
+            }
+            //選択されなかった
+            public void onNothingSelected(AdapterView<?> parent) {
+                //
+            }
+        });
+
 
         //ニックネーム入力のためのインスタンスを生成
         dataPass = getSharedPreferences("data", MODE_PRIVATE);
-//        dataPass2 = getSharedPreferences("data", MODE_PRIVATE);
 
         //入力できるようにする
         editText2 = findViewById(R.id.edit_text);
-        editText3 = findViewById(R.id.edit_text2);
-
-//        Button button7 = findViewById(R.id.button_finish);
-
-//        toastMessage = "アカウントの変更が完了しました";
-//
-//        button7.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                toastMake(toastMessage, 0, -200);
-//            }
-//        });
 
         //ニックネーム変更表示
         final Button button_finish = findViewById(R.id.acount_finish);
         button_finish.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-//        button_return.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View view) {
                 passText = editText2.getText().toString();  //入力内容を格納
-                passText2 = editText3.getText().toString();  //入力内容を格納
-                if ((passText.isEmpty()) && (passText2.isEmpty())) {
+                if (passText.isEmpty()) {
                     message = "正しく入力してください";
                 } else {
                     writePass(passText);
@@ -95,14 +107,6 @@ public class SetteiAcounthenkou extends Activity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-//        String file2 = "wherePass.txt";
-//        try (FileOutputStream fileOutputstream = openFileOutput(file,
-//                Context.MODE_PRIVATE);) {
-//            fileOutputstream.write(where.getBytes());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
 
     }
     private void toastMake(String message) {

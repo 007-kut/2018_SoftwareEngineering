@@ -76,14 +76,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.15" />
 
-    <EditText
-        android:id="@+id/edit_text2"
+    <Spinner
+        android:id="@+id/area"
         android:layout_width="182dp"
-        android:layout_height="50dp"
-        android:autofillHints="@string/hint"
+        android:layout_height="47dp"
         android:background="#e0f0f9"
-        android:hint="@string/hint"
-        android:inputType="text"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

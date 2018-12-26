@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
         if(pass.equals("imaiKatsuaki")) {
             Intent intent = new Intent(getApplication(), NewAccount.class);
             startActivity(intent);
-        }
+    }
 
                 //ゲーム
         final Button button_game = findViewById(R.id.button_game);
