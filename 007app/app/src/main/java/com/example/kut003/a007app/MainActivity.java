@@ -10,18 +10,26 @@ import android.widget.Button;
 import android.content.Intent;
 import android.widget.TextView;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class MainActivity extends Activity {
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
-        //ゲーム
+
+        //初期設定
+        String pass = readFile();
+        if(pass.equals("imaiKatsuaki")) {
+            Intent intent = new Intent(getApplication(), NewAccount.class);
+            startActivity(intent);
+        }
+
+                //ゲーム
         final Button button_game = findViewById(R.id.button_game);
         button_game.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -60,5 +68,23 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+    }
+
+    //パスワードを読み込む
+    public String readFile() {
+        String text = null;
+        String file = "gamePass.txt";
+        // try-with-resources
+        try (FileInputStream fileInputStream = openFileInput(file);
+             BufferedReader reader= new BufferedReader(
+                     new InputStreamReader(fileInputStream, "UTF-8"))) {
+            String lineBuffer;
+            while( (lineBuffer = reader.readLine()) != null ) {
+                text = lineBuffer ;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return text;
     }
 }

@@ -3,6 +3,7 @@
 package com.example.kut003.a007app;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import android.view.Gravity;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 
 public class SetteiAcountsakujo extends Activity {
@@ -29,12 +33,12 @@ public class SetteiAcountsakujo extends Activity {
         button_yes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toastMake(toastMessage, 0, -200);
+                String cleanPass = "imaiKatsuaki";
+                writePass(cleanPass);
+                Intent intent = new Intent(getApplication(), MainActivity.class);
+                startActivity(intent);
             }
         });
-
-
-
 
         final Button button_no = findViewById(R.id.button_sakujo_no);
         button_no.setOnClickListener(new View.OnClickListener() {
@@ -60,5 +64,16 @@ public class SetteiAcountsakujo extends Activity {
         // 位置調整
         toast.setGravity(Gravity.CENTER, x, y);
         toast.show();
+    }
+
+    //パスワードの書き込み
+    public void writePass(String password) {
+        String file = "gamePass.txt";
+        try (FileOutputStream fileOutputstream = openFileOutput(file,
+                Context.MODE_PRIVATE);) {
+            fileOutputstream.write(password.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
