@@ -78,7 +78,7 @@ class UploadTask extends AsyncTask<String, Void, String> {
                 outStream = httpConn.getOutputStream();
                 for (Integer i = 1; i < params.length; i++) {
                     outStream.write(params[i].getBytes("UTF-8"));
-                    outStream.write(" & ".getBytes("UTF-8"));
+                    outStream.write("&".getBytes("UTF-8"));
                 }
                 outStream.flush();
             } catch (IOException e) {

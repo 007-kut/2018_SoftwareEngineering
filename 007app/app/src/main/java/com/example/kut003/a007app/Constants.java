@@ -7,7 +7,8 @@ public final class Constants {
     //Google Spreadsheets と同じ。上からid=0。
     public static final String[] PHP_FILE_NAMES = {
             "GetQuestionContents",
-            "InsertNewUser"
+            "InsertNewUser",
+            "UpdateUserData"
     };
 
     public static String getServerAddress (String idstr) {
