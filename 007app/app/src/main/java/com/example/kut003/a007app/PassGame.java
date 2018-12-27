@@ -62,7 +62,7 @@ public class PassGame extends Activity {
 
     //パスワードを読み込む
     public String readFile() {
-        String text = null;
+        String text = "";
         String file = "gamePass.txt";
         // try-with-resources
         try (FileInputStream fileInputStream = openFileInput(file);
