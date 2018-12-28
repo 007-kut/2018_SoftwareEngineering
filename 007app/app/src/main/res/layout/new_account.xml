@@ -11,6 +11,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="58dp"
+        android:id="@+id/database" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
         android:layout_margin="10dp"
         android:text="初期設定"
         android:textColor="#000000"

@@ -1,12 +1,9 @@
 //初期設定画面(図1)
-
 package com.example.kut003.a007app;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -17,25 +14,24 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.view.Gravity;
-
 import java.io.FileOutputStream;
 import java.io.IOException;
-
 
 public class NewAccount extends Activity {
     SharedPreferences dataPass;
     public EditText textName;   //アカウント名
-    public EditText textArea;   //地域
     public EditText textPass;   //パスワード
+    public TextView textView;
     private String accountName;
     private String accountPass;
     private String accountArea;
     private String [] listArea = new String[47];
 
-public NewAccount(){
-    ListArea la = new ListArea();
-    System.arraycopy(la.listArea, 0, this.listArea, 0, 47);
-}
+    public NewAccount(){
+        ListArea la = new ListArea();
+        System.arraycopy(la.listArea, 0, this.listArea, 0, 47);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,15 +40,16 @@ public NewAccount(){
         //ニックネーム入力のためのインスタンスを生成
         dataPass = getSharedPreferences("data", MODE_PRIVATE);
 
+        textName = findViewById(R.id.edit_text);
+        textPass = findViewById(R.id.edit_text3);
+        textView = findViewById(R.id.database);
+
+
         //都道府県リスト
         Spinner sp = findViewById(R.id.area);
-        // ArrayAdapter
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, listArea);
-
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sp.setAdapter(adapter);
-
-        //都道府県のリストを表示
         sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             //選択された
             @Override
@@ -62,13 +59,9 @@ public NewAccount(){
             }
             //選択されなかった
             public void onNothingSelected(AdapterView<?> parent) {
-                //
+                //特に処理はなし？
             }
         });
-
-        //入力できるようにする
-        textName = findViewById(R.id.edit_text);
-        textPass = findViewById(R.id.edit_text3);
 
         //パスワード変更表示
         final Button button_finish = findViewById(R.id.button_finish);
@@ -76,14 +69,17 @@ public NewAccount(){
             public void onClick(View view) {
                 accountName = textName.getText().toString();    //名前を格納
                 accountPass = textPass.getText().toString();    //パスワード格納
-
-                //すべて入力されているか判定
-                if (!(accountName.isEmpty()) && !(accountArea.isEmpty()) && !(accountPass.isEmpty())) {
-                    writePass(accountPass); //パスワード保存
+                DatabaseContents dc = new DatabaseContents();   //書く場所おかしい気がする
+                String userId = dc.getContentsById(textView,"1", "Name=" + accountName, "Area=" + accountArea);
+                if (userId.equals("NG")) {
+                    toastMake();
+                } else {
+                    String file = "gamePass.txt";   //パスワード格納
+                    writeFile(accountPass, file);
+                    file = "UserId.txt";    //ユーザID格納
+                    writeFile(userId, file);
                     Intent intent = new Intent(getApplication(), MainActivity.class);
                     startActivity(intent);
-                } else {
-                    toastMake();
                 }
             }
         });
@@ -91,8 +87,7 @@ public NewAccount(){
     }
 
     //パスワードの書き込み
-    public void writePass(String password) {
-        String file = "gamePass.txt";
+    public void writeFile(String password, String file) {
         try (FileOutputStream fileOutputstream = openFileOutput(file,
                 Context.MODE_PRIVATE);) {
             fileOutputstream.write(password.getBytes());

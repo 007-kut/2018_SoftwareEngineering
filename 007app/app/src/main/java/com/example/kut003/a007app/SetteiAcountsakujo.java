@@ -33,7 +33,7 @@ public class SetteiAcountsakujo extends Activity {
         button_yes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String cleanPass = "imaiKatsuaki";
+                String cleanPass = "";
                 writePass(cleanPass);
                 Intent intent = new Intent(getApplication(), MainActivity.class);
                 startActivity(intent);
