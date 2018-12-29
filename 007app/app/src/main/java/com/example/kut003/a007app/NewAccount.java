@@ -70,20 +70,25 @@ public class NewAccount extends Activity {
                 accountName = textName.getText().toString();    //名前を格納
                 accountPass = textPass.getText().toString();    //パスワード格納
                 DatabaseContents dc = new DatabaseContents();   //書く場所おかしい気がする
-                String userId = dc.getContentsById(textView,"1", "Name=" + accountName, "Area=" + accountArea);
-                if (userId.equals("NG")) {
-                    toastMake();
-                } else {
-                    String file = "gamePass.txt";   //パスワード格納
-                    writeFile(accountPass, file);
-                    file = "UserId.txt";    //ユーザID格納
-                    writeFile(userId, file);
-                    Intent intent = new Intent(getApplication(), MainActivity.class);
-                    startActivity(intent);
-                }
+                dc.setLister(createListener());
+                dc.getContentsById(textView,"1", "Name=" + accountName, "Area=" + accountArea);
             }
         });
+    }
 
+    private UploadTask.Listener createListener () {
+        return new UploadTask.Listener() {
+            // 通信が成功した場合の処理(result : 返り値)
+            @Override
+            public void onSuccess(String result) {
+                // 例: textView.setText(result);
+            }
+            //通信が失敗した場合の処理(result : 返り値)
+            @Override
+            public void onFailure(String result) {
+                // 例: System.out.print("Don't mind.");
+            }
+        };
     }
 
     //パスワードの書き込み
