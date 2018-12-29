@@ -71,7 +71,7 @@ public class NewAccount extends Activity {
                 accountPass = textPass.getText().toString();    //パスワード格納
                 DatabaseContents dc = new DatabaseContents();   //書く場所おかしい気がする
                 dc.setLister(createListener());
-                dc.getContentsById(textView,"1", "Name=" + accountName, "Area=" + accountArea);
+                dc.getContentsById("1", "Name=" + accountName, "Area=" + accountArea);
             }
         });
     }
