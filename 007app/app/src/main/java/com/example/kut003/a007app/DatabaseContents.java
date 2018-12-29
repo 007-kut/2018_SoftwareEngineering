@@ -18,21 +18,47 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /*
-// ↓ 使い方 ↓ (textViewは事前に定義すること)
+   ↓ 使い方 ↓ (textViewは事前に定義すること)
+
        DatabaseContents dc = new DatabaseContents();
+       dc.setLister(createListener());
        dc.getContentsById(textView, "0");
                                      ↑id
-// ↑ 使い方 ↑
-// ※ 引数のidは『Google Spreadsheets』& 『Constants』クラス(定数定義クラス)を見ること。
+
+      【 下のcreateListenerという関数もファイル内で定義してください。 (コピペでOK)】
+
+       private UploadTask.Listener createListener () {
+        return new UploadTask.Listener() {
+            // 通信が成功した場合の処理(result : 返り値)
+            @Override
+            public void onSuccess(String result) {
+                // 例: textView.setText(result);
+            }
+            //通信が失敗した場合の処理(result : 返り値)
+            @Override
+            public void onFailure(String result) {
+            }
+       };
+
+   ↑ 使い方 ↑
+   ※ 引数のidは『Google Spreadsheets』& 『Constants』クラス(定数定義クラス)を見ること。
+   ※ なんか動作がおかしいと思ったらソースコードと出力ログを本城に送ってください。
 */
+
+
 public class DatabaseContents extends AppCompatActivity {
     private UploadTask task;
     protected TextView textView;
 
-    public void getContentsById(TextView textView, String... params) {
-        this.textView = textView;
+    DatabaseContents() {
         task = new UploadTask();
-        task.setListener(createListener());
+    }
+
+    public void getContentsById(TextView textView, String... params) {
+        if (getLister() == null) {
+            throw new ExceptionInInitializerError("listenerがセットされていません。詳しくは本城まで聞いて。");
+        }
+        this.textView = textView;
         task.execute(params);
     }
 
@@ -42,20 +68,19 @@ public class DatabaseContents extends AppCompatActivity {
         super.onDestroy();
     }
 
-    private UploadTask.Listener createListener() {
-        return new UploadTask.Listener() {
-            @Override
-            public void onSuccess(String result) {
-                textView.setText(result);
-            }
-        };
+    public UploadTask.Listener getLister() {
+        return task.listener;
+    }
+
+    public void setLister (UploadTask.Listener listener) {
+        task.setListener(listener);
     }
 }
 
 
 class UploadTask extends AsyncTask<String, Void, String> {
 
-    private Listener listener;
+    protected Listener listener;
 
     @Override
     protected String doInBackground(String... params) {
@@ -125,6 +150,8 @@ class UploadTask extends AsyncTask<String, Void, String> {
         super.onPostExecute(result);
         if (listener != null) {
             listener.onSuccess(result);
+        } else {
+            listener.onFailure(result);
         }
     }
 
@@ -134,5 +161,7 @@ class UploadTask extends AsyncTask<String, Void, String> {
 
     interface Listener {
         void onSuccess(String result);
+        void onFailure(String result);
     }
+
 }
