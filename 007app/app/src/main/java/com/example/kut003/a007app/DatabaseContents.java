@@ -22,7 +22,7 @@ import java.net.URL;
 
        DatabaseContents dc = new DatabaseContents();
        dc.setLister(createListener());
-       dc.getContentsById(textView, "0");
+       dc.getContentsById("0");
                                      ↑id
 
       【 下のcreateListenerという関数もファイル内で定義してください。 (コピペでOK)】
@@ -54,11 +54,10 @@ public class DatabaseContents extends AppCompatActivity {
         task = new UploadTask();
     }
 
-    public void getContentsById(TextView textView, String... params) {
+    public void getContentsById(String... params) {
         if (getLister() == null) {
             throw new ExceptionInInitializerError("listenerがセットされていません。詳しくは本城まで聞いて。");
         }
-        this.textView = textView;
         task.execute(params);
     }
 
