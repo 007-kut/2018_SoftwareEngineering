@@ -26,6 +26,7 @@ public class NewAccount extends Activity {
     private String accountPass;
     private String accountArea;
     private String [] listArea = new String[47];
+    DatabaseContents dc = new DatabaseContents();   //書く場所おかしい気がする
 
     public NewAccount(){
         ListArea la = new ListArea();
@@ -42,8 +43,6 @@ public class NewAccount extends Activity {
 
         textName = findViewById(R.id.edit_text);
         textPass = findViewById(R.id.edit_text3);
-        textView = findViewById(R.id.database);
-
 
         //都道府県リスト
         Spinner sp = findViewById(R.id.area);
@@ -69,9 +68,12 @@ public class NewAccount extends Activity {
             public void onClick(View view) {
                 accountName = textName.getText().toString();    //名前を格納
                 accountPass = textPass.getText().toString();    //パスワード格納
-                DatabaseContents dc = new DatabaseContents();   //書く場所おかしい気がする
-                dc.setLister(createListener());
-                dc.getContentsById("1", "Name=" + accountName, "Area=" + accountArea);
+                if(!(accountName.isEmpty() || accountPass.isEmpty())) {
+                    dc.setLister(createListener());
+                    dc.getContentsById("1", "Name=" + accountName, "Area=" + accountArea);
+                } else {
+                    toastMake();
+                }
             }
         });
     }
@@ -81,21 +83,25 @@ public class NewAccount extends Activity {
             // 通信が成功した場合の処理(result : 返り値)
             @Override
             public void onSuccess(String result) {
-                // 例: textView.setText(result);
+                String file = "gamePass.txt";
+                writeFile(accountName,file);
+                file = "userId.txt";
+                writeFile(result, file);
+                Intent intent = new Intent(getApplication(), MainActivity.class);
+                startActivity(intent);
             }
             //通信が失敗した場合の処理(result : 返り値)
             @Override
-            public void onFailure(String result) {
-                // 例: System.out.print("Don't mind.");
+            public void onFailure(String result){
+                toastMake();
             }
         };
     }
 
-    //パスワードの書き込み
-    public void writeFile(String password, String file) {
-        try (FileOutputStream fileOutputstream = openFileOutput(file,
-                Context.MODE_PRIVATE);) {
-            fileOutputstream.write(password.getBytes());
+    //ファイルへの書き込み
+    public void writeFile(String word, String file) {
+        try (FileOutputStream fileOutputstream = openFileOutput(file, Context.MODE_PRIVATE);) {
+            fileOutputstream.write(word.getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         }

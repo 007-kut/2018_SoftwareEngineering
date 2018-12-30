@@ -24,7 +24,7 @@ import java.net.URL;
        dc.setLister(createListener());
        dc.getContentsById("0");
                            ↑id
-                           
+
       【 下のcreateListenerという関数もファイル内で定義してください。 (コピペでOK)】
 
        private UploadTask.Listener createListener () {

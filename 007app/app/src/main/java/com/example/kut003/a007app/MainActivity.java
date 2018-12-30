@@ -13,14 +13,17 @@ import java.io.InputStreamReader;
 public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         //初期設定すんのかいせんのかい
         String pass = readFile();
         if(pass.isEmpty()) {
             Intent intent = new Intent(getApplication(), NewAccount.class);
             startActivity(intent);
         }
+
         //ゲーム
         final Button button_game = findViewById(R.id.button_game);
         button_game.setOnClickListener(new View.OnClickListener() {
@@ -29,6 +32,7 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+
         //成長記録
         final Button button_grow = findViewById(R.id.button_grow);
         button_grow.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +41,7 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+
         //子育て窓口
         final Button button_wind = findViewById(R.id.button_wind);
         button_wind.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +50,7 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+
         //設定
         final Button button_setting = findViewById(R.id.button_setting);
         button_setting.setOnClickListener(new View.OnClickListener() {
