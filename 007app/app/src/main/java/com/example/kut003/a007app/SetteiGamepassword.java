@@ -97,14 +97,6 @@ public class SetteiGamepassword extends Activity {
         }
     }
 
-//        String file2 = "wherePass.txt";
-//        try (FileOutputStream fileOutputstream = openFileOutput(file,
-//                Context.MODE_PRIVATE);) {
-//            fileOutputstream.write(where.getBytes());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
     private void toastMake(String message) {
         Toast toast = Toast.makeText(this, message, Toast.LENGTH_LONG);
         // 位置調整

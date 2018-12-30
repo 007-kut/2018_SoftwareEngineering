@@ -25,12 +25,12 @@ public class NewAccount extends Activity {
     private String accountName;
     private String accountPass;
     private String accountArea;
-    private String [] listArea = new String[47];
+    private String [] listArea = new String[48];
     DatabaseContents dc = new DatabaseContents();   //書く場所おかしい気がする
 
     public NewAccount(){
         ListArea la = new ListArea();
-        System.arraycopy(la.listArea, 0, this.listArea, 0, 47);
+        System.arraycopy(la.listArea, 0, this.listArea, 0, 48);
     }
 
     @Override
@@ -55,6 +55,9 @@ public class NewAccount extends Activity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Spinner spinner = (Spinner)parent;
                 accountArea = (String)spinner.getSelectedItem();
+                if(accountArea.equals("タップして選択")){
+                    accountArea = "";   //地域を選択してないことになるよ
+                }
             }
             //選択されなかった
             public void onNothingSelected(AdapterView<?> parent) {
@@ -68,7 +71,7 @@ public class NewAccount extends Activity {
             public void onClick(View view) {
                 accountName = textName.getText().toString();    //名前を格納
                 accountPass = textPass.getText().toString();    //パスワード格納
-                if(!(accountName.isEmpty() || accountPass.isEmpty())) {
+                if(!(accountName.isEmpty() || accountPass.isEmpty() || accountArea.isEmpty())) {
                     dc.setLister(createListener());
                     dc.getContentsById("1", "Name=" + accountName, "Area=" + accountArea);
                 } else {
@@ -84,7 +87,7 @@ public class NewAccount extends Activity {
             @Override
             public void onSuccess(String result) {
                 String file = "gamePass.txt";
-                writeFile(accountName,file);
+                writeFile(accountPass,file);
                 file = "userId.txt";
                 writeFile(result, file);
                 Intent intent = new Intent(getApplication(), MainActivity.class);

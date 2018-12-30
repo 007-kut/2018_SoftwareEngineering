@@ -99,13 +99,6 @@
             android:name=".MakePost"
             android:label="@string/app_name" >
         </activity>
-        //パスワード変更画面(図36)
-        <activity
-            android:name=".ChangePass"
-            android:label="@string/app_name" >
-        </activity>
-
-
         //設定メイン画面(図30)
         <activity
             android:name=".SetteiMain"
@@ -126,11 +119,17 @@
             android:name=".SetteiAcounthenkou"
             android:label="@string/app_name" >
         </activity>
+        //アカウント情報変更完了表示画面(図33と図34の間)
+        <activity
+            android:name=".SuccessChangeAccount"
+            android:label="@string/app_name" >
+        </activity>
         //アカウント削除画面(図34)
         <activity
             android:name=".SetteiAcountsakujo"
             android:label="@string/app_name" >
         </activity>
+        //パスワード変更画面(図36)
         //ゲームパスワード画面(図36)
         <activity
             android:name=".SetteiGamepassword"

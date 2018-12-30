@@ -33,8 +33,12 @@ public class SetteiAcountsakujo extends Activity {
         button_yes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String cleanPass = "";
-                writePass(cleanPass);
+                toastMake(toastMessage);
+                String word = "";
+                String file = "gamePass.txt";
+                writeFile(word, file);
+                file = "userId.txt";
+                writeFile(word, file);
                 Intent intent = new Intent(getApplication(), MainActivity.class);
                 startActivity(intent);
             }
@@ -59,19 +63,16 @@ public class SetteiAcountsakujo extends Activity {
         });
     }
 
-    private void toastMake(String message, int x, int y){
-        Toast toast = Toast.makeText(this, message, Toast.LENGTH_LONG);
-        // 位置調整
-        toast.setGravity(Gravity.CENTER, x, y);
+    private void toastMake(String message){
+        Toast toast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER, 0, -200);
         toast.show();
     }
 
-    //パスワードの書き込み
-    public void writePass(String password) {
-        String file = "gamePass.txt";
-        try (FileOutputStream fileOutputstream = openFileOutput(file,
-                Context.MODE_PRIVATE);) {
-            fileOutputstream.write(password.getBytes());
+    //ファイルへの書き込み
+    public void writeFile(String word, String file) {
+        try (FileOutputStream fileOutputstream = openFileOutput(file, Context.MODE_PRIVATE);) {
+            fileOutputstream.write(word.getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         }
