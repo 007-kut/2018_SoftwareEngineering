@@ -1,24 +1,26 @@
 //イラスト画面(図6)
 package com.example.kut003.a007app;
 
-import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
-import android.content.Intent;
 import android.widget.Toast;
 
+public class MakeArt extends AppCompatActivity implements View.OnClickListener{
 
-public class MakeArt extends Activity {
-
+    private PaintView drawingView;
     private String savedMessage;    //保存確認画面を表示するために使う
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.make_art);
 
         //ゲーム選択画面にもどる
@@ -40,6 +42,47 @@ public class MakeArt extends Activity {
                 toastMake(savedMessage);
             }
         });
+
+        red_button= findViewById(R.id.button_red);
+        red_button.setOnClickListener(this);
+        black_button= findViewById(R.id.button_black);
+        black_button.setOnClickListener(this);
+        white_button= findViewById(R.id.button_white);
+        white_button.setOnClickListener(this);
+
+        this.drawingView = findViewById(R.id.drawing_view);
+
+        findViewById(R.id.delete_button).setOnClickListener(deleteDrawing);
+    }
+
+    View.OnClickListener deleteDrawing = new View.OnClickListener(){
+        @Override
+        public void onClick(View view){
+            drawingView.delete();
+        }
+    };
+
+    Button red_button,black_button,white_button;
+    public void onClick(View view){
+        switch(view.getId()){
+            case R.id.button_red:
+                drawingView.setPen(Color.RED);
+                Toast.makeText(this,"red",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.button_white:
+                drawingView.setPen(Color.WHITE);
+                Toast.makeText(this,"white",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.button_black:
+                drawingView.setPen(Color.BLACK);
+                Toast.makeText(this,"black",Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
     }
 
     private void toastMake(String message){

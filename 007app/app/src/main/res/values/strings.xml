@@ -20,6 +20,14 @@
 
         //ゲーム選択画面(図3)
         <string name="art">おえかき</string>string>
+        <string name="apple">りんご</string>string>
+        <string name="banana">ばなな</string>string>
+        <string name="free">らくがき</string>string>
+        <string name="save">ほぞん</string>string>
+        <string name="color_red">あか</string>string>
+        <string name="color_black">くろ</string>string>
+        <string name="color_white">しろ</string>string>
+        <string name="delete">リセット</string>string>
         <string name="buy">おつかい</string>string>
         <string name="back">もどる</string>string>
 
