@@ -8,7 +8,9 @@ public final class Constants {
     public static final String[] PHP_FILE_NAMES = {
             "GetQuestionContents",
             "InsertNewUser",
-            "UpdateUserData"
+            "UpdateUserData",
+            "InsertQuestion",
+            "InsertAnswer"
     };
 
     public static String getServerAddress (String idstr) {
