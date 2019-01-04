@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -12,12 +13,21 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.Toast;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class MakePost extends Activity {
 
     private EditText questionText;
-    private TextView textView;
-    private CheckBox checkBox;
+    private CheckBox checkBox;  //匿名のチェックボックス
+    private String checkAnonimity = "1";
+    DatabaseContents dc = new DatabaseContents();
+    public static final String EXTRA_MESSAGE = "a";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,10 +44,10 @@ public class MakePost extends Activity {
                 // チェックステータス取得
                 boolean check = checkBox.isChecked();
                 if(check){
-                    checkBox.setText("匿名");
+                    checkAnonimity = "0";
                 }
                 else{
-                    checkBox.setText("ユーザ名");
+                    checkAnonimity = "1";
                 }
             }
         });
@@ -47,7 +57,6 @@ public class MakePost extends Activity {
         final Button button0 = findViewById(R.id.button_return);
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Log.d("debug", "button0, Perform action on click");
                 Intent intent = new Intent(getApplication(), Parenting.class);
                 startActivity(intent);
             }
@@ -57,10 +66,64 @@ public class MakePost extends Activity {
         final Button button1 = findViewById(R.id.button_make_post);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Log.d("debug", "button1, Perform action on click");
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
-                startActivity(intent);
+                String questionContent = questionText.getText().toString();
+                if(questionContent.isEmpty()) {
+                    toastMake();
+                } else {
+                    String userId = readFile();    //パスワードの読み込み
+                    dc.setLister(createListener());
+                    dc.getContentsById("3", "UserID=" + userId, "Qcontents=" + questionContent, "Anonimity=" + checkAnonimity);
+                }
             }
         });
+    }
+
+    //データベースアクセス結果
+    private UploadTask.Listener createListener () {
+        return new UploadTask.Listener() {
+
+            // 通信が成功した場合の処理(result : 返り値)
+            @Override
+            public void onSuccess(String result) {
+                //Intent intent = new Intent(getApplication(), CompleteQuestion.class);
+                //intent.putExtra(EXTRA_MESSAGE, result);
+                Intent intent = new Intent(getApplication(), CompleteQuestion.class);
+                startActivity(intent);
+            }
+            //通信が失敗した場合の処理(result : 返り値)
+            @Override
+            public void onFailure(String result) {
+                //Intent intent = new Intent(getApplication(), CompleteQuestion.class);
+                //intent.putExtra("result", result);
+                toastMake();
+            }
+        };
+    }
+
+    //トースト表示
+    private void toastMake() {
+        String message = "正しく入力してください";
+        Toast toast = Toast.makeText(this, message, Toast.LENGTH_LONG);
+        // 位置調整
+        toast.setGravity(Gravity.CENTER, 0, -200);
+        toast.show();
+    }
+
+    //UserIDを読み込む
+    public String readFile() {
+        String text = "";
+        String file = "userId.txt";
+        // try-with-resources
+        try (FileInputStream fileInputStream = openFileInput(file);
+             BufferedReader reader= new BufferedReader(
+                     new InputStreamReader(fileInputStream, "UTF-8"))) {
+            String lineBuffer;
+            while( (lineBuffer = reader.readLine()) != null ) {
+                text = lineBuffer ;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return text;
     }
 }

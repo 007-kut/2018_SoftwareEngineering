@@ -99,6 +99,11 @@
             android:name=".MakePost"
             android:label="@string/app_name" >
         </activity>
+        //投稿作成画面(図26)
+        <activity
+            android:name=".CompleteQuestion"
+            android:label="@string/app_name" >
+        </activity>
         //設定メイン画面(図30)
         <activity
             android:name=".SetteiMain"
