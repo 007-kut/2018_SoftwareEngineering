@@ -1,4 +1,4 @@
-package com.example.camera;
+package com.example.michio7.myapplication;
 
 import org.junit.Test;
 
