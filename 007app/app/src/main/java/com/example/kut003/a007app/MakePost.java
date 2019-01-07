@@ -26,7 +26,7 @@ public class MakePost extends Activity {
     private CheckBox checkBox;  //匿名のチェックボックス
     private String checkAnonimity = "1";
     DatabaseContents dc = new DatabaseContents();
-    public static final String EXTRA_MESSAGE = "a";
+    public static final String EXTRAMESSAGE = "com.example.kut003.a007app.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,20 +81,20 @@ public class MakePost extends Activity {
     //データベースアクセス結果
     private UploadTask.Listener createListener () {
         return new UploadTask.Listener() {
-
             // 通信が成功した場合の処理(result : 返り値)
             @Override
             public void onSuccess(String result) {
-                //Intent intent = new Intent(getApplication(), CompleteQuestion.class);
-                //intent.putExtra(EXTRA_MESSAGE, result);
+                result = "投稿されました";
                 Intent intent = new Intent(getApplication(), CompleteQuestion.class);
+                intent.putExtra(EXTRAMESSAGE, result);
                 startActivity(intent);
             }
             //通信が失敗した場合の処理(result : 返り値)
             @Override
             public void onFailure(String result) {
-                //Intent intent = new Intent(getApplication(), CompleteQuestion.class);
-                //intent.putExtra("result", result);
+                result = "投稿エラー";
+                Intent intent = new Intent(getApplication(), CompleteQuestion.class);
+                intent.putExtra(EXTRAMESSAGE, result);
                 toastMake();
             }
         };

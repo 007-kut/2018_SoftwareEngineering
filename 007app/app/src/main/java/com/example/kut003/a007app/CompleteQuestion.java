@@ -11,14 +11,13 @@ import android.widget.TextView;
 public class CompleteQuestion extends Activity {
 
     private TextView textView;
-    Intent intent = getIntent();
-    String answer = "テスト";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.complete_question);
-        //answer = intent.getStringExtra(MakePost.EXTRA_MESSAGE);
+        
+        Intent intent = getIntent();
+        String answer = intent.getStringExtra(MakePost.EXTRAMESSAGE);
         textView = findViewById(R.id.text_view);
         textView.setText(answer);
 
