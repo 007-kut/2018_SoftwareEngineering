@@ -22,7 +22,7 @@ public class QuestionList extends Activity {
 
     private static final String[] texts = {
             // Globe Decade の楽曲リストより
-            "Feel Like dance",
+            "あああああああああああああああああああああああああああああああ",
             "Joy to the love (globe)",
             "SWEET PAIN",
             "DEPARTURES (RADIO EDIT)",
@@ -67,10 +67,9 @@ public class QuestionList extends Activity {
         //入力できるようにする
         editText = findViewById(R.id.edit_text);
         editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                // EditTextのフォーカスが外れた場合
+                // editTextのフォーカスが外れた場合
                 if (!hasFocus) {
                     // ソフトキーボードを非表示にする
                     InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -86,7 +85,7 @@ public class QuestionList extends Activity {
                 button0.setFocusableInTouchMode(true);
                 button0.requestFocus();
                 String search = editText.getText().toString();  //入力内容を格納
-                Intent intent = new Intent(getApplication(), MainActivity.class);
+                //Intent intent = new Intent(getApplication(), MainActivity.class);
                 //startActivity(intent);
             }
         });
