@@ -1,4 +1,3 @@
-//投稿作成画面(図25)
 package com.example.kut003.a007app;
 
 import android.app.Activity;
@@ -20,7 +19,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class MakePost extends Activity {
+public class MakeAnswer extends Activity {
 
     private EditText questionText;
     private CheckBox checkBox;  //匿名のチェックボックス
@@ -31,7 +30,7 @@ public class MakePost extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.make_post);
+        setContentView(R.layout.make_answer);
 
         checkBox = findViewById(R.id.check);
         checkBox.setChecked(false);
@@ -57,13 +56,13 @@ public class MakePost extends Activity {
         final Button button0 = findViewById(R.id.button_return);
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), QuestionList.class);
+                Intent intent = new Intent(getApplication(), Answer.class);
                 startActivity(intent);
             }
         });
 
         //投稿ボタン
-        final Button button1 = findViewById(R.id.button_make_post);
+        final Button button1 = findViewById(R.id.button_make_answer);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 String questionContent = questionText.getText().toString();
@@ -84,7 +83,7 @@ public class MakePost extends Activity {
             // 通信が成功した場合の処理(result : 返り値)
             @Override
             public void onSuccess(String result) {
-                result = "投稿されました";
+                result = "回答されました";
                 Intent intent = new Intent(getApplication(), CompleteQuestion.class);
                 intent.putExtra(EXTRAMESSAGE, result);
                 startActivity(intent);
@@ -92,7 +91,7 @@ public class MakePost extends Activity {
             //通信が失敗した場合の処理(result : 返り値)
             @Override
             public void onFailure(String result) {
-                result = "投稿エラー";
+                result = "回答エラー";
                 Intent intent = new Intent(getApplication(), CompleteQuestion.class);
                 intent.putExtra(EXTRAMESSAGE, result);
                 toastMake();

@@ -25,7 +25,7 @@ public class CompleteQuestion extends Activity {
         returnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplication(), Parenting.class);
+                Intent intent = new Intent(getApplication(), QuestionList.class);
                 startActivity(intent);
             }
         });

@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
         final Button button_wind = findViewById(R.id.button_wind);
         button_wind.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), Parenting.class);
+                Intent intent = new Intent(getApplication(), QuestionList.class);
                 startActivity(intent);
             }
         });

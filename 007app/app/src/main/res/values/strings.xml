@@ -33,6 +33,11 @@
 
         //子育て窓口メイン画面(図24)
         <string name="post">投稿作成</string>string>
+        <string name="ichiran">質問一覧</string>
+        <string name="kensaku">キーワードを入力してください</string>
+        <string name="toukou">投稿作成</string>
+        <string name="question">回答一覧</string>
+        <string name="kaitousakusei">回答作成</string>
 
         //設定画面(図30)
         <string name="button">Button</string>
