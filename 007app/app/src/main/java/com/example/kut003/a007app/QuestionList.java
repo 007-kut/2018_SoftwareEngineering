@@ -44,6 +44,11 @@ public class QuestionList extends Activity {
             "とにかく無性に…"
     };
 
+    private static final String[] texts1 = {
+            // Globe Decade の楽曲リストより
+          "1", "2"
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +64,7 @@ public class QuestionList extends Activity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String test = texts1[position];    //要素数が対応しているっぽいです
                 Intent intent = new Intent(getApplication(), SubActivity2.class);
                 startActivity(intent);
             }
