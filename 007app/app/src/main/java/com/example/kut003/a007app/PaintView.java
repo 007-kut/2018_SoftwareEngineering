@@ -8,10 +8,6 @@ import android.graphics.Path;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-import android.graphics.Bitmap;
-import android.graphics.Rect;
-import android.icu.text.RelativeDateTimeFormatter;
-import android.os.Environment;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,7 +45,7 @@ public class PaintView extends View {
         this.paint = new Paint();
         this.paint.setStyle(Paint.Style.STROKE);
         this.paint.setAntiAlias(true);
-        this.paint.setStrokeWidth(10);
+        this.paint.setStrokeWidth(40);
 
         this.lines = new ArrayList<DrawLine>();
     }
