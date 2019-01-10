@@ -73,6 +73,32 @@ public class DatabaseContents extends AppCompatActivity {
     public void setLister (UploadTask.Listener listener) {
         task.setListener(listener);
     }
+
+    /**
+     * @param  result:GetNewest___Questionで受け取ったデータ
+     * @return       0      1      2        3           4        5
+     *          1 [ [QID] [Name] [Area] [Qcontents] [Anonimity] [Date] ]
+     *          2 [ [QID] [Name] [Area] [Qcontents] [Anonimity] [Date] ]
+     *                                  ...
+     *         10 [ [QID] [Name] [Area] [Qcontents] [Anonimity] [Date] ]
+     *         ※2次元String配列
+     */
+
+    final static int NUM_ELEMENTS = 6;
+    final static String SPLIT_CHARACTER = "<:-o-:>";
+
+    public static String[][] splitQuestionData(String data) {
+        String[] dataSplited = data.split(SPLIT_CHARACTER);
+        int NUM_DATA = dataSplited.length / NUM_ELEMENTS;
+        String[][] dataArray = new String[NUM_DATA][NUM_ELEMENTS];
+        for (int i = 0; i < NUM_DATA; i++) {
+            for (int j = 0; j < NUM_ELEMENTS; j++) {
+                dataArray[i][j] = dataSplited[NUM_ELEMENTS*i+j];
+            }
+        }
+        return dataArray;
+    }
+
 }
 
 
