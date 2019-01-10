@@ -28,18 +28,18 @@ public class QuestionList extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.question_list);
         dc.setLister(createListener());
         dc.getContentsById("5");
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.question_list);
 
-       // リスト表示
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.parentinglist);
+        // リスト表示
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.parentinglist);
         ListView listView = findViewById(R.id.listview);
         for (int i = 0; i < questionContentsList.length; i++) {
             String str = questionContentsList[i];
-            arrayAdapter.add(str);
-        }
+        arrayAdapter.add(str);
+    }
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -82,8 +82,7 @@ public class QuestionList extends Activity {
                 button1.setFocusableInTouchMode(true);
                 button1.requestFocus();
                 String search = editText.getText().toString();  //入力内容を格納
-                //Intent intent = new Intent(getApplication(), MainActivity.class);
-                //startActivity(intent);
+                arrayAdapter.notifyDataSetChanged();    //動作未確認
             }
         });
         final Button button2 = findViewById(R.id.button_make);
@@ -115,4 +114,6 @@ public class QuestionList extends Activity {
             }
         };
     }
+
+
 }

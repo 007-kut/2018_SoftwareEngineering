@@ -85,6 +85,7 @@ public class AnswerList extends Activity {
                         answerContentsList[y] = datas[y][3];
                     }
                 } else {
+                    // 「他の回答が反映されたままの状態」を改善するため""で上書き
                     for(int y = 0; y < 10; y++) {
                         answerContentsList[y] = "";
                     }
