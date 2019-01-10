@@ -18,13 +18,15 @@ import java.util.Locale;
 
 public class QuestionList extends Activity {
 
-    public EditText editText;
+    private EditText editText;
+    public static final String questionContents = "com.example.kut003.a007app.1";
+    public static final String qId = "com.example.kut003.a007app.2";
 
-    private static final String[] texts = {
-            // Globe Decade の楽曲リストより
-            "あああああああああああああああああああああああああああああああ",
-            "Joy to the love (globe)",
-            "SWEET PAIN",
+    private static final String[] questionContentsList = {
+            // QIDに対応する内容を格納するための配列
+            "保育園の入園に必要な手続きは？",
+            "横田の成績が芳しくない",
+            "かごめ",
             "DEPARTURES (RADIO EDIT)",
             "FREEDOM (RADIO EDIT)",
             "Is this love",
@@ -38,15 +40,12 @@ public class QuestionList extends Activity {
             "Sa Yo Na Ra",
             "sweet heart",
             "Perfume of love",
-            "MISS YOUR BODY",
-            "still growin' up",
-            "biting her nails",
-            "とにかく無性に…"
     };
 
-    private static final String[] texts1 = {
-            // Globe Decade の楽曲リストより
-          "1", "2"
+    private static final String[] qIdList = {
+            // QIDを格納するための配列
+          "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+          "11", "12", "13", "14", "15"
     };
 
     @Override
@@ -57,15 +56,18 @@ public class QuestionList extends Activity {
         // リスト表示
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.parentinglist);
         ListView listView = findViewById(R.id.listview);
-        for (String str: texts) {
+        for (String str: questionContentsList) {
             arrayAdapter.add(str);
         }
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String test = texts1[position];    //要素数が対応しているっぽいです
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
+                String contents = questionContentsList[position];    //要素数が対応しているっぽいです
+                String qid = qIdList[position];
+                Intent intent = new Intent(getApplication(), AnswerList.class);
+                intent.putExtra(questionContents, contents);
+                intent.putExtra(qId, qid);
                 startActivity(intent);
             }
         });
@@ -84,26 +86,24 @@ public class QuestionList extends Activity {
             }
         });
 
-        final Button button0 = findViewById(R.id.button_search);
+        final Button button0 = findViewById(R.id.button_return);
         button0.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                button0.setFocusable(true);
-                button0.setFocusableInTouchMode(true);
-                button0.requestFocus();
-                String search = editText.getText().toString();  //入力内容を格納
-                //Intent intent = new Intent(getApplication(), MainActivity.class);
-                //startActivity(intent);
-            }
-        });
-
-        final Button button1 = findViewById(R.id.button_return);
-        button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplication(), MainActivity.class);
                 startActivity(intent);
             }
         });
-
+        final Button button1 = findViewById(R.id.button_search);
+        button1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                button1.setFocusable(true);
+                button1.setFocusableInTouchMode(true);
+                button1.requestFocus();
+                String search = editText.getText().toString();  //入力内容を格納
+                //Intent intent = new Intent(getApplication(), MainActivity.class);
+                //startActivity(intent);
+            }
+        });
         final Button button2 = findViewById(R.id.button_make);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {

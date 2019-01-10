@@ -2,75 +2,63 @@ package com.example.kut003.a007app;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.TextView;
 
-import java.util.Locale;
+public class AnswerList extends Activity {
 
-public class Answer extends Activity {
-
-    private static final String[] texts = {
-            // Globe Decade の楽曲リストより
-            "Feel Like dance",
+    private static final String[] answerContentsList = {
+            // AIDに対応する内容を格納
+            "もう救いようがないんだよ",
             "Joy to the love (globe)",
             "SWEET PAIN",
             "DEPARTURES (RADIO EDIT)",
-            "FREEDOM (RADIO EDIT)",
-            "Is this love",
-            "Can't Stop Fallin' in Love",
-            "FACE",
-            "FACES PLACES",
-            "Anytime smokin' cigarette",
-            "Wanderin' Destiny",
-            "Love again",
-            "wanna Be A Dreammaker",
-            "Sa Yo Na Ra",
-            "sweet heart",
-            "Perfume of love",
-            "MISS YOUR BODY",
-            "still growin' up",
-            "biting her nails",
-            "とにかく無性に…"
     };
+
+    private static final String[] aIdList = {
+            // AIDを格納
+            "もう救いようがないんだよ",
+            "Joy to the love (globe)",
+            "SWEET PAIN",
+            "DEPARTURES (RADIO EDIT)",
+    };
+
+    private TextView textView;
+    public static final String sendQuestionContents = "com.example.kut003.a007app.3";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.answer);
+        setContentView(R.layout.answer_list);
 
-        // itemを表示するTextViewが設定されているparentinglist.xmlを指す
+        //リスト表示
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.parentinglist);
-
-        // activity_main.xmlのlistViewにListViewをセット
         ListView listView = findViewById(R.id.listview);
-
-
-        for (String str : texts) {
+        for (String str : answerContentsList) {
             // ArrayAdapterにitemを追加する
             arrayAdapter.add(str);
         }
-
-        // adapterをListViewにセット
         listView.setAdapter(arrayAdapter);
 
-        // itemがクリックされた時のリスナー
+        //質問内容とQIDを格納
+        Intent intent = getIntent();
+        final String questionContents = intent.getStringExtra(QuestionList.questionContents);
+        final String qId = intent.getStringExtra(QuestionList.qId);
+        textView = findViewById(R.id.question_text);
+        textView.setText(questionContents);
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getApplication(), MainActivity.class);
+                Intent intent = new Intent(getApplication(), SubActivity2.class);
                 startActivity(intent);
-//                Toast.makeText(Parenting2.this,
-//                        String.format(Locale.US,"%sがtapされました",texts[position]),
-//                        Toast.LENGTH_LONG).show();
             }
         });
-
         final Button button1 = findViewById(R.id.button_return);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -82,6 +70,7 @@ public class Answer extends Activity {
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplication(), MakeAnswer.class);
+                intent.putExtra(sendQuestionContents, questionContents);
                 startActivity(intent);
             }
         });

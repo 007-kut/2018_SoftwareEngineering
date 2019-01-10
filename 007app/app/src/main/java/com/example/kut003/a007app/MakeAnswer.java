@@ -21,16 +21,21 @@ import java.io.InputStreamReader;
 
 public class MakeAnswer extends Activity {
 
+    private TextView textView;
     private EditText questionText;
     private CheckBox checkBox;  //匿名のチェックボックス
     private String checkAnonimity = "1";
     DatabaseContents dc = new DatabaseContents();
-    public static final String EXTRAMESSAGE = "com.example.kut003.a007app.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.make_answer);
+
+        Intent intent = getIntent();
+        String questionContents = intent.getStringExtra(AnswerList.sendQuestionContents);
+        textView = findViewById(R.id.contents_text);
+        textView.setText(questionContents);
 
         checkBox = findViewById(R.id.check);
         checkBox.setChecked(false);
@@ -56,8 +61,7 @@ public class MakeAnswer extends Activity {
         final Button button0 = findViewById(R.id.button_return);
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), Answer.class);
-                startActivity(intent);
+                finish();
             }
         });
 
@@ -83,18 +87,10 @@ public class MakeAnswer extends Activity {
             // 通信が成功した場合の処理(result : 返り値)
             @Override
             public void onSuccess(String result) {
-                result = "回答されました";
-                Intent intent = new Intent(getApplication(), CompleteQuestion.class);
-                intent.putExtra(EXTRAMESSAGE, result);
-                startActivity(intent);
             }
             //通信が失敗した場合の処理(result : 返り値)
             @Override
             public void onFailure(String result) {
-                result = "回答エラー";
-                Intent intent = new Intent(getApplication(), CompleteQuestion.class);
-                intent.putExtra(EXTRAMESSAGE, result);
-                toastMake();
             }
         };
     }
