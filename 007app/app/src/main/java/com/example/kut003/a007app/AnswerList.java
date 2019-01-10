@@ -13,28 +13,22 @@ import android.widget.TextView;
 public class AnswerList extends Activity {
 
     private static final String[] answerContentsList = {
-            // AIDに対応する内容を格納
-            "もう救いようがないんだよ",
-            "Joy to the love (globe)",
-            "SWEET PAIN",
-            "DEPARTURES (RADIO EDIT)",
+            "", "", "", "", "", "","", "", "", "", "", "", "", "", ""
     };
-
     private static final String[] aIdList = {
-            // AIDを格納
-            "もう救いようがないんだよ",
-            "Joy to the love (globe)",
-            "SWEET PAIN",
-            "DEPARTURES (RADIO EDIT)",
-    };
+            "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "", "", "", "", ""
 
+    };
     private TextView textView;
     public static final String sendQuestionContents = "com.example.kut003.a007app.3";
+    public static final String sendQId = "com.example.kut003.a007app.4";
+    DatabaseContents dc = new DatabaseContents();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.answer_list);
+
 
         //リスト表示
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.parentinglist);
@@ -51,6 +45,8 @@ public class AnswerList extends Activity {
         final String qId = intent.getStringExtra(QuestionList.qId);
         textView = findViewById(R.id.question_text);
         textView.setText(questionContents);
+        dc.setLister(createListener());
+        dc.getContentsById("7", "QID=" + qId);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -71,8 +67,29 @@ public class AnswerList extends Activity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplication(), MakeAnswer.class);
                 intent.putExtra(sendQuestionContents, questionContents);
+                intent.putExtra(sendQId, qId);
                 startActivity(intent);
             }
         });
+    }
+
+    //データベースアクセス結果
+    private UploadTask.Listener createListener () {
+        return new UploadTask.Listener() {
+            // 通信が成功した場合の処理(result : 返り値)
+            @Override
+            public void onSuccess(String result) {
+                String[][] datas = DatabaseContents.splitQuestionData(result);
+                for(int y = 0; y < datas.length; y++) {
+                    //aIdList[y] = datas[y][0];
+                    //answerContentsList[y] = datas[y][3];
+                }
+            }
+            //通信が失敗した場合の処理(result : 返り値)
+            @Override
+            public void onFailure(String result) {
+                finish();
+            }
+        };
     }
 }

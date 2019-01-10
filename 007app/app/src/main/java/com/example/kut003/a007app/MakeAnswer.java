@@ -22,9 +22,10 @@ import java.io.InputStreamReader;
 public class MakeAnswer extends Activity {
 
     private TextView textView;
-    private EditText questionText;
+    private EditText answerText;
     private CheckBox checkBox;  //匿名のチェックボックス
     private String checkAnonimity = "1";
+    public static final String EXTRAMESSAGE = "com.example.kut003.a007app.MESSAGE";
     DatabaseContents dc = new DatabaseContents();
 
     @Override
@@ -33,7 +34,8 @@ public class MakeAnswer extends Activity {
         setContentView(R.layout.make_answer);
 
         Intent intent = getIntent();
-        String questionContents = intent.getStringExtra(AnswerList.sendQuestionContents);
+        final String questionContents = intent.getStringExtra(AnswerList.sendQuestionContents);
+        final String qId = intent.getStringExtra(AnswerList.sendQId);
         textView = findViewById(R.id.contents_text);
         textView.setText(questionContents);
 
@@ -56,7 +58,7 @@ public class MakeAnswer extends Activity {
             }
         });
 
-        questionText = findViewById(R.id.question_text);
+        answerText = findViewById(R.id.answer_text);
         //子育て窓口画面に戻る
         final Button button0 = findViewById(R.id.button_return);
         button0.setOnClickListener(new View.OnClickListener() {
@@ -65,17 +67,17 @@ public class MakeAnswer extends Activity {
             }
         });
 
-        //投稿ボタン
+        //回答ボタン
         final Button button1 = findViewById(R.id.button_make_answer);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                String questionContent = questionText.getText().toString();
-                if(questionContent.isEmpty()) {
+                String answerContent = answerText.getText().toString();
+                if(answerContent.isEmpty()) {
                     toastMake();
                 } else {
                     String userId = readFile();    //パスワードの読み込み
                     dc.setLister(createListener());
-                    dc.getContentsById("3", "UserID=" + userId, "Qcontents=" + questionContent, "Anonimity=" + checkAnonimity);
+                    dc.getContentsById("4", "QID=" + qId, "UserID=" + userId, "Acontents=" + answerContent, "Anonimity=" + checkAnonimity);
                 }
             }
         });
@@ -87,14 +89,21 @@ public class MakeAnswer extends Activity {
             // 通信が成功した場合の処理(result : 返り値)
             @Override
             public void onSuccess(String result) {
+                result = "投稿されました";
+                Intent intent = new Intent(getApplication(), CompleteQuestion.class);
+                intent.putExtra(EXTRAMESSAGE, result);
+                startActivity(intent);
             }
             //通信が失敗した場合の処理(result : 返り値)
             @Override
             public void onFailure(String result) {
+                result = "投稿エラー";
+                Intent intent = new Intent(getApplication(), CompleteQuestion.class);
+                intent.putExtra(EXTRAMESSAGE, result);
+                toastMake();
             }
         };
     }
-
     //トースト表示
     private void toastMake() {
         String message = "正しく入力してください";

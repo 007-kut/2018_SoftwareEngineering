@@ -3,7 +3,6 @@ package com.example.kut003.a007app;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -12,51 +11,33 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
-
-import java.util.Locale;
 
 public class QuestionList extends Activity {
 
     private EditText editText;
     public static final String questionContents = "com.example.kut003.a007app.1";
     public static final String qId = "com.example.kut003.a007app.2";
-
+    DatabaseContents dc = new DatabaseContents();
     private static final String[] questionContentsList = {
-            // QIDに対応する内容を格納するための配列
-            "保育園の入園に必要な手続きは？",
-            "横田の成績が芳しくない",
-            "かごめ",
-            "DEPARTURES (RADIO EDIT)",
-            "FREEDOM (RADIO EDIT)",
-            "Is this love",
-            "Can't Stop Fallin' in Love",
-            "FACE",
-            "FACES PLACES",
-            "Anytime smokin' cigarette",
-            "Wanderin' Destiny",
-            "Love again",
-            "wanna Be A Dreammaker",
-            "Sa Yo Na Ra",
-            "sweet heart",
-            "Perfume of love",
+            //DBの処理が非同期なので最初は空の状態
+            "", "", "", "", "", "","", "", "", "", "", "", "", "", ""
     };
-
     private static final String[] qIdList = {
-            // QIDを格納するための配列
-          "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
-          "11", "12", "13", "14", "15"
+            "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "", "", "", "", ""
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question_list);
+        dc.setLister(createListener());
+        dc.getContentsById("5");
 
-        // リスト表示
+       // リスト表示
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.parentinglist);
         ListView listView = findViewById(R.id.listview);
-        for (String str: questionContentsList) {
+        for (int i = 0; i < questionContentsList.length; i++) {
+            String str = questionContentsList[i];
             arrayAdapter.add(str);
         }
         listView.setAdapter(arrayAdapter);
@@ -86,6 +67,7 @@ public class QuestionList extends Activity {
             }
         });
 
+        editText = findViewById(R.id.edit_text);
         final Button button0 = findViewById(R.id.button_return);
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -111,5 +93,26 @@ public class QuestionList extends Activity {
                 startActivity(intent);
             }
         });
+
+    }
+
+    //データベースアクセス結果
+    private UploadTask.Listener createListener () {
+        return new UploadTask.Listener() {
+            // 通信が成功した場合の処理(result : 返り値)
+            @Override
+            public void onSuccess(String result) {
+                String[][] datas = DatabaseContents.splitQuestionData(result);
+                for(int y = 0; y < datas.length; y++) {
+                    qIdList[y] = datas[y][0];
+                    questionContentsList[y] = datas[y][3];
+                }
+            }
+            //通信が失敗した場合の処理(result : 返り値)
+            @Override
+            public void onFailure(String result) {
+                finish();
+            }
+        };
     }
 }
