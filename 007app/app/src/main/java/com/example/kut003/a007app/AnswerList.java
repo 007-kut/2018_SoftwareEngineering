@@ -29,7 +29,6 @@ public class AnswerList extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.answer_list);
 
-
         //リスト表示
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.parentinglist);
         ListView listView = findViewById(R.id.listview);
@@ -48,13 +47,13 @@ public class AnswerList extends Activity {
         dc.setLister(createListener());
         dc.getContentsById("7", "QID=" + qId);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getApplication(), SubActivity2.class);
                 startActivity(intent);
             }
-        });
+        });*/
         final Button button1 = findViewById(R.id.button_return);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -79,10 +78,16 @@ public class AnswerList extends Activity {
             // 通信が成功した場合の処理(result : 返り値)
             @Override
             public void onSuccess(String result) {
-                String[][] datas = DatabaseContents.splitQuestionData(result);
-                for(int y = 0; y < datas.length; y++) {
-                    //aIdList[y] = datas[y][0];
-                    //answerContentsList[y] = datas[y][3];
+                if(!(result == null)) {
+                    String[][] datas = DatabaseContents.splitQuestionData(result);
+                    for (int y = 0; y < datas.length; y++) {
+                        aIdList[y] = datas[y][0];
+                        answerContentsList[y] = datas[y][3];
+                    }
+                } else {
+                    for(int y = 0; y < 10; y++) {
+                        answerContentsList[y] = "";
+                    }
                 }
             }
             //通信が失敗した場合の処理(result : 返り値)

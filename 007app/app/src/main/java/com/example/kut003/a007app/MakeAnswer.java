@@ -78,6 +78,7 @@ public class MakeAnswer extends Activity {
                     String userId = readFile();    //パスワードの読み込み
                     dc.setLister(createListener());
                     dc.getContentsById("4", "QID=" + qId, "UserID=" + userId, "Acontents=" + answerContent, "Anonimity=" + checkAnonimity);
+                    //dc.getContentsById("4", "QID=10", "UserID=5", "Acontents=BugCheck", "Anonimity=True");
                 }
             }
         });
