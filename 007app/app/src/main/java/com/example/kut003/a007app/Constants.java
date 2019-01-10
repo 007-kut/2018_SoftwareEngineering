@@ -10,7 +10,11 @@ public final class Constants {
             "InsertNewUser",
             "UpdateUserData",
             "InsertQuestion",
-            "InsertAnswer"
+            "InsertAnswer",
+            "GetNewest10QuestionData",
+            "GetSearchedQuestionData",
+            "GetAnswerContents"
+
     };
 
     public static String getServerAddress (String idstr) {
