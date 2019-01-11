@@ -8,14 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
 
-public class InBasket extends Activity {
+public class  InBasket extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.in_basket);
 
-        final Button button1 = findViewById(R.id.button_back);
+        final Button button1 = findViewById(R.id.button_albam_back);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button1, Perform action on click");

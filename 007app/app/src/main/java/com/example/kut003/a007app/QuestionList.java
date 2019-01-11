@@ -59,7 +59,7 @@ public class QuestionList extends Activity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
+                Intent intent = new Intent(getApplication(), MakePost.class);
                 startActivity(intent);
             }
         });
@@ -102,7 +102,7 @@ public class QuestionList extends Activity {
         final Button button2 = findViewById(R.id.button_make);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), MakePost.class);
+                Intent intent = new Intent(getApplication(), SubActivity2.class);
                 startActivity(intent);
             }
         });

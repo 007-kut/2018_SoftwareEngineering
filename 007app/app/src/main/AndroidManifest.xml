@@ -96,6 +96,11 @@
         </activity>
 
         //成長記録メイン画面
+        <activity
+            android:name=".GrowHome"
+            android:label="TestActivity">
+        </activity>
+
         //成長記録リスト
 
         //子育て窓口メイン画面(図24)
@@ -105,10 +110,6 @@
             android:label="@string/app_name" >
         </activity>
         //投稿作成画面(図25)
-        <activity
-            android:name=".MakePost"
-            android:label="@string/app_name" >
-        </activity>
         //投稿作成画面(図26)
         <activity
             android:name=".CompleteQuestion"
