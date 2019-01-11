@@ -17,49 +17,42 @@ public class QuestionList extends Activity {
     private EditText editText;
     public static final String questionContents = "com.example.kut003.a007app.1";
     public static final String qId = "com.example.kut003.a007app.2";
-    public static final String answerContents = "com.example.kut003.a007app.3test";
-    public static final String aId = "com.example.kut003.a007app.4test";
     String[] questionContentsList = new String[10];
-    String[] answerContentsList = new String[10];
     String[] qIdList = new String[10];
-    String[] aIdList = new String[10];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question_list);
-        Intent intent = getIntent();
-        //MainActivityで準備した質問を受け取る
-        //QuestionList.java内だと、DBから情報を受け取る前にxmlで表示を開始しようとしてぬるぽ
-        questionContentsList = intent.getStringArrayExtra(MainActivity.questionContents);
-        qIdList = intent.getStringArrayExtra(MainActivity.qId);
-
-        //
-        // final DatabaseContents dc = new DatabaseContents();
-        //dc.setLister(createListener());
+        final ShareQuestion sq = (ShareQuestion) this.getApplication();
+        questionContentsList = sq.getContents();
+        qIdList = sq.getId();
 
         // リスト表示
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.parentinglist);
         ListView listView = findViewById(R.id.listview);
         for (int i = 0; i < questionContentsList.length; i++) {
             String str = questionContentsList[i];
-        arrayAdapter.add(str);
-    }
+            arrayAdapter.add(str);
+        }
+
+        //各質問をタップしたときの動作
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String contents = questionContentsList[position];    //要素数が対応しているっぽいです
                 String qid = qIdList[position];
-                //dc.getContentsById("5");
                 Intent intent = new Intent(getApplication(), AnswerList.class);
-                intent.putExtra(questionContents, contents);
-                intent.putExtra(qId, qid);
-                startActivity(intent);
+                //intent.putExtra(questionContents, contents);
+                //intent.putExtra(qId, qid);
+                sq.setChooseContents(contents);
+                sq.setChooseId(qid);
+                startActivity(intent);    //QIDと内容を送って遷移
             }
         });
 
-        //入力できるようにする
+        //検索欄
         editText = findViewById(R.id.edit_text);
         editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -73,6 +66,7 @@ public class QuestionList extends Activity {
             }
         });
 
+        //もどる
         final Button button0 = findViewById(R.id.button_return);
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -80,6 +74,8 @@ public class QuestionList extends Activity {
                 startActivity(intent);
             }
         });
+
+        //検索ボタン
         final Button button1 = findViewById(R.id.button_search);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -90,6 +86,8 @@ public class QuestionList extends Activity {
                 arrayAdapter.notifyDataSetChanged();    //動作未確認
             }
         });
+
+        //回答作成
         final Button button2 = findViewById(R.id.button_make);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -98,24 +96,4 @@ public class QuestionList extends Activity {
             }
         });
     }
-
-    //データベースアクセス結果
-    private UploadTask.Listener createListener () {
-        return new UploadTask.Listener() {
-            @Override
-            public void onSuccess(String result) {
-                String[][] datas = DatabaseContents.splitQuestionData(result);
-                for(int y = 0; y < datas.length; y++) {
-                    qIdList[y] = datas[y][0];
-                    questionContentsList[y] = datas[y][3];
-                }
-            }
-            @Override
-            public void onFailure(String result) {
-                finish();
-            }
-        };
-    }
-
-
 }

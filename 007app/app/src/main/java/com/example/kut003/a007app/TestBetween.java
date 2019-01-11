@@ -4,8 +4,8 @@ import android.app.Activity;
 
 public class TestBetween extends Activity {
 
-    public static final String questionContents = "com.example.kut003.a007app.1test";
-    public static final String qId = "com.example.kut003.a007app.2test";
+    public static final String questionContents = "com.example.kut003.a007app.111test";
+    public static final String qId = "com.example.kut003.a007app.222test";
     String[] questionContentsList = new String[10];
     String[] qIdList = new String[10];
     public TestBetween(){

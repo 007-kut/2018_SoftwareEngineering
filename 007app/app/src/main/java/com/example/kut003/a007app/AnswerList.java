@@ -28,6 +28,7 @@ public class AnswerList extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.answer_list);
+        final ShareQuestion sq = (ShareQuestion) this.getApplication();
 
         //リスト表示
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.parentinglist);
@@ -40,8 +41,10 @@ public class AnswerList extends Activity {
 
         //質問内容とQIDを格納
         Intent intent = getIntent();
-        final String questionContents = intent.getStringExtra(QuestionList.questionContents);
-        final String qId = intent.getStringExtra(QuestionList.qId);
+        //final String questionContents = intent.getStringExtra(QuestionList.questionContents);
+        //final String qId = intent.getStringExtra(QuestionList.qId);
+        final String questionContents = sq.getChooseContents();
+        final String qId = sq.getChooseId();
         textView = findViewById(R.id.question_text);
         textView.setText(questionContents);
         dc.setLister(createListener());
@@ -58,8 +61,6 @@ public class AnswerList extends Activity {
         final Button button1 = findViewById(R.id.button_return);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                //Intent intent = new Intent(getApplication(), QuestionList.class);
-                //startActivity(intent);
                 finish();
             }
         });
@@ -67,13 +68,12 @@ public class AnswerList extends Activity {
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplication(), MakeAnswer.class);
-                intent.putExtra(sendQuestionContents, questionContents);
-                intent.putExtra(sendQId, qId);
+                //intent.putExtra(sendQuestionContents, questionContents);
+                //intent.putExtra(sendQId, qId);
                 startActivity(intent);
             }
         });
     }
-
     //データベースアクセス結果
     private UploadTask.Listener createListener () {
         return new UploadTask.Listener() {

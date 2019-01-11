@@ -32,13 +32,20 @@ public class MakeAnswer extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.make_answer);
+        final ShareQuestion sq = (ShareQuestion) this.getApplication();
 
+        //タップされた質問を表示
         Intent intent = getIntent();
-        final String questionContents = intent.getStringExtra(AnswerList.sendQuestionContents);
-        final String qId = intent.getStringExtra(AnswerList.sendQId);
+        //final String questionContents = intent.getStringExtra(QuestionList.questionContents);
+        //final String qId = intent.getStringExtra(AnswerList.sendQId);
+        final String questionContents = sq.getChooseContents();
+        final String qId = sq.getChooseId();
         textView = findViewById(R.id.contents_text);
         textView.setText(questionContents);
 
+        answerText = findViewById(R.id.answer_text);
+
+        //匿名か
         checkBox = findViewById(R.id.check);
         checkBox.setChecked(false);
         checkBox.setText("匿名");
@@ -58,7 +65,6 @@ public class MakeAnswer extends Activity {
             }
         });
 
-        answerText = findViewById(R.id.answer_text);
         //子育て窓口画面に戻る
         final Button button0 = findViewById(R.id.button_return);
         button0.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +111,7 @@ public class MakeAnswer extends Activity {
             }
         };
     }
+
     //トースト表示
     private void toastMake() {
         String message = "正しく入力してください";

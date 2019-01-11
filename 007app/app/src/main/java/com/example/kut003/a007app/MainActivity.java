@@ -12,11 +12,9 @@ import java.io.InputStreamReader;
 
 public class MainActivity extends Activity {
 
-    //子育て窓口で使う配列とキー
+    //子育て窓口で使う配列
     String[] questionContentsList = new String[10];
     String[] qIdList = new String[10];
-    public static final String questionContents = "com.example.kut003.a007app.1test";
-    public static final String qId = "com.example.kut003.a007app.2test";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +28,8 @@ public class MainActivity extends Activity {
             startActivity(intent);
         }
 
-        // 子育て窓口で質問を10個並べるために事前に用意
+        //子育て窓口で使う
+        final ShareQuestion sq = (ShareQuestion) this.getApplication();
         DatabaseContents dc = new DatabaseContents();
         dc.setLister(createListener());
         dc.getContentsById("5");
@@ -57,9 +56,9 @@ public class MainActivity extends Activity {
         final Button button_wind = findViewById(R.id.button_wind);
         button_wind.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                sq.setContents(questionContentsList);
+                sq.setId(qIdList);
                 Intent intent = new Intent(getApplication(), QuestionList.class);
-                intent.putExtra(questionContents, questionContentsList);
-                intent.putExtra(qId, qIdList);
                 startActivity(intent);
             }
         });
