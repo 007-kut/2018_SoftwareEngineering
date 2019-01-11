@@ -23,10 +23,11 @@
     <Button
         android:id="@+id/button_apple"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="163dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="16dp"
+        android:background="@drawable/apple"
         android:text="@string/apple"
         android:textSize="30sp"
         app:layout_constraintEnd_toStartOf="@+id/button_banana"
@@ -37,22 +38,24 @@
     <Button
         android:id="@+id/button_banana"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="163dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="16dp"
+        android:background="@drawable/banana"
         android:text="@string/banana"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_apple"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <Button
         android:id="@+id/button_drawing"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="205dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="32dp"
         android:text="@string/free"
@@ -61,7 +64,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_apple"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/button_banana" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        tools:layout_editor_absoluteY="8dp" />
 
 </android.support.constraint.ConstraintLayout>

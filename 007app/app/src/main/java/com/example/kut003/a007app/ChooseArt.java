@@ -26,7 +26,7 @@ public class ChooseArt extends Activity {
         final Button button1 = findViewById(R.id.button_apple);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), MakeArt.class);
+                Intent intent = new Intent(getApplication(), PaintApple.class);
                 startActivity(intent);
             }
         });
@@ -34,7 +34,7 @@ public class ChooseArt extends Activity {
         final Button button2 = findViewById(R.id.button_banana);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), MakeArt.class);
+                Intent intent = new Intent(getApplication(), PaintBanana.class);
                 startActivity(intent);
             }
         });
