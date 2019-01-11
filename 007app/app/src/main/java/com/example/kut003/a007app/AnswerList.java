@@ -22,6 +22,7 @@ public class AnswerList extends Activity {
     private TextView textView;
     public static final String sendQuestionContents = "com.example.kut003.a007app.3";
     public static final String sendQId = "com.example.kut003.a007app.4";
+    private ArrayAdapter<String> arrayAdapter;
     DatabaseContents dc = new DatabaseContents();
 
     @Override
@@ -31,13 +32,7 @@ public class AnswerList extends Activity {
         final ShareQuestion sq = (ShareQuestion) this.getApplication();
 
         //リスト表示
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.parentinglist);
-        ListView listView = findViewById(R.id.listview);
-        for (String str : answerContentsList) {
-            // ArrayAdapterにitemを追加する
-            arrayAdapter.add(str);
-        }
-        listView.setAdapter(arrayAdapter);
+        arrayAdapter = new ArrayAdapter<>(this, R.layout.parentinglist);
 
         //質問内容とQIDを格納
         Intent intent = getIntent();
@@ -86,6 +81,15 @@ public class AnswerList extends Activity {
                         aIdList[y] = datas[y][0];
                         answerContentsList[y] = datas[y][3];
                     }
+
+                    //リスト表示
+                    ListView listView = findViewById(R.id.listview);
+                    for (String str : answerContentsList) {
+                        // ArrayAdapterにitemを追加する
+                        arrayAdapter.add(str);
+                    }
+                    listView.setAdapter(arrayAdapter);
+
                 } else {
                     // 「他の回答が反映されたままの状態」を改善するため""で上書き
                     for(int y = 0; y < 10; y++) {
