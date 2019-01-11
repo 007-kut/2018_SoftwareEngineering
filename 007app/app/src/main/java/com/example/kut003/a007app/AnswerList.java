@@ -47,7 +47,8 @@ public class AnswerList extends Activity {
         dc.setLister(createListener());
         dc.getContentsById("7", "QID=" + qId);
 
-        /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /* 回答の詳細表示はいるのか？いらないのか？要検討ポイント
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getApplication(), SubActivity2.class);
@@ -57,8 +58,9 @@ public class AnswerList extends Activity {
         final Button button1 = findViewById(R.id.button_return);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), QuestionList.class);
-                startActivity(intent);
+                //Intent intent = new Intent(getApplication(), QuestionList.class);
+                //startActivity(intent);
+                finish();
             }
         });
         final Button button2 = findViewById(R.id.button_kaitoiusakusei);

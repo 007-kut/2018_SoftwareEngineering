@@ -11,9 +11,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class MainActivity extends Activity {
+
+    //子育て窓口で使う配列とキー
+    String[] questionContentsList = new String[10];
+    String[] qIdList = new String[10];
+    public static final String questionContents = "com.example.kut003.a007app.1test";
+    public static final String qId = "com.example.kut003.a007app.2test";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -23,6 +29,11 @@ public class MainActivity extends Activity {
             Intent intent = new Intent(getApplication(), NewAccount.class);
             startActivity(intent);
         }
+
+        // 子育て窓口で質問を10個並べるために事前に用意
+        DatabaseContents dc = new DatabaseContents();
+        dc.setLister(createListener());
+        dc.getContentsById("5");
 
         //ゲーム
         final Button button_game = findViewById(R.id.button_game);
@@ -47,6 +58,8 @@ public class MainActivity extends Activity {
         button_wind.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplication(), QuestionList.class);
+                intent.putExtra(questionContents, questionContentsList);
+                intent.putExtra(qId, qIdList);
                 startActivity(intent);
             }
         });
@@ -79,5 +92,25 @@ public class MainActivity extends Activity {
             e.printStackTrace();
         }
         return text;
+    }
+
+    //データベースアクセス結果
+    private UploadTask.Listener createListener () {
+        return new UploadTask.Listener() {
+            // 通信が成功した場合の処理(result : 返り値)
+            @Override
+            public void onSuccess(String result) {
+                String[][] datas = DatabaseContents.splitQuestionData(result);
+                for(int y = 0; y < datas.length; y++) {
+                    qIdList[y] = datas[y][0];
+                    questionContentsList[y] = datas[y][3];
+                }
+            }
+            //通信が失敗した場合の処理(result : 返り値)
+            @Override
+            public void onFailure(String result) {
+                finish();
+            }
+        };
     }
 }
