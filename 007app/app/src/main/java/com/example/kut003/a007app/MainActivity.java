@@ -12,10 +12,6 @@ import java.io.InputStreamReader;
 
 public class MainActivity extends Activity {
 
-    //子育て窓口で使う配列
-    String[] questionContentsList = new String[10];
-    String[] qIdList = new String[10];
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,12 +23,6 @@ public class MainActivity extends Activity {
             Intent intent = new Intent(getApplication(), NewAccount.class);
             startActivity(intent);
         }
-
-        //子育て窓口で使う
-        final ShareQuestion sq = (ShareQuestion) this.getApplication();
-        DatabaseContents dc = new DatabaseContents();
-        dc.setLister(createListener());
-        dc.getContentsById("5");
 
         //ゲーム
         final Button button_game = findViewById(R.id.button_game);
@@ -56,8 +46,6 @@ public class MainActivity extends Activity {
         final Button button_wind = findViewById(R.id.button_wind);
         button_wind.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                sq.setContents(questionContentsList);
-                sq.setId(qIdList);
                 Intent intent = new Intent(getApplication(), QuestionList.class);
                 startActivity(intent);
             }
@@ -91,25 +79,5 @@ public class MainActivity extends Activity {
             e.printStackTrace();
         }
         return text;
-    }
-
-    //データベースアクセス結果
-    private UploadTask.Listener createListener () {
-        return new UploadTask.Listener() {
-            // 通信が成功した場合の処理(result : 返り値)
-            @Override
-            public void onSuccess(String result) {
-                String[][] datas = DatabaseContents.splitQuestionData(result);
-                for(int y = 0; y < datas.length; y++) {
-                    qIdList[y] = datas[y][0];
-                    questionContentsList[y] = datas[y][3];
-                }
-            }
-            //通信が失敗した場合の処理(result : 返り値)
-            @Override
-            public void onFailure(String result) {
-                finish();
-            }
-        };
     }
 }

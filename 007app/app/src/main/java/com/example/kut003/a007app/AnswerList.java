@@ -20,8 +20,6 @@ public class AnswerList extends Activity {
 
     };
     private TextView textView;
-    public static final String sendQuestionContents = "com.example.kut003.a007app.3";
-    public static final String sendQId = "com.example.kut003.a007app.4";
     private ArrayAdapter<String> arrayAdapter;
     DatabaseContents dc = new DatabaseContents();
 
@@ -35,9 +33,6 @@ public class AnswerList extends Activity {
         arrayAdapter = new ArrayAdapter<>(this, R.layout.parentinglist);
 
         //質問内容とQIDを格納
-        Intent intent = getIntent();
-        //final String questionContents = intent.getStringExtra(QuestionList.questionContents);
-        //final String qId = intent.getStringExtra(QuestionList.qId);
         final String questionContents = sq.getChooseContents();
         final String qId = sq.getChooseId();
         textView = findViewById(R.id.question_text);
@@ -63,8 +58,6 @@ public class AnswerList extends Activity {
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplication(), MakeAnswer.class);
-                //intent.putExtra(sendQuestionContents, questionContents);
-                //intent.putExtra(sendQId, qId);
                 startActivity(intent);
             }
         });
@@ -77,19 +70,15 @@ public class AnswerList extends Activity {
             public void onSuccess(String result) {
                 if(!(result == null)) {
                     String[][] datas = DatabaseContents.splitQuestionData(result);
-                    for (int y = 0; y < datas.length; y++) {
-                        aIdList[y] = datas[y][0];
-                        answerContentsList[y] = datas[y][3];
-                    }
-
-                    //リスト表示
                     ListView listView = findViewById(R.id.listview);
-                    for (String str : answerContentsList) {
-                        // ArrayAdapterにitemを追加する
-                        arrayAdapter.add(str);
+                    int count = datas.length - 1;   //DBからの返り値が古い順で返ってくるから
+                    for (int y = 0; y < datas.length; y++) {
+                        aIdList[y] = datas[count][0];
+                        answerContentsList[y] = datas[count][3];
+                        arrayAdapter.add(answerContentsList[y]);
+                        count--;
                     }
                     listView.setAdapter(arrayAdapter);
-
                 } else {
                     // 「他の回答が反映されたままの状態」を改善するため""で上書き
                     for(int y = 0; y < 10; y++) {
