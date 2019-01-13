@@ -34,10 +34,7 @@ public class MakeAnswer extends Activity {
         setContentView(R.layout.make_answer);
         final ShareQuestion sq = (ShareQuestion) this.getApplication();
 
-        //タップされた質問を表示
-        Intent intent = getIntent();
-        //final String questionContents = intent.getStringExtra(QuestionList.questionContents);
-        //final String qId = intent.getStringExtra(AnswerList.sendQId);
+        //タップされた質問
         final String questionContents = sq.getChooseContents();
         final String qId = sq.getChooseId();
         textView = findViewById(R.id.contents_text);

@@ -100,6 +100,7 @@ public class QuestionList extends Activity {
     //データベースアクセス結果
     private UploadTask.Listener createListener () {
         return new UploadTask.Listener() {
+
             // 通信が成功した場合の処理(result : 返り値)
             @Override
             public void onSuccess(String result) {
@@ -110,6 +111,14 @@ public class QuestionList extends Activity {
                         qIdList[y] = datas[y][0];
                         questionContentsList[y] = datas[y][3];
                         arrayAdapter.add(questionContentsList[y]);
+                    }
+                    //回答が10個ないときの処理
+                    if(datas.length < 10) {
+                        for (int y = datas.length; y < 10; y++ ) {
+                            qIdList[y] = "";
+                            questionContentsList[y] = "";
+                            arrayAdapter.add(questionContentsList[y]);
+                        }
                     }
                 } else {
                     // 質問が1個もない状況で利用(DBの質問を初期化したときとか)

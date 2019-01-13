@@ -9,5 +9,4 @@
     android:textColor="#0e1af4"
     android:maxLines="3"
     android:minLines="2">
-
 </TextView>
