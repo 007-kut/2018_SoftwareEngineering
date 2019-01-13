@@ -19,7 +19,6 @@ public class QuestionList extends Activity {
     String[] qIdList = new String[10];
     private ArrayAdapter<String> arrayAdapter;
     DatabaseContents dc = new DatabaseContents();
-    DatabaseContents dcs = new DatabaseContents();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +75,7 @@ public class QuestionList extends Activity {
         final Button button1 = findViewById(R.id.button_search);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                DatabaseContents dcs = new DatabaseContents();
                 arrayAdapter.clear();
                 button1.setFocusable(true);
                 button1.setFocusableInTouchMode(true);
