@@ -81,7 +81,7 @@ public class QuestionList extends Activity {
                 button1.setFocusableInTouchMode(true);
                 button1.requestFocus();
                 String search = editText.getText().toString();  //入力内容を格納
-                dcs.setLister(createListener2());
+                dcs.setLister(createListener());
                 dcs.getContentsById("6", "Search=" + search);
                 //arrayAdapter.notifyDataSetChanged();    //動作未確認
             }
@@ -99,36 +99,6 @@ public class QuestionList extends Activity {
 
     //データベースアクセス結果
     private UploadTask.Listener createListener () {
-        return new UploadTask.Listener() {
-            // 通信が成功した場合の処理(result : 返り値)
-            @Override
-            public void onSuccess(String result) {
-                ListView listView = findViewById(R.id.listview);
-                if(!(result == null)) {
-                    String[][] datas = DatabaseContents.splitQuestionData(result);
-                    for (int y = 0; y < datas.length; y++) {
-                        qIdList[y] = datas[y][0];
-                        questionContentsList[y] = datas[y][3];
-                        arrayAdapter.add(questionContentsList[y]);
-                    }
-                } else {
-                    // 質問が1個もない状況で利用(DBの質問を初期化したときとか)
-                    for(int y = 0; y < 10; y++) {
-                        questionContentsList[y] = "";
-                        arrayAdapter.add(questionContentsList[y]);
-                    }
-                }
-                listView.setAdapter(arrayAdapter);
-            }
-            //通信が失敗した場合の処理(result : 返り値)
-            @Override
-            public void onFailure(String result) {
-                finish();
-            }
-        };
-    }
-
-    private UploadTask.Listener createListener2 () {
         return new UploadTask.Listener() {
             // 通信が成功した場合の処理(result : 返り値)
             @Override
