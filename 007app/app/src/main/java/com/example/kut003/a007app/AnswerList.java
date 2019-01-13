@@ -68,9 +68,9 @@ public class AnswerList extends Activity {
             // 通信が成功した場合の処理(result : 返り値)
             @Override
             public void onSuccess(String result) {
+                ListView listView = findViewById(R.id.listview);
                 if(!(result == null)) {
                     String[][] datas = DatabaseContents.splitQuestionData(result);
-                    ListView listView = findViewById(R.id.listview);
                     int count = datas.length - 1;   //DBからの返り値が古い順で返ってくるから
                     for (int y = 0; y < datas.length; y++) {
                         aIdList[y] = datas[count][0];
@@ -78,13 +78,22 @@ public class AnswerList extends Activity {
                         arrayAdapter.add(answerContentsList[y]);
                         count--;
                     }
-                    listView.setAdapter(arrayAdapter);
+                    //回答が10個ないときの処理
+                    if(datas.length < 10) {
+                        for (int y = datas.length; y < 10; y++ ) {
+                            aIdList[y] = "";
+                            answerContentsList[y] = "";
+                            arrayAdapter.add(answerContentsList[y]);
+                        }
+                    }
                 } else {
                     // 「他の回答が反映されたままの状態」を改善するため""で上書き
                     for(int y = 0; y < 10; y++) {
                         answerContentsList[y] = "";
+                        arrayAdapter.add(answerContentsList[y]);
                     }
                 }
+                listView.setAdapter(arrayAdapter);
             }
             //通信が失敗した場合の処理(result : 返り値)
             @Override
