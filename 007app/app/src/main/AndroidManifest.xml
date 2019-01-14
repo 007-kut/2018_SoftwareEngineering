@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kut003.a007app">
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:networkSecurityConfig="@xml/network_security_config">
-
+        android:theme="@style/AppTheme">
         <activity
             android:name=".ListArea"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //アカウント初期設定画面(図1)
         <activity
             android:name=".NewAccount"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //機能選択画面(図2)
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -28,73 +28,58 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         //ゲーム選択画面(図3)
         <activity
             android:name=".ChooseGame"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //パスワード入力画面(図4)
         <activity
             android:name=".PassGame"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //おえかきゲーム画面(図5)
         <activity
             android:name=".ChooseArt"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //イラスト(図6)
         <activity
             android:name=".MakeArt"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //りんご(図6)
         <activity
             android:name=".PaintApple"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //ばなな(図6)
         <activity
             android:name=".PaintBanana"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //作る食べ物を選ぶ画面(図10)
         <activity
             android:name=".ChooseFood"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //材料確認画面(図11)
         <activity
             android:name=".MaterialFood"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //お店を選択する確認画面(図12)
         <activity
             android:name=".ChooseShop"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //もっている材料を確認する画面(図13)
         <activity
             android:name=".InBasket"
-            android:label="@string/app_name" >
-        </activity>
-       //材料をお店で選択する画面(図14)
+            android:label="@string/app_name"></activity>
+        //材料をお店で選択する画面(図14)
         <activity
             android:name=".ChooseMaterial"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //帰ってきた画面(図15)
         <activity
             android:name=".BackHome"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //食べ物完成画面(図17)
         <activity
             android:name=".CheckFood"
-            android:label="@string/app_name" >
-        </activity>
-
+            android:label="@string/app_name"></activity>
         //成長記録メイン画面
         //成長記録リスト
 
@@ -102,75 +87,77 @@
         //子育て窓口メイン画面テスト(図24)
         <activity
             android:name=".QuestionList"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //投稿作成画面(図25)
         <activity
             android:name=".MakePost"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //投稿作成画面(図26)
         <activity
             android:name=".CompleteQuestion"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //回答画面(図27)
         <activity
             android:name=".Answer"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //回答画面(図28)
         <activity
             android:name=".MakeAnswer"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //設定メイン画面(図30)
         <activity
             android:name=".SetteiMain"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //問い合わせ画面(図31)
         <activity
             android:name=".SetteiToiawase"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //アカウント画面(図32)
         <activity
             android:name=".SetteiAcount"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //アカウント変更画面(図33)
         <activity
             android:name=".SetteiAcounthenkou"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //アカウント情報変更完了表示画面(図33と図34の間)
         <activity
             android:name=".SuccessChangeAccount"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //アカウント削除画面(図34)
         <activity
             android:name=".SetteiAcountsakujo"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         //パスワード変更画面(図36)
         //ゲームパスワード画面(図36)
         <activity
             android:name=".SetteiGamepassword"
-            android:label="@string/app_name" >
-        </activity>
-
+            android:label="@string/app_name"></activity>
         <activity
             android:name=".SubActivity2"
-            android:label="@string/app_name" >
-        </activity>
-        <!-- 外部データベース通信  -->
+            android:label="@string/app_name"></activity>
+        <!-- 外部データベース通信 -->
         <activity
             android:name=".DatabaseContents"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
 
+        <!-- カメラ -->
+        <activity
+            android:name=".Camera"
+            android:label="@string/app_name"></activity>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/provider_paths" />
     </application>
 
 </manifest>

@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
         final Button button_grow = findViewById(R.id.button_grow);
         button_grow.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
+                Intent intent = new Intent(getApplication(), Camera.class);
                 startActivity(intent);
             }
         });
