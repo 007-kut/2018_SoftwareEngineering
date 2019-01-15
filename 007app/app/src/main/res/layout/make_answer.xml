@@ -30,6 +30,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        android:id="@+id/contents_text"
         android:layout_width="wrap_content"
         android:layout_height="36dp"
         android:layout_marginStart="8dp"
@@ -80,7 +81,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/question_text"
+        android:id="@+id/answer_text"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="top|left"

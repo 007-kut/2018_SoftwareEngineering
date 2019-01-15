@@ -8,7 +8,8 @@
     android:background="#0000"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:focusableInTouchMode="true">
 
 
     <Button
@@ -32,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:text="投稿作成"
+        android:text="投稿する"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.928"
@@ -62,7 +63,7 @@
     <EditText
         android:id="@+id/edit_text"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="59dp"
         android:layout_marginTop="8dp"
         android:autofillHints="@string/hint"
         android:background="#e0f0f9"
