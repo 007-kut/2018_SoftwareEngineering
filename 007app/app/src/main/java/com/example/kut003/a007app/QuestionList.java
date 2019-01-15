@@ -17,6 +17,9 @@ public class QuestionList extends Activity {
     private EditText editText;
     String[] questionContentsList = new String[10];
     String[] qIdList = new String[10];
+    String[] questionName = new String[10];
+    String[] questionArea = new String[10];
+    String[] questionAnonimity =  new String[10];
     private ArrayAdapter<String> arrayAdapter;
     DatabaseContents dc = new DatabaseContents();
 
@@ -39,11 +42,13 @@ public class QuestionList extends Activity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String contents = questionContentsList[position];    //要素数が対応しているっぽいです
                 String qid = qIdList[position];
+                String name = questionName[position];
+                String area = questionArea[position];
+                String contents = questionContentsList[position];    //要素数が対応しているっぽいです
+                String anonimity = questionAnonimity[position];
+                sq.setChooseQuestion(qid, name, area, contents, anonimity);
                 Intent intent = new Intent(getApplication(), AnswerList.class);
-                sq.setChooseContents(contents);
-                sq.setChooseId(qid);
                 startActivity(intent);    //QIDと内容を送って遷移
             }
         });
@@ -109,7 +114,10 @@ public class QuestionList extends Activity {
                     String[][] datas = DatabaseContents.splitQuestionData(result);
                     for (int y = 0; y < datas.length; y++) {
                         qIdList[y] = datas[y][0];
+                        questionName[y] = datas[y][1];
+                        questionArea[y] = datas[y][2];
                         questionContentsList[y] = datas[y][3];
+                        questionAnonimity[y] = datas[y][4];
                         arrayAdapter.add(questionContentsList[y]);
                     }
                     //回答が10個ないときの処理

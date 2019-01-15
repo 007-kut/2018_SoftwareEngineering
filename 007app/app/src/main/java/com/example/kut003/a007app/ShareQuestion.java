@@ -6,8 +6,12 @@ import android.app.Application;
 public class ShareQuestion extends Application {
     private String [] savedContents = new String [10];
     private String [] SavedId = new String [10];
-    private String chooseContents;
     private String chooseId;
+    private String chooseName;
+    private String chooseArea;
+    private String chooseContents;
+    private String chooseAnonimity;
+
 
     public  String[] getContents () {
         return this.savedContents;
@@ -15,11 +19,20 @@ public class ShareQuestion extends Application {
     public String[] getId() {
         return this.SavedId;
     }
+    public String getChooseId() {
+        return this.chooseId;
+    }
+    public String getChooseName() {
+        return this.chooseName;
+    }
+    public String getChooseArea() {
+        return this.chooseArea;
+    }
     public String getChooseContents () {
         return this.chooseContents;
     }
-    public String getChooseId() {
-        return this.chooseId;
+    public String getChooseAnonimity() {
+        return this.chooseAnonimity;
     }
     public void setContents(String[] array) {
         this.savedContents = array;
@@ -27,11 +40,11 @@ public class ShareQuestion extends Application {
     public void setId(String[] array) {
         this.SavedId = array;
     }
-    public void setChooseContents(String contents) {
-        this.chooseContents = contents;
-    }
-    public void setChooseId (String id) {
+    public void setChooseQuestion(String id, String name, String area, String contents, String anonimity) {
         this.chooseId = id;
+        this.chooseName = name;
+        this.chooseArea = area;
+        this.chooseContents = contents;
+        this.chooseAnonimity = anonimity;
     }
-
 }

@@ -20,6 +20,7 @@ public class AnswerList extends Activity {
 
     };
     private TextView textView;
+    private TextView textAnonimity;
     private ArrayAdapter<String> arrayAdapter;
     DatabaseContents dc = new DatabaseContents();
 
@@ -39,6 +40,17 @@ public class AnswerList extends Activity {
         textView.setText(questionContents);
         dc.setLister(createListener());
         dc.getContentsById("7", "QID=" + qId);
+
+        //質問者の情報
+        textAnonimity = findViewById(R.id.userName);
+        String check = sq.getChooseAnonimity();
+        String name = sq.getChooseName();
+        if(check.equals("0")) {
+            check = "匿名投稿";
+        } else {
+            check = name + "による投稿";
+        }
+        textAnonimity.setText(check);
 
         /* 回答の詳細表示はいるのか？いらないのか？要検討ポイント
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
