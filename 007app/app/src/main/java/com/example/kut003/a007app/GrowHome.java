@@ -1,6 +1,6 @@
 package com.example.kut003.a007app;
 
-//import android.support.v7.app.AppCompatActivity                                                                                             ;
+import android.support.v7.app.AppCompatActivity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
 import android.view.View.OnClickListener;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Environment;
+import android.widget.ImageView;
 
 public class GrowHome extends Activity {
 
@@ -15,6 +19,17 @@ public class GrowHome extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.grow_home);
+        File dir = new File(Environment.getExternalStorageDirectory().getPath()+"/Pictures/");
+        if(dir.exists()){
+            File file = new File(dir.getAbsolutePath()+"/turbans.jpg");
+            if (file.exists()) {
+                Bitmap bm = BitmapFactory.decodeFile(file.getPath());
+                ((ImageView)findViewById(R.id.imageView)).setImageBitmap(bm);
+            }else{
+                ;
+            }
+        }
+
         //XMLのButtonを検索する
         final Button button_camera = (Button) findViewById(R.id.button_grow_camera);
         //Buttonがクリックされた時のイベントリスナー
@@ -58,5 +73,8 @@ public class GrowHome extends Activity {
                 startActivity(intent);
             }
         });
+
+        //画像の出力
+
     }
 }
