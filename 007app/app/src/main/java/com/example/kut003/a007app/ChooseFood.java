@@ -12,8 +12,8 @@ public class ChooseFood extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.choose_food);
+        final ShareQuestion sq = (ShareQuestion) this.getApplication();
 
         //機能設定画面に戻る
         final Button button0 = findViewById(R.id.button_back);
@@ -29,7 +29,7 @@ public class ChooseFood extends Activity {
         final Button button1 = findViewById(R.id.button_cookie);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Log.d("debug", "button1, Perform action on click");
+                sq.setChooseFood("cookie");
                 Intent intent = new Intent(getApplication(), MaterialFood.class);
                 startActivity(intent);
             }
@@ -39,7 +39,7 @@ public class ChooseFood extends Activity {
         final Button button2 = findViewById(R.id.button_hamburg);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Log.d("debug", "button2, Perform action on click");
+                sq.setChooseFood("hamburg");
                 Intent intent = new Intent(getApplication(), MaterialFood.class);
                 startActivity(intent);
             }

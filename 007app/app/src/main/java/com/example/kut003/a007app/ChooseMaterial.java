@@ -17,8 +17,29 @@ public class ChooseMaterial extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.choose_material);
+        final ShareQuestion sq = (ShareQuestion) this.getApplication();
+
+        String chooseShop = sq.getChooseShop();
+
+        if (chooseShop.equals("butcher")) {
+            //肉屋の処理
+            setContentView(R.layout.butcher);
+            final Button button_butcher = findViewById(R.id.button_butcher);
+            button_butcher.setOnClickListener(new View.OnClickListener() {
+                int countPork = sq.getPork();
+                public void onClick(View view) {
+                    countPork++;
+                    sq.setCountPork(countPork);
+                    //Intent intent = new Intent(getApplication(), SubActivity2.class);
+                    //startActivity(intent);
+                }
+            });
+        } else if (chooseShop.equals("market")) {
+            //市場の処理
+        } else {
+            //八百屋の処理
+        }
 
         //お店選択に戻る
         final Button button0 = findViewById(R.id.button_back);

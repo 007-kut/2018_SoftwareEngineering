@@ -4,6 +4,7 @@ package com.example.kut003.a007app;
 import android.app.Application;
 
 public class ShareQuestion extends Application {
+    //子育て窓口で使う
     private String [] savedContents = new String [10];
     private String [] SavedId = new String [10];
     private String chooseId;
@@ -11,7 +12,6 @@ public class ShareQuestion extends Application {
     private String chooseArea;
     private String chooseContents;
     private String chooseAnonimity;
-
 
     public  String[] getContents () {
         return this.savedContents;
@@ -47,4 +47,44 @@ public class ShareQuestion extends Application {
         this.chooseContents = contents;
         this.chooseAnonimity = anonimity;
     }
+
+    //おつかいで使う
+    private String chooseFood;
+    private String chooseShop;
+    private int onion = 0;
+    private int carrots;
+    private int pork = 0;
+    private int beef = 0;
+    private int mince = 0;
+    private int egg = 0;
+    private int milk = 0;
+
+    public void setChooseFood(String food) {
+        this.chooseFood = food;
+    }
+    public void setChooseShop(String shop) {
+        this.chooseShop = shop;
+    }
+    public void setCountOnion(int count) {
+        this.onion = count;
+    }
+    public void setCountPork(int count) {
+        this.pork = count;
+    }
+    public String getChooseFood() {
+        return this.chooseFood;
+    }
+    public String getChooseShop() {
+        return this.chooseShop;
+    }
+    public int getOnion() {
+        return this.onion;
+    }
+    public int getPork() {
+        return this.pork;
+    }
+
+
 }
+
+
