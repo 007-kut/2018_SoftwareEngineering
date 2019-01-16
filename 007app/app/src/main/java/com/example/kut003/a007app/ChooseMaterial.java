@@ -138,16 +138,30 @@ public class ChooseMaterial extends Activity {
 
     private Context context;
     public void toast() {
+        final ShareQuestion sq = (ShareQuestion) this.getApplication();
+        String chooseFood = sq.getChooseFood();
+
         context = getApplicationContext();
         Toast toast = new Toast(context);
         LayoutInflater inflater = getLayoutInflater();
-        ViewGroup viewGroup = findViewById(R.id.relative_layout);
-        View view = inflater.inflate(R.layout.custom_toast, viewGroup);
-        toast.setView(view);
-        // 表示時間
-        toast.setDuration(Toast.LENGTH_SHORT);
-        // 位置調整
-        toast.setGravity(Gravity.CENTER, 0, 0);
-        toast.show();
+        if(chooseFood.equals("cookie")) {
+            ViewGroup viewGroup = findViewById(R.id.relative_layout);
+            View view = inflater.inflate(R.layout.custom_toast, viewGroup);
+            toast.setView(view);
+            // 表示時間
+            toast.setDuration(Toast.LENGTH_SHORT);
+            // 位置調整
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+        }else {
+            ViewGroup viewGroup1 = findViewById(R.id.relative_layout);
+            View view1 = inflater.inflate(R.layout.layout, viewGroup1);
+            toast.setView(view1);
+            // 表示時間
+            toast.setDuration(Toast.LENGTH_SHORT);
+            // 位置調整
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+        }
     }
 }

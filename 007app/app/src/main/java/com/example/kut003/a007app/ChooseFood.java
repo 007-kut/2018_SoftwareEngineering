@@ -14,7 +14,18 @@ public class ChooseFood extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_food);
         final ShareQuestion sq = (ShareQuestion) this.getApplication();
-
+        int pork = 0;
+        int beef = 0;
+        int onion = 0;
+        int carrots = 0;
+        int egg = 0;
+        int milk = 0;
+        sq.setCountPork(pork);
+        sq.setCountBeef(beef);
+        sq.setCountOnion(onion);
+        sq.setCountCarrots(carrots);
+        sq.setCountEgg(egg);
+        sq.setCountMilk(milk);
         //機能設定画面に戻る
         final Button button0 = findViewById(R.id.button_back);
         button0.setOnClickListener(new View.OnClickListener() {
