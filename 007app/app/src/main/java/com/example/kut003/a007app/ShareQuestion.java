@@ -49,10 +49,10 @@ public class ShareQuestion extends Application {
     }
 
     //おつかいで使う
-    private String chooseFood;
-    private String chooseShop;
+    private String chooseFood = "";
+    private String chooseShop = "";
     private int onion = 0;
-    private int carrots;
+    private int carrots = 0;
     private int pork = 0;
     private int beef = 0;
     private int mince = 0;

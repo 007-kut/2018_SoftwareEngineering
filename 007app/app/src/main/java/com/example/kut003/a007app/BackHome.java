@@ -12,7 +12,7 @@ import android.view.Gravity;
 
 public class BackHome extends Activity {
 
-    private String lackedMessage = "LACKING";   //不足って意味
+    private String lackedMessage = "たりないよ";   //不足って意味
     private boolean completeCheck = false;
     Random rand = new Random();    //1つのボタンで複数の遷移先を実装するための一次的な措置
     @Override
@@ -31,12 +31,12 @@ public class BackHome extends Activity {
         int milk = sq.getMilk();
         if(chooseFood.equals("cookie")) {
             //クッキーに必要な材料
-            if(egg > 5) {
+            if(egg >= 5 && milk >= 1) {
                 completeCheck = true;
             }
         } else {
             //ハンバーグに必要な材料
-            if(pork > 10) {
+            if(pork >= 3 && onion >= 5 && carrots >= 2) {
                 completeCheck = true;
             }
         }

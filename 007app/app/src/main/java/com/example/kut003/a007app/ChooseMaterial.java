@@ -3,6 +3,7 @@ package com.example.kut003.a007app;
 
 import android.app.Activity;
 import android.content.Context;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -12,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.content.Intent;
 import android.widget.Toast;
-
+import android.widget.ImageButton;
 public class ChooseMaterial extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +26,8 @@ public class ChooseMaterial extends Activity {
         if (chooseShop.equals("butcher")) {
             //肉屋の処理
             setContentView(R.layout.butcher);
-            final Button button_butcher = findViewById(R.id.button_butcher);
-            button_butcher.setOnClickListener(new View.OnClickListener() {
+            final ImageButton button_pork = findViewById(R.id.button_pork);
+            button_pork.setOnClickListener(new View.OnClickListener() {
                 int countPork = sq.getPork();
                 public void onClick(View view) {
                     countPork++;
@@ -35,11 +36,31 @@ public class ChooseMaterial extends Activity {
                     //startActivity(intent);
                 }
             });
+            final ImageButton button_beef = findViewById(R.id.button_beef);
+            button_beef.setOnClickListener(new View.OnClickListener() {
+                int countBeef = sq.getBeef();
+                public void onClick(View view) {
+                    countBeef++;
+                    sq.setCountBeef(countBeef);
+                    //Intent intent = new Intent(getApplication(), SubActivity2.class);
+                    //startActivity(intent);
+                }
+            });
+            final ImageButton button_mince = findViewById(R.id.button_mince);
+            button_mince.setOnClickListener(new View.OnClickListener() {
+                int countMince = sq.getMince();
+                public void onClick(View view) {
+                    countMince++;
+                    sq.setCountMince(countMince);
+                    //Intent intent = new Intent(getApplication(), SubActivity2.class);
+                    //startActivity(intent);
+                }
+            });
         } else if (chooseShop.equals("market")) {
             //
             setContentView(R.layout.market);
-            final Button button_market = findViewById(R.id.button_market);
-            button_market.setOnClickListener(new View.OnClickListener() {
+            final ImageButton button_egg = findViewById(R.id.button_egg);
+            button_egg.setOnClickListener(new View.OnClickListener() {
                 int countEgg = sq.getEgg();
                 public void onClick(View view) {
                     countEgg++;
@@ -48,15 +69,35 @@ public class ChooseMaterial extends Activity {
                     //startActivity(intent);
                 }
             });
+            final ImageButton button_milk = findViewById(R.id.button_milk);
+            button_milk.setOnClickListener(new View.OnClickListener() {
+                int countMilk = sq.getMilk();
+                public void onClick(View view) {
+                    countMilk++;
+                    sq.setCountMilk(countMilk);
+                    //Intent intent = new Intent(getApplication(), SubActivity2.class);
+                    //startActivity(intent);
+                }
+            });
         } else {
             setContentView(R.layout.greengrocer);
-            final Button button_greengrocer = findViewById(R.id.button_greengrocer);
-            button_greengrocer.setOnClickListener(new View.OnClickListener() {
+            final ImageButton button_onion = findViewById(R.id.button_onion);
+            button_onion.setOnClickListener(new View.OnClickListener() {
                 int countOnion = sq.getOnion();
 
                 public void onClick(View view) {
                     countOnion++;
-                    sq.setCountPork(countOnion);
+                    sq.setCountOnion(countOnion);
+                }
+                //八百屋の処理
+            });
+            final ImageButton button_carrots = findViewById(R.id.button_carrots);
+            button_carrots.setOnClickListener(new View.OnClickListener() {
+                int countCarrots = sq.getCarrots();
+
+                public void onClick(View view) {
+                    countCarrots++;
+                    sq.setCountCarrots(countCarrots);
                 }
                 //八百屋の処理
             });
