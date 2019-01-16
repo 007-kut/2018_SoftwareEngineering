@@ -3,7 +3,6 @@ package com.example.kut003.a007app;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
@@ -15,7 +14,7 @@ public class ChooseArt extends Activity {
         setContentView(R.layout.choose_art);
 
         //機能設定画面に戻る
-        final Button button0 = findViewById(R.id.button_back);
+        final Button button0 = findViewById(R.id.button_albam_back);
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplication(), ChooseGame.class);

@@ -24,7 +24,7 @@ public class MakeArt extends AppCompatActivity implements View.OnClickListener{
         setContentView(R.layout.make_art);
 
         //ゲーム選択画面にもどる
-        final Button button0 = findViewById(R.id.button_back);
+        final Button button0 = findViewById(R.id.button_albam_back);
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button1, Perform action on click");

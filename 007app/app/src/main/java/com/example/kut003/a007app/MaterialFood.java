@@ -16,7 +16,7 @@ public class MaterialFood extends Activity {
         setContentView(R.layout.material_food);
 
         //作る食べ物を選ぶ画面に戻る
-        final Button button0 = findViewById(R.id.button_back);
+        final Button button0 = findViewById(R.id.button_albam_back);
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button0, Perform action on click");

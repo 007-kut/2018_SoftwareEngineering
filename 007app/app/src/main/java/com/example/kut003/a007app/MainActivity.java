@@ -2,6 +2,7 @@
 package com.example.kut003.a007app;
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.constraint.solver.GoalRow;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
@@ -11,13 +12,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class MainActivity extends Activity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //初期設定すんのかいせんのかい
+        //初期設定
         String pass = readFile();
         if(pass.isEmpty()) {
             Intent intent = new Intent(getApplication(), NewAccount.class);
@@ -37,7 +38,7 @@ public class MainActivity extends Activity {
         final Button button_grow = findViewById(R.id.button_grow);
         button_grow.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
+                Intent intent = new Intent(getApplication(), GrowHome.class);
                 startActivity(intent);
             }
         });

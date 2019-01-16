@@ -22,7 +22,6 @@ import java.io.InputStreamReader;
 
 public class MakePost extends Activity {
 
-    private TextView textView;
     private EditText questionText;
     private CheckBox checkBox;  //匿名のチェックボックス
     private String checkAnonimity = "1";
@@ -58,7 +57,8 @@ public class MakePost extends Activity {
         final Button button0 = findViewById(R.id.button_return);
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                finish();
+                Intent intent = new Intent(getApplication(), QuestionList.class);
+                startActivity(intent);
             }
         });
 

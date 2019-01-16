@@ -21,28 +21,17 @@ import java.io.InputStreamReader;
 
 public class MakeAnswer extends Activity {
 
-    private TextView textView;
-    private EditText answerText;
+    private EditText questionText;
     private CheckBox checkBox;  //匿名のチェックボックス
     private String checkAnonimity = "1";
-    public static final String EXTRAMESSAGE = "com.example.kut003.a007app.MESSAGE";
     DatabaseContents dc = new DatabaseContents();
+    public static final String EXTRAMESSAGE = "com.example.kut003.a007app.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.make_answer);
-        final ShareQuestion sq = (ShareQuestion) this.getApplication();
 
-        //タップされた質問
-        final String questionContents = sq.getChooseContents();
-        final String qId = sq.getChooseId();
-        textView = findViewById(R.id.contents_text);
-        textView.setText(questionContents);
-
-        answerText = findViewById(R.id.answer_text);
-
-        //匿名か
         checkBox = findViewById(R.id.check);
         checkBox.setChecked(false);
         checkBox.setText("匿名");
@@ -62,26 +51,27 @@ public class MakeAnswer extends Activity {
             }
         });
 
+        questionText = findViewById(R.id.question_text);
         //子育て窓口画面に戻る
         final Button button0 = findViewById(R.id.button_return);
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                finish();
+                Intent intent = new Intent(getApplication(), Answer.class);
+                startActivity(intent);
             }
         });
 
-        //回答ボタン
+        //投稿ボタン
         final Button button1 = findViewById(R.id.button_make_answer);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                String answerContent = answerText.getText().toString();
-                if(answerContent.isEmpty()) {
+                String questionContent = questionText.getText().toString();
+                if(questionContent.isEmpty()) {
                     toastMake();
                 } else {
                     String userId = readFile();    //パスワードの読み込み
                     dc.setLister(createListener());
-                    dc.getContentsById("4", "QID=" + qId, "UserID=" + userId, "Acontents=" + answerContent, "Anonimity=" + checkAnonimity);
-                    //dc.getContentsById("4", "QID=10", "UserID=5", "Acontents=BugCheck", "Anonimity=True");
+                    dc.getContentsById("3", "UserID=" + userId, "Qcontents=" + questionContent, "Anonimity=" + checkAnonimity);
                 }
             }
         });
@@ -93,7 +83,7 @@ public class MakeAnswer extends Activity {
             // 通信が成功した場合の処理(result : 返り値)
             @Override
             public void onSuccess(String result) {
-                result = "投稿されました";
+                result = "回答されました";
                 Intent intent = new Intent(getApplication(), CompleteQuestion.class);
                 intent.putExtra(EXTRAMESSAGE, result);
                 startActivity(intent);
@@ -101,7 +91,7 @@ public class MakeAnswer extends Activity {
             //通信が失敗した場合の処理(result : 返り値)
             @Override
             public void onFailure(String result) {
-                result = "投稿エラー";
+                result = "回答エラー";
                 Intent intent = new Intent(getApplication(), CompleteQuestion.class);
                 intent.putExtra(EXTRAMESSAGE, result);
                 toastMake();

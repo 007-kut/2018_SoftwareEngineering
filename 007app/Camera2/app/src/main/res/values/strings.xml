@@ -1,5 +1,3 @@
 <resources>
-    <string name="app_name">TestCameraIntent</string>
-    <string name="button">Button</string>
-    <string name="description">camera picture</string>
+    <string name="app_name">My Application</string>
 </resources>
