@@ -31,7 +31,6 @@ public class CheckFood extends Activity {
         sq.setCountMilk(milk);
         final Button button0 = findViewById(R.id.button_back);
         button0.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View view) {
                 Intent intent = new Intent(getApplication(), ChooseFood.class);
                 startActivity(intent);

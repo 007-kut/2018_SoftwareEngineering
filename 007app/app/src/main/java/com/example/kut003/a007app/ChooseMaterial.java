@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.content.Intent;
 import android.widget.Toast;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
 public class ChooseMaterial extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,54 +28,62 @@ public class ChooseMaterial extends Activity {
         if (chooseShop.equals("butcher")) {
             //肉屋の処理
             setContentView(R.layout.butcher);
+            final TextView textView1 = findViewById(R.id.textView1);
             final ImageButton button_pork = findViewById(R.id.button_pork);
+            int countPork = sq.getPork();
+            textView1.setText(String.valueOf(countPork));
             button_pork.setOnClickListener(new View.OnClickListener() {
                 int countPork = sq.getPork();
                 public void onClick(View view) {
                     countPork++;
+                    textView1.setText(String.valueOf(countPork));
                     sq.setCountPork(countPork);
+
                     //Intent intent = new Intent(getApplication(), SubActivity2.class);
                     //startActivity(intent);
                 }
             });
+            final TextView textView2 = findViewById(R.id.textView2);
             final ImageButton button_beef = findViewById(R.id.button_beef);
+            int countBeef = sq.getBeef();
+            textView2.setText(String.valueOf(countBeef));
             button_beef.setOnClickListener(new View.OnClickListener() {
                 int countBeef = sq.getBeef();
                 public void onClick(View view) {
                     countBeef++;
+                    textView2.setText(String.valueOf(countBeef));
                     sq.setCountBeef(countBeef);
                     //Intent intent = new Intent(getApplication(), SubActivity2.class);
                     //startActivity(intent);
                 }
             });
-            final ImageButton button_mince = findViewById(R.id.button_mince);
-            button_mince.setOnClickListener(new View.OnClickListener() {
-                int countMince = sq.getMince();
-                public void onClick(View view) {
-                    countMince++;
-                    sq.setCountMince(countMince);
-                    //Intent intent = new Intent(getApplication(), SubActivity2.class);
-                    //startActivity(intent);
-                }
-            });
+
         } else if (chooseShop.equals("market")) {
             //
             setContentView(R.layout.market);
+            final TextView textView1 = findViewById(R.id.textView1);
             final ImageButton button_egg = findViewById(R.id.button_egg);
+            int countEgg = sq.getEgg();
+            textView1.setText(String.valueOf(countEgg));
             button_egg.setOnClickListener(new View.OnClickListener() {
                 int countEgg = sq.getEgg();
                 public void onClick(View view) {
                     countEgg++;
+                    textView1.setText(String.valueOf(countEgg));
                     sq.setCountEgg(countEgg);
                     //Intent intent = new Intent(getApplication(), SubActivity2.class);
                     //startActivity(intent);
                 }
             });
+            final TextView textView2 = findViewById(R.id.textView2);
             final ImageButton button_milk = findViewById(R.id.button_milk);
+            int countMilk = sq.getMilk();
+            textView2.setText(String.valueOf(countMilk));
             button_milk.setOnClickListener(new View.OnClickListener() {
                 int countMilk = sq.getMilk();
                 public void onClick(View view) {
                     countMilk++;
+                    textView2.setText(String.valueOf(countMilk));
                     sq.setCountMilk(countMilk);
                     //Intent intent = new Intent(getApplication(), SubActivity2.class);
                     //startActivity(intent);
@@ -81,22 +91,29 @@ public class ChooseMaterial extends Activity {
             });
         } else {
             setContentView(R.layout.greengrocer);
+            final TextView textView1 = findViewById(R.id.textView1);
             final ImageButton button_onion = findViewById(R.id.button_onion);
+            int countOnion = sq.getOnion();
+            textView1.setText(String.valueOf(countOnion));
             button_onion.setOnClickListener(new View.OnClickListener() {
                 int countOnion = sq.getOnion();
 
                 public void onClick(View view) {
                     countOnion++;
+                    textView1.setText(String.valueOf(countOnion));
                     sq.setCountOnion(countOnion);
                 }
                 //八百屋の処理
             });
+            final TextView textView2 = findViewById(R.id.textView2);
             final ImageButton button_carrots = findViewById(R.id.button_carrots);
+            int countCarrots = sq.getCarrots();
+            textView2.setText(String.valueOf(countCarrots));
             button_carrots.setOnClickListener(new View.OnClickListener() {
                 int countCarrots = sq.getCarrots();
-
                 public void onClick(View view) {
                     countCarrots++;
+                    textView2.setText(String.valueOf(countCarrots));
                     sq.setCountCarrots(countCarrots);
                 }
                 //八百屋の処理
