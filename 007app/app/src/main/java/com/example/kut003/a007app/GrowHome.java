@@ -24,6 +24,7 @@ public class GrowHome extends Activity {
         //カメラボタンの制御
         final Button button_camera = (Button) findViewById(R.id.button_grow_camera);
         //Buttonがクリックされた時のイベントリスナー
+
         button_camera.setOnClickListener(new OnClickListener() {
             //コールバックメソッド
             public void onClick(View view) {
@@ -35,9 +36,9 @@ public class GrowHome extends Activity {
                 startActivity(intent);
                 //アクティビティを閉じる
                 finish();
-
             }
         });
+
         //もどるボタン
         final Button button_back = findViewById(R.id.button_grow_back);
         button_back.setOnClickListener(new View.OnClickListener() {
