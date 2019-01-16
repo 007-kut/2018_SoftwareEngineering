@@ -8,20 +8,29 @@ import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
 import android.view.View.OnClickListener;
-import android.net.Uri;
-import android.os.ParcelFileDescriptor;
-
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Environment;
+import android.widget.ImageView;
 
 public class GrowHome extends Activity {
 
-    public static final String EXTRA_DATA
-            = "com.example.testactivitytrasdata.DATA";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.grow_home);
+        File dir = new File(Environment.getExternalStorageDirectory().getPath()+"/Pictures/");
+        if(dir.exists()){
+            File file = new File(dir.getAbsolutePath()+"/turbans.jpg");
+            if (file.exists()) {
+                Bitmap bm = BitmapFactory.decodeFile(file.getPath());
+                ((ImageView)findViewById(R.id.imageView)).setImageBitmap(bm);
+            }else{
+                ;
+            }
+        }
 
-        //カメラボタンの制御
+        //XMLのButtonを検索する
         final Button button_camera = (Button) findViewById(R.id.button_grow_camera);
         //Buttonがクリックされた時のイベントリスナー
         button_camera.setOnClickListener(new OnClickListener() {
@@ -35,7 +44,6 @@ public class GrowHome extends Activity {
                 startActivity(intent);
                 //アクティビティを閉じる
                 finish();
-
             }
         });
         //もどるボタン
@@ -47,15 +55,26 @@ public class GrowHome extends Activity {
                 startActivity(intent);
             }
         });
-
-        //ギャラリー画面
-        final Button button_gallery = findViewById(R.id.button_grow_gallery);
-        button_gallery.setOnClickListener(new View.OnClickListener(){
+        //共有ボタン
+        final Button button_share = findViewById(R.id.button_grow_share);
+        button_share.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Log.d("debug", "button_grow_garally Perform action on click");
-                Intent intent = new Intent(getApplication(), CheckImage.class);
+                Log.d("debug","button_grow_share, Perform action on click");
+                Intent intent = new Intent(getApplication(), SubActivity2.class);
                 startActivity(intent);
             }
         });
+        //削除ボタン
+        final Button button_delete = findViewById(R.id.button_grow_delete);
+        button_delete.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Log.d("debug","button_grow_delete, Perform action on click");
+                Intent intent = new Intent(getApplication(), SubActivity2.class);
+                startActivity(intent);
+            }
+        });
+
+        //画像の出力
+
     }
 }
