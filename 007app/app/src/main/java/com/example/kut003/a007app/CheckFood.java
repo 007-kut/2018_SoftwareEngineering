@@ -17,14 +17,12 @@ public class CheckFood extends Activity {
         final ShareQuestion sq = (ShareQuestion) this.getApplication();
         int pork = 0;
         int beef = 0;
-        int mince = 0;
         int onion = 0;
         int carrots = 0;
         int egg = 0;
         int milk = 0;
         sq.setCountPork(pork);
         sq.setCountBeef(beef);
-        sq.setCountMince(mince);
         sq.setCountOnion(onion);
         sq.setCountCarrots(carrots);
         sq.setCountEgg(egg);

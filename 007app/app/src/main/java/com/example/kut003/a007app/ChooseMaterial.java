@@ -38,9 +38,6 @@ public class ChooseMaterial extends Activity {
                     countPork++;
                     textView1.setText(String.valueOf(countPork));
                     sq.setCountPork(countPork);
-
-                    //Intent intent = new Intent(getApplication(), SubActivity2.class);
-                    //startActivity(intent);
                 }
             });
             final TextView textView2 = findViewById(R.id.textView2);
@@ -53,13 +50,9 @@ public class ChooseMaterial extends Activity {
                     countBeef++;
                     textView2.setText(String.valueOf(countBeef));
                     sq.setCountBeef(countBeef);
-                    //Intent intent = new Intent(getApplication(), SubActivity2.class);
-                    //startActivity(intent);
                 }
             });
-
         } else if (chooseShop.equals("market")) {
-            //
             setContentView(R.layout.market);
             final TextView textView1 = findViewById(R.id.textView1);
             final ImageButton button_egg = findViewById(R.id.button_egg);
@@ -71,8 +64,6 @@ public class ChooseMaterial extends Activity {
                     countEgg++;
                     textView1.setText(String.valueOf(countEgg));
                     sq.setCountEgg(countEgg);
-                    //Intent intent = new Intent(getApplication(), SubActivity2.class);
-                    //startActivity(intent);
                 }
             });
             final TextView textView2 = findViewById(R.id.textView2);
@@ -85,8 +76,6 @@ public class ChooseMaterial extends Activity {
                     countMilk++;
                     textView2.setText(String.valueOf(countMilk));
                     sq.setCountMilk(countMilk);
-                    //Intent intent = new Intent(getApplication(), SubActivity2.class);
-                    //startActivity(intent);
                 }
             });
         } else {
@@ -97,7 +86,6 @@ public class ChooseMaterial extends Activity {
             textView1.setText(String.valueOf(countOnion));
             button_onion.setOnClickListener(new View.OnClickListener() {
                 int countOnion = sq.getOnion();
-
                 public void onClick(View view) {
                     countOnion++;
                     textView1.setText(String.valueOf(countOnion));
@@ -116,7 +104,6 @@ public class ChooseMaterial extends Activity {
                     textView2.setText(String.valueOf(countCarrots));
                     sq.setCountCarrots(countCarrots);
                 }
-                //八百屋の処理
             });
         }
 

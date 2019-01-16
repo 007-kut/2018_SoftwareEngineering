@@ -56,7 +56,7 @@ public class ChooseShop extends Activity {
             }
         });
 
-        /*//かご
+        //かご
         final Button button4 = findViewById(R.id.button_basket);
         button4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -64,8 +64,7 @@ public class ChooseShop extends Activity {
                 Intent intent = new Intent(getApplication(), InBasket.class);
                 startActivity(intent);
             }
-        });*/
-
+        });
         //おうちにかえる
         final Button button5 = findViewById(R.id.button_home);
         button5.setOnClickListener(new View.OnClickListener() {

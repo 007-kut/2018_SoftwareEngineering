@@ -24,7 +24,6 @@ public class BackHome extends Activity {
         String chooseFood = sq.getChooseFood();
         int pork = sq.getPork();    //材料全部
         int beef = sq.getBeef();
-        int mince = sq.getMince();
         int onion = sq.getOnion();
         int carrots = sq.getCarrots();
         int egg = sq.getEgg();
@@ -36,7 +35,7 @@ public class BackHome extends Activity {
             }
         } else {
             //ハンバーグに必要な材料
-            if(pork >= 3 && onion >= 5 && carrots >= 2) {
+            if(pork >= 3 && beef >= 3 && onion >= 5 && carrots >= 2) {
                 completeCheck = true;
             }
         }

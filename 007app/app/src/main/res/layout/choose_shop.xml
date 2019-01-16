@@ -11,7 +11,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:text="お店一覧"
+        android:text="おみせをえらんでね"
         android:textSize="30sp"
         android:layout_margin="10dp"
         android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
         android:background="#0000"
         android:contentDescription="@string/image_description"
         android:scaleType="centerInside"
-        android:src="@drawable/store"
+        android:src="@drawable/butcher"
         app:layout_constraintBottom_toTopOf="@+id/button_market"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.524"
@@ -80,7 +80,7 @@
         android:background="#0000"
         android:contentDescription="@string/image_description"
         android:scaleType="centerInside"
-        android:src="@drawable/store"
+        android:src="@drawable/green_grocer"
         app:layout_constraintBottom_toTopOf="@+id/button_market"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.241"
@@ -109,5 +109,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button_basket"
+        android:layout_width="wrap_content"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="133dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="16dp"
+        android:text="B"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_market"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_greengrocer" />
 
 </android.support.constraint.ConstraintLayout>

@@ -55,7 +55,6 @@ public class ShareQuestion extends Application {
     private int carrots = 0;
     private int pork = 0;
     private int beef = 0;
-    private int mince = 0;
     private int egg = 0;
     private int milk = 0;
 
@@ -76,9 +75,6 @@ public class ShareQuestion extends Application {
     }
     public void setCountBeef(int count) {
         this.beef = count;
-    }
-    public void setCountMince(int count) {
-        this.mince = count;
     }
     public void setCountEgg(int count) {
         this.egg = count;
@@ -103,9 +99,6 @@ public class ShareQuestion extends Application {
     }
     public int getBeef() {
         return this.beef;
-    }
-    public int getMince() {
-        return this.mince;
     }
     public int getEgg() {
         return this.egg;
