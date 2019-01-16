@@ -71,6 +71,21 @@ public class ShareQuestion extends Application {
     public void setCountPork(int count) {
         this.pork = count;
     }
+    public void setCountCarrots(int count) {
+        this.carrots = count;
+    }
+    public void setCountBeef(int count) {
+        this.beef = count;
+    }
+    public void setCountMince(int count) {
+        this.mince = count;
+    }
+    public void setCountEgg(int count) {
+        this.egg = count;
+    }
+    public void setCountMilk(int count) {
+        this.milk = count;
+    }
     public String getChooseFood() {
         return this.chooseFood;
     }
@@ -83,8 +98,21 @@ public class ShareQuestion extends Application {
     public int getPork() {
         return this.pork;
     }
-
-
+    public int getCarrots() {
+        return this.carrots;
+    }
+    public int getBeef() {
+        return this.beef;
+    }
+    public int getMince() {
+        return this.mince;
+    }
+    public int getEgg() {
+        return this.egg;
+    }
+    public int getMilk() {
+        return this.milk;
+    }
 }
 
 

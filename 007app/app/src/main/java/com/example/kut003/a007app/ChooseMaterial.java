@@ -36,9 +36,30 @@ public class ChooseMaterial extends Activity {
                 }
             });
         } else if (chooseShop.equals("market")) {
-            //市場の処理
+            //
+            setContentView(R.layout.market);
+            final Button button_market = findViewById(R.id.button_market);
+            button_market.setOnClickListener(new View.OnClickListener() {
+                int countEgg = sq.getEgg();
+                public void onClick(View view) {
+                    countEgg++;
+                    sq.setCountEgg(countEgg);
+                    //Intent intent = new Intent(getApplication(), SubActivity2.class);
+                    //startActivity(intent);
+                }
+            });
         } else {
-            //八百屋の処理
+            setContentView(R.layout.greengrocer);
+            final Button button_greengrocer = findViewById(R.id.button_greengrocer);
+            button_greengrocer.setOnClickListener(new View.OnClickListener() {
+                int countOnion = sq.getOnion();
+
+                public void onClick(View view) {
+                    countOnion++;
+                    sq.setCountPork(countOnion);
+                }
+                //八百屋の処理
+            });
         }
 
         //お店選択に戻る

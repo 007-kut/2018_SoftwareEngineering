@@ -23,8 +23,17 @@ public class BackHome extends Activity {
 
         String chooseFood = sq.getChooseFood();
         int pork = sq.getPork();    //材料全部
+        int beef = sq.getBeef();
+        int mince = sq.getMince();
+        int onion = sq.getOnion();
+        int carrots = sq.getCarrots();
+        int egg = sq.getEgg();
+        int milk = sq.getMilk();
         if(chooseFood.equals("cookie")) {
             //クッキーに必要な材料
+            if(egg > 5) {
+                completeCheck = true;
+            }
         } else {
             //ハンバーグに必要な材料
             if(pork > 10) {
