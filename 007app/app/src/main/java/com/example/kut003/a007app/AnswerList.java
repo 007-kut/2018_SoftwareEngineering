@@ -45,10 +45,11 @@ public class AnswerList extends Activity {
         textAnonimity = findViewById(R.id.userName);
         String check = sq.getChooseAnonimity();
         String name = sq.getChooseName();
+        String area = sq.getChooseArea();
         if(check.equals("0")) {
             check = "匿名投稿";
         } else {
-            check = name + "による投稿";
+            check = name + "による投稿 (" + area  + ")";
         }
         textAnonimity.setText(check);
 

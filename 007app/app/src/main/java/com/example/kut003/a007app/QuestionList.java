@@ -118,7 +118,13 @@ public class QuestionList extends Activity {
                         questionArea[y] = datas[y][2];
                         questionContentsList[y] = datas[y][3];
                         questionAnonimity[y] = datas[y][4];
-                        arrayAdapter.add(questionContentsList[y]);
+                        String name;
+                        if(questionAnonimity[y].equals("0")) {
+                            name = "匿名投稿";
+                        } else {
+                            name = questionName[y] + "による投稿";
+                        }
+                        arrayAdapter.add(name + "\r\n" + questionContentsList[y]);
                     }
                     //回答が10個ないときの処理
                     if(datas.length < 10) {
