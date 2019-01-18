@@ -1,6 +1,4 @@
 package com.example.kut003.a007app;
-import android.app.Activity;
-import android.content.ContentResolver;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -37,7 +35,7 @@ public class CheckImage  extends AppCompatActivity {
     private int viewWidth, viewHeight;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {yyyyyy
         super.onCreate(savedInstanceState);
         setContentView(R.layout.check_image);
 
@@ -58,7 +56,6 @@ public class CheckImage  extends AppCompatActivity {
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("image/*");
         startActivityForResult(intent, READ_REQUEST_CODE);
-
 
         //もどるボタン
         final Button button_back = findViewById(R.id.button_viewer_back);
