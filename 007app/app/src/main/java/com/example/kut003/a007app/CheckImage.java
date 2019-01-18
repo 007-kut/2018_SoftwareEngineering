@@ -33,6 +33,7 @@ import android.view.WindowManager;
 
 public class CheckImage  extends AppCompatActivity {
     private static final int READ_REQUEST_CODE = 42;
+
     private Bitmap bmp;
     private ImageView iv;
     private Canvas canvas;
@@ -42,6 +43,7 @@ public class CheckImage  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.check_image);
+
 
         // ウィンドウマネージャのインスタンス取得
         WindowManager manager = (WindowManager) getSystemService(WINDOW_SERVICE);
@@ -53,6 +55,7 @@ public class CheckImage  extends AppCompatActivity {
         viewWidth = point.x;
         viewHeight = point.y;
 
+        iv = (ImageView) findViewById(R.id.image_view);
         //@Override
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
@@ -92,6 +95,7 @@ public class CheckImage  extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //保存ボタン（仮）
         final Button button_save = findViewById(R.id.button_grow_save);
         button_save.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -128,7 +132,7 @@ public class CheckImage  extends AppCompatActivity {
     Intent resultData;
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent resultData){
-        super.onActivityResult(requestCode, resultCode, resultData);
+        //super.onActivityResult(requestCode, resultCode, resultData);
         //iv = (ImageView)findViewById(R.id.imageView);
         if (requestCode == READ_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             Uri uri = null;
@@ -137,20 +141,20 @@ public class CheckImage  extends AppCompatActivity {
                 try {
                     // Uriを表示
                     // textView.setText(String.format(Locale.US, "Uri:　%s", uri.toString()));
-                    Bitmap bmp = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
-                    //Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.red);
+                    //Bitmap bmp = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
                     bmp = loadImage(uri, viewWidth, viewHeight);
-
+                    canvas = new Canvas(bmp);
+                    iv.setImageBitmap(bmp);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                canvas = new Canvas(bmp);
-                iv.setImageBitmap(bmp);
+                //canvas = new Canvas(bmp);
+                //iv.setImageBitmap(bmp);
             }
         }
     }
 
-    private Bitmap loadImage(Uri uri, int viewWidth, int viewHeight){
+    private Bitmap loadImage(Uri uri, int viewWidth, int viewHeight) {
         // Uriから画像を読み込みBitmapを作成
         Bitmap originalBitmap = null;
         try {
@@ -163,7 +167,7 @@ public class CheckImage  extends AppCompatActivity {
 
         // MediaStoreから回転情報を取得
         final int orientation;
-        Cursor cursor = MediaStore.Images.Media.query(getContentResolver(), uri, new String[] {
+        Cursor cursor = MediaStore.Images.Media.query(getContentResolver(), uri, new String[]{
                 MediaStore.Images.ImageColumns.ORIENTATION
         });
         if (cursor != null) {
@@ -180,10 +184,10 @@ public class CheckImage  extends AppCompatActivity {
         final float scale;
         if (orientation == 90 || orientation == 270) {
             // 縦向きの画像は半分のサイズに変更
-            scale = Math.min(((float)viewWidth / originalHeight)/2, ((float)viewHeight / originalWidth)/2);
+            scale = Math.min(((float) viewWidth / originalHeight) / 2, ((float) viewHeight / originalWidth) / 2);
         } else {
             // 横向きの画像
-            scale = Math.min((float)viewWidth / originalWidth, (float)viewHeight / originalHeight);
+            scale = Math.min((float) viewWidth / originalWidth, (float) viewHeight / originalHeight);
         }
 
         // 変換行列の作成
