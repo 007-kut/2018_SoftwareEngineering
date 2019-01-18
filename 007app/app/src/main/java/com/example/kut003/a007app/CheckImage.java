@@ -35,7 +35,7 @@ public class CheckImage  extends AppCompatActivity {
     private int viewWidth, viewHeight;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {yyyyyy
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.check_image);
 
@@ -112,18 +112,17 @@ public class CheckImage  extends AppCompatActivity {
     Intent resultData;
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent resultData){
-        if (requestCode == READ_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
-            Uri uri = null;
-            if (resultData != null) {
-                uri = resultData.getData();
-                try {
-                    // Uriを表示
-                    bmp = loadImage(uri, viewWidth, viewHeight);
-                    canvas = new Canvas(bmp);
-                    iv.setImageBitmap(bmp);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+        super.onActivityResult(requestCode, resultCode, resultData);
+        Uri uri = null;
+        if (resultData != null) {
+            uri = resultData.getData();
+            try {
+                // Uriを表示
+                bmp = loadImage(uri, viewWidth, viewHeight);
+                canvas = new Canvas(bmp);
+                iv.setImageBitmap(bmp);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }
