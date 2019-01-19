@@ -14,7 +14,10 @@ public final class Constants {
             "GetNewest10QuestionData",
             "GetSearchedQuestionData",
             "GetAnswerContents",
-            "GetSelectedArea10QuestionData"
+            "GetSelectedArea10QuestionData",
+            "InsertFileData",
+            "GetFileData",
+            "DeleteFileData"
 
     };
 
