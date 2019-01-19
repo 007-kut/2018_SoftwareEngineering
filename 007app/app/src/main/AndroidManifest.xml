@@ -102,6 +102,10 @@
         </activity>
 
         //成長記録リスト
+        <activity
+            android:name=".CheckImage"
+            android:label="TestActivity">
+        </activity>
 
         //子育て窓口メイン画面(図24)
         //子育て窓口メイン画面テスト(図24)
