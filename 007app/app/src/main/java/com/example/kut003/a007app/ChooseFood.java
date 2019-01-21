@@ -20,6 +20,7 @@ public class ChooseFood extends Activity {
         int carrots = 0;
         int egg = 0;
         int milk = 0;
+
         sq.setCountPork(pork);
         sq.setCountBeef(beef);
         sq.setCountOnion(onion);

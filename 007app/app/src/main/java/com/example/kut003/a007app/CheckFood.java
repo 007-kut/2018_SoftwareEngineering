@@ -7,14 +7,19 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
+import android.widget.ImageView;
 
 public class CheckFood extends Activity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.check_food);
-        //機能設定画面に戻る
         final ShareQuestion sq = (ShareQuestion) this.getApplication();
+        /*String chooseFood = sq.getChooseFood();*/
+        setContentView(R.layout.check_food);
+        sq.setChooseFood("");
+        //機能設定画面に戻る
+
         int pork = 0;
         int beef = 0;
         int onion = 0;
@@ -27,6 +32,15 @@ public class CheckFood extends Activity {
         sq.setCountCarrots(carrots);
         sq.setCountEgg(egg);
         sq.setCountMilk(milk);
+
+        /*if(chooseFood.equals("cookie")) {
+           ImageView imageView2 = findViewById(R.id.cookie);
+           imageView2.setImageResource(R.drawable.cookie);
+        }else{
+            final ImageView imageView = findViewById(R.id.humburg);
+            imageView.setImageResource(R.drawable.hamburg);
+        }*/
+
         final Button button0 = findViewById(R.id.button_back);
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {

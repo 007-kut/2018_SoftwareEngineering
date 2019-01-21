@@ -14,6 +14,7 @@ public class InBasket extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.in_basket);
         final ShareQuestion sq = (ShareQuestion) this.getApplication();
 
@@ -40,6 +41,8 @@ public class InBasket extends Activity {
         final TextView textView6 = findViewById(R.id.textView6);
         int countMilk = sq.getMilk();
         textView6.setText(String.valueOf(countMilk));
+
+
 
         final Button button1 = findViewById(R.id.button_back);
         button1.setOnClickListener(new View.OnClickListener() {
