@@ -118,20 +118,33 @@ public class QuestionList extends Activity {
                         questionArea[y] = datas[y][2];
                         questionContentsList[y] = datas[y][3];
                         questionAnonimity[y] = datas[y][4];
-                        arrayAdapter.add(questionContentsList[y]);
+                        String name;
+                        if(questionAnonimity[y].equals("0")) {
+                            name = "匿名投稿";
+                        } else {
+                            name = questionName[y] + "による投稿";
+                        }
+                        arrayAdapter.add(name + "\r\n" + questionContentsList[y]);
                     }
-                    //回答が10個ないときの処理
+                    //10個ないときの処理
                     if(datas.length < 10) {
                         for (int y = datas.length; y < 10; y++ ) {
                             qIdList[y] = "";
+                            questionName[y] = "";
+                            questionArea[y] = "";
                             questionContentsList[y] = "";
+                            questionAnonimity[y] = "";
                             arrayAdapter.add(questionContentsList[y]);
                         }
                     }
                 } else {
                     // 質問が1個もない状況で利用(DBの質問を初期化したときとか)
                     for(int y = 0; y < 10; y++) {
+                        qIdList[y] = "";
+                        questionName[y] = "";
+                        questionArea[y] = "";
                         questionContentsList[y] = "";
+                        questionAnonimity[y] = "";
                         arrayAdapter.add(questionContentsList[y]);
                     }
                 }
