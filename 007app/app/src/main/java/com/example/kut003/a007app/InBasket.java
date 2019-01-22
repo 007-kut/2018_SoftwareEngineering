@@ -7,24 +7,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
-<<<<<<< HEAD
-
-public class  InBasket extends Activity {
-=======
 import android.widget.TextView;
 
 public class InBasket extends Activity {
 
->>>>>>> imai
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.in_basket);
-<<<<<<< HEAD
-
-        final Button button1 = findViewById(R.id.button_albam_back);
-=======
         final ShareQuestion sq = (ShareQuestion) this.getApplication();
 
         final TextView textView1 = findViewById(R.id.textView1);
@@ -54,7 +45,6 @@ public class InBasket extends Activity {
 
 
         final Button button1 = findViewById(R.id.button_back);
->>>>>>> imai
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button1, Perform action on click");
@@ -63,8 +53,4 @@ public class InBasket extends Activity {
             }
         });
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> imai

@@ -3,10 +3,6 @@ package com.example.kut003.a007app;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-<<<<<<< HEAD
-import android.support.v7.app.AppCompatActivity;
-=======
->>>>>>> imai
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -15,39 +11,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-<<<<<<< HEAD
-import android.widget.Toast;
-
-import java.util.Locale;
-
-public class QuestionList extends Activity {
-
-    public EditText editText;
-
-    private static final String[] texts = {
-            // Globe Decade の楽曲リストより
-            "Feel Like dance",
-            "Joy to the love (globe)",
-            "SWEET PAIN",
-            "DEPARTURES (RADIO EDIT)",
-            "FREEDOM (RADIO EDIT)",
-            "Is this love",
-            "Can't Stop Fallin' in Love",
-            "FACE",
-            "FACES PLACES",
-            "Anytime smokin' cigarette",
-            "Wanderin' Destiny",
-            "Love again",
-            "wanna Be A Dreammaker",
-            "Sa Yo Na Ra",
-            "sweet heart",
-            "Perfume of love",
-            "MISS YOUR BODY",
-            "still growin' up",
-            "biting her nails",
-            "とにかく無性に…"
-    };
-=======
 
 public class QuestionList extends Activity {
 
@@ -59,21 +22,11 @@ public class QuestionList extends Activity {
     String[] questionAnonimity =  new String[10];
     private ArrayAdapter<String> arrayAdapter;
     DatabaseContents dc = new DatabaseContents();
->>>>>>> imai
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question_list);
-<<<<<<< HEAD
-
-        // リスト表示
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.parentinglist);
-        ListView listView = findViewById(R.id.listview);
-        for (String str: texts) {
-            arrayAdapter.add(str);
-        }
-=======
         final ShareQuestion sq = (ShareQuestion) this.getApplication();
 
         //リスト表示
@@ -85,25 +38,10 @@ public class QuestionList extends Activity {
         //リスト表示
         ListView listView = findViewById(R.id.listview);
         //各質問をタップしたときの動作
->>>>>>> imai
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-<<<<<<< HEAD
-                Intent intent = new Intent(getApplication(), MakePost.class);
-                startActivity(intent);
-            }
-        });
-
-        //入力できるようにする
-        editText = findViewById(R.id.edit_text);
-        editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                // EditTextのフォーカスが外れた場合
-=======
                 String qid = qIdList[position];
                 String name = questionName[position];
                 String area = questionArea[position];
@@ -121,7 +59,6 @@ public class QuestionList extends Activity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 // editTextのフォーカスが外れた場合
->>>>>>> imai
                 if (!hasFocus) {
                     // ソフトキーボードを非表示にする
                     InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -130,32 +67,6 @@ public class QuestionList extends Activity {
             }
         });
 
-<<<<<<< HEAD
-        final Button button0 = findViewById(R.id.button_search);
-        button0.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                button0.setFocusable(true);
-                button0.setFocusableInTouchMode(true);
-                button0.requestFocus();
-                String search = editText.getText().toString();  //入力内容を格納
-                Intent intent = new Intent(getApplication(), MainActivity.class);
-                //startActivity(intent);
-            }
-        });
-
-        final Button button1 = findViewById(R.id.button_return);
-        button1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        final Button button2 = findViewById(R.id.button_make);
-        button2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
-=======
         //もどる
         final Button button0 = findViewById(R.id.button_return);
         button0.setOnClickListener(new View.OnClickListener() {
@@ -186,13 +97,10 @@ public class QuestionList extends Activity {
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplication(), MakePost.class);
->>>>>>> imai
                 startActivity(intent);
             }
         });
     }
-<<<<<<< HEAD
-=======
 
     //データベースアクセス結果
     private UploadTask.Listener createListener () {
@@ -249,5 +157,4 @@ public class QuestionList extends Activity {
             }
         };
     }
->>>>>>> imai
 }
