@@ -108,7 +108,7 @@ public class ChooseMaterial extends Activity {
         }
 
         //お店選択に戻る
-        final Button button0 = findViewById(R.id.button_albam_back);
+        final Button button0 = findViewById(R.id.button_back);
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button0, Perform action on click");
