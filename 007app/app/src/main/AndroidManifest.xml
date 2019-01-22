@@ -114,6 +114,11 @@
             android:name=".CheckImage"
             android:label="TestActivity">
         </activity>
+        //成長記録内部データベース管理クラス
+        <activity
+            android:name=".DatabaseOpenHelper"
+            android:label="TestActivity">
+        </activity>
 
         //子育て窓口メイン画面(図24)
         //子育て窓口メイン画面テスト(図24)

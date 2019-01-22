@@ -2,6 +2,7 @@ package com.example.kut003.a007app;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -13,19 +14,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.net.Uri;
-import android.os.ParcelFileDescriptor;
 import android.content.Context;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.File;
 import android.database.Cursor;
 import android.graphics.Matrix;
 import android.graphics.Point;
 import android.view.Display;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
+
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
 public class CheckImage  extends AppCompatActivity {
     private static final int READ_REQUEST_CODE = 42;
@@ -34,15 +42,24 @@ public class CheckImage  extends AppCompatActivity {
     private ImageView iv;
     private Canvas canvas;
     private Uri uri;
+    private String path;
     private int viewWidth, viewHeight;
+    private DatabaseOpenHelper helper;
+    private SQLiteDatabase db;
+
+    public EditText editComment;
+    public TextView viewComment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.check_image);
 
-        //画像の表示
+        //コメント表示欄の処理
+        editComment = findViewById(R.id.comment_text);
+        viewComment = findViewById(R.id.comment_display);
 
+        //画像の表示
         // ウィンドウマネージャのインスタンス取得
         WindowManager manager = (WindowManager) getSystemService(WINDOW_SERVICE);
         // ディスプレイのインスタンスを生成
@@ -58,6 +75,8 @@ public class CheckImage  extends AppCompatActivity {
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("image/*");
         startActivityForResult(intent, READ_REQUEST_CODE);
+
+        readData();
 
         //もどるボタン
         final Button button_back = findViewById(R.id.button_viewer_back);
@@ -77,19 +96,20 @@ public class CheckImage  extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         //削除ボタン
         final Button button_delete = findViewById(R.id.button_grow_delete);
         button_delete.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-
                 //delete(Uri uri);
                 //コメントの削除
-                //
+                //deleteDB();
                 Log.d("debug", "button_grow_delete, Perform action on click");
                 Intent intent = new Intent(getApplication(), SubActivity2.class);
                 startActivity(intent);
             }
         });
+        /*
         //保存ボタン（仮）
         final Button button_save = findViewById(R.id.button_grow_save);
         button_save.setOnClickListener(new View.OnClickListener() {
@@ -98,24 +118,26 @@ public class CheckImage  extends AppCompatActivity {
                 Intent intent = new Intent(getApplication(), SubActivity2.class);
                 startActivity(intent);
             }
-        });
+        });*/
+
         //databaseをゴニョニョしたら画像と連携させて実装
         //保存ボタン
-        /*
-        final Button button1 = findViewById(R.id.button_grow_save);
-        button1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                String questionContent = questionText.getText().toString();
-                if(questionContent.isEmpty()) {
-                    toastMake();
-                } else {
-                    String userId = readFile();    //パスワードの読み込み
-                    dc.setLister(createListener());
-                    dc.getContentsById("3", "UserID=" + userId, "Qcontents=" + questionContent, "Anonimity=" + checkAnonimity);
+        Button insertButton = findViewById(R.id.button_grow_save);
+        insertButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(helper == null){
+                    helper = new DatabaseOpenHelper(getApplicationContext());
                 }
+                if(db == null){
+                    db = helper.getWritableDatabase();
+                }
+                String key = editComment.getText().toString();
+                insertData(db, key, uri);
             }
-        });*/
+        });
     }
+
     //画像の読み込み
     Intent resultData;
     @Override
@@ -187,17 +209,54 @@ public class CheckImage  extends AppCompatActivity {
         return Bitmap.createBitmap(originalBitmap, 0, 0, originalWidth, originalHeight, matrix,
                 true);
     }
-    // アンドロイドのデータベースへ登録する
-    /*
-    private void registerDatabase(String file) {
-        ContentValues contentValues = new ContentValues();
-        ContentResolver contentResolver = Camera.this.getContentResolver();
-        contentValues.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg/");
-        contentValues.put("_data", file);
-        contentResolver.insert(
-                MediaStore.Images.Media.EXTERNAL_CONTENT_URI,contentValues);
-        Log.d("VAR_DUMP", "!! -- MyDebug : " + MediaStore.Images.Media.EXTERNAL_CONTENT_URI
-                + " and " + MediaStore.Images.Media.MIME_TYPE);
+
+    private void readData(){
+        if(helper == null){
+            helper = new DatabaseOpenHelper(getApplicationContext());
+        }
+
+        if(db == null){
+            db = helper.getReadableDatabase();
+        }
+        Log.d("debug","**********Cursor");
+
+        Cursor cursor = db.query(
+                "images",
+                new String[] { "path", "comment" },
+                null,
+                null,
+                null,
+                null,
+                null
+        );
+
+        cursor.moveToFirst();
+
+        StringBuilder sbuilder = new StringBuilder();
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            sbuilder.append(cursor.getString(0));
+            sbuilder.append(": ");
+            sbuilder.append(cursor.getString(1));
+            sbuilder.append("\n");
+            cursor.moveToNext();
+        }
+
+        // 忘れずに！
+        cursor.close();
+
+        Log.d("debug","**********"+sbuilder.toString());
+        viewComment.setText(sbuilder.toString());
+    }
+
+    //insertData(DataBase, comment, image URI)
+    private void insertData(SQLiteDatabase db, String com, Uri uri){
+        path = uri.toString();
+        ContentValues values = new ContentValues();
+        values.put("path", path);
+        values.put("comment", com);
+
+        db.insert("images", null, values);
     }
 
     /*

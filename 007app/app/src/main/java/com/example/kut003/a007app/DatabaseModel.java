@@ -1,5 +1,6 @@
 package com.example.kut003.a007app;
 
+/*
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -10,7 +11,10 @@ public class DatabaseModel {
 
     DatabaseOpenHelper helper;
     SQLiteDatabase db;
-    final String TABLE_NAME = DatabaseOpenHelper.TABLE_NAME;
+    private final String TABLE_NAME = DatabaseOpenHelper.TABLE_NAME;
+
+    private static final String SQL_INSERT_DATA = "INSERT INTO " + TABLE_NAME + " (path, comment) values(?,?);";
+    private static final String SQL_SEARCH_DATA = "SELECT * FROM " + TABLE_NAME;
 
     DatabaseModel(Context context){
         if(helper == null || db == null) {
@@ -19,12 +23,12 @@ public class DatabaseModel {
         }
     }
 
+    //
     // TODO:select文にwhereが無いため設計が必要
     public String searchData(){
         Cursor cursor = null;
         try{
-            String sql    = "SELECT * FROM " + TABLE_NAME;
-            cursor = db.rawQuery(sql , new String[]{}); //SQLの実行
+            cursor = db.rawQuery(SQL_SEARCH_DATA , new String[]{}); //SQLの実行
             return readCursor(cursor);
         }
         finally{
@@ -52,14 +56,14 @@ public class DatabaseModel {
         }
     }
 
+    //データ追加
     public void insertData(String path, String comment){
-        String sql = "insert into " + TABLE_NAME + " (path, comment) values(?,?);";
         String[] bindStr = new String[]{
                 path,
                 comment
         };
         try {
-            db.execSQL(sql, bindStr);
+            db.execSQL(SQL_INSERT_DATA, bindStr);
         } catch (SQLException e) {
             Log.e("ERROR", e.toString());
         }
@@ -91,5 +95,6 @@ public class DatabaseModel {
             Log.e("ERROR", e.toString());
         }
     }
-    */
+
 }
+*/

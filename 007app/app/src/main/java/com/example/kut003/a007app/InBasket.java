@@ -26,7 +26,7 @@ public class InBasket extends Activity {
         int countPork = sq.getPork();
         textView2.setText(String.valueOf(countPork));
 
-        final TextView textView3 = findViewById(R.id.textView3);
+        final TextView textView3 = findViewById(R.id.comment_display);
         int countCarrots = sq.getCarrots();
         textView3.setText(String.valueOf(countCarrots));
 
