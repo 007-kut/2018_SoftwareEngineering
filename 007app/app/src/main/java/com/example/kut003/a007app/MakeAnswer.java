@@ -56,7 +56,7 @@ public class MakeAnswer extends Activity {
         final Button button0 = findViewById(R.id.button_return);
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), Answer.class);
+                Intent intent = new Intent(getApplication(), QuestionList.class);
                 startActivity(intent);
             }
         });
