@@ -68,7 +68,7 @@ public class Camera extends Activity {
         Button buttonDelete = findViewById(R.id.button_delete);
         buttonDelete.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), Camera.class);
+                Intent intent = new Intent(getApplication(), SubActivity2.class);
                 startActivity(intent);
             }
         });
