@@ -1,4 +1,5 @@
 package com.example.kut003.a007app;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,12 +14,11 @@ import android.widget.ImageView;
 import android.widget.EditText;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
+import android.content.Context;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.FileDescriptor;
-import java.io.InputStream;
-import java.util.Locale;
+import java.io.File;
 import android.database.Cursor;
 import android.graphics.Matrix;
 import android.graphics.Point;
@@ -32,6 +32,7 @@ public class CheckImage  extends AppCompatActivity {
     private Bitmap bmp;
     private ImageView iv;
     private Canvas canvas;
+    private Uri uri;
     private int viewWidth, viewHeight;
 
     @Override
@@ -79,6 +80,10 @@ public class CheckImage  extends AppCompatActivity {
         final Button button_delete = findViewById(R.id.button_grow_delete);
         button_delete.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+
+                //delete(Uri uri);
+                //コメントの削除
+                //
                 Log.d("debug", "button_grow_delete, Perform action on click");
                 Intent intent = new Intent(getApplication(), SubActivity2.class);
                 startActivity(intent);
@@ -93,8 +98,9 @@ public class CheckImage  extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        /*databaseをゴニョニョしたら画像と連携させて実装
+        //databaseをゴニョニョしたら画像と連携させて実装
         //保存ボタン
+        /*
         final Button button1 = findViewById(R.id.button_grow_save);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -113,7 +119,7 @@ public class CheckImage  extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent resultData){
         super.onActivityResult(requestCode, resultCode, resultData);
-        Uri uri = null;
+        uri = null;
         if (resultData != null) {
             uri = resultData.getData();
             try {
@@ -178,4 +184,19 @@ public class CheckImage  extends AppCompatActivity {
         return Bitmap.createBitmap(originalBitmap, 0, 0, originalWidth, originalHeight, matrix,
                 true);
     }
+    /*
+    private void delete(Uri uri) {
+        String outputPath = uri;
+        Context context = this;
+
+        File file = new File(outputPath);
+        if (file.exists()){
+            file.delete();
+            context.getContentResolver().delete(
+                    MediaStore.Files.getContentUri("external");
+                    MediaStore.Files.FileColumns.DATA + "=?",
+                    new String[]{outputPath}
+            );
+        }
+    }*/
 }

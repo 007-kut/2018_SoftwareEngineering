@@ -101,6 +101,11 @@
             android:label="TestActivity">
         </activity>
 
+        //カメラ機能
+        <activity
+            android:name=".Camera"
+            android:label="TestActivity">
+        </activity>
         //成長記録リスト
         <activity
             android:name=".CheckImage"

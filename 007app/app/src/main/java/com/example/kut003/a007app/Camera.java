@@ -72,7 +72,6 @@ public class Camera extends Activity {
                 startActivity(intent);
             }
         });
-
     }
 
     private void cameraIntent(){
@@ -174,7 +173,6 @@ public class Camera extends Activity {
     public void onRequestPermissionsResult(int requestCode,
                                            @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
-
         if (requestCode == REQUEST_PERMISSION) {
             // 使用が許可された
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -188,5 +186,4 @@ public class Camera extends Activity {
             }
         }
     }
-
 }
