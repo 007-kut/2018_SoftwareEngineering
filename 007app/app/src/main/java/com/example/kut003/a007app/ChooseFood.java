@@ -1,4 +1,4 @@
-//作る食べ物を選ぶ画面(図10)
+//作る食べ物を選ぶ画面(図10) imai
 package com.example.kut003.a007app;
 
 import android.app.Activity;

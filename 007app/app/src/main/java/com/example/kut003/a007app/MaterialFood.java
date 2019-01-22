@@ -1,4 +1,4 @@
-//材料確認画面(図11)
+//材料確認画面(図11) imai
 package com.example.kut003.a007app;
 
 import android.app.Activity;

@@ -1,4 +1,4 @@
-//材料をお店で選択する画面(図14)
+//材料をお店で選択する画面(図14) imai
 package com.example.kut003.a007app;
 
 import android.app.Activity;

@@ -1,4 +1,4 @@
-//お店を選択する画面(図12)
+//お店を選択する画面(図12) imai
 package com.example.kut003.a007app;
 
 import android.app.Activity;
