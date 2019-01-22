@@ -12,6 +12,7 @@ public class DatabaseModel {
     SQLiteDatabase db;
     final String TABLE_NAME = DatabaseOpenHelper.TABLE_NAME;
 
+    //コンストラクタ
     DatabaseModel(Context context){
         if(helper == null || db == null) {
             helper = new DatabaseOpenHelper(context);
@@ -19,11 +20,13 @@ public class DatabaseModel {
         }
     }
 
+    //データの読み出し
     // TODO:select文にwhereが無いため設計が必要
     public String searchData(){
         Cursor cursor = null;
         try{
             String sql    = "SELECT * FROM " + TABLE_NAME;
+
             cursor = db.rawQuery(sql , new String[]{}); //SQLの実行
             return readCursor(cursor);
         }
@@ -34,6 +37,7 @@ public class DatabaseModel {
         }
     }
 
+    //
     private String readCursor(Cursor cursor){
         try{
             //カーソル開始位置を先頭にする

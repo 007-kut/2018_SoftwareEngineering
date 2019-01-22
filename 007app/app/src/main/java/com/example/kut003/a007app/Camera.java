@@ -25,12 +25,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class Camera extends Activity {
+public class Camera extends Activity, DatabaseModel{
 
     private final static int RESULT_CAMERA = 1001;
     private final static int REQUEST_PERMISSION = 1002;
 
-    //NameBookDBHelper dbHelper = new NameBookDBHelper( context );
+    NameBookDBHelper dbHelper = new NameBookDBHelper( context );
 
     private ImageView imageView;
     private Uri cameraUri;
