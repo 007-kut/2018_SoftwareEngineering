@@ -45,7 +45,7 @@ public class PassGame extends Activity {
                     Intent intent = new Intent(getApplication(), MainActivity.class);
                     startActivity(intent);
                 } else {
-                    Intent intent = new Intent(getApplication(), SubActivity2.class);
+                    Intent intent = new Intent(getApplication(), ChooseGame.class);
                     startActivity(intent);
                 }
             }
