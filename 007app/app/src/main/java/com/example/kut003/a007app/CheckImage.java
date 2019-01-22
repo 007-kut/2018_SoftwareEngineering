@@ -76,7 +76,6 @@ public class CheckImage  extends AppCompatActivity {
         intent.setType("image/*");
         startActivityForResult(intent, READ_REQUEST_CODE);
 
-        readData();
 
         //もどるボタン
         final Button button_back = findViewById(R.id.button_viewer_back);
@@ -109,18 +108,7 @@ public class CheckImage  extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        /*
-        //保存ボタン（仮）
-        final Button button_save = findViewById(R.id.button_grow_save);
-        button_save.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Log.d("debug", "button_grow_save, Perform action on click");
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
-                startActivity(intent);
-            }
-        });*/
 
-        //databaseをゴニョニョしたら画像と連携させて実装
         //保存ボタン
         Button insertButton = findViewById(R.id.button_grow_save);
         insertButton.setOnClickListener(new View.OnClickListener() {
@@ -134,6 +122,7 @@ public class CheckImage  extends AppCompatActivity {
                 }
                 String key = editComment.getText().toString();
                 insertData(db, key, uri);
+                Log.d("debug", "コメントは保存されました。");
             }
         });
     }
@@ -151,6 +140,8 @@ public class CheckImage  extends AppCompatActivity {
                 bmp = loadImage(uri, viewWidth, viewHeight);
                 canvas = new Canvas(bmp);
                 iv.setImageBitmap(bmp);
+                //コメント機能
+                readData(uri);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -210,7 +201,8 @@ public class CheckImage  extends AppCompatActivity {
                 true);
     }
 
-    private void readData(){
+    private void readData(Uri uri){
+        String uris = uri.toString();
         if(helper == null){
             helper = new DatabaseOpenHelper(getApplicationContext());
         }
@@ -223,7 +215,7 @@ public class CheckImage  extends AppCompatActivity {
         Cursor cursor = db.query(
                 "images",
                 new String[] { "path", "comment" },
-                null,
+                "path == uri",
                 null,
                 null,
                 null,

@@ -17,7 +17,7 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
 
     private static final String SQL_CREATE_ENTRIES  =
             "CREATE TABLE IF NOT EXISTS images ("
-            + " ID INTEGER PRIMARY KEY AUTOINCREMENT,"
+            //+ " ID INTEGER PRIMARY KEY AUTOINCREMENT,"
             + " path TEXT,"
             + " Comment TEXT"
             + ");";
@@ -32,7 +32,7 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db){
-        createScheduleTable(db);
+        //createScheduleTable(db);
         // テーブル作成
         // SQLiteファイルがなければSQLiteファイルが作成される
         db.execSQL(SQL_CREATE_ENTRIES);
