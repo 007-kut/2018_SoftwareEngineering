@@ -3,6 +3,7 @@
     package="com.example.kut003.a007app">
     <uses-permission android:name="android.permission.INTERNET" />
     <application
+        android:name = "com.example.kut003.a007app.ShareQuestion"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -125,10 +126,6 @@
             android:label="@string/app_name" >
         </activity>
         //回答画面(図27)
-        <activity
-            android:name=".Answer"
-            android:label="@string/app_name" >
-        </activity>
         //回答画面(図28)
         <activity
             android:name=".MakeAnswer"
