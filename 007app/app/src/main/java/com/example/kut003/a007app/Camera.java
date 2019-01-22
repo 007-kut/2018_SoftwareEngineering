@@ -69,7 +69,7 @@ public class Camera extends Activity {
         Button buttonBack = findViewById(R.id.button_back);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), MainActivity.class);
+                Intent intent = new Intent(getApplication(), GrowHome.class);
                 startActivity(intent);
             }
         });
