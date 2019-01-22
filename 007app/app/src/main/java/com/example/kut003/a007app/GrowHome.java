@@ -23,22 +23,22 @@ public class GrowHome extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.grow_home);
 
-        //カメラ機能（仮）
+        //カメラ機能
         //XMLのButtonを検索する
         final Button button_camera = (Button) findViewById(R.id.button_grow_camera);
-        //Buttonがクリックされた時のイベントリスナー
-
         button_camera.setOnClickListener(new OnClickListener() {
             //コールバックメソッド
             public void onClick(View view) {
                 //インテントの生成
-                Intent intent = new Intent();
+                //Intent intent = new Intent();
                 //インテントのアクションを指定する
-                intent.setAction("android.media.action.IMAGE_CAPTURE");
+                //intent.setAction("android.media.action.IMAGE_CAPTURE");
                 //標準搭載されているカメラアプリのアクティビティを起動する
-                startActivity(intent);
+                //startActivity(intent);
                 //アクティビティを閉じる
-                finish();
+                //finish();
+                Intent intent = new Intent(getApplication(), Camera.class);
+                startActivity(intent);
             }
         });
 
