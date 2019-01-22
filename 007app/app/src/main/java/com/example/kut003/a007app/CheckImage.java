@@ -188,6 +188,7 @@ public class CheckImage  extends AppCompatActivity {
                 true);
     }
     // アンドロイドのデータベースへ登録する
+
     private void registerDatabase(String file) {
         ContentValues contentValues = new ContentValues();
         ContentResolver contentResolver = Camera.this.getContentResolver();

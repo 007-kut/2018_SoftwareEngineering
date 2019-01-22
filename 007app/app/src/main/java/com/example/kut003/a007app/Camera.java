@@ -30,6 +30,8 @@ public class Camera extends Activity {
     private final static int RESULT_CAMERA = 1001;
     private final static int REQUEST_PERMISSION = 1002;
 
+    NameBookDBHelper dbHelper = new NameBookDBHelper( context );
+    
     private ImageView imageView;
     private Uri cameraUri;
     private String filePath;
