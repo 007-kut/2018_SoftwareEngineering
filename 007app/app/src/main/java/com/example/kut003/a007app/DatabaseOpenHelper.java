@@ -5,7 +5,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-
 public class DatabaseOpenHelper extends SQLiteOpenHelper {
 
     private static final String TAG = "DatabaseOpenHelper";
@@ -26,7 +25,6 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME + ";");
         onCreate(db);
-
     }
 
     private void createScheduleTable(SQLiteDatabase db){

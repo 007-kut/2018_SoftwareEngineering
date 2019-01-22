@@ -1,5 +1,6 @@
 package com.example.kut003.a007app;
 import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -115,6 +116,7 @@ public class CheckImage  extends AppCompatActivity {
             }
         });*/
     }
+    //画像の読み込み
     Intent resultData;
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent resultData){
@@ -133,6 +135,7 @@ public class CheckImage  extends AppCompatActivity {
         }
     }
 
+    //画像の可視化
     private Bitmap loadImage(Uri uri, int viewWidth, int viewHeight) {
         // Uriから画像を読み込みBitmapを作成
         Bitmap originalBitmap = null;
@@ -184,7 +187,21 @@ public class CheckImage  extends AppCompatActivity {
         return Bitmap.createBitmap(originalBitmap, 0, 0, originalWidth, originalHeight, matrix,
                 true);
     }
+    // アンドロイドのデータベースへ登録する
     /*
+    private void registerDatabase(String file) {
+        ContentValues contentValues = new ContentValues();
+        ContentResolver contentResolver = Camera.this.getContentResolver();
+        contentValues.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg/");
+        contentValues.put("_data", file);
+        contentResolver.insert(
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI,contentValues);
+        Log.d("VAR_DUMP", "!! -- MyDebug : " + MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+                + " and " + MediaStore.Images.Media.MIME_TYPE);
+    }
+
+    /*
+    //画像の削除
     private void delete(Uri uri) {
         String outputPath = uri;
         Context context = this;

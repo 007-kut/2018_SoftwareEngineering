@@ -30,6 +30,8 @@ public class Camera extends Activity {
     private final static int RESULT_CAMERA = 1001;
     private final static int REQUEST_PERMISSION = 1002;
 
+    //NameBookDBHelper dbHelper = new NameBookDBHelper( context );
+
     private ImageView imageView;
     private Uri cameraUri;
     private String filePath;
@@ -41,7 +43,8 @@ public class Camera extends Activity {
 
         imageView = findViewById(R.id.image_view);
 
-        Button cameraButton = findViewById(R.id.camera_button);
+        // Android 6, API 23以上でパーミッシンの確認
+        /*Button cameraButton = findViewById(R.id.camera_button);
         cameraButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,13 +56,20 @@ public class Camera extends Activity {
                     cameraIntent();
                 }
             }
-        });
+        });*/
 
+
+        if (Build.VERSION.SDK_INT >= 23) {
+            checkPermission();
+        }
+        else {
+            cameraIntent();
+        }
         // もどるボタン
         Button buttonBack = findViewById(R.id.button_back);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), MainActivity.class);
+                Intent intent = new Intent(getApplication(), GrowHome.class);
                 startActivity(intent);
             }
         });
