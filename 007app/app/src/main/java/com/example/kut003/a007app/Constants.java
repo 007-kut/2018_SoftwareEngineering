@@ -13,7 +13,11 @@ public final class Constants {
             "InsertAnswer",
             "GetNewest10QuestionData",
             "GetSearchedQuestionData",
-            "GetAnswerContents"
+            "GetAnswerContents",
+            "GetSelectedArea10QuestionData",
+            "InsertFileData",
+            "GetFileData",
+            "DeleteFileData"
 
     };
 
