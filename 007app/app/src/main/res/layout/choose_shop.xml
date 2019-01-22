@@ -123,4 +123,5 @@
         app:layout_constraintEnd_toStartOf="@+id/button_market"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_greengrocer" />
+
 </android.support.constraint.ConstraintLayout>
