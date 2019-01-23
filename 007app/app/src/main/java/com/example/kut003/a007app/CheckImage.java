@@ -107,7 +107,7 @@ public class CheckImage  extends AppCompatActivity {
                 startActivity(intent);
                 Log.d("debug", "button_grow_delete, Perform action on click");
             }
-        });*/
+        });
 
         //保存ボタン
         Button insertButton = findViewById(R.id.button_grow_save);
@@ -238,7 +238,7 @@ public class CheckImage  extends AppCompatActivity {
         viewComment.setText(sbuilder.toString());
     }
 
-    //insertData(DataBase, comment, image URI)
+    //insertData(DataBase, comment, image URI)　コメント更新
     private void insertData(SQLiteDatabase db, String com, Uri uri){
         path = uri.toString();
         //try {
@@ -257,7 +257,7 @@ public class CheckImage  extends AppCompatActivity {
         readData(uri);
     }
 
-/*
+
     //画像の削除
     private void delete(Uri uri) {
         String outputPath = uri;
@@ -275,7 +275,7 @@ public class CheckImage  extends AppCompatActivity {
             );
         }
     }
-    */
+
 
     //コメントの削除
     private void deleteComment(String path){
