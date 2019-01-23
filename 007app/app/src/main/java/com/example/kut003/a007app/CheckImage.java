@@ -215,19 +215,20 @@ public class CheckImage  extends AppCompatActivity {
         Cursor cursor = db.query(
                 "images",
                  new String[] {"comment"},
-                "path == ?",
-                 new String[]{"uris"},
+                "Path = ?",
+                 new String[]{""+ uris},
                 null,
                 null,
                 null
         );
+
 
         cursor.moveToFirst();
 
         StringBuilder sbuilder = new StringBuilder();
 
         for (int i = 0; i < cursor.getCount(); i++) {
-            sbuilder.append(cursor.getString(2));
+            sbuilder.append(cursor.getString(0));
             cursor.moveToNext();
         }
 
@@ -241,11 +242,17 @@ public class CheckImage  extends AppCompatActivity {
     //insertData(DataBase, comment, image URI)
     private void insertData(SQLiteDatabase db, String com, Uri uri){
         path = uri.toString();
-        ContentValues values = new ContentValues();
-        values.put("path", path);
-        values.put("comment", com);
+        //try {
+            //db = SQLiteDatabase.openDatabase("images", null);
+        //}catch (FileNotFoundException e){
+            //db = null;
+        //}
 
-        db.insert("images", null, values);
+        ContentValues cv = new ContentValues();
+        cv.put("Path", path);
+        cv.put("Comment", com);
+
+        db.insert("images", null, cv);
         readData(uri);
     }
 

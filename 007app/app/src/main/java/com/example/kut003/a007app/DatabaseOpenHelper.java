@@ -15,13 +15,13 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
     //Table name
     public static final String TABLE_NAME = "images";
 
-    //public static final String COLUMN_NAME_TITLE = "path";
+    //public static final String COLUMN_NAME_TITLE = "uriPath";
     //public static final String COLUMN_NAME_SUBTITLE = "comment";
 
     private static final String SQL_CREATE_ENTRIES  =
             "CREATE TABLE images ("
             + " id INTEGER AUTOINCREMENT PRIMARY KEY,"
-            + " Path TEXT PRIMARY KEY,"
+            + " uriPath TEXT,"
             + " Comment TEXT"
             + ");";
 
@@ -48,6 +48,7 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_ENTRIES);
         onCreate(db);
     }
+
 /*
     private void createScheduleTable(SQLiteDatabase db){
         // テーブル作成SQL
