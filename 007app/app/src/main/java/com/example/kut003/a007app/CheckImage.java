@@ -77,6 +77,7 @@ public class CheckImage  extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        /*
         //削除ボタン
         final Button button_delete = findViewById(R.id.button_grow_delete);
         button_delete.setOnClickListener(new View.OnClickListener() {
@@ -90,6 +91,7 @@ public class CheckImage  extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        */
         //保存ボタン（仮）
         final Button button_save = findViewById(R.id.button_grow_save);
         button_save.setOnClickListener(new View.OnClickListener() {
