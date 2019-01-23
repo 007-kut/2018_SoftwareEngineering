@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        //子育て窓口
+        //子育て窓口　　　　　　　
         final Button button_wind = findViewById(R.id.button_wind);
         button_wind.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {

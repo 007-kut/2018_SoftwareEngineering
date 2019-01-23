@@ -58,7 +58,6 @@ public class Camera extends Activity {
             }
         });*/
 
-
         if (Build.VERSION.SDK_INT >= 23) {
             checkPermission();
         }
@@ -82,20 +81,28 @@ public class Camera extends Activity {
                 startActivity(intent);
             }
         });
+        // ギャラリー画面
+        final Button button_gallery = findViewById(R.id.button_gallery);
+        button_gallery.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Log.d("debug", "button_grow_garally Perform action on click");
+                Intent intent = new Intent(getApplication(), CheckImage.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void cameraIntent(){
         // 保存先のフォルダーを作成するケース
 //        File cameraFolder = new File(
-//                Environment.getExternalStoragePublicDirectory(
-//                        Environment.DIRECTORY_PICTURES),"IMG");
+//        Environment.getExternalStoragePublicDirectory(
+//        Environment.DIRECTORY_PICTURES),"IMG");
 //        cameraFolder.mkdirs();
 
         // 保存先のフォルダーをカメラに指定した場合
         File cameraFolder = new File(
                 Environment.getExternalStoragePublicDirectory(
                         Environment.DIRECTORY_DCIM),"Camera");
-
 
         // 保存ファイル名
         String fileName = new SimpleDateFormat(

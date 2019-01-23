@@ -74,7 +74,6 @@ public class SetteiGamepassword extends Activity {
             }
         });
 
-
         //ホームへ
         final Button button_return = findViewById(R.id.button_password_home);
         button_return.setOnClickListener(new View.OnClickListener() {
