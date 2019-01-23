@@ -97,7 +97,6 @@ public class CheckImage  extends AppCompatActivity {
         });
 
         //削除ボタン
-        /*
         final Button button_delete = findViewById(R.id.button_grow_delete);
         button_delete.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
