@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.net.Uri;
 import android.content.Context;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import android.database.Cursor;
@@ -73,9 +74,8 @@ public class CheckImage  extends AppCompatActivity {
         iv = (ImageView) findViewById(R.id.image_view);
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
-        intent.setType("image/*");
+        intent.setType("image/jpeg");
         startActivityForResult(intent, READ_REQUEST_CODE);
-
 
         //もどるボタン
         final Button button_back = findViewById(R.id.button_viewer_back);
@@ -97,17 +97,17 @@ public class CheckImage  extends AppCompatActivity {
         });
 
         //削除ボタン
+        /*
         final Button button_delete = findViewById(R.id.button_grow_delete);
         button_delete.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                //delete(Uri uri);
+                delete(Uri uri);
                 //コメントの削除
-                //deleteDB();
-                Log.d("debug", "button_grow_delete, Perform action on click");
-                Intent intent = new Intent(getApplication(), SubActivity2.class);
+                Intent intent = new Intent(getApplication(), DeleteImage.class);
                 startActivity(intent);
+                Log.d("debug", "button_grow_delete, Perform action on click");
             }
-        });
+        });*/
 
         //保存ボタン
         Button insertButton = findViewById(R.id.button_grow_save);
@@ -222,7 +222,6 @@ public class CheckImage  extends AppCompatActivity {
                 null
         );
 
-
         cursor.moveToFirst();
 
         StringBuilder sbuilder = new StringBuilder();
@@ -248,6 +247,8 @@ public class CheckImage  extends AppCompatActivity {
             //db = null;
         //}
 
+        deleteComment(path);
+
         ContentValues cv = new ContentValues();
         cv.put("Path", path);
         cv.put("Comment", com);
@@ -256,7 +257,7 @@ public class CheckImage  extends AppCompatActivity {
         readData(uri);
     }
 
-    /*
+/*
     //画像の削除
     private void delete(Uri uri) {
         String outputPath = uri;
@@ -265,11 +266,19 @@ public class CheckImage  extends AppCompatActivity {
         File file = new File(outputPath);
         if (file.exists()){
             file.delete();
+            //コメント削除
+            deleteComment(outputPath);
             context.getContentResolver().delete(
                     MediaStore.Files.getContentUri("external");
                     MediaStore.Files.FileColumns.DATA + "=?",
                     new String[]{outputPath}
             );
         }
-    }*/
+    }
+    */
+
+    //コメントの削除
+    private void deleteComment(String path){
+        db.delete("images", "Path=?", new String[]{path});
+    }
 }

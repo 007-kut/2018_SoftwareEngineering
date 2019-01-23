@@ -120,6 +120,11 @@
             android:label="TestActivity">
         </activity>
 
+        //成長記録データ削除画面
+        <activity
+            android:name=".DeleteImage"
+            android:label="TestActivity">
+        </activity>
         //子育て窓口メイン画面(図24)
         //子育て窓口メイン画面テスト(図24)
         <activity
