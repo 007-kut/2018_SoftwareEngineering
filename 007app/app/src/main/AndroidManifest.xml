@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-feature android:name="android.hardware.camera" />
     <application
-        android:name = "com.example.kut003.a007app.ShareQuestion"
+        android:name = ".ShareQuestion"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -94,10 +94,9 @@
         </activity>
         //食べ物完成画面(図17)
         <activity
-            android:name=".CheckFood"
-            android:label="@string/app_name" >
-        </activity>
-
+        android:name=".CheckFood"
+        android:label="@string/app_name" >
+    </activity>
         //成長記録メイン画面
         <activity
             android:name=".GrowHome"
@@ -122,15 +121,28 @@
             android:label="@string/app_name" >
         </activity>
         //投稿作成画面(図25)
+        <activity
+            android:name=".MakePost"
+            android:label="@string/app_name" >
+        </activity>
         //投稿作成画面(図26)
         <activity
             android:name=".CompleteQuestion"
             android:label="@string/app_name" >
         </activity>
         //回答画面(図27)
+        <activity
+            android:name=".AnswerList"
+            android:label="@string/app_name" >
+        </activity>
         //回答画面(図28)
         <activity
             android:name=".MakeAnswer"
+            android:label="@string/app_name" >
+        </activity>
+        //回答作成完了画面(図28)
+        <activity
+            android:name=".CompleteAnswer"
             android:label="@string/app_name" >
         </activity>
         //設定メイン画面(図30)
@@ -163,7 +175,6 @@
             android:name=".SetteiAcountsakujo"
             android:label="@string/app_name" >
         </activity>
-        //パスワード変更画面(図36)
         //ゲームパスワード画面(図36)
         <activity
             android:name=".SetteiGamepassword"

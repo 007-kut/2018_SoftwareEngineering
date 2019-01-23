@@ -1,4 +1,4 @@
-//QIDと質問をクラス間で共有するためのファイル
+//QIDと質問をクラス間で共有するためのファイル imai
 package com.example.kut003.a007app;
 
 import android.app.Application;
