@@ -214,9 +214,9 @@ public class CheckImage  extends AppCompatActivity {
 
         Cursor cursor = db.query(
                 "images",
-                new String[] { "path", "comment" },
-                "path == uri",
-                null,
+                 new String[] {"comment"},
+                "path == ?",
+                 new String[]{"uris"},
                 null,
                 null,
                 null
@@ -227,10 +227,7 @@ public class CheckImage  extends AppCompatActivity {
         StringBuilder sbuilder = new StringBuilder();
 
         for (int i = 0; i < cursor.getCount(); i++) {
-            sbuilder.append(cursor.getString(0));
-            sbuilder.append(": ");
-            sbuilder.append(cursor.getString(1));
-            sbuilder.append("\n");
+            sbuilder.append(cursor.getString(2));
             cursor.moveToNext();
         }
 
@@ -249,6 +246,7 @@ public class CheckImage  extends AppCompatActivity {
         values.put("comment", com);
 
         db.insert("images", null, values);
+        readData(uri);
     }
 
     /*

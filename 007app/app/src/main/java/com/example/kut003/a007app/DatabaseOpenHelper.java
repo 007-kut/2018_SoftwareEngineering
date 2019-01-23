@@ -15,10 +15,13 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
     //Table name
     public static final String TABLE_NAME = "images";
 
+    //public static final String COLUMN_NAME_TITLE = "path";
+    //public static final String COLUMN_NAME_SUBTITLE = "comment";
+
     private static final String SQL_CREATE_ENTRIES  =
-            "CREATE TABLE IF NOT EXISTS images ("
-            //+ " ID INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + " path TEXT,"
+            "CREATE TABLE images ("
+            + " id INTEGER AUTOINCREMENT PRIMARY KEY,"
+            + " Path TEXT PRIMARY KEY,"
             + " Comment TEXT"
             + ");";
 
@@ -41,7 +44,7 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
-        onCreate(db);// アップデートの判別
+        // アップデートの判別
         db.execSQL(SQL_DELETE_ENTRIES);
         onCreate(db);
     }
