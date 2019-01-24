@@ -233,12 +233,12 @@ public class CheckImage  extends AppCompatActivity {
 
         // 忘れずに！
         cursor.close();
-
         Log.d("debug","**********"+sbuilder.toString());
         viewComment.setText(sbuilder.toString());
     }
 
     //insertData(DataBase, comment, image URI)
+    //コメントの更新
     private void insertData(SQLiteDatabase db, String com, Uri uri){
         path = uri.toString();
         //try {
@@ -257,6 +257,10 @@ public class CheckImage  extends AppCompatActivity {
         readData(uri);
     }
 
+    //コメントの削除
+    private void deleteComment(String path){
+        db.delete("images", "Path=?", new String[]{path});
+    }
 /*
     //画像の削除
     private void delete(Uri uri) {
@@ -277,8 +281,5 @@ public class CheckImage  extends AppCompatActivity {
     }
     */
 
-    //コメントの削除
-    private void deleteComment(String path){
-        db.delete("images", "Path=?", new String[]{path});
-    }
+
 }
