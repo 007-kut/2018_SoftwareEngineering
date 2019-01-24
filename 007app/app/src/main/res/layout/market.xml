@@ -62,8 +62,8 @@
 
     <ImageButton
         android:id="@+id/button_egg"
-        android:layout_width="100sp"
-        android:layout_height="100sp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginTop="244dp"
         android:layout_marginEnd="52dp"
         android:background="#0000"
@@ -77,8 +77,8 @@
 
     <ImageButton
         android:id="@+id/button_milk"
-        android:layout_width="100sp"
-        android:layout_height="100sp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginTop="240dp"
         android:layout_marginEnd="232dp"
         android:background="#0000"
