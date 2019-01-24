@@ -1,4 +1,4 @@
-//持っている材料を確認(図13)
+//持っている材料を確認(図13) imai
 package com.example.kut003.a007app;
 
 import android.app.Activity;

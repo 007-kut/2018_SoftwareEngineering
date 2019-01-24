@@ -22,15 +22,22 @@ import java.io.InputStreamReader;
 public class MakeAnswer extends Activity {
 
     private EditText questionText;
+    private TextView textView;
     private CheckBox checkBox;  //匿名のチェックボックス
     private String checkAnonimity = "1";
     DatabaseContents dc = new DatabaseContents();
     public static final String EXTRAMESSAGE = "com.example.kut003.a007app.MESSAGE";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.make_answer);
+        final ShareQuestion sq = (ShareQuestion) this.getApplication();
+
+        String answer = sq.getChooseContents();
+        textView = findViewById(R.id.contents_text);
+        textView.setText(answer);
 
         checkBox = findViewById(R.id.check);
         checkBox.setChecked(false);
@@ -51,7 +58,7 @@ public class MakeAnswer extends Activity {
             }
         });
 
-        questionText = findViewById(R.id.question_text);
+        questionText = findViewById(R.id.answer_text);
         //子育て窓口画面に戻る
         final Button button0 = findViewById(R.id.button_return);
         button0.setOnClickListener(new View.OnClickListener() {
@@ -65,13 +72,14 @@ public class MakeAnswer extends Activity {
         final Button button1 = findViewById(R.id.button_make_answer);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                String questionContent = questionText.getText().toString();
-                if(questionContent.isEmpty()) {
+                String answerContent = questionText.getText().toString();
+                if(answerContent.isEmpty()) {
                     toastMake();
                 } else {
+                    String qid = sq.getChooseId();
                     String userId = readFile();    //パスワードの読み込み
                     dc.setLister(createListener());
-                    dc.getContentsById("3", "UserID=" + userId, "Qcontents=" + questionContent, "Anonimity=" + checkAnonimity);
+                    dc.getContentsById("4","QID=" + qid,  "UserID=" + userId, "Acontents=" + answerContent, "Anonimity=" + checkAnonimity);
                 }
             }
         });
