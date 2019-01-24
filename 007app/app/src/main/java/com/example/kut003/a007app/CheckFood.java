@@ -1,4 +1,4 @@
-//できあがり画面(図17)
+//できあがり画面(図17) imai
 package com.example.kut003.a007app;
 
 import android.app.Activity;
@@ -17,7 +17,6 @@ public class CheckFood extends Activity {
         final ShareQuestion sq = (ShareQuestion) this.getApplication();
         /*String chooseFood = sq.getChooseFood();*/
         setContentView(R.layout.check_food);
-        sq.setChooseFood("");
         //機能設定画面に戻る
 
         int pork = 0;
@@ -33,13 +32,19 @@ public class CheckFood extends Activity {
         sq.setCountEgg(egg);
         sq.setCountMilk(milk);
 
-        /*if(chooseFood.equals("cookie")) {
-           ImageView imageView2 = findViewById(R.id.cookie);
+        String chooseFood = sq.getChooseFood();
+        if(chooseFood.equals("cookie")) {
+           final ImageView imageView2 = findViewById(R.id.humburg);
            imageView2.setImageResource(R.drawable.cookie);
         }else{
             final ImageView imageView = findViewById(R.id.humburg);
             imageView.setImageResource(R.drawable.hamburg);
-        }*/
+            /*画像を一度セットすると、2回目からエラーがでるよ（試してみて）
+            これはセットを初期化してあげるとなおるっぽいね
+            調べて試してみてください*/
+        }
+
+        sq.setChooseFood("");
 
         final Button button0 = findViewById(R.id.button_back);
         button0.setOnClickListener(new View.OnClickListener() {
