@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.content.Intent;
+import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -108,7 +109,7 @@ public class ChooseMaterial extends Activity {
         }
 
         //お店選択に戻る
-        final Button button0 = findViewById(R.id.button_albam_back);
+        final Button button0 = findViewById(R.id.button_back);
         button0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("debug", "button0, Perform action on click");

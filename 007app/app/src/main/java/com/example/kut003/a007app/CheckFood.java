@@ -39,6 +39,9 @@ public class CheckFood extends Activity {
         }else{
             final ImageView imageView = findViewById(R.id.humburg);
             imageView.setImageResource(R.drawable.hamburg);
+            /*画像を一度セットすると、2回目からエラーがでるよ（試してみて）
+            これはセットを初期化してあげるとなおるっぽいね
+            調べて試してみてください*/
         }
 
         sq.setChooseFood("");

@@ -13,16 +13,18 @@ public class MaterialFood extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.material_food);
+
         final ShareQuestion sq = (ShareQuestion) this.getApplication();
         String chooseFood = sq.getChooseFood();
-        setContentView(R.layout.material_food);
+
+        final ImageView imageView = findViewById(R.id.food);
         if(chooseFood.equals("cookie")) {
-            final ImageView imageView2 = findViewById(R.id.cookie);
-            imageView2.setImageResource(R.drawable.material2);
+            imageView.setImageResource(R.drawable.material2);
         }else{
-            final ImageView imageView = findViewById(R.id.cookie);
             imageView.setImageResource(R.drawable.material);
         }
+
         //作る食べ物を選ぶ画面に戻る
         final Button button0 = findViewById(R.id.button_albam_back);
         button0.setOnClickListener(new View.OnClickListener() {
