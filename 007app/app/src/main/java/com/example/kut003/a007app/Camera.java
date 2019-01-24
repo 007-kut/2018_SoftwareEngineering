@@ -73,6 +73,7 @@ public class Camera extends Activity {
             }
         });
 
+        /*
         // 削除ボタン
         Button buttonDelete = findViewById(R.id.button_delete);
         buttonDelete.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +82,7 @@ public class Camera extends Activity {
                 startActivity(intent);
             }
         });
+        */
         // ギャラリー画面
         final Button button_gallery = findViewById(R.id.button_gallery);
         button_gallery.setOnClickListener(new View.OnClickListener(){
