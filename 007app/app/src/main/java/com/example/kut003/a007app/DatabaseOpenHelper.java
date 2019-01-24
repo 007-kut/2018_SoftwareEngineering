@@ -20,7 +20,7 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
 
     private static final String SQL_CREATE_ENTRIES  =
             "CREATE TABLE images ("
-            + " id INTEGER AUTOINCREMENT PRIMARY KEY,"
+            + " id INTEGER PRIMARY KEY AUTOINCREMENT,"
             + " Path TEXT,"
             + " Comment TEXT"
             + ");";
