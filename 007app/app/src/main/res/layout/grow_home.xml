@@ -13,7 +13,7 @@
         android:layout_height="350dp"
         android:layout_margin="20dp"
         android:layout_marginLeft="28dp"
-        android:text="カメラ"
+        android:text="📷"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -50,7 +50,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="削除"
+        android:text="🚮"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
