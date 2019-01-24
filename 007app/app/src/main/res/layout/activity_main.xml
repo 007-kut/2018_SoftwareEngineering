@@ -74,7 +74,8 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/background"
-        tools:layout_editor_absoluteY="91dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <ImageView
         android:layout_width="311dp"
