@@ -233,7 +233,6 @@ public class CheckImage  extends AppCompatActivity {
 
         // 忘れずに！
         cursor.close();
-
         Log.d("debug","**********"+sbuilder.toString());
         viewComment.setText(sbuilder.toString());
     }
