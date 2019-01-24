@@ -215,7 +215,7 @@ public class CheckImage  extends AppCompatActivity {
         Cursor cursor = db.query(
                 "images",
                  new String[] {"comment"},
-                "Path = ?",
+                "Path = '?'",
                  new String[]{""+ uris},
                 null,
                 null,
