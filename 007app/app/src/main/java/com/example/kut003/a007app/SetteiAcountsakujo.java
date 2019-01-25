@@ -52,15 +52,6 @@ public class SetteiAcountsakujo extends Activity {
                 startActivity(intent);
             }
         });
-
-        final Button button_return= findViewById(R.id.button_sakujo_home);
-        button_return.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Log.d("debug", "button44, Perform action on click");
-                Intent intent = new Intent(getApplication(), SetteiMain.class);
-                startActivity(intent);
-            }
-        });
     }
 
     private void toastMake(String message){

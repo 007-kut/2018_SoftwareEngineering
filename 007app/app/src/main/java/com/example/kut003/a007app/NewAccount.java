@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -31,6 +32,17 @@ public class NewAccount extends Activity {
     public NewAccount(){
         ListArea la = new ListArea();
         System.arraycopy(la.listArea, 0, this.listArea, 0, 48);
+    }
+
+    //もどるが押せなくなる
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        if (event.getAction()==KeyEvent.ACTION_DOWN) {
+            switch (event.getKeyCode()) {
+                case KeyEvent.KEYCODE_BACK:
+                    return true;
+            }
+        }
+        return super.dispatchKeyEvent(event);
     }
 
     @Override

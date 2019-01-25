@@ -28,7 +28,7 @@ public class SetteiAcounthenkou extends Activity {
 
     SharedPreferences dataPass;
     public EditText editText;
-    private String accountName;
+    private String accountName = "";
     private String message = null;
     private String accountArea = "";
     private String [] listArea = new String[48];

@@ -71,7 +71,7 @@
     <EditText
         android:id="@+id/edit_text3"
         android:layout_width="182dp"
-        android:layout_height="50dp"
+        android:layout_height="47dp"
         android:autofillHints="@string/hint"
         android:background="#e0f0f9"
         android:hint="@string/hint"
