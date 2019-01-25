@@ -6,7 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".SetteiMain">
+    tools:context=".SetteiMain"
+    android:focusableInTouchMode="true">
 
     <TextView
         android:layout_width="wrap_content"
