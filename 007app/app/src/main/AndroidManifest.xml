@@ -110,7 +110,7 @@
         //成長記録リスト
         <activity
             android:name=".CheckImage"
-            android:label="TestActivity">
+            android:label="おやここねくと">
         </activity>
         //成長記録内部データベース管理クラス
         <activity
