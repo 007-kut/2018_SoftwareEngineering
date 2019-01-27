@@ -150,7 +150,7 @@ class UploadTask extends AsyncTask<String, Void, String> {
                 BufferedReader bufReader = new BufferedReader(inReader);
                 String line;
                 while((line = bufReader.readLine()) != null) {
-                    result = line;
+                    result += line;
                 }
                 bufReader.close();
                 inReader.close();
