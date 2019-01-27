@@ -4,21 +4,16 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 public class AnswerList extends Activity {
-
-    private static final String[] answerContentsList = {
-            "", "", "", "", "", "","", "", "", "", "", "", "", "", ""
-    };
-    private static final String[] aIdList = {
-            "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "", "", "", "", ""
-
-    };
+    String[] answerContentsList =new String [10];
+    String[] aIdList = new String [10];
+    String[] answerName = new String[10];
+    String[] answerAnonimity = new String[10];
     private TextView textView;
     private TextView textAnonimity;
     private ArrayAdapter<String> arrayAdapter;
@@ -31,7 +26,7 @@ public class AnswerList extends Activity {
         final ShareQuestion sq = (ShareQuestion) this.getApplication();
 
         //リスト表示
-        arrayAdapter = new ArrayAdapter<>(this, R.layout.parentinglist);
+        arrayAdapter = new ArrayAdapter<>(this, R.layout.answer_array);
 
         //質問内容とQIDを格納
         final String questionContents = sq.getChooseContents();
@@ -87,14 +82,21 @@ public class AnswerList extends Activity {
                     int count = datas.length - 1;   //DBからの返り値が古い順で返ってくるから
                     for (int y = 0; y < datas.length; y++) {
                         aIdList[y] = datas[count][0];
+                        answerName[y]  = datas[count][1];
                         answerContentsList[y] = datas[count][3];
-                        arrayAdapter.add(answerContentsList[y]);
+                        answerAnonimity[y] = datas[count][4];
+                        String name;
+                        if(answerAnonimity[y].equals("0")) {
+                            name = "匿名投稿";
+                        } else {
+                            name = answerName[y] + "による投稿";
+                        }
+                        arrayAdapter.add(name + "\r\n" + answerContentsList[y]);
                         count--;
                     }
                     //回答が10個ないときの処理
                     if(datas.length < 10) {
                         for (int y = datas.length; y < 10; y++ ) {
-                            aIdList[y] = "";
                             answerContentsList[y] = "";
                             arrayAdapter.add(answerContentsList[y]);
                         }
