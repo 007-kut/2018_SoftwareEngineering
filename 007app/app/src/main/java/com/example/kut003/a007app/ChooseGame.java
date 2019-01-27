@@ -28,9 +28,6 @@ public class ChooseGame extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
         setContentView(R.layout.choose_game);
 
         //機能設定画面に戻る

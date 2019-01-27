@@ -30,7 +30,7 @@ public class QuestionList extends Activity {
         final ShareQuestion sq = (ShareQuestion) this.getApplication();
 
         //リスト表示
-        arrayAdapter = new ArrayAdapter<>(this, R.layout.parentinglist);
+        arrayAdapter = new ArrayAdapter<>(this, R.layout.question_array);
 
         dc.setLister(createListener());
         dc.getContentsById("5");
@@ -119,13 +119,13 @@ public class QuestionList extends Activity {
                         questionContentsList[y] = datas[y][3];
                         questionAnonimity[y] = datas[y][4];
                         String name;
-                        if(questionAnonimity[y].equals("0")) {
-                            name = "匿名投稿";
-                        } else {
-                            name = questionName[y] + "による投稿";
-                        }
-                        arrayAdapter.add(name + "\r\n" + questionContentsList[y]);
+                    if(questionAnonimity[y].equals("0")) {
+                        name = "匿名投稿";
+                    } else {
+                        name = questionName[y] + "による投稿";
                     }
+                    arrayAdapter.add(name + "\r\n" + questionContentsList[y]);
+                }
                     //10個ないときの処理
                     if(datas.length < 10) {
                         for (int y = datas.length; y < 10; y++ ) {
