@@ -47,9 +47,11 @@ public class QuestionList extends Activity {
                 String area = questionArea[position];
                 String contents = questionContentsList[position];    //要素数が対応しているっぽいです
                 String anonimity = questionAnonimity[position];
-                sq.setChooseQuestion(qid, name, area, contents, anonimity);
-                Intent intent = new Intent(getApplication(), AnswerList.class);
-                startActivity(intent);    //QIDと内容を送って遷移
+                if(!(contents.equals(""))) {
+                    sq.setChooseQuestion(qid, name, area, contents, anonimity);
+                    Intent intent = new Intent(getApplication(), AnswerList.class);
+                    startActivity(intent);    //QIDと内容を送って遷移
+                }
             }
         });
 
@@ -129,11 +131,11 @@ public class QuestionList extends Activity {
                     //10個ないときの処理
                     if(datas.length < 10) {
                         for (int y = datas.length; y < 10; y++ ) {
-                            //qIdList[y] = "";
-                            //questionName[y] = "";
-                            //questionArea[y] = "";
+                            qIdList[y] = "";
+                            questionName[y] = "";
+                            questionArea[y] = "";
                             questionContentsList[y] = "";
-                            //questionAnonimity[y] = "";
+                            questionAnonimity[y] = "";
                             arrayAdapter.add(questionContentsList[y]);
                         }
                     }
