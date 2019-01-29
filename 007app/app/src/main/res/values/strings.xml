@@ -19,6 +19,7 @@
         <string name="description">各種設定</string>string>
 
         //ゲーム選択画面(図3)
+        <string name="play">ゲームをえらんでね</string>string>
         <string name="art">おえかき</string>string>
         <string name="apple">りんご</string>string>
         <string name="banana">ばなな</string>string>

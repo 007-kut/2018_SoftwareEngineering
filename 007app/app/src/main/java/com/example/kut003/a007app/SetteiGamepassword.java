@@ -24,47 +24,28 @@ public class SetteiGamepassword extends Activity {
 
     SharedPreferences dataPass;
     //    SharedPreferences dataPass2;
-    public EditText editText4;
-    public EditText editText5;
+    public EditText editText;
     private String passText = null;
-    private String passText2 = null;
     private String message = null;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.settei_gamepassword);
 
         //ニックネーム入力のためのインスタンスを生成
         dataPass = getSharedPreferences("data", MODE_PRIVATE);
-//        dataPass2 = getSharedPreferences("data", MODE_PRIVATE);
 
         //入力できるようにする
-        editText4 = findViewById(R.id.edit_text);
-        editText5 = findViewById(R.id.edit_text2);
-
-//        Button button7 = findViewById(R.id.button_finish);
-
-//        toastMessage = "アカウントの変更が完了しました";
-//
-//        button7.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                toastMake(toastMessage, 0, -200);
-//            }
-//        });
+        editText = findViewById(R.id.edit_text);
 
         //パスワード変更表示
         final Button button_finish = findViewById(R.id.button_password_finish);
         button_finish.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-//        button_return.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View view) {
-                passText = editText4.getText().toString();  //入力内容を格納
-                passText2 = editText5.getText().toString();  //入力内容を格納
-                if (passText.equals(passText2) && !(passText.isEmpty())) {
+                passText = editText.getText().toString();  //入力内容を格納
+                if (!(passText.isEmpty())) {
                     message = "変更されました";
                     writePass(passText);
                 } else {
