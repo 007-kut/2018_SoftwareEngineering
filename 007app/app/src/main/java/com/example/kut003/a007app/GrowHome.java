@@ -1,6 +1,5 @@
 package com.example.kut003.a007app;
 
-import android.support.v7.app.AppCompatActivity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,10 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
 import android.view.View.OnClickListener;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.Environment;
-import android.widget.ImageView;
 
 
 public class GrowHome extends Activity {
