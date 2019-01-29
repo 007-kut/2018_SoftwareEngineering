@@ -27,6 +27,7 @@ import android.graphics.Point;
 import android.view.Display;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
+import android.view.KeyEvent;
 
 
 public class CheckImage  extends Activity {
@@ -68,6 +69,7 @@ public class CheckImage  extends Activity {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("image/jpeg");
+        //画像の種類を変更するか。PNGをどうするか。
         startActivityForResult(intent, READ_REQUEST_CODE);
 
         //もどるボタン
@@ -120,7 +122,6 @@ public class CheckImage  extends Activity {
             }
         });
     }
-
     //画像の読み込み
     Intent resultData;
     @Override
@@ -139,6 +140,9 @@ public class CheckImage  extends Activity {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        }else{
+            Intent intent = new Intent(getApplication(), GrowHome.class);
+            startActivity(intent);
         }
     }
 
