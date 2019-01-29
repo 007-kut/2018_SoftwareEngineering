@@ -4,7 +4,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-feature android:name="android.hardware.camera" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <!--<uses-permission android:name="android.permission.CAMERA"/>-->
     <application
         android:name = ".ShareQuestion"
         android:allowBackup="true"
@@ -96,7 +96,7 @@
         <activity
         android:name=".CheckFood"
         android:label="@string/app_name" >
-    </activity>
+        </activity>
         //成長記録メイン画面
         <activity
             android:name=".GrowHome"
