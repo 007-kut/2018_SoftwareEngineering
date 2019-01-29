@@ -111,7 +111,7 @@ class UploadTask extends AsyncTask<String, Void, String> {
 
         String urlSt = Constants.getServerAddress(params[0]);
         HttpURLConnection httpConn = null;
-        String result = null;
+        String result = "";
 
         try {
             URL url = new URL(urlSt);
@@ -150,7 +150,7 @@ class UploadTask extends AsyncTask<String, Void, String> {
                 BufferedReader bufReader = new BufferedReader(inReader);
                 String line;
                 while((line = bufReader.readLine()) != null) {
-                    result = line;
+                    result += line;
                 }
                 bufReader.close();
                 inReader.close();
