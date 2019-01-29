@@ -43,21 +43,6 @@ public class Camera extends Activity {
 
         imageView = findViewById(R.id.image_view);
 
-        // Android 6, API 23以上でパーミッシンの確認
-        /*Button cameraButton = findViewById(R.id.camera_button);
-        cameraButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Android 6, API 23以上でパーミッシンの確認
-                if (Build.VERSION.SDK_INT >= 23) {
-                    checkPermission();
-                }
-                else {
-                    cameraIntent();
-                }
-            }
-        });*/
-
         if (Build.VERSION.SDK_INT >= 23) {
             checkPermission();
         }

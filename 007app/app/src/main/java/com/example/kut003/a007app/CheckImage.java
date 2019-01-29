@@ -7,7 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.provider.MediaStore;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,16 +27,10 @@ import android.graphics.Point;
 import android.view.Display;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
+import android.view.KeyEvent;
 
-import android.content.ContentValues;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 
-public class CheckImage  extends AppCompatActivity {
+public class CheckImage  extends Activity {
     private static final int READ_REQUEST_CODE = 42;
 
     private Bitmap bmp;
@@ -75,6 +69,7 @@ public class CheckImage  extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("image/jpeg");
+        //画像の種類を変更するか。PNGをどうするか。
         startActivityForResult(intent, READ_REQUEST_CODE);
 
         //もどるボタン
@@ -86,6 +81,7 @@ public class CheckImage  extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        /*
         //共有ボタン
         final Button button_share = findViewById(R.id.button_grow_share);
         button_share.setOnClickListener(new View.OnClickListener() {
@@ -95,7 +91,7 @@ public class CheckImage  extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+*/
         //削除ボタン
         /*
         final Button button_delete = findViewById(R.id.button_grow_delete);
@@ -126,7 +122,6 @@ public class CheckImage  extends AppCompatActivity {
             }
         });
     }
-
     //画像の読み込み
     Intent resultData;
     @Override
@@ -145,6 +140,9 @@ public class CheckImage  extends AppCompatActivity {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        }else{
+            Intent intent = new Intent(getApplication(), GrowHome.class);
+            startActivity(intent);
         }
     }
 
