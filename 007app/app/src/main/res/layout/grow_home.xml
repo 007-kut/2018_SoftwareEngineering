@@ -9,117 +9,52 @@
 
     <Button
         android:id="@+id/button_grow_camera"
-        android:layout_width="150dp"
-        android:layout_height="350dp"
-        android:layout_margin="20dp"
-        android:layout_marginLeft="28dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="65dp"
         android:text="カメラ"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.645" />
+        android:background="#87CEFA"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_grow_gallery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_grow_back" />
 
     <Button
         android:id="@+id/button_grow_gallery"
-        android:layout_width="150dp"
-        android:layout_height="350dp"
-        android:layout_margin="20dp"
-        android:layout_marginEnd="28dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="75dp"
+        android:layout_weight="1"
         android:text="ギャラリー"
+        android:background="#FFE700"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.664" />
-
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_grow_camera"
+        app:layout_constraintVertical_bias="0.898" />
 
     <Button
         android:id="@+id/button_grow_back"
-        android:layout_width="100dp"
-        android:layout_height="45dp"
-        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
         android:text="もどる"
-        app:layout_constraintEnd_toStartOf="@+id/button_grow_delete"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <!--
-    <Button
-        android:id="@+id/button_grow_delete"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="削除"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-
-    <Button
-        android:id="@+id/button_grow_share"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="共有"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toEndOf="@+id/button_grow_camera"
-        app:layout_constraintTop_toBottomOf="@+id/button_grow_delete"
-        app:layout_constraintVertical_bias="0.909" />
-
-    <ImageView
-        android:id="@+id/image_view"
-        android:layout_width="126dp"
-        android:layout_height="131dp"
-        android:contentDescription="@string/description"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.782"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.657" />
-
-    <ImageView
-        android:id="@+id/image_view"
-        android:layout_width="126dp"
-        android:layout_height="131dp"
-        android:contentDescription="@string/description"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.201"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.207" />
-
-    <ImageView
-        android:id="@+id/image_view"
-        android:layout_width="126dp"
-        android:layout_height="131dp"
-        android:contentDescription="@string/description"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.201"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.657" />
-
-    <ImageView
-        android:id="@+id/image_view"
-        android:layout_width="126dp"
-        android:layout_height="131dp"
-        android:contentDescription="@string/description"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.782"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.207" />
-    -->
+        app:layout_constraintVertical_bias="0.018" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -7,7 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.provider.MediaStore;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -28,15 +28,8 @@ import android.view.Display;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
 
-import android.content.ContentValues;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 
-public class CheckImage  extends AppCompatActivity {
+public class CheckImage  extends Activity {
     private static final int READ_REQUEST_CODE = 42;
 
     private Bitmap bmp;
@@ -86,6 +79,7 @@ public class CheckImage  extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        /*
         //共有ボタン
         final Button button_share = findViewById(R.id.button_grow_share);
         button_share.setOnClickListener(new View.OnClickListener() {
@@ -95,7 +89,7 @@ public class CheckImage  extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+*/
         //削除ボタン
         /*
         final Button button_delete = findViewById(R.id.button_grow_delete);
@@ -238,6 +232,7 @@ public class CheckImage  extends AppCompatActivity {
     }
 
     //insertData(DataBase, comment, image URI)
+    //コメントの更新
     private void insertData(SQLiteDatabase db, String com, Uri uri){
         path = uri.toString();
         //try {
@@ -256,6 +251,10 @@ public class CheckImage  extends AppCompatActivity {
         readData(uri);
     }
 
+    //コメントの削除
+    private void deleteComment(String path){
+        db.delete("images", "Path=?", new String[]{path});
+    }
 /*
     //画像の削除
     private void delete(Uri uri) {
@@ -276,8 +275,5 @@ public class CheckImage  extends AppCompatActivity {
     }
     */
 
-    //コメントの削除
-    private void deleteComment(String path){
-        db.delete("images", "Path=?", new String[]{path});
-    }
+
 }
