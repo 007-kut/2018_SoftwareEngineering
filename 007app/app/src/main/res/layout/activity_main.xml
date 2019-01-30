@@ -15,9 +15,10 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="250dp"
         android:layout_marginRight="40dp"
-        android:layout_marginBottom="8dp"
-        android:background="#FFE700"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/button_green"
         android:text="@string/game"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="35sp"
         app:layout_constraintBottom_toTopOf="@+id/button_grow"
         app:layout_constraintHorizontal_bias="1.0"
@@ -25,6 +26,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.646" />
+
 
     <Button
         android:id="@+id/button_grow"
@@ -34,7 +36,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="8dp"
-        android:background="#90EE90"
+        android:background="@drawable/button_yellow"
         android:text="@string/grow"
         android:textSize="35sp"
         app:layout_constraintBottom_toTopOf="@+id/button_wind"
@@ -51,7 +53,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="8dp"
-        android:background="#87CEFA"
+        android:background="@drawable/button_blue"
         android:text="@string/wind"
         android:textSize="35sp"
         app:layout_constraintBottom_toTopOf="@+id/button_setting"
@@ -68,7 +70,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="32dp"
-        android:background="#D3D3D3"
+        android:background="@drawable/button_gray"
         android:text="@string/setting"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -12,14 +12,18 @@
         android:id="@+id/button_albam_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/back"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/food"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="500dp"
+        android:layout_marginBottom="750dp"
+        android:background="@drawable/return_button"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.169" />
+        app:layout_constraintVertical_bias="0.072" />
 
     <Button
         android:id="@+id/button_go"
@@ -30,6 +34,8 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="24dp"
         android:text="おつかいへいく"
+        android:background="@drawable/button_red"
+        android:textColor="#ffffff"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

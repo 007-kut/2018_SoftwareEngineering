@@ -37,6 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="設定画面へ"
+        android:background="@drawable/button_gray"
+        android:textColor="#ffffff"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.502"

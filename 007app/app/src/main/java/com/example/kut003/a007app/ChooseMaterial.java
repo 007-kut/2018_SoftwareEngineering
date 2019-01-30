@@ -152,7 +152,6 @@ public class ChooseMaterial extends Activity {
             // 表示時間
             toast.setDuration(Toast.LENGTH_SHORT);
             // 位置調整
-            toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
         }else {
             ViewGroup viewGroup1 = findViewById(R.id.relative_layout);
@@ -161,7 +160,6 @@ public class ChooseMaterial extends Activity {
             // 表示時間
             toast.setDuration(Toast.LENGTH_SHORT);
             // 位置調整
-            toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
         }
     }
