@@ -66,6 +66,7 @@
         android:layout_marginBottom="32dp"
         android:text="@string/free"
         android:background="@drawable/button_blue"
+        android:textColor="#ffffff"
         android:textSize="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

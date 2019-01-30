@@ -87,6 +87,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:text="検索"
+        android:background="#0543ca"
+        android:textColor="#ffffff"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintHorizontal_bias="0.942"
