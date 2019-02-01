@@ -1,0 +1,229 @@
+\documentclass[a4j]{jarticle}
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{epsbox}
+\usepackage{url}
+\usepackage{here}
+
+\setlength{\headsep}{-5mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\textwidth}{165mm}
+\setlength{\textheight}{230mm}
+\setlength{\footskip}{20mm}
+
+\title{
+\vspace{30mm}
+{\bf データテーブル} 
+\date{}
+}
+
+\begin{document}
+\maketitle
+
+以下に本システムで用いるデータテーブルを示す。\\
+表1、表2はユーザー情報を示している。親の情報と子の情報をそれぞれ格納している。\\
+
+
+
+\begin{table}[H]
+    \caption{表1:親ユーザー情報}
+    \label{tbl: table1}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            AuserID & 半角英数字型 & 6文字固定長 & TEXT & PK\\ \hline
+            ParentName & 全角文字型 & 50文字可変長 & TEXT & \\ \hline
+            area & 全角文字型 & 50文字可変長 & TEXT & \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+
+\begin{table}[H]
+    \caption{表2 子ユーザー情報}
+    \label{tbl: table2}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            CuserID & 半角英数字型 & 6文字固定長 & TEXT & PK\\ \hline
+            ChildName & 全角文字型 & 50文字可変長 & TEXT & \\ \hline
+            AuserID & 半角英数字型 & 6文字固定長 & TEXT & FK:親ユーザー情報\\ \hline
+            gameID & 半角英数字型 & 8文字固定長 & TEXT & FK:ゲーム機能\\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+表3～表6ではゲーム機能に関するデータを示している。表3ではゲームのとりまとめを、表4と表5では「おえかき」機能に関する内容を、表6では「おつかい」機能に関する内容を格納している。\\
+\begin{table}[H]
+    \caption{表3 ゲーム機能}
+    \label{tbl: table3}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            gameID & 半角英数字型 & 8文字固定長 & TEXT & PK\\ \hline
+            artID & 半角英数字型 & 10文字固定長 & TEXT & FK:「おえかき」\\ \hline
+            buyerID & 半角英数字型 & 10文字固定長 & TEXT & FK:「おつかい」\\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \caption{表4 「おえかき」}
+    \label{tbl: table4}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            artID & 半角英数字型 & 10文字固定長 & TEXT & PK\\ \hline
+            PcontentsID & 半角英数字型 & 10文字固定長 & TEXT & FK:絵のデータ管理\\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \caption{表5 絵のデータ管理}
+    \label{tbl: table5}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            PcontentsID & 半角英数字型 & 10文字固定長 & TEXT & PK\\ \hline
+            Pcontents(URL) & 全角文字型 & 100文字可変長 & TEXT & \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+
+\begin{table}[H]
+    \caption{表6 「おつかい」}
+    \label{tbl: table6}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            buyerID & 半角英数字型 & 10文字固定長 & TEXT & PK\\ \hline
+            score & 整数型 & 6文字可変長 & INTEGER & \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+表7～表9では成長記録(アルバム)機能に関するデータを示している。表7では成長記録のとりまとめを行い、表8と表9ではデータの関連付けのために日付と写真の管理を行う。\\
+\begin{table}[H]
+    \caption{表7 成長記録}
+    \label{tbl: table7}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            albamID & 半角英数字型 & 8文字固定長 & TEXT & PK\\ \hline
+            AuserID & 半角英数字型 & 6文字固定長 & TEXT & FK:子ユーザー情報\\ \hline
+            dateID & 半角英数字型 & 8文字固定長 & TEXT & FK:日付\\ \hline
+            photoID & 半角英数字型 & 10文字固定長 & TEXT & FK:写真\\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \caption{表8 日付}
+    \label{tbl: table8}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            dateID & 半角英数字型 & 8文字固定長 & TEXT & PK\\ \hline
+            createDate & 日付型 & 20文字固定長 & NUMERIC & \\ \hline
+            renewDate & 日付型 & 20文字固定長 & NUMERIC & \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+
+\begin{table}[H]
+    \caption{表9 写真}
+    \label{tbl: table9}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            photoID & 半角英数字型 & 10文字固定長 & TEXT & PK\\ \hline
+            photo(URL) & 全角文字型 & 100文字可変長 & TEXT & \\ \hline
+            comment & 全角文字型 & 100文字可変長 & TEXT & \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+
+表10～表13では、質問箱に関するデータを示している。表10では質問と質問者の関連付けを、表11では質問内容を、表12では回答と回答者の関連付けを、表13では回答者の関連付けを行っている。
+\begin{table}[H]
+    \caption{表10 質問}
+    \label{tbl: table10}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            QID & 半角英数字型 & 8文字固定長 & TEXT & PK\\ \hline
+            AuserID & 半角英数字型 & 6文字固定長 & TEXT & FK:親ユーザー情報\\ \hline
+            QcontentsID & 半角英数字型 & 10文字固定長 & TEXT & FK:質問内容\\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \caption{表11 回答}
+    \label{tbl: table11}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            AID & 半角英数字型 & 8文字固定長 & TEXT & PK\\ \hline
+            QID & 半角英数字型 & 8文字固定長 & TEXT & FK:質問\\ \hline
+            AuserID & 半角英数字型 & 6文字固定長 & TEXT & FK:親ユーザー情報\\ \hline
+            AcontentsID & 半角英数字型 & 10文字固定長 & TEXT & FK:回答内容\\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \caption{表12 質問内容}
+    \label{tbl: table12}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+           属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            QcontentsID & 半角英数字型 & 10文字固定長 & TEXT & PK\\ \hline
+            contents & 全角文字型 & 100文字可変長 & TEXT & \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+
+\begin{table}[H]
+    \caption{表13 回答内容}
+    \label{tbl: table13}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            AcontentsID & 半角英数字型 & 10文字固定長 & TEXT & PK\\ \hline
+            contents & 全角文字型 & 100文字可変長 & TEXT & \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+また、表14に上記のデータテーブルに対する操作を示す。
+
+\begin{table}[H]
+    \caption{表14 各種データテーブルに対する操作}
+    \label{tbl: table14}
+    \begin{center}
+        \begin{tabular}{|l||c|c|c|c||c|c|c|c|} \hline
+             & \multicolumn{4}{|c||}{アプリケーション} & \multicolumn{4}{|c|}{管理画面}\\ \hline
+            データテーブル & \multicolumn{1}{|l|}{作成} & \multicolumn{1}{|l|}{参照} & \multicolumn{1}{|l|}{更新} & \multicolumn{1}{|l||}{削除} & \multicolumn{1}{|l|}{作成} & \multicolumn{1}{|l|}{参照} & \multicolumn{1}{|l|}{更新} & \multicolumn{1}{|l|}{削除}\\ \hline
+            親ユーザー情報 & 〇 & 〇 & 〇 & 〇 & 〇 & 〇 & 〇 & 〇\\ \hline
+            子ユーザー情報 & 〇 & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline \hline
+            ゲーム機能 & 〇 & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline
+            「おえかき」 & 〇 & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline
+            絵のデータ管理 & 〇 & 〇 & 〇 &   & 〇 & 〇 & 〇 & 〇\\ \hline
+            「おつかい」 & 〇 & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline \hline
+            成長記録 & 〇 & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline
+            日付 &  & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline
+            写真 & 〇 & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline \hline
+            質問 & 〇 & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline 
+            質問内容 & 〇 & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline
+            回答 & 〇 & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline
+            回答内容 & 〇 & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline
+
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\end{document}

@@ -1,0 +1,129 @@
+\documentclass[a4j]{jarticle}
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{epsbox}
+\usepackage{url}
+\usepackage{here}
+
+\setlength{\headsep}{-5mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\textwidth}{165mm}
+\setlength{\textheight}{230mm}
+\setlength{\footskip}{20mm}
+
+\title{
+\vspace{30mm}
+{\bf データテーブル}
+\date{}
+}
+
+\begin{document}
+\maketitle
+\section{データテーブル構造}
+
+以下に本システムで用いるデータテーブルを示す。\\
+表\ref{tbl: user}はユーザー情報を示しており、親の情報を格納している。\\
+
+\begin{table}[H]
+    \caption{親ユーザー情報}
+    \label{tbl: user}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            UserID & 半角英数字型 & 6文字固定長 & TEXT & PK\\ \hline
+            Name & 全角文字型 & 10文字可変長 & TEXT & \\ \hline
+            Area & 全角文字型 & 5文字可変長 & TEXT & \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+
+表\ref{tbl: question}～表\ref{tbl: date}では、質問箱に関するデータを示している。表\ref{tbl: question}では質問と質問者の関連付けを、表\ref{tbl: answer}では回答と回答者の関連付けを行い、質問と回答の管理を行っている。\\
+また、表\ref{tbl: qcontents}では質問内容を、表\ref{tbl: acontents}では回答内容を、表\ref{tbl: date}では日付の管理を行っている。\\
+\begin{table}[H]
+    \caption{質問}
+    \label{tbl: question}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            QID & 半角英数字型 & 8文字固定長 & TEXT & PK\\ \hline
+            UserID & 半角英数字型 & 6文字固定長 & TEXT & FK:親ユーザー情報\\ \hline
+            QcontentsID & 半角英数字型 & 10文字固定長 & TEXT & FK:質問内容\\ \hline
+            DateID & 半角英数字型 & 8文字固定長 & TEXT & FK:日付\\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \caption{回答}
+    \label{tbl: answer}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            AID & 半角英数字型 & 8文字固定長 & TEXT & PK\\ \hline
+            QID & 半角英数字型 & 8文字固定長 & TEXT & FK:質問\\ \hline
+            UserID & 半角英数字型 & 6文字固定長 & TEXT & FK:親ユーザー情報\\ \hline
+            AcontentsID & 半角英数字型 & 10文字固定長 & TEXT & FK:回答内容\\ \hline
+            DateID & 半角英数字型 & 8文字固定長 & TEXT & FK:日付\\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \caption{質問内容}
+    \label{tbl: qcontents}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+           属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            QcontentsID & 半角英数字型 & 10文字固定長 & TEXT & PK\\ \hline
+            Qcontents & 全角文字型 & 100文字可変長 & TEXT & \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+
+\begin{table}[H]
+    \caption{回答内容}
+    \label{tbl: acontents}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            AcontentsID & 半角英数字型 & 10文字固定長 & TEXT & PK\\ \hline
+            Acontents & 全角文字型 & 100文字可変長 & TEXT & \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \caption{日付}
+    \label{tbl: date}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline
+            属性 & データ型 & データ長 & SQLite & key:Table名\\ \hline \hline
+            DateID & 半角英数字型 & 8文字固定長 & TEXT & PK\\ \hline
+            Date & 日付型 & 20文字固定長 & NUMERIC & \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+
+また、表\ref{tbl: datatable}に上記のデータテーブルに対する操作を示す。
+
+\begin{table}[H]
+    \caption{表14 各種データテーブルに対する操作}
+    \label{tbl: datatable}
+    \begin{center}
+        \begin{tabular}{|l||c|c|c|c||c|c|c|c|} \hline
+             & \multicolumn{4}{|c||}{アプリケーション} & \multicolumn{4}{|c|}{管理画面}\\ \hline
+            データテーブル & \multicolumn{1}{|l|}{作成} & \multicolumn{1}{|l|}{参照} & \multicolumn{1}{|l|}{更新} & \multicolumn{1}{|l||}{削除} & \multicolumn{1}{|l|}{作成} & \multicolumn{1}{|l|}{参照} & \multicolumn{1}{|l|}{更新} & \multicolumn{1}{|l|}{削除}\\ \hline \hline
+            親ユーザー情報 & 〇 & 〇 & 〇 & 〇 & 〇 & 〇 & 〇 & 〇\\ \hline
+            質問 & 〇 & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline
+            質問内容 & 〇 & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline
+            回答 & 〇 & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline
+            回答内容 & 〇 & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline
+            日付 &  & 〇 & 〇 &  & 〇 & 〇 & 〇 & 〇\\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\end{document}

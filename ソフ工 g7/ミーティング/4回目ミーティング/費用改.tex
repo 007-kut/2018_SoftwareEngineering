@@ -1,0 +1,81 @@
+\documentclass[a4j]{jarticle}
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{url}
+\usepackage{here}
+\usepackage{listings}
+\usepackage{amsmath,amssymb}
+\usepackage[dvipdfmx]{color}
+
+\setlength{\headsep}{-5mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\textwidth}{165mm}
+\setlength{\textheight}{230mm}
+\setlength{\footskip}{20mm}
+
+\title{
+\vspace{30mm}
+{\bf 子育て支援システム}
+\\
+\vspace{5mm}
+{\bf システム提案書v1\\
+}
+\vspace{120mm}
+}
+
+\author{
+\vspace{5mm}
+チーム名 007\\
+\vspace{5mm}
+}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+
+\section{費用と効果}
+システムの開発及び運用にかかる費用は以下の通りです。
+　\begin{table}[htp]
+\begin{center}
+  \caption{開発費用}
+  \begin{tabular}{|l|r|l|r|l|}\hline
+    項目& 単価(円) & 数量 & 金額(円) & 備考  \\ \hline
+    Android端末(本体)& 30,000 & 3台 & 90,000 & 　 \\ \hline
+    Android端末(通信料)& 100,000 & 1台分 & 100,000 & 1台のみインターネット通信を試行するため  \\ \hline
+    システム開発人件費& 40,000 & 420人日 & 16,800,000 & 工程内訳:7人×2ヶ月(60日)  \\ \hline
+    サーバー代& 250,000 & 1台 & 250,000 & 　 \\ \hline
+    維持費& 1,000,000 & 5年 & 5,000,000 & 　　  \\ \hline
+    広告費& 30,000 & 20回 & 600,000 & 　　  \\ \hline
+    \multicolumn{3}{|l|}{合計} & 22,840,000 &　 \\ \hline
+  \end{tabular}
+\end{center}
+\end{table}
+
+このアプリを運用することにより待機児童の教育不足や親同士でのつながりの減少を解決することできると想定されます。このアプリは 300 円の有料アプリとして GooglePlay で配信するものです。この場合、手数料として全体の 3 割が引かれます。全国の 2\UTF{FF5E}5 歳児の子どもを持つ保護者を対象としており、その数はおよそ400万人であり、その内の 3\%となる約 12 万人の方がダウンロードすると仮定した算出結果は以下のようになります。
+
+\[
+  120,000×300×0.7 = 25,200,000 [円/年]
+]\
+
+また、この結果は 1 年間運用した場合の結果であり、このシステムは5年間の運用を想定しているためあと4年分の出生率を考えるとと毎年約 90 万人近くの子どもが産まれているため5年間での2\UTF{FF5E}5歳児の子供の数は約760万人であると考えられ、その内の約3\%となる23万人の方がダウンロードした場合以下のような算出結果が得られます。
+
+\[
+  228,000×300×0.7 = 47,880,000　[円/年]
+]\
+
+以上の結果から利益を求めると以下のようになり5年間の運用でも黒字となると考えられます。
+
+\[
+  47,880,000 - 22,840,000 = 25,040,000　[円]
+]\
+
+\begin{thebibliography}{1}
+\bibitem{bib:tomo}
+  少子化をめぐる現状.\\
+  \url{http://www8.cao.go.jp/shoushi/shoushika/whitepaper/measures/w-2017/29pdfgaiyoh/pdf/s1-1.pdf}.
+  \newblock 2018年10月16日閲覧.
+
+\end{document}

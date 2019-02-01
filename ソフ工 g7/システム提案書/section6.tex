@@ -1,0 +1,51 @@
+\documentclass[a4j]{jarticle}
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{epsbox}
+\usepackage{url}
+\usepackage{here}
+
+\setlength{\headsep}{-5mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\textwidth}{165mm}
+\setlength{\textheight}{230mm}
+\setlength{\footskip}{20mm}
+
+\title{
+\vspace{30mm}
+{\bf システムのハードウェア・ソフトウェア構成} 
+\date{}
+}
+
+\begin{document}
+\maketitle
+
+本章では、システムで必要となるハードウェア・ソフトウェア構成について記述します。
+システムは、サービスのメイン処理を行う管理サーバを１台使用し、クライアントが利用するスマートフォンやタブレット端末と通信を行うことによって、データの送受信や記録を行えるようにします。これを実現するためには、表１のような構成のハードウェアが必要となります。また、このサービスを提供するためには、表２のようなソフトウェア構成が必要となります。
+
+\begin{table}[H]
+    \caption{表1:ハードウェア構成}
+    \label{tbl: table1}
+    \begin{center}
+        \begin{tabular}{|c|c|c|} \hline
+            項目 & 種類　&  個数\\ \hline
+            メインサーバPC & 2TBのレンタルサーバ & 1\\ \hline
+            クライアント側端末 & 各個人のスマートフォン・タブレット  & - \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+
+\begin{table}[H]
+    \caption{表2:ソフトウェア構成}
+    \label{tbl: table2}
+    \begin{center}
+        \begin{tabular}{|c|} \hline
+            項目 \\ \hline
+            Androidスマートフォン・タブレット向けアプリケーション \\ \hline
+            管理者向けウェブページ \\ \hline
+            サーバ用データベースシステム \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+\end{document}

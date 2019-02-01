@@ -1,0 +1,66 @@
+%提出するレポートの書式はこのtemplateファイルに沿って作成してください。
+%特に表紙・概要の書式は変えないで下さい。
+
+\documentclass[a4j]{jarticle}
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{url}
+\usepackage{here}
+\usepackage{listings}
+\usepackage{amsmath,amssymb}
+
+\setlength{\headsep}{-5mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\textwidth}{165mm}
+\setlength{\textheight}{230mm}
+\setlength{\footskip}{20mm}
+
+\title{
+\vspace{30mm}
+{\bf 子育て支援システム}
+\\
+\vspace{5mm}
+{\bf システム提案書v1\\
+}
+\vspace{120mm}
+}
+
+\author{
+\vspace{5mm}
+チーム名 007\\
+\vspace{5mm}
+}
+
+
+\begin{document}
+\maketitle
+\newpage
+\section{課題解決のための方法}
+この子育て支援システムによる、課題解決方法について説明します。
+\begin{itemize}
+  \item 利用者のスマートフォンを利用した親同士の交流支援 ~\\
+    幼児知育における不安や疑問をシステム利用者間で質問・相談することができる場を提供します。さらに利用者が任意に住んでいる地域を設定することで、その地域に特化した具体的な意見等を共有することができます。
+  \item 親子のコミュニケーションを図るための知育ゲーム ~\\
+    利用者の端末に幼児向けの知育ゲームを導入することで、親子交流及び知育を行う場を提供します。開発側が幼児向けの知育をサポートすることで、共働きなどで自分の空き時間が少ない親の育児負担を軽減させることにも有効であると考えられます。一方で、親が知育ゲームばかりをさせてしまわないように、これらのコンテンツの利用に対してある程度の時間的制限をかける機能を付けます。また、これらのゲームのうち、塗り絵などの競争性の低いコンテンツに対しては作品(記録)の共有機能をつけます。
+\end{itemize}
+
+
+\section{開発体制と工程計画}
+本システムは、弊社7名のプログラマによって実施します。\par
+また、本システムの工程計画は以下の通りとなっています。
+
+\begin{table}[!h]
+  \centering
+  \caption{本システムの工程計画}
+  \begin{tabular}{|c|c|}
+    \hline
+    \multicolumn{1}{|c|}{工程} & \multicolumn{1}{c|}{完了予定日程} \\ \hline \hline
+    仕様凍結 & 2018年10月25日  \\ \hline
+    外部設計完了 & 2018年11月22日  \\ \hline
+    内部設計完了 & 2018年12月13日 \\ \hline
+    開発・動作試験 & 2019年1月17日  \\ \hline
+    納品 & 2019年1月24日  \\ \hline
+  \end{tabular}
+\end{table}
+
+\end{document}
